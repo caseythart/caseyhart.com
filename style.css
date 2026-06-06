@@ -1,0 +1,85 @@
+:root {
+  --blue: #43859a;
+  --coral: #ee6f5f;
+  --text: #24323a;
+  --background: #f7f9fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(1000px, 90vw);
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.page {
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero-logo {
+  display: block;
+  width: min(720px, 95%);
+  margin: 0 auto 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--blue);
+  line-height: 1;
+}
+
+.tagline {
+  margin: 1rem 0 0;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--coral);
+}
+
+.intro {
+  max-width: 650px;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: white;
+  background: var(--blue);
+  text-decoration: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.links a:hover {
+  background: var(--coral);
+}
