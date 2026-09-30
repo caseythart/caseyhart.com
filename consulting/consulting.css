@@ -33,7 +33,20 @@ a {
   margin: 0 auto;
 }
 
-/* Header with text wordmark */
+/* Header: CH mark + text wordmark */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+
 .header {
   border-bottom: 1px solid var(--line);
 }
@@ -98,6 +111,48 @@ a {
 
 .hero .wrap {
   padding: 5rem 0 4.5rem;
+}
+
+/* Hero: copy on the left, headshot on the right */
+.hero .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(330px, 34%);
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-photo {
+  position: relative;
+  margin: 0 18px 18px 0;
+}
+
+/* offset coral outline behind the photo */
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 2px solid var(--coral);
+  border-radius: 14px;
+}
+
+.hero-photo img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px var(--line), 0 12px 30px rgba(29, 43, 51, 0.12);
+}
+
+@media (max-width: 760px) {
+  .hero .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .hero-photo {
+    width: min(250px, 70%);
+  }
 }
 
 .eyebrow {

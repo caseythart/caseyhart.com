@@ -14,9 +14,12 @@
 <body>
   <header class="header">
     <div class="wrap">
-      <a class="wordmark" href="./">
-        <strong>Casey Hart</strong>
-        <span>Consulting</span>
+      <a class="brand" href="./" aria-label="Casey Hart Consulting, home">
+        <img class="brand-mark" src="chc-mark.svg" width="421" height="260" alt="">
+        <span class="wordmark">
+          <strong>Casey Hart</strong>
+          <span>Consulting</span>
+        </span>
       </a>
       <nav aria-label="Consulting">
         <a href="#services">Services</a>
@@ -31,16 +34,22 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <p class="eyebrow">Ontology &middot; Knowledge Graph &middot; Taxonomy</p>
-        <h1>Do you and your AI need understand your data?</h1>
-        <p class="lead">
-	  That's what ontologies are for.
-          My goal is to give you the knowledge and tools to leverage semantics.
-          I help my clients understand when graphs are useful, and then give them
-	  the tools to quickly capture that value.
-        </p>
-        <a class="btn" href="#contact">Start a conversation</a>
-        <a class="btn ghost" href="#services">See services</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Ontology &middot; Knowledge Graph &middot; Taxonomy</p>
+          <h1>Do you and your AI need understand your data?</h1>
+          <p class="lead">
+  	  That's what ontologies are for.
+            My goal is to give you the knowledge and tools to leverage semantics.
+            I help my clients understand when graphs are useful, and then give them
+  	  the tools to quickly capture that value.
+          </p>
+          <a class="btn" href="#contact">Start a conversation</a>
+          <a class="btn ghost" href="#services">See services</a>
+        </div>
+
+        <figure class="hero-photo">
+          <img src="headshot.jpg" width="680" height="850" alt="Casey Hart">
+        </figure>
       </div>
     </section>
 

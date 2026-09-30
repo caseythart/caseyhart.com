@@ -1,163 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - LifeGraph</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #222;
-      background-color: #fff;
-    }
-    h1, h2 {
-      color: #111;
-    }
-    h1 {
-      margin-bottom: 0.2em;
-    }
-    .meta {
-      color: #666;
-      margin-bottom: 2em;
-    }
-    a {
-      color: #0b66c3;
-    }
-    section {
-      margin-bottom: 1.5em;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeGraph Privacy Policy | Casey Hart</title>
+  <meta name="description" content="Privacy policy for LifeGraph, a personal fitness knowledge-graph app that runs locally on the user's own computer.">
+  <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
+  <header class="site-nav">
+    <a class="site-nav-home" href="../index.html">Casey Hart</a>
+    <nav aria-label="Site">
+      <a href="../about.html">About</a>
+      <a href="../speaking.html">Speaking</a>
+      <a href="../consulting/">Consulting</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <h1>Privacy Policy</h1>
-  <div class="meta">
-    <strong>Effective Date:</strong>"2026-06-25"
-  </div>
+  <main class="page prose">
+    <h1>LifeGraph Privacy Policy</h1>
 
-  <section>
-    <h2>Overview</h2>
-    <p>
-      LifeGraph (“we”, “our”, or “the app”) is a personal data application that helps users synchronize,
-      analyze, and visualize their health and fitness data. This includes optional integration with
-      Google Health APIs to import user-authorized health and fitness information.
+    <p class="tagline">
+      Last updated: September 29, 2026
     </p>
+
+    <h2>Summary</h2>
+
     <p>
-      We are committed to protecting your privacy and ensuring transparency about how your data is used.
+      LifeGraph is a personal fitness application that runs locally on the
+      user&rsquo;s own computer. Your heart rate and step data is stored on your
+      computer. It is not sent to me, to any server I operate, or to any third
+      party.
     </p>
-  </section>
 
-  <section>
-    <h2>Information We Collect</h2>
+    <h2>Who is responsible</h2>
 
-    <h3>Google Health / Fitness Data (if connected)</h3>
-    <p>When you connect your Google account, we may access:</p>
+    <p>
+      LifeGraph is developed by Casey Hart (&ldquo;I&rdquo; or &ldquo;me&rdquo;), an individual. I do not
+      operate a hosted LifeGraph service, and I have no accounts, servers, or databases that
+      hold LifeGraph users&rsquo; data.
+    </p>
+
+    <h2>What LifeGraph accesses</h2>
+
+    <p>
+      If you choose to connect your Google account, LifeGraph uses the Google Health API to
+      request access to:
+    </p>
+
     <ul>
-      <li>Physical activity data (e.g., steps, workouts)</li>
-      <li>Heart rate data (if available and authorized)</li>
-      <li>Sleep data (if authorized)</li>
-      <li>Other health-related metrics you explicitly grant access</li>
+      <li>Heart rate data</li>
+      <li>Step count data</li>
     </ul>
 
-    <h3>App-Provided Data</h3>
-    <p>We may also store:</p>
-    <ul>
-      <li>User-created fitness logs (e.g., workouts, body metrics)</li>
-      <li>Preferences and configuration settings</li>
-    </ul>
-
-    <p>We do not collect data without your explicit consent or action.</p>
-  </section>
-
-  <section>
-    <h2>How We Use Your Data</h2>
-    <ul>
-      <li>Synchronize health and fitness data</li>
-      <li>Display trends and visualizations</li>
-      <li>Generate personal insights</li>
-      <li>Improve user experience within the app</li>
-    </ul>
-    <p>We do not use your data for advertising or marketing.</p>
-  </section>
-
-  <section>
-    <h2>Data Storage</h2>
     <p>
-      Your data is stored securely in your application’s backend or database.
-      We take reasonable measures to protect it from unauthorized access.
-      Data remains tied to your user account.
+      Access is granted through Google&rsquo;s standard sign-in and consent screen. LifeGraph
+      only receives data you approve there. You can revoke access at any time in your
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Google Account permissions</a>.
     </p>
-  </section>
 
-  <section>
-    <h2>Data Sharing</h2>
-    <p>We do not sell, rent, or share your personal health data with third parties.</p>
-    <p>We only share data when necessary:</p>
-    <ul>
-      <li>With Google APIs to retrieve authorized data</li>
-      <li>If required by law or legal process</li>
-    </ul>
-  </section>
+    <h2>How the data is used</h2>
 
-  <section>
-    <h2>Third-Party Services</h2>
     <p>
-      LifeGraph uses Google Health / Fitness APIs for data synchronization.
+      The data is used only to store, query, and display your own fitness information
+      within LifeGraph on your computer. It is not used for advertising, marketing,
+      profiling, or selling, and it is not used to train any AI model.
     </p>
+
+    <h2>Where the data is stored</h2>
+
     <p>
-      Google Privacy Policy:
-      <a href="https://policies.google.com/privacy" target="_blank">
-        https://policies.google.com/privacy
-      </a>
+      Data is stored locally, in files in RDF Turtle (<code>.ttl</code>) format on the computer
+      where LifeGraph runs. LifeGraph does not upload these files anywhere. It has no analytics,
+      advertising, or tracking, and it does not send usage or crash reports.
     </p>
-  </section>
 
-  <section>
-    <h2>Data Retention</h2>
     <p>
-      We retain your data only as long as your account is active or needed to provide the service.
-      You may request deletion of your data at any time.
+      Because the data lives on your own computer, its security depends on that computer.
+      I recommend using your operating system&rsquo;s account protection and disk encryption,
+      and being careful with any backups you make yourself.
     </p>
-  </section>
 
-  <section>
-    <h2>Your Rights</h2>
-    <ul>
-      <li>Access your data</li>
-      <li>Request correction or deletion</li>
-      <li>Revoke Google access via your Google Account settings</li>
-    </ul>
-  </section>
+    <h2>Sharing</h2>
 
-  <section>
-    <h2>Security</h2>
     <p>
-      We implement reasonable security measures to protect your data, including secure authentication
-      and restricted access controls. However, no system is 100% secure.
+      I do not sell, rent, or share your data. The only outside connection is between LifeGraph
+      on your computer and Google&rsquo;s APIs, to retrieve the data you authorized. I may
+      disclose information only if required by law, but since I do not hold your data, there is
+      generally nothing for me to disclose.
     </p>
-  </section>
 
-  <section>
-    <h2>Changes to This Policy</h2>
+    <h2>Google API Services User Data Policy</h2>
+
     <p>
-      We may update this Privacy Policy occasionally. Updates will be posted on this page with a new effective date.
+      LifeGraph&rsquo;s use and transfer to any other app of information received from Google
+      APIs will adhere to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.
     </p>
-  </section>
 
-  <section>
+    <h2>Retention and deletion</h2>
+
+    <p>
+      Your data stays on your computer until you delete it. To delete it, remove the
+      LifeGraph <code>.ttl</code> data files from your computer. To stop LifeGraph from
+      receiving new data, revoke its access in your Google Account permissions (linked above).
+      Because I do not hold copies, there is nothing to delete on my side.
+    </p>
+
+    <h2>Changes to this policy</h2>
+
+    <p>
+      If LifeGraph later becomes available to other people, or is offered as a hosted service
+      that stores data on a server, I will update this policy before any such data is collected.
+      The date at the top shows when it was last changed.
+    </p>
+
     <h2>Contact</h2>
-    <p>
-      If you have questions about this Privacy Policy, contact:
-    </p>
-    <p>
-      <strong>Email: </strong>ontologyexplained@gmail.com
-    </p>
-  </section>
 
+    <p>
+      Questions or requests about this policy:
+      <a href="#" data-mail-user="hello" data-mail-domain="caseyhart.com" data-mail-subject="LifeGraph privacy question"></a>
+    </p>
+
+    <noscript>
+      <p>Please enable JavaScript to see the email link, or message me on
+      <a href="https://www.linkedin.com/in/casey-hart-7a032ba4/">LinkedIn</a>.</p>
+    </noscript>
+
+    <p class="page-footer">
+      &copy; Casey Hart &middot; <a href="../index.html">Home</a>
+    </p>
+  </main>
+
+  <script src="../js/mail.js"></script>
 </body>
 </html>

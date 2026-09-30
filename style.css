@@ -17,30 +17,11 @@ body {
   background: var(--background);
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("images/logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: min(1000px, 90vw);
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: -1;
-}
-
 .page {
   width: min(900px, 92%);
   margin: 0 auto;
   padding: 5rem 1rem;
   text-align: center;
-}
-
-.hero-logo {
-  display: block;
-  width: min(720px, 95%);
-  margin: 0 auto 2rem;
 }
 
 h1 {
@@ -250,4 +231,664 @@ h1 {
 
 .page.prose a:not(.button):hover {
   color: var(--coral);
+}
+
+.more-link {
+  margin: 1rem 0 0;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.more-link a {
+  color: var(--blue-dark);
+  text-decoration: none;
+  border-bottom: 2px solid var(--coral);
+}
+
+.more-link a:hover {
+  color: var(--coral);
+}
+
+/* ---------- Photos on inner pages (About) ---------- */
+
+.prose figure.photo {
+  margin: 1.75rem 0;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #d9e2e6;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(36, 50, 58, 0.05);
+}
+
+.prose figure.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.prose figure.photo figcaption {
+  padding: 0.5rem 0.4rem 0.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #55666e;
+}
+
+/* portrait photo that the text wraps around */
+.prose figure.photo-right {
+  float: right;
+  width: min(250px, 40%);
+  margin: 0.35rem 0 1rem 1.75rem;
+}
+
+/* a featured photo: centered, not full column width */
+.prose figure.photo-wide {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* portrait photo on the left, text wrapping on its right */
+.prose figure.photo-left {
+  float: left;
+  width: min(250px, 40%);
+  margin: 0.35rem 1.75rem 1rem 0;
+}
+
+/* About page opening: title and intro on the left, photo on the right */
+.prose .about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(270px, 36%);
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.prose .about-hero .intro {
+  margin-bottom: 0;
+}
+
+.prose .about-hero figure.photo {
+  margin: 0;
+}
+
+/* two photos side by side, cropped to the same shape so they line up */
+.prose .photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.prose .photo-pair figure.photo {
+  margin: 0;
+}
+
+.prose .photo-pair img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* keep floated photos from running into the next section */
+.prose h2 {
+  clear: both;
+}
+
+.prose ul.hobbies {
+  padding-left: 1.3rem;
+}
+
+.prose ul.hobbies li {
+  margin: 0.35rem 0;
+}
+
+.prose ul.hobbies li::marker {
+  color: var(--coral);
+}
+
+@media (max-width: 600px) {
+  .prose figure.photo-right,
+  .prose figure.photo-left {
+    float: none;
+    width: min(260px, 80%);
+    margin: 1.5rem auto;
+  }
+
+  .prose .about-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .prose .about-hero figure.photo {
+    width: min(260px, 80%);
+    margin: 0 auto;
+  }
+
+  .prose .photo-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Home page (knowledge-graph design).
+   Everything below is scoped to <body class="kgh">, which only index.html
+   uses, so the other pages are unaffected.
+   ========================================================================== */
+
+.kgh {
+  --teal: #43859a;
+  --teal-ink: #2b6478;
+  --coral: #ee6f5f;
+  --coral-ink: #b94a3c;
+  --slate: #6b8794;
+  --muted: #55666e;
+  --line: #d9e2e6;
+  --ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.kgh .home {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+  padding: 1.25rem 0 1.5rem;
+}
+
+/* ---------- Hero ----------
+   Wide screens: the graph fills the hero and the name + intro sit in the open
+   upper-left corner. Narrower screens: text first, then a compact graph. */
+
+.kgh .hero {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+/* faint dotted "graph paper" behind the graph, fading out at the edges */
+.kgh .hero::before {
+  content: "";
+  position: absolute;
+  inset: -2.5rem -4vw -1rem;
+  background-image: radial-gradient(rgba(67, 133, 154, 0.2) 1px, transparent 1.6px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse at 62% 45%, #000 15%, transparent 68%);
+  mask-image: radial-gradient(ellipse at 62% 45%, #000 15%, transparent 68%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.kgh .hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.kgh .hero h1 {
+  font-size: clamp(2.6rem, 6vw, 3.9rem);
+  letter-spacing: -0.015em;
+}
+
+/* coral rule under the name, as wide as the name itself */
+.kgh .hero h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 0.45rem;
+  border-radius: 2px;
+  background: var(--coral);
+}
+
+.kgh .hero h1 {
+  display: inline-block;
+}
+
+.kgh .hero .tagline {
+  margin-top: 0.45rem;
+  font-size: clamp(1.02rem, 2vw, 1.2rem);
+  color: var(--coral-ink);
+}
+
+.kgh .hero .intro {
+  margin: 1.1rem 0 0;
+  max-width: 34rem;
+  font-size: 1.03rem;
+  line-height: 1.55;
+}
+
+.kgh .more-link {
+  margin-top: 0.75rem;
+  font-family: var(--ui);
+  font-size: 0.95rem;
+}
+
+.kgh .graph-wrap .kg-compact { display: none; }
+
+@media (min-width: 1100px) {
+  .kgh .hero {
+    aspect-ratio: 1080 / 470;
+  }
+
+  .kgh .graph-wrap {
+    position: absolute;
+    inset: 0;
+  }
+
+  .kgh .hero-text {
+    width: 44%;
+    padding-top: 0.25rem;
+  }
+}
+
+@media (max-width: 1099px) {
+  .kgh .graph-wrap .kg-wide { display: none; }
+  .kgh .graph-wrap .kg-compact { display: block; }
+
+  .kgh .graph-wrap {
+    width: min(460px, 100%);
+    margin: 1.5rem auto 0;
+  }
+
+  .kgh .hero::before {
+    -webkit-mask-image: radial-gradient(ellipse at 50% 70%, #000 15%, transparent 65%);
+    mask-image: radial-gradient(ellipse at 50% 70%, #000 15%, transparent 65%);
+  }
+}
+
+@media (max-width: 700px) {
+  .kgh .hero-text { text-align: center; }
+  .kgh .hero .intro { margin-left: auto; margin-right: auto; }
+}
+
+/* The intro paragraph as a graph node: same look as the cards below,
+   with a node dot on its right edge where the :description edge lands. */
+.kgh .hero .desc-box {
+  position: relative;
+  max-width: none;
+  padding: 0.85rem 1.1rem 0.8rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(36, 50, 58, 0.04);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.kgh .hero .desc-box::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid var(--coral);
+}
+
+@media (max-width: 1099px) {
+  /* no edge on the compact layout, so no dot either */
+  .kgh .hero .desc-box::after { display: none; }
+}
+
+/* ---------- The graph ---------- */
+
+.kgh .kg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* professional edges are teal, personal ones coral */
+.kg .kg-pro { --edge: var(--teal); --pred: var(--teal-ink); }
+.kg .kg-per,
+.kg .kg-member { --edge: var(--coral); --pred: var(--coral-ink); }
+
+.kg .kg-edge {
+  fill: none;
+  stroke: var(--edge);
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: kg-draw 0.9s ease-out both;
+  animation-delay: var(--d, 0s);
+}
+
+.kg .kg-member .kg-edge {
+  stroke-width: 1.5;
+  opacity: 0.8;
+}
+
+/* the arrowhead is part of the path, so fade it in as the line draws */
+@keyframes kg-draw {
+  0% { stroke-dashoffset: 1; opacity: 0; }
+  55% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+.kg .kg-node {
+  fill: #fff;
+  stroke: var(--edge);
+  stroke-width: 2.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: kg-pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+  animation-delay: calc(var(--d, 0s) + 0.55s);
+  transition: fill 0.2s;
+}
+
+@keyframes kg-pop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+.kg .kg-label {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: bold;
+  fill: #24323a;
+  paint-order: stroke;
+  stroke: #f7f9fa;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+  animation: kg-fade 0.6s ease-out both;
+  animation-delay: calc(var(--d, 0s) + 0.6s);
+}
+
+.kg .kg-member .kg-label { font-weight: normal; }
+
+.kg .kg-pred {
+  font-family: var(--mono);
+  fill: var(--pred);
+  paint-order: stroke;
+  stroke: #f7f9fa;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  animation: kg-fade 0.6s ease-out both;
+  animation-delay: calc(var(--d, 0s) + 0.75s);
+}
+
+.kg-wide .kg-label { font-size: 18px; }
+.kg-wide .kg-member .kg-label { font-size: 15.5px; }
+.kg-wide .kg-pred { font-size: 13px; }
+.kg-compact .kg-label { font-size: 17px; }
+.kg-compact .kg-member .kg-label { font-size: 15px; }
+.kg-compact .kg-pred { font-size: 12.5px; }
+
+@keyframes kg-fade {
+  from { opacity: 0; }
+}
+
+.kg .kg-spoke:hover .kg-edge { stroke-width: 2.8; }
+.kg .kg-spoke:hover .kg-node { fill: var(--edge); }
+
+.kg .kg-pulse { opacity: 0; }
+
+.kg .kg-initials {
+  font-family: Georgia, "Times New Roman", serif;
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+.kg .kg-orbit {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 1.4;
+  stroke-dasharray: 2 9;
+  stroke-linecap: round;
+  opacity: 0.55;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: kg-spin 80s linear infinite;
+}
+
+@keyframes kg-spin { to { transform: rotate(360deg); } }
+
+/* ---------- Groups as connected nodes ----------
+   Each group label is a parent node; a rail runs from it and branches down
+   to each card, whose top edge carries a node dot. */
+
+.kgh .group {
+  --accent: var(--teal);
+  position: relative;
+  margin-top: 1.4rem;
+}
+
+.kgh .group.g-media { --accent: var(--coral); }
+.kgh .group.g-build { --accent: var(--slate); }
+
+.kgh .group h2 {
+  position: relative;
+  margin: 0;
+  padding-left: 24px;
+  font-family: var(--ui);
+  font-size: 0.8rem;
+  line-height: 16px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+}
+
+.kgh .group h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.kgh .group h2 .pred {
+  margin-left: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.kgh .tiles {
+  --gap: 1rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr));
+  gap: var(--gap);
+  margin-top: 26px;
+}
+
+.kgh .tile {
+  position: relative;
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.8rem 1.1rem 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(36, 50, 58, 0.04);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+
+.kgh .tile:hover,
+.kgh .tile:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(36, 50, 58, 0.09);
+}
+
+.kgh .tile strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 1.08rem;
+  color: var(--teal-ink);
+}
+
+.kgh .tile span {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.42;
+}
+
+.kgh .tile .ext {
+  display: inline;
+  font-family: var(--ui);
+  font-size: 0.85em;
+  color: var(--coral-ink);
+}
+
+/* node dot on each card */
+.kgh .tile::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid var(--accent);
+  box-sizing: border-box;
+  transition: background 0.18s, transform 0.18s;
+}
+
+.kgh .tile:hover::after,
+.kgh .tile:focus-visible::after {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+/* brand icons for the channel and podcast */
+.kgh .tile-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  transform: translateY(-50%);
+  background: center / contain no-repeat;
+  pointer-events: none;
+}
+
+.kgh .tile-oe .tile-icon { background-image: url("images/logo.png"); opacity: 0.45; }
+.kgh .tile-ppp .tile-icon { background-image: url("images/ppp-icon.svg"); }
+.kgh .tile-oe,
+.kgh .tile-ppp {
+  overflow: visible;
+  padding-right: 5rem;
+}
+
+/* Wide: a tree. Rail from the label, a branch down to each card. */
+@media (min-width: 760px) {
+  .kgh .tiles::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 5px;
+    /* stop at the last card's branch */
+    right: calc((100% - (var(--n, 3) - 1) * var(--gap)) / var(--n, 3) - 1.1rem - 7px);
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.55;
+  }
+
+  .kgh .group::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    width: 2px;
+    height: 24px;
+    background: var(--accent);
+    opacity: 0.55;
+  }
+
+  .kgh .tile::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: calc(1.1rem + 5px);
+    width: 2px;
+    height: 12px;
+    background: var(--accent);
+    opacity: 0.55;
+  }
+
+  .kgh .tile::after {
+    top: -6px;
+    left: 1.1rem;
+  }
+}
+
+/* Narrow: a spine down the left with a branch to each card. */
+@media (max-width: 759px) {
+  .kgh .tiles {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 0.7rem;
+    padding-left: 1.7rem;
+  }
+
+  .kgh .tiles::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -0.9rem;
+    bottom: 1.6rem;
+    width: 2px;
+    background: var(--accent);
+    opacity: 0.55;
+  }
+
+  .kgh .tile::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.7rem + 6px);
+    top: 1.35rem;
+    width: calc(1.7rem - 6px);
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.55;
+  }
+
+  .kgh .tile::after {
+    left: -6px;
+    top: calc(1.35rem - 5px);
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.kgh .home-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.75rem 2rem;
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--ui);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.kgh .ttl {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+  white-space: pre;
+}
+
+.kgh .ttl .p { color: var(--teal-ink); }
+.kgh .ttl .o { color: var(--coral-ink); }
+
+/* ---------- Respect reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .kg *,
+  .kgh .tile,
+  .kgh .tile::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .kg .kg-pulses { display: none; }
 }

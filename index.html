@@ -3,44 +3,313 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casey Hart | Philosophy & AI</title>
+  <title>Casey Hart | Ontologist, Philosopher, Programmer</title>
   <meta name="description" content="Casey Hart is an ontologist, philosopher, and programmer working on ontology, artificial intelligence, and knowledge graphs. Talks, consulting, podcast, and projects.">
-  <meta property="og:title" content="Casey Hart | Philosophy & AI">
-  <meta property="og:description" content="Ontologist, philosopher, and programmer. Talks, consulting, podcast, and projects on ontology, AI, and knowledge graphs.">
+  <meta property="og:title" content="Casey Hart | Ontologist, Philosopher, Programmer">
+  <meta property="og:description" content="Ontology, artificial intelligence, and knowledge graphs. Talks, consulting, podcast, and projects.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://caseyhart.com/">
-  <meta property="og:image" content="https://caseyhart.com/images/logo.png">
+  <meta property="og:image" content="https://caseyhart.com/images/casey_headshot_square.jpg">
+  <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="style.css">
+  <!-- Structured data: tells search engines who this page is about (schema.org Person). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Casey Hart",
+    "url": "https://caseyhart.com/",
+    "image": "https://caseyhart.com/images/casey_headshot_square.jpg",
+    "jobTitle": "Ontologist",
+    "knowsAbout": ["Ontology", "Knowledge graphs", "Artificial intelligence", "Philosophy"],
+    "sameAs": [
+      "https://www.linkedin.com/in/casey-hart-7a032ba4/",
+      "https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA",
+      "https://www.youtube.com/@PhilosophyProgramsPromptsPod"
+    ]
+  }
+  </script>
 </head>
-<body>
-  <main class="page">
-    <img src="images/logo.png" alt="Philosophy & AI logo" class="hero-logo">
+<body class="kgh">
+  <main class="home">
 
-    <h1>Casey Hart</h1>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Casey Hart</h1>
 
-    <p class="tagline">
-      Ontologist • Philosopher • Programmer
-    </p>
+        <p class="intro desc-box">
+          I&rsquo;m a PhD philosopher who somehow ended up building knowledge graphs
+          for a living. The urge to teach never went away, so now I make YouTube videos and podcast about
+	  important topics in philosophy and/or AI. I especially like carefully reconstructing arguments
+	  in ways that clarify things. And away from the keyboard and the
+          microphone? You&rsquo;ll probably find me on our little &lsquo;farm&rsquo; in
+          the Pacific Northwest.
+        </p>
 
-    <p class="intro">
-      Writing, building, and thinking about ontology, artificial intelligence,
-      philosophy, and knowledge graphs.
-    </p>
+        <p class="more-link"><a href="about.html">More about me &rarr;</a></p>
+      </div>
 
-    <nav class="links">
-      <a href="https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://www.linkedin.com/in/casey-hart-7a032ba4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="Casey_Hart_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      <a href="https://www.youtube.com/@PhilosophyProgramsPromptsPod" target="_blank" rel="noopener noreferrer">Podcast</a>
-      <a href="projects.html">Projects</a>
-    </nav>
+      <div class="graph-wrap">
+        <!-- Two versions of the same graph: kg-wide for large screens (the name and intro
+             sit in its open upper-left corner) and kg-compact for tablets and phones.
+             Labels and predicates are plain text; edit them in both. -->
+        <svg class="kg kg-wide" viewBox="0 0 1080 470" role="img" aria-labelledby="kg-wide-t kg-wide-d">
+          <title id="kg-wide-t">Casey Hart, as a small knowledge graph</title>
+          <desc id="kg-wide-d">Casey creates YouTube videos and a podcast, studied philosophy, has the job title ontologist, thinks about AI, forages for mushrooms, plays tennis, and loves his family: his wife and kids.</desc>
+          <defs>
+            <clipPath id="kg-wide-me"><circle cx="700" cy="178" r="76"/></clipPath>
+            <radialGradient id="kg-wide-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#43859a" stop-opacity="0.15"/>
+              <stop offset="1" stop-color="#43859a" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="kg-wide-ph" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#43859a"/><stop offset="1" stop-color="#2b6478"/>
+            </linearGradient>
+            <marker id="kg-wide-ar-pro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#43859a"/></marker>
+            <marker id="kg-wide-ar-per" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#ee6f5f"/></marker>
+          </defs>
+          <circle cx="700" cy="178" r="175" fill="url(#kg-wide-glow)" aria-hidden="true"/>
+          <g class="kg-spoke kg-pro" style="--d:0.30s">
+            <path id="kg-wide-e-create" class="kg-edge" pathLength="1" d="M700.0,91.0 C707.3,73.8 705.1,53.6 700.0,39.0" marker-end="url(#kg-wide-ar-pro)"/>
+            <text class="kg-pred" x="718.3" y="68.6" text-anchor="middle">:createsType</text>
+            <circle class="kg-node" cx="700" cy="26" r="9"/>
+            <text class="kg-label" x="717.0" y="32.3" text-anchor="start">YouTube Video</text>
+          </g>
+          <g class="kg-spoke kg-pro" style="--d:0.43s">
+            <path id="kg-wide-e-phil" class="kg-edge" pathLength="1" d="M778.4,140.2 C814.6,98.9 871.1,78.8 916.3,73.6" marker-end="url(#kg-wide-ar-pro)"/>
+            <text class="kg-pred" x="838.0" y="85.6" text-anchor="middle">:studies</text>
+            <circle class="kg-node" cx="928" cy="68" r="9"/>
+            <text class="kg-label" x="945.0" y="74.3" text-anchor="start">Philosophy</text>
+          </g>
+          <g class="kg-spoke kg-pro" style="--d:0.56s">
+            <path id="kg-wide-e-onto" class="kg-edge" pathLength="1" d="M786.9,182.8 C839.3,163.9 899.4,173.7 942.0,191.3" marker-end="url(#kg-wide-ar-pro)"/>
+            <text class="kg-pred" x="868.9" y="164.3" text-anchor="middle">:jobTitle</text>
+            <circle class="kg-node" cx="955" cy="192" r="9"/>
+            <text class="kg-label" x="972.0" y="198.3" text-anchor="start">Ontologist</text>
+          </g>
+          <g class="kg-spoke kg-pro" style="--d:0.69s">
+            <path id="kg-wide-e-ai" class="kg-edge" pathLength="1" d="M775.0,222.0 C832.2,229.5 882.9,267.0 913.8,303.4" marker-end="url(#kg-wide-ar-pro)"/>
+            <text class="kg-pred" x="861.2" y="244.6" text-anchor="middle">:thinksAbout</text>
+            <circle class="kg-node" cx="925" cy="310" r="9"/>
+            <text class="kg-label" x="942.0" y="316.3" text-anchor="start">AI</text>
+          </g>
+          <g class="kg-spoke kg-per" style="--d:0.82s">
+            <path id="kg-wide-e-mush" class="kg-edge" pathLength="1" d="M739.2,255.7 C742.6,307.2 773.3,354.7 804.1,384.4" marker-end="url(#kg-wide-ar-per)"/>
+            <text class="kg-pred" x="749.2" y="338.9" text-anchor="middle">:foragesForType</text>
+            <circle class="kg-node" cx="810" cy="396" r="9"/>
+            <text class="kg-label" x="827.0" y="402.3" text-anchor="start">Mushroom</text>
+          </g>
+          <g class="kg-spoke kg-per" style="--d:0.95s">
+            <path id="kg-wide-e-family" class="kg-edge" pathLength="1" d="M655.0,252.5 C648.1,300.7 615.8,343.2 584.7,368.9" marker-end="url(#kg-wide-ar-per)"/>
+            <text class="kg-pred" x="640.6" y="330.7" text-anchor="middle">:loves</text>
+            <circle class="kg-node" cx="578" cy="380" r="9"/>
+            <text class="kg-label" x="561.0" y="386.3" text-anchor="end">Family</text>
+          </g>
+          <g class="kg-spoke kg-member" style="--d:1.08s">
+            <path id="kg-wide-e-wife" class="kg-edge" pathLength="1" d="M568.5,387.3 C557.0,407.4 535.4,420.6 517.1,426.5"/>
+            <circle class="kg-node" cx="510" cy="432" r="6.5"/>
+            <text class="kg-label" x="510.0" y="460.9" text-anchor="middle">Wife</text>
+          </g>
+          <g class="kg-spoke kg-member" style="--d:1.21s">
+            <path id="kg-wide-e-kids" class="kg-edge" pathLength="1" d="M587.4,387.5 C599.1,409.2 621.8,423.6 641.0,430.4"/>
+            <circle class="kg-node" cx="648" cy="436" r="6.5"/>
+            <text class="kg-label" x="648.0" y="464.9" text-anchor="middle">Kids</text>
+          </g>
+          <g class="kg-spoke kg-per" style="--d:1.34s">
+            <path id="kg-wide-e-tennis" class="kg-edge" pathLength="1" d="M625.1,222.3 C565.3,303.4 465.0,349.0 383.2,365.4" marker-end="url(#kg-wide-ar-per)"/>
+            <text class="kg-pred" x="519.3" y="334.4" text-anchor="middle">:plays</text>
+            <circle class="kg-node" cx="372" cy="372" r="9"/>
+            <text class="kg-label" x="372.0" y="403.4" text-anchor="middle">Tennis</text>
+          </g>
+          <!-- Edge from the photo to the intro box; js/hero-edge.js positions it. -->
+          <g class="kg-spoke kg-per kg-desc" style="--d:0.2s" aria-hidden="true">
+            <path class="kg-edge" pathLength="1" d="" marker-end="url(#kg-wide-ar-per)"/>
+            <text class="kg-pred" text-anchor="middle"></text>
+          </g>
+          <g class="kg-pulses" aria-hidden="true">
+            <circle r="4" class="kg-pulse" fill="#43859a">
+              <animateMotion dur="13.0s" begin="2.2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.28;1" calcMode="linear"><mpath href="#kg-wide-e-onto"/></animateMotion>
+              <animate attributeName="opacity" dur="13.0s" begin="2.2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.25;0.29;1"/>
+            </circle>
+            <circle r="4" class="kg-pulse" fill="#ee6f5f">
+              <animateMotion dur="13.0s" begin="4.8s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.28;1" calcMode="linear"><mpath href="#kg-wide-e-family"/></animateMotion>
+              <animate attributeName="opacity" dur="13.0s" begin="4.8s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.25;0.29;1"/>
+            </circle>
+            <circle r="4" class="kg-pulse" fill="#43859a">
+              <animateMotion dur="13.0s" begin="7.4s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.28;1" calcMode="linear"><mpath href="#kg-wide-e-create"/></animateMotion>
+              <animate attributeName="opacity" dur="13.0s" begin="7.4s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.25;0.29;1"/>
+            </circle>
+            <circle r="4" class="kg-pulse" fill="#ee6f5f">
+              <animateMotion dur="13.0s" begin="10.0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.28;1" calcMode="linear"><mpath href="#kg-wide-e-mush"/></animateMotion>
+              <animate attributeName="opacity" dur="13.0s" begin="10.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.25;0.29;1"/>
+            </circle>
+            <circle r="4" class="kg-pulse" fill="#43859a">
+              <animateMotion dur="13.0s" begin="12.6s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.28;1" calcMode="linear"><mpath href="#kg-wide-e-ai"/></animateMotion>
+              <animate attributeName="opacity" dur="13.0s" begin="12.6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.25;0.29;1"/>
+            </circle>
+          </g>
+          <g class="kg-me">
+            <circle class="kg-orbit" cx="700" cy="178" r="96"/>
+            <circle cx="700" cy="178" r="83" fill="#fff"/>
+            <circle cx="700" cy="178" r="84.5" fill="none" stroke="#43859a" stroke-opacity="0.35" stroke-width="1.5"/>
+            <circle cx="700" cy="178" r="76" fill="url(#kg-wide-ph)"/>
+            <text x="700" y="195" text-anchor="middle" class="kg-initials" style="font-size:47px">CH</text>
+            <image href="images/casey_headshot_square.jpg" x="624" y="102" width="152" height="152" clip-path="url(#kg-wide-me)" preserveAspectRatio="xMidYMid slice"/>
+          </g>
+        </svg>
+        <svg class="kg kg-compact" viewBox="0 0 400 490" role="img" aria-labelledby="kg-compact-t kg-compact-d">
+          <title id="kg-compact-t">Casey Hart, as a small knowledge graph</title>
+          <desc id="kg-compact-d">Casey creates YouTube videos and a podcast, studied philosophy, has the job title ontologist, thinks about AI, forages for mushrooms, plays tennis, and loves his family: his wife and kids.</desc>
+          <defs>
+            <clipPath id="kg-compact-me"><circle cx="192" cy="225" r="66"/></clipPath>
+            <radialGradient id="kg-compact-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#43859a" stop-opacity="0.15"/>
+              <stop offset="1" stop-color="#43859a" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="kg-compact-ph" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#43859a"/><stop offset="1" stop-color="#2b6478"/>
+            </linearGradient>
+            <marker id="kg-compact-ar-pro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#43859a"/></marker>
+            <marker id="kg-compact-ar-per" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#ee6f5f"/></marker>
+          </defs>
+          <circle cx="192" cy="225" r="152" fill="url(#kg-compact-glow)" aria-hidden="true"/>
+          <g class="kg-spoke kg-pro" style="--d:0.30s">
+            <path id="kg-compact-e-create" class="kg-edge" pathLength="1" d="M193.6,148.0 C182.2,114.4 186.6,75.1 195.7,47.0" marker-end="url(#kg-compact-ar-pro)"/>
+            <text class="kg-pred" x="173.9" y="99.6" text-anchor="middle">:createsType</text>
+            <circle class="kg-node" cx="196" cy="34" r="9"/>
+            <text class="kg-label" x="179.0" y="40.0" text-anchor="end">YouTube Video</text>
+          </g>
+          <g class="kg-spoke kg-pro" style="--d:0.43s">
+            <path id="kg-compact-e-phil" class="kg-edge" pathLength="1" d="M244.3,168.5 C258.9,133.7 290.1,105.5 317.2,89.5" marker-end="url(#kg-compact-ar-pro)"/>
+            <text class="kg-pred" x="266.4" y="117.4" text-anchor="middle">:studies</text>
+            <circle class="kg-node" cx="326" cy="80" r="9"/>
+            <text class="kg-label" x="326.0" y="61.0" text-anchor="middle">Philosophy</text>
+          </g>
+          <g class="kg-spoke kg-pro" style="--d:0.56s">
+            <path id="kg-compact-e-onto" class="kg-edge" pathLength="1" d="M269.0,225.5 C290.2,218.0 315.1,220.4 333.0,225.9" marker-end="url(#kg-compact-ar-pro)"/>
+            <text class="kg-pred" x="302.3" y="212.1" text-anchor="middle">:jobTitle</text>
+            <circle class="kg-node" cx="346" cy="226" r="9"/>
+            <text class="kg-label" x="346.0" y="256.6" text-anchor="middle">Ontologist</text>
+          </g>
+          <g class="kg-spoke kg-pro" style="--d:0.69s">
+            <path id="kg-compact-e-ai" class="kg-edge" pathLength="1" d="M246.2,279.7 C274.5,293.0 296.6,319.8 308.8,342.8" marker-end="url(#kg-compact-ar-pro)"/>
+            <text class="kg-pred" x="292.9" y="302.7" text-anchor="middle">:thinksAbout</text>
+            <circle class="kg-node" cx="318" cy="352" r="9"/>
+            <text class="kg-label" x="335.0" y="357.9" text-anchor="start">AI</text>
+          </g>
+          <g class="kg-spoke kg-per" style="--d:0.82s">
+            <path id="kg-compact-e-mush" class="kg-edge" pathLength="1" d="M207.7,300.4 C200.9,347.6 216.4,398.4 235.4,433.3" marker-end="url(#kg-compact-ar-per)"/>
+            <text class="kg-pred" x="199.0" y="378.5" text-anchor="middle">:foragesForType</text>
+            <circle class="kg-node" cx="238" cy="446" r="9"/>
+            <text class="kg-label" x="238.0" y="476.6" text-anchor="middle">Mushroom</text>
+          </g>
+          <g class="kg-spoke kg-per" style="--d:0.95s">
+            <path id="kg-compact-e-family" class="kg-edge" pathLength="1" d="M147.8,288.1 C140.8,314.3 121.2,337.4 103.5,351.4" marker-end="url(#kg-compact-ar-per)"/>
+            <text class="kg-pred" x="140.4" y="336.2" text-anchor="middle">:loves</text>
+            <circle class="kg-node" cx="96" cy="362" r="9"/>
+            <text class="kg-label" x="79.0" y="367.9" text-anchor="end">Family</text>
+          </g>
+          <g class="kg-spoke kg-member" style="--d:1.08s">
+            <path id="kg-compact-e-wife" class="kg-edge" pathLength="1" d="M90.0,372.4 C86.0,393.9 71.9,413.8 58.5,426.2"/>
+            <circle class="kg-node" cx="54" cy="434" r="6.5"/>
+            <text class="kg-label" x="54.0" y="462.1" text-anchor="middle">Wife</text>
+          </g>
+          <g class="kg-spoke kg-member" style="--d:1.21s">
+            <path id="kg-compact-e-kids" class="kg-edge" pathLength="1" d="M102.8,371.9 C109.4,397.0 128.0,419.1 144.9,432.6"/>
+            <circle class="kg-node" cx="150" cy="440" r="6.5"/>
+            <text class="kg-label" x="150.0" y="468.1" text-anchor="middle">Kids</text>
+          </g>
+          <g class="kg-spoke kg-per" style="--d:1.34s">
+            <path id="kg-compact-e-tennis" class="kg-edge" pathLength="1" d="M124.3,188.4 C97.9,184.4 73.1,167.9 57.4,152.2" marker-end="url(#kg-compact-ar-per)"/>
+            <text class="kg-pred" x="80.6" y="190.6" text-anchor="middle">:plays</text>
+            <circle class="kg-node" cx="46" cy="146" r="9"/>
+            <text class="kg-label" x="46.0" y="127.0" text-anchor="middle">Tennis</text>
+          </g>
+          <g class="kg-pulses" aria-hidden="true">
+            <circle r="4" class="kg-pulse" fill="#43859a">
+              <animateMotion dur="7.8s" begin="2.2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.28;1" calcMode="linear"><mpath href="#kg-compact-e-onto"/></animateMotion>
+              <animate attributeName="opacity" dur="7.8s" begin="2.2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.25;0.29;1"/>
+            </circle>
+            <circle r="4" class="kg-pulse" fill="#ee6f5f">
+              <animateMotion dur="7.8s" begin="4.8s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.28;1" calcMode="linear"><mpath href="#kg-compact-e-family"/></animateMotion>
+              <animate attributeName="opacity" dur="7.8s" begin="4.8s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.25;0.29;1"/>
+            </circle>
+            <circle r="4" class="kg-pulse" fill="#43859a">
+              <animateMotion dur="7.8s" begin="7.4s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.28;1" calcMode="linear"><mpath href="#kg-compact-e-create"/></animateMotion>
+              <animate attributeName="opacity" dur="7.8s" begin="7.4s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.25;0.29;1"/>
+            </circle>
+          </g>
+          <g class="kg-me">
+            <circle class="kg-orbit" cx="192" cy="225" r="86"/>
+            <circle cx="192" cy="225" r="73" fill="#fff"/>
+            <circle cx="192" cy="225" r="74.5" fill="none" stroke="#43859a" stroke-opacity="0.35" stroke-width="1.5"/>
+            <circle cx="192" cy="225" r="66" fill="url(#kg-compact-ph)"/>
+            <text x="192" y="240" text-anchor="middle" class="kg-initials" style="font-size:41px">CH</text>
+            <image href="images/casey_headshot_square.jpg" x="126" y="159" width="132" height="132" clip-path="url(#kg-compact-me)" preserveAspectRatio="xMidYMid slice"/>
+          </g>
+        </svg>
+      </div>
+    </section>
 
-    <p class="links-label">Work with me</p>
-    <nav class="links links-secondary" aria-label="Work with me">
-      <a href="speaking.html">Speaking</a>
-      <a href="consulting/">Consulting</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <section class="group g-work" aria-labelledby="g-work">
+      <h2 id="g-work">Work with me <span class="pred" aria-hidden="true">:offers</span></h2>
+      <div class="tiles" style="--n:3">
+        <a class="tile" href="speaking.html">
+          <strong>Speaking</strong>
+          <span>Talks, workshops, and interviews about ontology, philosophy, and AI.</span>
+        </a>
+        <a class="tile" href="consulting/">
+          <strong>Casey Hart Consulting</strong>
+          <span>Need help building an ontology? Want to have systems that understand your data?
+	  I can help.</span>
+        </a>
+        <a class="tile" href="contact.html">
+          <strong>Contact</strong>
+          <span>Get in touch with me. I have met so many cool people through the internet. I hope you're next!</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="group g-media" aria-labelledby="g-media">
+      <h2 id="g-media">Watch &amp; listen <span class="pred" aria-hidden="true">:hosts</span></h2>
+      <div class="tiles" style="--n:2">
+        <a class="tile tile-oe" href="https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA" target="_blank" rel="noopener noreferrer">
+          <strong>Ontology Explained <span class="ext">&nearr;</span></strong>
+          <span>Check out my YouTube channel philosophy and AI.</span>
+          <i class="tile-icon" aria-hidden="true"></i>
+        </a>
+        <a class="tile tile-ppp" href="https://www.youtube.com/@PhilosophyProgramsPromptsPod" target="_blank" rel="noopener noreferrer">
+          <strong>Philosophy, Programs, and Prompts <span class="ext">&nearr;</span></strong>
+          <span>I do a podcast with 'X-Risk Denialist' Carl Brown.</span>
+          <i class="tile-icon" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="group g-build" aria-labelledby="g-build">
+      <h2 id="g-build">Projects &amp; background <span class="pred" aria-hidden="true">:seeAlso</span></h2>
+      <div class="tiles" style="--n:3">
+        <a class="tile" href="projects.html">
+          <strong>Projects</strong>
+          <span>What I&rsquo;m building (mostly ontology apps).</span>
+        </a>
+        <a class="tile" href="https://www.linkedin.com/in/casey-hart-7a032ba4/" target="_blank" rel="noopener noreferrer">
+          <strong>LinkedIn <span class="ext">&nearr;</span></strong>
+          <span>Professional background and experience.</span>
+        </a>
+        <a class="tile" href="Casey_Hart_Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <strong>Resume <span class="ext">&nearr;</span></strong>
+          <span>Do people still use resumes? Here's mine.</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="home-footer">
+      <span>&copy; Casey Hart</span>
+      <pre class="ttl" aria-hidden="true">:CaseyHart <span class="p">a</span> <span class="o">:Ontologist, :Philosopher, :Father, :PickleballPlayer</span> ;
+    <span class="p">:livesIn</span> <span class="o">:PacificNorthwest</span> .</pre>
+    </footer>
   </main>
+  <script src="js/hero-edge.js"></script>
 </body>
 </html>
