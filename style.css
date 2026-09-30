@@ -83,3 +83,171 @@ h1 {
 .links a:hover {
   background: var(--coral);
 }
+
+/* ---------- Added: site nav, secondary links, inner-page content ---------- */
+
+:root {
+  --blue-dark: #2b6478;
+}
+
+.links-label {
+  margin: 2.5rem 0 0.75rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-dark);
+}
+
+.links-secondary a {
+  background: transparent;
+  color: var(--blue-dark);
+  border: 2px solid var(--blue);
+  padding: calc(0.75rem - 2px) calc(1.2rem - 2px);
+}
+
+.links-secondary a:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: white;
+}
+
+.site-nav {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.site-nav a {
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-nav a:hover {
+  color: var(--coral);
+}
+
+.site-nav nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.site-nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--coral);
+}
+
+.site-nav-home {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+
+/* Inner pages: left-aligned reading layout */
+.page.prose {
+  text-align: left;
+  padding-top: 3rem;
+}
+
+.page.prose h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+}
+
+.page.prose .tagline {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+}
+
+.page.prose .intro {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 680px;
+}
+
+.page.prose h2 {
+  margin: 3rem 0 0.75rem;
+  color: var(--blue-dark);
+  font-size: 1.7rem;
+}
+
+.page.prose p,
+.page.prose li {
+  line-height: 1.65;
+  font-size: 1.1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d9e2e6;
+  border-top: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 1.25rem 1.4rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.4rem;
+  background: var(--blue-dark);
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: var(--coral);
+}
+
+/* Placeholder text that still needs your input */
+.todo {
+  background: #fff3b0;
+  color: #5a4a00;
+  padding: 0 0.25em;
+  border-radius: 3px;
+}
+
+.page-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #d9e2e6;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #55666e;
+}
+
+.page-footer a {
+  color: var(--blue-dark);
+}
+
+.page.prose a:not(.button) {
+  color: var(--blue-dark);
+}
+
+.page.prose a:not(.button):hover {
+  color: var(--coral);
+}
