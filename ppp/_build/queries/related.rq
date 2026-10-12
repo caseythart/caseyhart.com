@@ -1,0 +1,10 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# Pairs of episodes that cite at least one of the same sources, with what they share.
+SELECT ?ep ?other (COUNT(DISTINCT ?src) AS ?shared) (GROUP_CONCAT(DISTINCT STR(?srcName); separator="|") AS ?names) WHERE {
+  ?ep a :PodcastEpisode ; :cites ?src .
+  ?other a :PodcastEpisode ; :cites ?src .
+  FILTER (?ep != ?other)
+  OPTIONAL { ?src :name ?srcName }
+}
+GROUP BY ?ep ?other

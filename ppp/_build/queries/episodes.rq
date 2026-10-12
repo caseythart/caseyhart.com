@@ -1,0 +1,15 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# One row per episode, in episode order (episodeNumber is xsd:decimal, so 3.5 sorts between 3 and 4).
+SELECT ?ep ?number ?name ?date ?duration ?youtube ?spotify ?apple ?description WHERE {
+  ?ep a :PodcastEpisode ;
+      :episodeNumber ?number ;
+      :name ?name .
+  OPTIONAL { ?ep :releaseDate/:universalDate ?date }
+  OPTIONAL { ?ep :hasDuration/:duration ?duration }
+  OPTIONAL { ?ep :url-Youtube ?youtube }
+  OPTIONAL { ?ep :url-Spotify ?spotify }
+  OPTIONAL { ?ep :url-ApplePodcasts ?apple }
+  OPTIONAL { ?ep :description ?description }
+}
+ORDER BY ?number

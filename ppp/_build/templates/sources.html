@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Sources | Philosophy, Programs, and Prompts{% endblock %}
+{% block description %}Every article, paper, book and video cited on Philosophy, Programs, and Prompts, with the episodes that cite each one.{% endblock %}
+{% block path %}sources/{% endblock %}
+{% block content %}
+    <section class="sources-page">
+      <div class="wrap narrow">
+        <p class="crumbs"><a href="{{ root }}#episodes">&larr; All episodes</a></p>
+        <header class="ep-head">
+          <p class="eyebrow"><span class="prompt" aria-hidden="true">&gt;_</span> Bibliography</p>
+          <h1>Sources</h1>
+          <p class="lead">Every source cited in our show notes: {{ sources | length }} so far, across {{ episodes | selectattr("sources") | list | length }} episodes. Most-cited first.
+            It all comes from <a href="{{ root }}{{ data_file }}">one Turtle file</a>, so you can query it yourself.</p>
+        </header>
+
+        <ol class="source-list biblio">
+          {% for s in sources %}
+          <li class="source" id="{{ s.id }}">
+            {% if s.url %}<a class="src-name" href="{{ s.url }}">{{ s.name }}</a>{% else %}<span class="src-name">{{ s.name }}</span>{% endif %}
+            <p class="src-meta">
+              <span class="kind">{{ s.kind }}</span>
+              {% if s.url %}<span>{{ s.url | domain }}</span>{% endif %}
+              {% for who in s.by | sort %}<span class="tag">{{ who }}&rsquo;s</span>{% endfor %}
+            </p>
+            <p class="cited-in">Cited in
+              {% for e in s.episodes %}<a class="chip{% if s.episodes | length > 1 %} chip-strong{% endif %}" href="{{ root }}episode/{{ e.slug }}/" title="{{ e.name }}">Ep {{ e.number }}</a>{% endfor %}
+            </p>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+{% endblock %}

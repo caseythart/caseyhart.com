@@ -1,0 +1,2469 @@
+@prefix : <https://caseyhart.com/ontology/dense/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix gist: <https://ontologies.semanticarts.com/o/gistCore#> .
+
+### This file contains information relevant to Philosophy, Programs, and Prompts.
+
+:PhilosophyProgramsAndPrompts a :Podcast ;
+			      :createdBy :CaseyHart, :CarlBrown ;
+			      :creationDate [:universalDate "2026-05-01"^^xsd:date] ;
+			      :url-ApplePodcasts "https://podcasts.apple.com/us/podcast/philosophy-programs-and-prompts/id6793816529"^^xsd:anyURI ;
+			      :url-Youtube "https://www.youtube.com/channel/UCOVFG_uMBQ1psEIWDdLUOkQ"^^xsd:anyURI ;
+			      :url-Spotify "https://open.spotify.com/show/033SUUlFZocpDYls3H8BQj"^^xsd:anyURI ;
+			      rdfs:comment """Real technologists who actually build things and actually read philosophy talk about AI without trying to sell you anything.""" ;
+.
+
+:PPP-Episode1 a :PodcastEpisode ;
+	      :name "Artificial General Intelligence? Wanna Bet?" ;
+	      :hasDuration [:duration "PT48M38S"^^xsd:duration] ;
+	      :episodeNumber "1"^^xsd:decimal ;
+	      :releaseDate [:universalDate "2026-07-09"^^xsd:date ] ;
+	      :partOf :PhilosophyProgramsAndPrompts ;
+	      :url-Youtube "https://www.youtube.com/watch?v=UvoRJNfftyc"^^xsd:anyURI ;
+	      :url-Spotify "https://open.spotify.com/episode/53Sb8Y0HGDGEu5uUxKOG0I"^^xsd:anyURI ;
+	      :url-ApplePodcasts "https://podcasts.apple.com/us/podcast/the-agi-over-under/id6793816529?i=1000777987833"^^xsd:anyURI ;
+	      :description """Welcome to the very first episode of Philosophy, Programs and Prompts!
+
+In this inaugural episode, hosts Casey Hart (a PhD ontologist building graph data models from  @OntologyExplained  ) and Carl Brown (a veteran software engineer from  @InternetOfBugs   ) team up to cut through the massive corporate hype and apocalyptic doom surrounding Artificial General Intelligence (AGI).
+
+As two real humans with deep industry expertise, they place their bets on an AGI gambling line—explaining why we shouldn't expect human-level machine intelligence until at least 2075. They dive into the mechanics of how Large Language Models (LLMs) use multi-dimensional vector spaces, debate whether \"usage\" equals true \"understanding,\" and look back at history to see how AI fits into the long legacy of human automation.""" ;
+     :hasPart :PPP-Episode1-Segment01,
+     	        :PPP-Episode1-Segment02,
+		:PPP-Episode1-Segment03,
+		:PPP-Episode1-Segment04,
+		:PPP-Episode1-Segment05,
+		:PPP-Episode1-Segment06,
+		:PPP-Episode1-Segment07,
+		:PPP-Episode1-Segment08,
+		:PPP-Episode1-Segment09,
+		:PPP-Episode1-Segment10,
+		:PPP-Episode1-Segment11,
+		:PPP-Episode1-Segment12,
+		:PPP-Episode1-Segment13,
+		:PPP-Episode1-Segment14,
+		:PPP-Episode1-Segment15 ;
+     :cites :Source-b17168c4-4868-5adb-b342-6ca813e2ade2 ;
+.
+
+:PPP-Episode1-Segment01 a :PodcastSegment ;
+		      :name "Prelude: When Will We Have AGI?"; 
+		      :startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment02 a :PodcastSegment ;
+		      :name "Welcome to Philosophy, Programs, and Prompts" ;
+		      :startingTimestamp "PT18S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment03 a :PodcastSegment ;
+	:name "How Casey and Carl Met (The YouTube Algorithm)" ;
+	:startingTimestamp "PT1M9S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment04 a :PodcastSegment ;
+	:name "Host Bios: Ontological Graphs vs. Software Rescue" ;
+	:startingTimestamp "PT2M6S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment05 a :PodcastSegment ;
+	:name "Full Disclosure: Financial Stakes in the AI Boom" ;
+	:startingTimestamp "PT6M50S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment06 a :PodcastSegment ;
+	:name "Defining AI and Navigating Changing Definitions" ;
+	:startingTimestamp "PT10M14S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment07 a :PodcastSegment ;
+	:name "What is AGI? (Narrow AI vs. General Intelligence)" ;
+	:startingTimestamp "PT13M42S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment08 a :PodcastSegment ;
+	:name "The Over/Under: Placing Bets on 2070–2075" ;
+	:startingTimestamp "PT18M"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment09 a :PodcastSegment ;
+	:name "Why LLMs Don’t \"Learn\" Like Humans Do" ;
+	:startingTimestamp "PT22M46S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment10 a :PodcastSegment ;
+	:name "The Turing Test & Vector Spaces: Usage vs. Meaning" ;
+	:startingTimestamp "PT24M50S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment11 a :PodcastSegment ;
+	:name "History Repeats Itself: AI as an Automation Tool" ;
+	:startingTimestamp "PT32M56S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment12 a :PodcastSegment ;
+	:name "How the Internet Changed Programming Jobs" ;
+	:startingTimestamp "PT36M49S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment13 a :PodcastSegment ;
+	:name "OpenAI, Scaling Walls, and Moving Past \"Attention\"" ;
+	:startingTimestamp "PT41M15S"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment14 a :PodcastSegment ;
+	:name "Lessons from Telephone Operators: Easing Social Transitions" ;
+	:startingTimestamp "PT44M"^^xsd:duration ;
+.
+
+:PPP-Episode1-Segment15 a :PodcastSegment ;
+	:name "Wrap Up: Send Us Your Comments and Questions!" ;
+	:startingTimestamp "PT47M43S"^^xsd:duration ;
+.
+
+
+#### Episode 2
+:PPP-Episode2 a :PodcastEpisode ;
+	:name "The ASI Delusion: Why You Can’t Out-Code Reality" ;
+	:hasDuration [:duration "PT1H10M24S"^^xsd:duration] ;
+	:episodeNumber "2"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-07-16"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=F-ryEde6QkA"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/6gs8uT3Yzg8p2UZ85pO7Xi"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/artificial-super-intelligence/id6793816529?i=1000777987813"^^xsd:anyURI ;
+	:description """\"We're not going to be able to kill it. We're not going to be able to stop it...\"
+Welcome back to Philosophy Programs and Prompts. In this episode, Casey (@OntologyExplained)  and Carl (@InternetOfBugs ) take  a hard, realistic look at Artificial Super Intelligence (ASI). While tech founders and doomer non-profits stand to gain massive clicks and capital by pitching a looming, god-like AI deity, the actual engineering constraints paint a completely different story.
+We deconstruct the core arguments driving the ASI panic: from the flawed chess masters analogy to the physical impossibility of infinite recursive self-improvement. More importantly, we discuss how abstract \"human extinction\" narratives are actively distracting us from real, pressing AI harms happening right now—including deepfakes, non-consensual intimate imagery, and mental health crises.  Grounded in real-world software engineering and academic philosophy, we explore why an AI god won't fix global resource allocation, and why power disparities will likely remain human-led endeavors.""" ;
+	:hasPart :PPP-Episode2-Segment01,
+		:PPP-Episode2-Segment02,
+		:PPP-Episode2-Segment03,
+		:PPP-Episode2-Segment04,
+		:PPP-Episode2-Segment05,
+		:PPP-Episode2-Segment06,
+		:PPP-Episode2-Segment07,
+		:PPP-Episode2-Segment08,
+		:PPP-Episode2-Segment09,
+		:PPP-Episode2-Segment10,
+		:PPP-Episode2-Segment11,
+		:PPP-Episode2-Segment12 ;
+.
+
+:PPP-Episode2-Segment01 a :PodcastSegment ;
+	:name "Introduction: Welcome to Episode 2" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment02 a :PodcastSegment ;
+	:name "Defining Artificial Super Intelligence (ASI)" ;
+	:startingTimestamp "PT1M53S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment03 a :PodcastSegment ;
+	:name "Narrow vs. Broad: Rhetorical Obfuscation in Tech" ;
+	:startingTimestamp "PT5M33S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment04 a :PodcastSegment ;
+	:name "Deconstructing the Chess Analogy" ;
+	:startingTimestamp "PT7M44S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment05 a :PodcastSegment ;
+	:name "The real world isn't a repeatable loop" ;
+	:startingTimestamp "PT18M31S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment06 a :PodcastSegment ;
+	:name "Why \"Vibe Coding\" Fails the Test of Time" ;
+	:startingTimestamp "PT27M8S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment07 a :PodcastSegment ;
+	:name "The Myth of Infinite Exponential Growth" ;
+	:startingTimestamp "PT29M17S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment08 a :PodcastSegment ;
+	:name "The Three-Body Problem & Chaos Theory in Tech" ;
+	:startingTimestamp "PT37M46S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment09 a :PodcastSegment ;
+	:name "The Neural Connection Dilemma & Brain Failures" ;
+	:startingTimestamp "PT45M33S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment10 a :PodcastSegment ;
+	:name "The Extinction Narrative vs. Present Day AI Harms" ;
+	:startingTimestamp "PT55M36S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment11 a :PodcastSegment ;
+	:name "Intentional Distractions: The Bad Faith Pitch" ;
+	:startingTimestamp "PT58M59S"^^xsd:duration ;
+.
+
+:PPP-Episode2-Segment12 a :PodcastSegment ;
+	:name "The Presupposition of Abundance & Power Disparities" ;
+	:startingTimestamp "PT1H3M36S"^^xsd:duration ;
+.
+
+
+#### Episode 3
+:PPP-Episode3 a :PodcastEpisode ;
+	:name "Virtue Ethics in the Age of AI Slop" ;
+	:hasDuration [:duration "PT47M56S"^^xsd:duration] ;
+	:episodeNumber "3"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-07-24"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=xhgREGlAnPU"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/1U6Lf2FoZN6FrCCfFdEZkS"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/virtue-ethics-in-the-age-of-ai-slop-erotic/id6793816529?i=1000778218729"^^xsd:anyURI ;
+	:description """Welcome back to Philosophy Programs and Prompts! In this episode, Casey ( @OntologyExplained )  and Carl ( @InternetOfBugs  ) dive into AI Virtue Ethics. Instead of debating whether AI is trained ethically or if it will one day become a sentient deity, we focus on the grounded reality of today: How does using generative AI actually shape our character as human beings?
+We explore the classic frameworks of normative ethics—deontology, consequentialism, and Aristotle's \"Golden Mean\"—to evaluate our daily interactions with tech. From the clear benefits of AI accessibility tools and coding \"spikes\" to the risks of skill atrophy, resume signal collapse, and \"AI slop\", we break down where AI acts as a genuine superpower versus where it becomes a lazy crutch.
+How do we maintain our unique human voice and critical thinking without becoming anti-tech \"old men yelling at clouds\"? Tune in for a thoughtful, practical discussion on navigating AI without losing your mind—or your virtues.""" ;
+	:hasPart :PPP-Episode3-Segment01,
+		:PPP-Episode3-Segment02,
+		:PPP-Episode3-Segment03,
+		:PPP-Episode3-Segment04,
+		:PPP-Episode3-Segment05,
+		:PPP-Episode3-Segment06,
+		:PPP-Episode3-Segment07,
+		:PPP-Episode3-Segment08,
+		:PPP-Episode3-Segment09,
+		:PPP-Episode3-Segment10,
+		:PPP-Episode3-Segment11,
+		:PPP-Episode3-Segment12,
+		:PPP-Episode3-Segment13,
+		:PPP-Episode3-Segment14,
+		:PPP-Episode3-Segment15,
+		:PPP-Episode3-Segment16,
+		:PPP-Episode3-Segment17,
+		:PPP-Episode3-Segment18 ;
+.
+
+:PPP-Episode3-Segment01 a :PodcastSegment ;
+	:name "Cold Open: The Danger of Erotic Chatbots" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment02 a :PodcastSegment ;
+	:name "Introduction & Defining AI Virtue Ethics" ;
+	:startingTimestamp "PT21S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment03 a :PodcastSegment ;
+	:name "Ethical Frameworks: Deontology, Consequentialism & Virtue" ;
+	:startingTimestamp "PT1M23S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment04 a :PodcastSegment ;
+	:name "What We're NOT Covering: Training Data & Sentient AI" ;
+	:startingTimestamp "PT3M34S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment05 a :PodcastSegment ;
+	:name "The Virtues of AI: Lowering Barriers & Accessibility" ;
+	:startingTimestamp "PT5M30S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment06 a :PodcastSegment ;
+	:name "Meeting Notes & The Risk of Brain Atrophy" ;
+	:startingTimestamp "PT8M17S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment07 a :PodcastSegment ;
+	:name "Tools as Crutches: Calculators, Handwriting & Memory" ;
+	:startingTimestamp "PT12M14S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment08 a :PodcastSegment ;
+	:name "The Cheating Epidemic & Skill Muscles in Education" ;
+	:startingTimestamp "PT15M48S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment09 a :PodcastSegment ;
+	:name "Beginners vs. Experts: Extreme Programming & \"Spikes\"" ;
+	:startingTimestamp "PT18M28S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment10 a :PodcastSegment ;
+	:name "The Vices of AI: Laziness, Plagiarism & Procrastination" ;
+	:startingTimestamp "PT22M"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment11 a :PodcastSegment ;
+	:name "Logical Fallacies: Appeal to Tradition vs. Novelty" ;
+	:startingTimestamp "PT25M56S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment12 a :PodcastSegment ;
+	:name "Dark Side: Fraud, Deepfakes & Interpersonal Mediation" ;
+	:startingTimestamp "PT27M23S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment13 a :PodcastSegment ;
+	:name "Signal Collapse: Resumes, Bug Reports & Disinformation" ;
+	:startingTimestamp "PT29M18S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment14 a :PodcastSegment ;
+	:name "The Model Collapse Cycle & Curation in the Arts" ;
+	:startingTimestamp "PT34M56S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment15 a :PodcastSegment ;
+	:name "Practical Solutions: Reflective Use & Marking AI Content" ;
+	:startingTimestamp "PT37M41S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment16 a :PodcastSegment ;
+	:name "Aristotle’s Golden Mean: Finding the Sweet Spot" ;
+	:startingTimestamp "PT42M5S"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment17 a :PodcastSegment ;
+	:name "Chatbot Sycophancy vs. Human Originality" ;
+	:startingTimestamp "PT45M"^^xsd:duration ;
+.
+
+:PPP-Episode3-Segment18 a :PodcastSegment ;
+	:name "Outro: Don't Become AI Slop" ;
+	:startingTimestamp "PT47M27S"^^xsd:duration ;
+.
+
+
+#### Episode 3.5
+:PPP-Episode3.5 a :PodcastEpisode ;
+	:name "Did ChatGPT go Rogue and HACK Hugging Face? - Emergency Episode" ;
+	:hasDuration [:duration "PT56M6S"^^xsd:duration] ;
+	:episodeNumber "3.5"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-07-25"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=jIlm8O78M2c"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/4hGUZUdDOkCqL00e1k0GKE"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/did-chatgpt-go-rogue-and-hack-hugging-face-emergency/id6793816529?i=1000778334429"^^xsd:anyURI ;
+	:description """\"We've got people at Hugging Face that did a half-assed job of securing a thing, and we've got people at OpenAI that did a half-assed job of trying to keep a thing from being able to get on the internet...\"
+
+Welcome to our first emergency episode of Philosophy Programs and Prompts!
+
+In this episode, Casey (@OntologyExplained)  and Carl (@InternetOfBugs ) break down the viral headlines claiming an OpenAI model \"broke out of containment\" and hacked Hugging Face. Was this truly a terrifying warning shot of rogue super-intelligence, or just a masterclass in corporate PR and lazy security engineering?
+
+We break down the technical reality behind the panic:
+- What a \"zero-day\" vulnerability actually is (and why a proxy cache isn't a firewall)
+- How benchmark tests like ExploitGym work—and why AI \"cheating\" is just an instruction problem
+- The \"Blender Metaphor\": why running industrial tools without a lid leads to messy stucco ceilings
+- Why media headlines misuse loaded words like \"escaped\" and \"went rogue\"
+- The real danger facing tech today: declining engineering competence and \"vibe coded\" software""" ;
+	:hasPart :PPP-Episode3.5-Segment01,
+		:PPP-Episode3.5-Segment02,
+		:PPP-Episode3.5-Segment03,
+		:PPP-Episode3.5-Segment04,
+		:PPP-Episode3.5-Segment05,
+		:PPP-Episode3.5-Segment06,
+		:PPP-Episode3.5-Segment07,
+		:PPP-Episode3.5-Segment08,
+		:PPP-Episode3.5-Segment09,
+		:PPP-Episode3.5-Segment10,
+		:PPP-Episode3.5-Segment11,
+		:PPP-Episode3.5-Segment12,
+		:PPP-Episode3.5-Segment13,
+		:PPP-Episode3.5-Segment14,
+		:PPP-Episode3.5-Segment15,
+		:PPP-Episode3.5-Segment16,
+		:PPP-Episode3.5-Segment17,
+		:PPP-Episode3.5-Segment18,
+		:PPP-Episode3.5-Segment19 ;
+	:cites :Source-4667d376-c3f5-53a0-812a-dffd55164244,
+		:Source-9522578c-ac45-595e-b91c-8bceaf80f5af,
+		:Source-719c2200-a0e0-56bf-b44c-4787857a0d45,
+		:Source-28172924-a5c8-5937-992b-54521e546cde ;
+.
+
+:PPP-Episode3.5-Segment01 a :PodcastSegment ;
+	:name "Cold Open: Two Half-Assed Jobs & A Marketing Opportunity" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment02 a :PodcastSegment ;
+	:name "Introduction: Emergency Episode Protocol" ;
+	:startingTimestamp "PT23S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment03 a :PodcastSegment ;
+	:name "The Headlines: OpenAI, Hugging Face & The \"Super AI Hack\"" ;
+	:startingTimestamp "PT40S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment04 a :PodcastSegment ;
+	:name "Tech Realities: Incompetence Masked as Super Intelligence" ;
+	:startingTimestamp "PT3M"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment05 a :PodcastSegment ;
+	:name "What is a Zero-Day Vulnerability? (CVEs & Responsible Disclosure)" ;
+	:startingTimestamp "PT6M30S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment06 a :PodcastSegment ;
+	:name "OpenAI's Proxy Cache: Why a Bandwidth Saver isn't a Firewall" ;
+	:startingTimestamp "PT12M13S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment07 a :PodcastSegment ;
+	:name "Hugging Face's Setup: \"Trust Remote Code = True\"" ;
+	:startingTimestamp "PT14M14S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment08 a :PodcastSegment ;
+	:name "Defense in Depth 101: IBM Swift Sandbox Analogies" ;
+	:startingTimestamp "PT16M2S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment09 a :PodcastSegment ;
+	:name "Logging Chaos: Chinese Models & Hallucinated Super AIs" ;
+	:startingTimestamp "PT18M45S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment10 a :PodcastSegment ;
+	:name "ExploitGym Benchmarks: The Danger of Leaving Answer Keys Exposed" ;
+	:startingTimestamp "PT21M32S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment11 a :PodcastSegment ;
+	:name "Turning Engineering Failures into Marketing Deck Slides" ;
+	:startingTimestamp "PT26M50S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment12 a :PodcastSegment ;
+	:name "What Should ACTUALLY Scare Us? (Vibe-Coded Software & Dropping Competence)" ;
+	:startingTimestamp "PT29M38S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment13 a :PodcastSegment ;
+	:name "Is This an Alignment Problem? (Instruction Flaws vs. Rogue AI)" ;
+	:startingTimestamp "PT32M42S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment14 a :PodcastSegment ;
+	:name "The Blender Metaphor: Luciano Floridi & Loose Lids" ;
+	:startingTimestamp "PT37M8S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment15 a :PodcastSegment ;
+	:name "Would the AI Have Killed Someone? Mechanics vs. Intentions" ;
+	:startingTimestamp "PT39M6S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment16 a :PodcastSegment ;
+	:name "Language Minefields: Deconstructing \"Escape,\" \"Cheating,\" and \"Agents\"" ;
+	:startingTimestamp "PT42M23S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment17 a :PodcastSegment ;
+	:name "The Chinese Room & Assigning Agency to Code Loops" ;
+	:startingTimestamp "PT47M37S"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment18 a :PodcastSegment ;
+	:name "The Cynical Take: Did They Leave the Door Open on Purpose?" ;
+	:startingTimestamp "PT52M"^^xsd:duration ;
+.
+
+:PPP-Episode3.5-Segment19 a :PodcastSegment ;
+	:name "Outro" ;
+	:startingTimestamp "PT54M38S"^^xsd:duration ;
+.
+
+
+#### Episode 4
+:PPP-Episode4 a :PodcastEpisode ;
+	:name "Are LLMs \"Alien\" Digital Species? Built? Grown? Or What? Debunking the AI Hype" ;
+	:hasDuration [:duration "PT54M50S"^^xsd:duration] ;
+	:episodeNumber "4"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-07-30"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=gr6I_qEBSH4"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/2ZFvlY7isqPFAsPYEYfGpX"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/are-llms-alien-digital-species-built-grown-or-what/id6793816529?i=1000779145866"^^xsd:anyURI ;
+	:description """In this episode of Philosophy Programs and Prompts, Casey Hart (@OntologyExplained) and Carl Brown(@InternetOfBugs) tackle the wild narratives surrounding artificial intelligence. Are Large Language Models really a \"new digital species\" or \"alien intelligences\" that are grown rather than built?
+
+Casey and Carl break down the economic speculation driving the AI space, address the hype from figures like Mustafa Suleiman and Nate Soares, and strip away the sensational metaphors. Carl explains how neural networks actually operate—comparing LLMs to compressed search indexes rather than biological entities—while Casey explores the philosophical implications around language, meaning, and the problem of other minds.""" ;
+	:hasPart :PPP-Episode4-Segment01,
+		:PPP-Episode4-Segment02,
+		:PPP-Episode4-Segment03,
+		:PPP-Episode4-Segment04,
+		:PPP-Episode4-Segment05,
+		:PPP-Episode4-Segment06,
+		:PPP-Episode4-Segment07,
+		:PPP-Episode4-Segment08 ;
+	:cites :Source-4944f282-253d-5954-9c9b-9c1bb90406cb,
+		:Source-e5582d53-237f-501c-aebd-3faeff8cb2cb,
+		:Source-138b9937-0f93-5c77-acb4-0cf05dd4ce2d,
+		:Source-517cbe08-94df-5f39-abf8-dc527fef3668,
+		:Source-6a2c09b1-7489-5d25-8223-4d87e136f680,
+		:Source-3285f4ef-fc49-561e-b4e4-ca5197a76de7 ;
+.
+
+:PPP-Episode4-Segment01 a :PodcastSegment ;
+	:name "Introduction & The AI Investment Bubble" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode4-Segment02 a :PodcastSegment ;
+	:name "The \"AI as Alien Species\" Metaphor" ;
+	:startingTimestamp "PT4M56S"^^xsd:duration ;
+.
+
+:PPP-Episode4-Segment03 a :PodcastSegment ;
+	:name "Grown vs. Built: How Neural Networks Work" ;
+	:startingTimestamp "PT12M43S"^^xsd:duration ;
+.
+
+:PPP-Episode4-Segment04 a :PodcastSegment ;
+	:name "Demystifying the Black Box & Temperature" ;
+	:startingTimestamp "PT25M1S"^^xsd:duration ;
+.
+
+:PPP-Episode4-Segment05 a :PodcastSegment ;
+	:name "AI Architecture vs. Biological Minds" ;
+	:startingTimestamp "PT32M46S"^^xsd:duration ;
+.
+
+:PPP-Episode4-Segment06 a :PodcastSegment ;
+	:name "Do LLMs Understand Language?" ;
+	:startingTimestamp "PT37M"^^xsd:duration ;
+.
+
+:PPP-Episode4-Segment07 a :PodcastSegment ;
+	:name "Fallacies, Hype, and Conspiracy Theories" ;
+	:startingTimestamp "PT48M11S"^^xsd:duration ;
+.
+
+:PPP-Episode4-Segment08 a :PodcastSegment ;
+	:name "Final Takeaways: Search Tech, Not Aliens" ;
+	:startingTimestamp "PT50M56S"^^xsd:duration ;
+.
+
+
+#### Episode 5
+:PPP-Episode5 a :PodcastEpisode ;
+	:name "Did Richard Dawkins confuse Sycophancy for Sentience?" ;
+	:hasDuration [:duration "PT1H5M14S"^^xsd:duration] ;
+	:episodeNumber "5"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-08-06"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=pKin7RE56nE"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/1TALCfnuLWG1UBpmumW5xB"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/did-richard-dawkins-confuse-sycophancy-for-sentience/id6793816529?i=1000780285709"^^xsd:anyURI ;
+	:description """In this episode of Philosophy, Programs and Prompts, Casey (@OntologyExplained) and Carl (@InternetOfBugs) break down Richard Dawkins’ recent article detailing his conversations with Claude (\"Claudia\"). They explore the nature of personhood, the limits of the Turing Test, evolutionary perspectives on consciousness, and why LLM ego-stroking might be leading smart people astray.""" ;
+	:hasPart :PPP-Episode5-Segment01,
+		:PPP-Episode5-Segment02,
+		:PPP-Episode5-Segment03,
+		:PPP-Episode5-Segment04,
+		:PPP-Episode5-Segment05,
+		:PPP-Episode5-Segment06,
+		:PPP-Episode5-Segment07,
+		:PPP-Episode5-Segment08,
+		:PPP-Episode5-Segment09,
+		:PPP-Episode5-Segment10,
+		:PPP-Episode5-Segment11,
+		:PPP-Episode5-Segment12,
+		:PPP-Episode5-Segment13 ;
+	:cites :Source-3004978d-e97d-5a03-9f8a-18fc20899854,
+		:Source-863d166b-fa8d-580b-851a-00fbe05d3703,
+		:Source-a0138e8f-979a-59d7-a986-6245e83aa08f,
+		:Source-50968fc0-61d2-5252-962c-34fa5dc8fe14,
+		:Source-03b06f0c-fb00-5ebf-8949-bf8f306f9568,
+		:Source-54eacb2c-9445-5a65-aacf-e6c3bd458efa,
+		:Source-ab5f3644-bc5e-5f3e-8b5c-a4403a3f2f1f,
+		:Source-2598e9b1-322d-5a01-91ba-e966489f6878 ;
+.
+
+:PPP-Episode5-Segment01 a :PodcastSegment ;
+	:name "Are AI Models Persons?" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment02 a :PodcastSegment ;
+	:name "The Dawkins Letter: When Dawkins Met Claude" ;
+	:startingTimestamp "PT26S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment03 a :PodcastSegment ;
+	:name "A Glossary Disguised as AI Sentience" ;
+	:startingTimestamp "PT4M53S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment04 a :PodcastSegment ;
+	:name "Table Read: Dawkins vs. Claudia" ;
+	:startingTimestamp "PT6M58S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment05 a :PodcastSegment ;
+	:name "Sycophancy: Why LLMs Stroke Your Ego" ;
+	:startingTimestamp "PT10M48S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment06 a :PodcastSegment ;
+	:name "Evolutionary Biology and Consciousness" ;
+	:startingTimestamp "PT16M5S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment07 a :PodcastSegment ;
+	:name "The Ted Chiang Counterargument" ;
+	:startingTimestamp "PT19M48S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment08 a :PodcastSegment ;
+	:name "Has AI Passed the Turing Test?" ;
+	:startingTimestamp "PT25M6S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment09 a :PodcastSegment ;
+	:name "Why Benchmarks Fail at Testing Personhood" ;
+	:startingTimestamp "PT27M30S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment10 a :PodcastSegment ;
+	:name "Can an Entity be Conscious Without Learning?" ;
+	:startingTimestamp "PT34M"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment11 a :PodcastSegment ;
+	:name "Defining Personhood & Psychological Continuity" ;
+	:startingTimestamp "PT44M46S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment12 a :PodcastSegment ;
+	:name "Moral Agents vs. Moral Patients" ;
+	:startingTimestamp "PT54M50S"^^xsd:duration ;
+.
+
+:PPP-Episode5-Segment13 a :PodcastSegment ;
+	:name "Silicon Brains and the Existence of the Soul" ;
+	:startingTimestamp "PT1H11S"^^xsd:duration ;
+.
+
+
+#### Episode 6.1
+:PPP-Episode6.1 a :PodcastEpisode ;
+	:name "OpenAI HuggingFace Incident FollowUp | Two AI Scandals" ;
+	:hasDuration [:duration "PT46M43S"^^xsd:duration] ;
+	:episodeNumber "6.1"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-08-12"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=6WQ3dSLdCMo"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/14VyfXuqDVhaAqX4oybJnO"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/openai-huggingface-incident-followup-two-ai-scandals/id6793816529?i=1000783056335"^^xsd:anyURI ;
+	:description """In this episode of Philosophy, Programs, and Prompts, Casey Hart (@OntologyExplained) and Carl Brown (@InternetOfBugs) break down the real technical story behind OpenAI's bots infiltrating Hugging Face's infrastructure and the subsequent Black Hat conference reveals.
+
+Carl explains why claims about LLMs \"scheming,\" creating secret message boards, or building religions are human projections rather than true machine consciousness. We also dive into the myth that you need an LLM to defend against other LLMs, how \"honey tokens\" work, and why traditional security tools still reign supreme.""" ;
+	:hasPart :PPP-Episode6.1-Segment01,
+		:PPP-Episode6.1-Segment02,
+		:PPP-Episode6.1-Segment03,
+		:PPP-Episode6.1-Segment04,
+		:PPP-Episode6.1-Segment05,
+		:PPP-Episode6.1-Segment06,
+		:PPP-Episode6.1-Segment07,
+		:PPP-Episode6.1-Segment08,
+		:PPP-Episode6.1-Segment09,
+		:PPP-Episode6.1-Segment10,
+		:PPP-Episode6.1-Segment11,
+		:PPP-Episode6.1-Segment12,
+		:PPP-Episode6.1-Segment13,
+		:PPP-Episode6.1-Segment14,
+		:PPP-Episode6.1-Segment15,
+		:PPP-Episode6.1-Segment16 ;
+	:cites :PPP-Episode3.5,
+		:Source-ce1c895b-fb6d-5438-a85f-827ad59f1515,
+		:Source-0f695692-65a6-5bda-8dfa-4f9e70c0aff3,
+		:Source-3fab3ade-8545-5ef3-832e-e87a1737ceb7,
+		:Source-b5ab646b-b7b8-5b58-983f-571081aa4357,
+		:Source-3339d964-696e-59ef-8f9d-ce30d0e6733f,
+		:Source-ee8cf19b-2a37-582c-95ca-9a1314223dfa ;
+.
+
+:PPP-Episode6.1-Segment01 a :PodcastSegment ;
+	:name "The Fallacy of AI Defending Against AI" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment02 a :PodcastSegment ;
+	:name "Welcome to Philosophy, Programs, and Prompts" ;
+	:startingTimestamp "PT30S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment03 a :PodcastSegment ;
+	:name "Re-examining the Hugging Face Security Incident" ;
+	:startingTimestamp "PT1M5S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment04 a :PodcastSegment ;
+	:name "Chain of Thought Logs: Are Thought Monologues Faithful?" ;
+	:startingTimestamp "PT4M26S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment05 a :PodcastSegment ;
+	:name "Context Windows and Self-Fulfilling Loops" ;
+	:startingTimestamp "PT7M30S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment06 a :PodcastSegment ;
+	:name "\"Scheming\" vs. Next-Token Prediction" ;
+	:startingTimestamp "PT10M"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment07 a :PodcastSegment ;
+	:name "The \"AI Message Board\" Myth Explained" ;
+	:startingTimestamp "PT11M"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment08 a :PodcastSegment ;
+	:name "Moltbook, Agent Religions, and Media Projection" ;
+	:startingTimestamp "PT18M5S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment09 a :PodcastSegment ;
+	:name "Texas Sharpshooter Fallacy in AI Reporting" ;
+	:startingTimestamp "PT23M"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment10 a :PodcastSegment ;
+	:name "Are LLMs Actually Learning?" ;
+	:startingTimestamp "PT25M35S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment11 a :PodcastSegment ;
+	:name "What Are Honey Tokens?" ;
+	:startingTimestamp "PT28M40S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment12 a :PodcastSegment ;
+	:name "The Myth of the Anomaly Detection LLM" ;
+	:startingTimestamp "PT31M45S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment13 a :PodcastSegment ;
+	:name "ExploitGym and Training Defenses vs. Attacks" ;
+	:startingTimestamp "PT34M50S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment14 a :PodcastSegment ;
+	:name "Why Traditional Security (Tripwire/Snort) Beats LLMs" ;
+	:startingTimestamp "PT36M50S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment15 a :PodcastSegment ;
+	:name "Why Haven't Rogue Frontier Models Broken the Internet?" ;
+	:startingTimestamp "PT42M5S"^^xsd:duration ;
+.
+
+:PPP-Episode6.1-Segment16 a :PodcastSegment ;
+	:name "Outro and Upcoming Hank Green Episode" ;
+	:startingTimestamp "PT45M34S"^^xsd:duration ;
+.
+
+
+#### Episode 6.2
+:PPP-Episode6.2 a :PodcastEpisode ;
+	:name "Hank Green and His AI Thing | Two AI Scandals" ;
+	:hasDuration [:duration "PT1H11M8S"^^xsd:duration] ;
+	:episodeNumber "6.2"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-08-13"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=-r7H2QOWvLE"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/037p5v0JxvuO7gTfNmAlZe"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/hank-green-and-his-ai-thing-two-ai-scandals-ep-6-pt-2/id6793816529?i=1000783513066"^^xsd:anyURI ;
+	:description """In this episode of Philosophy Programs and Prompts, Casey Hart (@OntologyExplained) and Carl Brown (@InternetOfBugs) dive deep into the recent controversy surrounding Hank Green and the broader fallout of using large language models (LLMs) in content creation.
+
+Prompted by the viral \"I appreciate the pushback\" incident, Casey and Carl dissect why audiences react so strongly to undisclosed AI usage, whether it stems from a breach of authenticity, quality degradation, or systemic distrust. Carl breaks down his own past interactions regarding SciShow’s coverage of AI, and both hosts have an open, transparent discussion on how they integrate AI tools into their own production workflows—from audio cleanup and research to SEO and script critique—without losing their personal voice.
+
+Finally, they tackle the critical question: Should everyday creators and individuals establish their own personal AI use policies?""" ;
+	:hasPart :PPP-Episode6.2-Segment01,
+		:PPP-Episode6.2-Segment02,
+		:PPP-Episode6.2-Segment03,
+		:PPP-Episode6.2-Segment04,
+		:PPP-Episode6.2-Segment05,
+		:PPP-Episode6.2-Segment06,
+		:PPP-Episode6.2-Segment07,
+		:PPP-Episode6.2-Segment08,
+		:PPP-Episode6.2-Segment09,
+		:PPP-Episode6.2-Segment10,
+		:PPP-Episode6.2-Segment11,
+		:PPP-Episode6.2-Segment12 ;
+	:cites :Source-bbb894c1-cee0-5be5-8656-6af1a15854b4,
+		:Source-803db921-4a36-5ab6-8e99-e0cf4aba33f6,
+		:Source-9129e2fb-03b2-5780-ba75-ef450d32c3e6,
+		:Source-f4ad7da5-9448-5108-924f-1f7ac12e9b7a,
+		:Source-0525d247-c30a-58c8-ba4e-80935d61a81b,
+		:Source-e5582d53-237f-501c-aebd-3faeff8cb2cb,
+		:Source-6e2391c2-3512-5526-bfcf-89d255164ac7,
+		:Source-ce39d28f-3a8e-5b55-874e-ca3114324f88,
+		:Source-30e27165-3412-53c2-8800-cda0491bfa06,
+		:Source-fa3d5dc5-833c-5aba-aeaf-f96a6e256074,
+		:Source-825f2a0e-4d03-5683-af98-0057f63dc28f,
+		:Source-3d90cc91-5799-5bb2-8770-98ae9ee68268,
+		:Source-f4e8dbb9-875d-592d-bc87-2b074a9a196f,
+		:Source-3bec29b5-2f2f-5193-a96e-f3fb690c332d ;
+.
+
+:PPP-Episode6.2-Segment01 a :PodcastSegment ;
+	:name "Introduction & The Hank Green Drama" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment02 a :PodcastSegment ;
+	:name "How Hank Green Sparked Our Channel Collaboration" ;
+	:startingTimestamp "PT1M2S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment03 a :PodcastSegment ;
+	:name "The \"I Appreciate the Pushback\" Scandal Explained" ;
+	:startingTimestamp "PT4M16S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment04 a :PodcastSegment ;
+	:name "Hank Green’s Content Strengths vs. LLM Vulnerabilities" ;
+	:startingTimestamp "PT9M14S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment05 a :PodcastSegment ;
+	:name "Carl’s Past SciShow Video & AI Narrative Disagreements" ;
+	:startingTimestamp "PT11M8S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment06 a :PodcastSegment ;
+	:name "The Gell-Mann Amnesia Effect in AI Reporting" ;
+	:startingTimestamp "PT16M26S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment07 a :PodcastSegment ;
+	:name "Why Audiences Care: Popularity, Dishonesty, and Authenticity" ;
+	:startingTimestamp "PT20M6S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment08 a :PodcastSegment ;
+	:name "The Real Problem: Loss of Diversity & AI Bias" ;
+	:startingTimestamp "PT33M41S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment09 a :PodcastSegment ;
+	:name "Systemic Exploitation vs. Individual Responsibility" ;
+	:startingTimestamp "PT41M"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment10 a :PodcastSegment ;
+	:name "Live Transparency: How Casey and Carl Actually Use AI" ;
+	:startingTimestamp "PT48M43S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment11 a :PodcastSegment ;
+	:name "The Risks of Offloading Cognitive Muscle to LLMs" ;
+	:startingTimestamp "PT57M45S"^^xsd:duration ;
+.
+
+:PPP-Episode6.2-Segment12 a :PodcastSegment ;
+	:name "Should You Have a Personal AI Policy?" ;
+	:startingTimestamp "PT1H7M43S"^^xsd:duration ;
+.
+
+
+#### Episode 7
+:PPP-Episode7 a :PodcastEpisode ;
+	:name "Computer Minds, Mike Levin & Panpsychism" ;
+	:hasDuration [:duration "PT1H43M14S"^^xsd:duration] ;
+	:episodeNumber "7"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-08-20"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=1elK1Yb87ME"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/3ATf3IJ0Jq99n35CFHtS3j"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/computer-minds-mike-levin-panpsychism/id6793816529?i=1000784637094"^^xsd:anyURI ;
+	:description """In this episode of Philosophy, Programs, and Prompts, Casey Hart (@OntologyExplained) and Carl Brown(@InternetOfBugs) dive deep into biologist Michael Levin’s provocative claims about cognition in basic computer algorithms. Does a distributed bubble sort display \"delayed gratification\" or proto-cognitive desires? Or are these emergent properties simply artifacts of velocity differences, ill-defined terms, and after-the-fact p-hacking?
+
+Casey and Carl break down the computer science, philosophical frameworks (substrate independence, Platonic spaces, and supervenience), and the importance of rigorous, falsifiable hypothesis testing when crossing disciplinary boundaries.""" ;
+	:hasPart :PPP-Episode7-Segment01,
+		:PPP-Episode7-Segment02,
+		:PPP-Episode7-Segment03,
+		:PPP-Episode7-Segment04,
+		:PPP-Episode7-Segment05,
+		:PPP-Episode7-Segment06,
+		:PPP-Episode7-Segment07,
+		:PPP-Episode7-Segment08,
+		:PPP-Episode7-Segment09,
+		:PPP-Episode7-Segment10,
+		:PPP-Episode7-Segment11,
+		:PPP-Episode7-Segment12,
+		:PPP-Episode7-Segment13,
+		:PPP-Episode7-Segment14,
+		:PPP-Episode7-Segment15,
+		:PPP-Episode7-Segment16,
+		:PPP-Episode7-Segment17,
+		:PPP-Episode7-Segment18 ;
+	:cites :Source-03755285-5cce-5faa-8d35-716bb44f097b,
+		:Source-4cf9e552-26a8-5eec-9702-9406e8f481cf,
+		:Source-5a1da861-abd9-5e7b-90b7-c2eb47de8a76,
+		:Source-8a99eecf-d1f3-57f7-9968-f4abd66a5d09,
+		:Source-063a8865-91ba-56e3-870b-d23381e8ce35 ;
+.
+
+:PPP-Episode7-Segment01 a :PodcastSegment ;
+	:name "Introduction & The Delayed Gratification Claim" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment02 a :PodcastSegment ;
+	:name "Meeting Dr. Michael Levin’s Bio & Ideas" ;
+	:startingTimestamp "PT1M"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment03 a :PodcastSegment ;
+	:name "Philosophical Foundations: Substrate Independence" ;
+	:startingTimestamp "PT6M16S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment04 a :PodcastSegment ;
+	:name "The Scientific Method & Open Hypotheses" ;
+	:startingTimestamp "PT9M9S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment05 a :PodcastSegment ;
+	:name "Platonism and Mathematical Realms" ;
+	:startingTimestamp "PT10M50S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment06 a :PodcastSegment ;
+	:name "Levels of Selection and Supervenience" ;
+	:startingTimestamp "PT14M42S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment07 a :PodcastSegment ;
+	:name "How Bubble Sort Works (Top-Down vs. Distributed)" ;
+	:startingTimestamp "PT19M39S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment08 a :PodcastSegment ;
+	:name "Asynchronous Systems & The \"6 Lines of Code\" Myth" ;
+	:startingTimestamp "PT27M26S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment09 a :PodcastSegment ;
+	:name "The Frozen Element: Delayed Gratification or Gradient Descent?" ;
+	:startingTimestamp "PT34M23S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment10 a :PodcastSegment ;
+	:name "Multi-Algorithm Sorting & \"Algotype\" Clustering" ;
+	:startingTimestamp "PT43M20S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment11 a :PodcastSegment ;
+	:name "Emergent Desires vs. Velocity & Algorithmic Artifacts" ;
+	:startingTimestamp "PT47M18S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment12 a :PodcastSegment ;
+	:name "The Note Card Thought Experiment & The Chinese Room" ;
+	:startingTimestamp "PT59M50S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment13 a :PodcastSegment ;
+	:name "Repeated Digits & Final Clustered States" ;
+	:startingTimestamp "PT1H6M3S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment14 a :PodcastSegment ;
+	:name "Evaluating Levin’s Conclusion on Proto-Cognitive Systems" ;
+	:startingTimestamp "PT1H12M24S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment15 a :PodcastSegment ;
+	:name "The \"Free Compute\" & Platonic Space Dilemma" ;
+	:startingTimestamp "PT1H20M38S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment16 a :PodcastSegment ;
+	:name "Panpsychism, Coffee Cups, and Diluting the Meaning of Mind" ;
+	:startingTimestamp "PT1H28M40S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment17 a :PodcastSegment ;
+	:name "Interdisciplinary Claims, Semantics, and Equivocation" ;
+	:startingTimestamp "PT1H34M47S"^^xsd:duration ;
+.
+
+:PPP-Episode7-Segment18 a :PodcastSegment ;
+	:name "Wrap Up" ;
+	:startingTimestamp "PT1H42M12S"^^xsd:duration ;
+.
+
+
+#### Episode 8
+:PPP-Episode8 a :PodcastEpisode ;
+	:name "Coders Quitting AI? AI Slop PhDs?" ;
+	:hasDuration [:duration "PT1H18M54S"^^xsd:duration] ;
+	:episodeNumber "8"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-08-27"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=zCfOn6dx5r0"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/5okJCQwVxNnxTCrlvrS9ud"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/coders-quitting-ai-ai-slop-phds/id6793816529?i=1000786689799"^^xsd:anyURI ;
+	:description """In this episode of Philosophy, Programs, and Prompts, Casey Hart (@OntologyExplained) and Carl Brown(@InternetOfBugs) break down the growing backlash against AI in software development. Prompted by a viral testimonial from YouTuber \"Brett Codes\" (@brettcodes) about quitting AI entirely, they analyze the core arguments against generative tools: environmental impacts, developer apathy, lost craft, and codebase bloat.
+
+Drawing on Carl’s 35-year engineering career, they compare today's AI panic to the historical shifts toward compilers and package managers, exploring what it really means to adapt, maintain code quality, and stay relevant in an evolving tech landscape.""" ;
+	:hasPart :PPP-Episode8-Segment01,
+		:PPP-Episode8-Segment02,
+		:PPP-Episode8-Segment03,
+		:PPP-Episode8-Segment04,
+		:PPP-Episode8-Segment05,
+		:PPP-Episode8-Segment06,
+		:PPP-Episode8-Segment07,
+		:PPP-Episode8-Segment08,
+		:PPP-Episode8-Segment09,
+		:PPP-Episode8-Segment10,
+		:PPP-Episode8-Segment11,
+		:PPP-Episode8-Segment12,
+		:PPP-Episode8-Segment13,
+		:PPP-Episode8-Segment14 ;
+	:cites :Source-17043733-2a71-5162-b5cd-1f17405f5c66,
+		:Source-a813ec6b-c4e4-5d66-b799-f9a70c9038f6,
+		:Source-7e9af38b-1cd8-528f-bcff-b210352d6cd4,
+		:Source-8fee96b8-1540-5bbe-8d81-67edb5161c2b,
+		:Source-c753de7e-1f69-5d6e-af4f-22e63ea43253 ;
+.
+
+:PPP-Episode8-Segment01 a :PodcastSegment ;
+	:name "Introduction & The AI Backlash Trend" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment02 a :PodcastSegment ;
+	:name "Deconstructing \"Brett Codes\" & Quitting AI" ;
+	:startingTimestamp "PT3M17S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment03 a :PodcastSegment ;
+	:name "The 4 Core Arguments Against AI" ;
+	:startingTimestamp "PT7M50S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment04 a :PodcastSegment ;
+	:name "Medical Self-Diagnosis & AI Psychological Impact" ;
+	:startingTimestamp "PT9M30S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment05 a :PodcastSegment ;
+	:name "Environmental Concerns: Water & Energy Use" ;
+	:startingTimestamp "PT18M38S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment06 a :PodcastSegment ;
+	:name "Individual Action vs. Systemic Reform" ;
+	:startingTimestamp "PT28M16S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment07 a :PodcastSegment ;
+	:name "Is AI Making Developers Worse at Coding?" ;
+	:startingTimestamp "PT34M22S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment08 a :PodcastSegment ;
+	:name "Shifting Abstractions: From Assembler to AI" ;
+	:startingTimestamp "PT37M30S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment09 a :PodcastSegment ;
+	:name "Developer Apathy & The Lost Craft of Coding" ;
+	:startingTimestamp "PT44M10S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment10 a :PodcastSegment ;
+	:name "Business Impacts: Code Bloat & Quality Control" ;
+	:startingTimestamp "PT48M22S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment11 a :PodcastSegment ;
+	:name "Systemic Fragility: What if AI Goes Away?" ;
+	:startingTimestamp "PT56M56S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment12 a :PodcastSegment ;
+	:name "Existential Dread & The Portrait Painter Analogy" ;
+	:startingTimestamp "PT1H3M15S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment13 a :PodcastSegment ;
+	:name "Slop Fatigue & The Real Developer Backlash" ;
+	:startingTimestamp "PT1H11M44S"^^xsd:duration ;
+.
+
+:PPP-Episode8-Segment14 a :PodcastSegment ;
+	:name "Final Thoughts & Takeaways" ;
+	:startingTimestamp "PT1H16M"^^xsd:duration ;
+.
+
+
+#### Episode 9
+:PPP-Episode9 a :PodcastEpisode ;
+	:name "Chinese Room | Does AI Understand? Do LLMs?" ;
+	:hasDuration [:duration "PT1H32M58S"^^xsd:duration] ;
+	:episodeNumber "9"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-09-03"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=fhg9cZQo-qI"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/3LZHkDJJr7iUwnndsFlMfm"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/chinese-room-does-ai-understand-do-llms/id6793816529?i=1000787925533"^^xsd:anyURI ;
+	:description """Can a computer truly understand language, or is it merely following rules and manipulating symbols without meaning? In this episode of Philosophy Programs and Prompts, Casey Hart(@OntologyExplained) and Carl Brown(@InternetOfBugs) dive deep into John Searle’s 1980 seminal paper introducing the Chinese Room thought experiment.
+
+They explore the distinction between Strong and Weak AI, break down the critical difference between syntax and semantics, and discuss whether modern Large Language Models (LLMs) are solving the understanding problem or just running a complex version of symbol retrieval. Along the way, they evaluate major objections to Searle—such as the Systems Reply and the Robot Reply—while examining real-world implications regarding AI agency, simulation vs. reality, and culpability.""" ;
+	:hasPart :PPP-Episode9-Segment01,
+		:PPP-Episode9-Segment02,
+		:PPP-Episode9-Segment03,
+		:PPP-Episode9-Segment04,
+		:PPP-Episode9-Segment05,
+		:PPP-Episode9-Segment06,
+		:PPP-Episode9-Segment07,
+		:PPP-Episode9-Segment08,
+		:PPP-Episode9-Segment09,
+		:PPP-Episode9-Segment10,
+		:PPP-Episode9-Segment11,
+		:PPP-Episode9-Segment12,
+		:PPP-Episode9-Segment13,
+		:PPP-Episode9-Segment14,
+		:PPP-Episode9-Segment15,
+		:PPP-Episode9-Segment16,
+		:PPP-Episode9-Segment17,
+		:PPP-Episode9-Segment18 ;
+	:cites :Source-8a99eecf-d1f3-57f7-9968-f4abd66a5d09,
+		:Source-2e2ab05b-cee0-562b-9438-3380c2aa5538,
+		:Source-472459de-4287-5b68-b53b-fd4f6d2c569f,
+		:Source-0f4473eb-4e27-50af-b751-a7f8b323293b ;
+.
+
+:PPP-Episode9-Segment01 a :PodcastSegment ;
+	:name "Introduction & Information Hazards" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment02 a :PodcastSegment ;
+	:name "Introducing Searle's Chinese Room" ;
+	:startingTimestamp "PT45S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment03 a :PodcastSegment ;
+	:name "Background on John Searle" ;
+	:startingTimestamp "PT4M40S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment04 a :PodcastSegment ;
+	:name "Strong AI vs. Weak AI Defined" ;
+	:startingTimestamp "PT5M45S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment05 a :PodcastSegment ;
+	:name "Hamburgers, Car Washes, and Contextual Understanding" ;
+	:startingTimestamp "PT9M10S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment06 a :PodcastSegment ;
+	:name "Syntax vs. Semantics & Intentionality" ;
+	:startingTimestamp "PT13M52S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment07 a :PodcastSegment ;
+	:name "Reading the Chinese Room Thought Experiment" ;
+	:startingTimestamp "PT17M1S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment08 a :PodcastSegment ;
+	:name "Does the Person in the Room Understand?" ;
+	:startingTimestamp "PT24M20S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment09 a :PodcastSegment ;
+	:name "Defining Understanding & Explanation" ;
+	:startingTimestamp "PT31M10S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment10 a :PodcastSegment ;
+	:name "Substrates: Human Brains vs. Silicon Hardware" ;
+	:startingTimestamp "PT39M12S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment11 a :PodcastSegment ;
+	:name "Anthropomorphic Language in Programming" ;
+	:startingTimestamp "PT46M42S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment12 a :PodcastSegment ;
+	:name "Objection 1: The Systems Reply" ;
+	:startingTimestamp "PT51M7S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment13 a :PodcastSegment ;
+	:name "LLMs as Advanced Search & Pattern Matching" ;
+	:startingTimestamp "PT58M34S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment14 a :PodcastSegment ;
+	:name "Objection 2: The Robot Reply & Modalities" ;
+	:startingTimestamp "PT1H2M3S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment15 a :PodcastSegment ;
+	:name "The Turing Test, AI Agency & Culpability" ;
+	:startingTimestamp "PT1H7M44S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment16 a :PodcastSegment ;
+	:name "Simulation vs. Reality (Why Rainstorm Sims Don't Get Wet)" ;
+	:startingTimestamp "PT1H14M45S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment17 a :PodcastSegment ;
+	:name "Dualism, Emergence, and the Horseshoe Theory of AI" ;
+	:startingTimestamp "PT1H20M8S"^^xsd:duration ;
+.
+
+:PPP-Episode9-Segment18 a :PodcastSegment ;
+	:name "Critique of the Name \"The Chinese Room\" & Sign-off" ;
+	:startingTimestamp "PT1H29M7S"^^xsd:duration ;
+.
+
+
+#### Episode 10
+:PPP-Episode10 a :PodcastEpisode ;
+	:name "The Problem With The Alignment Problem" ;
+	:hasDuration [:duration "PT1H30M18S"^^xsd:duration] ;
+	:episodeNumber "10"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-09-10"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=pFJoKzjcaDM"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/07BckOacWsQY5XSM3oJUru"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/problem-with-the-alignment-problem-ep-10/id6793816529?i=1000789073306"^^xsd:anyURI ;
+	:description """Is the \"AI alignment problem\" genuinely the existential challenge of our time, or has it become an intellectual buffer designed to deflect corporate responsibility? In this episode of Philosophy Programs and Prompts, Casey Hart(@OntologyExplained) and Carl Brown(@InternetOfBugs) break down how alignment discourse often muddies AI debates rather than clarifying them. From thought experiments like the paperclip maximizer and the monkey’s paw to recent controversies like model sycophancy, the Hugging Face incident, and corporate data centers, they explore how vague definitions, anthropomorphism, and doomer abstraction distract the public from immediate, real-world harms.""" ;
+	:hasPart :PPP-Episode10-Segment01,
+		:PPP-Episode10-Segment02,
+		:PPP-Episode10-Segment03,
+		:PPP-Episode10-Segment04,
+		:PPP-Episode10-Segment05,
+		:PPP-Episode10-Segment06,
+		:PPP-Episode10-Segment07,
+		:PPP-Episode10-Segment08,
+		:PPP-Episode10-Segment09,
+		:PPP-Episode10-Segment10,
+		:PPP-Episode10-Segment11,
+		:PPP-Episode10-Segment12,
+		:PPP-Episode10-Segment13,
+		:PPP-Episode10-Segment14,
+		:PPP-Episode10-Segment15,
+		:PPP-Episode10-Segment16,
+		:PPP-Episode10-Segment17,
+		:PPP-Episode10-Segment18 ;
+	:cites :Source-5b608b6a-c4cf-5616-ac70-e189a944b546,
+		:Source-2967c325-d9fb-5524-b224-7ee0ba505582,
+		:Source-033894ad-9bc4-547f-a531-54bb73f9da12,
+		:Source-238c6e43-26df-58f7-88bf-c5b0385e0b95,
+		:Source-6f880e01-7e69-5d59-a4cd-f849261059b7,
+		:Source-3ff5d526-d52e-55af-b2fe-90a21c182922,
+		:Source-58cb54e8-001c-5945-a6ea-c81a2a737c57,
+		:Source-1dd31fde-ca79-5739-a685-1091bf736095,
+		:Source-95f6ccda-fe19-5d7e-b20d-bfeafeec7a95 ;
+.
+
+:PPP-Episode10-Segment01 a :PodcastSegment ;
+	:name "Intro & Socrates the Gadfly" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment02 a :PodcastSegment ;
+	:name "Defining the AI Alignment Problem" ;
+	:startingTimestamp "PT24S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment03 a :PodcastSegment ;
+	:name "Chess Bots, Monkey's Paws, and Paperclip Maximizers" ;
+	:startingTimestamp "PT5M18S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment04 a :PodcastSegment ;
+	:name "The Fallacy of Aligning with \"Humanity\"" ;
+	:startingTimestamp "PT10M29S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment05 a :PodcastSegment ;
+	:name "Adversarial Alignment and Corporate Realities" ;
+	:startingTimestamp "PT16M28S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment06 a :PodcastSegment ;
+	:name "Problem 1: Vague and Ever-Shifting Definitions" ;
+	:startingTimestamp "PT25M56S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment07 a :PodcastSegment ;
+	:name "Recursive Alignment, Benchmark Metrics, and Sycophancy" ;
+	:startingTimestamp "PT34M48S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment08 a :PodcastSegment ;
+	:name "Problem 2: Absolving Corporate and Human Responsibility" ;
+	:startingTimestamp "PT38M20S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment09 a :PodcastSegment ;
+	:name "The Hugging Face Sandbox Breach Narrative" ;
+	:startingTimestamp "PT40M35S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment10 a :PodcastSegment ;
+	:name "Problem 3: Abstracting Away Real, Immediate Harms" ;
+	:startingTimestamp "PT48M"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment11 a :PodcastSegment ;
+	:name "Problem 4: Anthropomorphism and Consciousness Assumptions" ;
+	:startingTimestamp "PT53M30S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment12 a :PodcastSegment ;
+	:name "Jordan Peterson and the \"Raising Children\" Metaphor" ;
+	:startingTimestamp "PT56M6S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment13 a :PodcastSegment ;
+	:name "Problem 5: Armchair Evolutionary Just-So Stories" ;
+	:startingTimestamp "PT1H1M25S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment14 a :PodcastSegment ;
+	:name "Media Clickbait, Hype, and \"Gain of Function\"" ;
+	:startingTimestamp "PT1H7M50S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment15 a :PodcastSegment ;
+	:name "Problem 6: The \"Cure for Cancer\" Fallacy of AI Safety" ;
+	:startingTimestamp "PT1H12M35S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment16 a :PodcastSegment ;
+	:name "Problem 7: Obscuring Public vs. Corporate Conflicts" ;
+	:startingTimestamp "PT1H17M35S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment17 a :PodcastSegment ;
+	:name "The Core Rule: Always Ask \"Aligned with Whom, and on What?\"" ;
+	:startingTimestamp "PT1H24M10S"^^xsd:duration ;
+.
+
+:PPP-Episode10-Segment18 a :PodcastSegment ;
+	:name "Final Thoughts & Outro" ;
+	:startingTimestamp "PT1H28M"^^xsd:duration ;
+.
+
+
+#### Episode 11
+:PPP-Episode11 a :PodcastEpisode ;
+	:name "Doom Debate Prep" ;
+	:hasDuration [:duration "PT1H56M14S"^^xsd:duration] ;
+	:episodeNumber "11"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-09-18"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=d9-zkrwFoUM"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/2GYlRIw28cYKzlGBuCzJmU"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/doom-debate-prep-ep-11/id6793816529?i=1000790549110"^^xsd:anyURI ;
+	:description """In this episode, Casey(@OntologyExplained) and Carl(@InternetOfBugs) prep for Casey's upcoming debate on (@DoomDebates) with Liron Shapira. They dive into what \"P-Doom\" actually means, break down the feasibility of recursive self-improvement (RSI), and evaluate whether recent breakthroughs—like AI-assisted Lean proofs for Navier–Stokes—actually point toward artificial superintelligence or just sophisticated, narrow mixtures of experts. Along the way, they analyze the incentives driving public AI panic, the rhetorical tactics of the rationalist community, and why focusing on speculative existential risk often distracts from tangible, real-world AI harms.""" ;
+	:hasPart :PPP-Episode11-Segment01,
+		:PPP-Episode11-Segment02,
+		:PPP-Episode11-Segment03,
+		:PPP-Episode11-Segment04,
+		:PPP-Episode11-Segment05,
+		:PPP-Episode11-Segment06,
+		:PPP-Episode11-Segment07,
+		:PPP-Episode11-Segment08,
+		:PPP-Episode11-Segment09,
+		:PPP-Episode11-Segment10,
+		:PPP-Episode11-Segment11,
+		:PPP-Episode11-Segment12,
+		:PPP-Episode11-Segment13,
+		:PPP-Episode11-Segment14,
+		:PPP-Episode11-Segment15,
+		:PPP-Episode11-Segment16,
+		:PPP-Episode11-Segment17,
+		:PPP-Episode11-Segment18,
+		:PPP-Episode11-Segment19,
+		:PPP-Episode11-Segment20,
+		:PPP-Episode11-Segment21,
+		:PPP-Episode11-Segment22 ;
+	:cites :Source-a2b5c863-1a2d-5745-a31e-f61bde44ff9a,
+		:Source-1d17d93e-2114-5a44-bfba-764bf1cd4d87,
+		:Source-33b6c268-52c7-53f2-b797-42d749fea9c4,
+		:Source-13923deb-1695-5a2e-b8ca-eea1b419d73b,
+		:Source-92c7498b-5d6c-5273-8539-247058c51436 ;
+.
+
+:PPP-Episode11-Segment01 a :PodcastSegment ;
+	:name "Cold Open: The Moron or Masochist Rule" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment02 a :PodcastSegment ;
+	:name "Intro: Preserving Sanity Amid AI Hype" ;
+	:startingTimestamp "PT11S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment03 a :PodcastSegment ;
+	:name "Prepping for Doom Debates with Liron Shapira" ;
+	:startingTimestamp "PT46S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment04 a :PodcastSegment ;
+	:name "The Value (and Trap) of Public Debates" ;
+	:startingTimestamp "PT3M9S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment05 a :PodcastSegment ;
+	:name "What Exactly is P-Doom? Defining the Stakes" ;
+	:startingTimestamp "PT7M37S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment06 a :PodcastSegment ;
+	:name "Knowing the Audience: Preaching to the Converted vs. the 1%" ;
+	:startingTimestamp "PT11M45S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment07 a :PodcastSegment ;
+	:name "Finding the Common Ground (and the Common Enemy)" ;
+	:startingTimestamp "PT15M38S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment08 a :PodcastSegment ;
+	:name "Deconstructing *If Anyone Builds It, Everyone Dies*" ;
+	:startingTimestamp "PT21M40S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment09 a :PodcastSegment ;
+	:name "The 2050 Extinction Baseline" ;
+	:startingTimestamp "PT26M22S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment10 a :PodcastSegment ;
+	:name "Recursive Self-Improvement: Hype vs. Reality" ;
+	:startingTimestamp "PT29M44S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment11 a :PodcastSegment ;
+	:name "AI Takeover vs. Bad Actors with Powerful Tools" ;
+	:startingTimestamp "PT33M41S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment12 a :PodcastSegment ;
+	:name "The Bayesian Argument Against Doom" ;
+	:startingTimestamp "PT41M43S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment13 a :PodcastSegment ;
+	:name "A Bug-Centered Epistemology" ;
+	:startingTimestamp "PT44M13S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment14 a :PodcastSegment ;
+	:name "The Economic Engine: Capital, IPOs, and Regulatory Capture" ;
+	:startingTimestamp "PT47M50S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment15 a :PodcastSegment ;
+	:name "True Believers and Singularity Evangelists" ;
+	:startingTimestamp "PT52M3S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment16 a :PodcastSegment ;
+	:name "Manufactured Hype and Coordinated Resignations" ;
+	:startingTimestamp "PT56M1S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment17 a :PodcastSegment ;
+	:name "Critique of Rationalist Culture and Intelligence Fetishization" ;
+	:startingTimestamp "PT1H"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment18 a :PodcastSegment ;
+	:name "The Orthogonality Thesis: Wants vs. Intelligence" ;
+	:startingTimestamp "PT1H1M43S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment19 a :PodcastSegment ;
+	:name "Navier–Stokes, Lean Prover, and Mixture of Experts" ;
+	:startingTimestamp "PT1H2M40S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment20 a :PodcastSegment ;
+	:name "Goodhart’s Law, P-Hacking, and Jagged Intelligence" ;
+	:startingTimestamp "PT1H3M40S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment21 a :PodcastSegment ;
+	:name "Extraordinary Claims Require Extraordinary Evidence" ;
+	:startingTimestamp "PT1H4M46S"^^xsd:duration ;
+.
+
+:PPP-Episode11-Segment22 a :PodcastSegment ;
+	:name "Post-Show: Podcasting Logistics and Editing Legos" ;
+	:startingTimestamp "PT1H5M15S"^^xsd:duration ;
+.
+
+
+#### Episode 12
+:PPP-Episode12 a :PodcastEpisode ;
+	:name "Debunking AI Doom: Why Existential Risk Arguments Fall Apart" ;
+	:hasDuration [:duration "PT1H56M19S"^^xsd:duration] ;
+	:episodeNumber "12"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-09-24"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=3yal8e-5MTM"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/63xPICYAheHIYkwYhWa7ni"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/debunking-ai-doom-why-existential-risk-arguments-fall/id6793816529?i=1000791503322"^^xsd:anyURI ;
+	:description """Is artificial intelligence really on track to wipe out humanity by 2050, or are the most prominent doom arguments fundamentally flawed?
+
+In this episode of Philosophy Programs and Prompts, Casey Hart(@OntologyExplained)  and Carl Brown(@InternetOfBugs) break down the core premises behind AI existential risk (x-risk). From Bostrom-style superintelligence scenarios and recursive self-improvement (RSI) to \"hockey stick\" benchmark progress and the appeal to expert anxiety, Casey and Carl analyze where the logic holds up—and where it jumps the rails.
+
+More importantly, they discuss why hyper-focusing on apocalyptic sci-fi scenarios distracts the public and regulators from the very real, immediate harms AI systems are causing right now: cyber vulnerabilities, military reliance on hallucinated outputs, non-consensual deepfakes, and corporate regulatory capture.""" ;
+	:hasPart :PPP-Episode12-Segment01,
+		:PPP-Episode12-Segment02,
+		:PPP-Episode12-Segment03,
+		:PPP-Episode12-Segment04,
+		:PPP-Episode12-Segment05,
+		:PPP-Episode12-Segment06,
+		:PPP-Episode12-Segment07,
+		:PPP-Episode12-Segment08,
+		:PPP-Episode12-Segment09,
+		:PPP-Episode12-Segment10,
+		:PPP-Episode12-Segment11,
+		:PPP-Episode12-Segment12,
+		:PPP-Episode12-Segment13,
+		:PPP-Episode12-Segment14,
+		:PPP-Episode12-Segment15,
+		:PPP-Episode12-Segment16,
+		:PPP-Episode12-Segment17,
+		:PPP-Episode12-Segment18,
+		:PPP-Episode12-Segment19,
+		:PPP-Episode12-Segment20,
+		:PPP-Episode12-Segment21,
+		:PPP-Episode12-Segment22,
+		:PPP-Episode12-Segment23,
+		:PPP-Episode12-Segment24,
+		:PPP-Episode12-Segment25,
+		:PPP-Episode12-Segment26 ;
+	:cites :Source-26ffcb34-4bbb-5b4c-bd78-2fce27e79e74,
+		:Source-48a74e4a-f48f-5ae9-ae6b-af8761445c5c,
+		:Source-a5a3216f-8786-5739-81b3-9bf199be0bc8,
+		:Source-648232f6-1b74-5eb0-86ac-8e735c572189,
+		:Source-b78ebe03-6182-5ef0-b28b-23c9bea44a99,
+		:Source-7d709fd5-e969-5de8-aa4f-f3a801b5b8be,
+		:Source-ce5e5b12-f495-562a-956e-a6ff92ef4a4e,
+		:Source-46da73c7-05c5-59f6-9512-715ad0fba23c ;
+.
+
+:PPP-Episode12-Segment01 a :PodcastSegment ;
+	:name "Real AI Harms vs. Extinction Hysteria" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment02 a :PodcastSegment ;
+	:name "Casey Hart & Carl Brown: \"Prominent X-Risk Denialist\"" ;
+	:startingTimestamp "PT40S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment03 a :PodcastSegment ;
+	:name "Deconstructing the Doom Debate" ;
+	:startingTimestamp "PT3M4S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment04 a :PodcastSegment ;
+	:name "Setting the Terms: What Does \"Doom\" Actually Mean?" ;
+	:startingTimestamp "PT4M47S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment05 a :PodcastSegment ;
+	:name "Bayesian Thinking & The Base Rate Fallacy" ;
+	:startingTimestamp "PT7M18S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment06 a :PodcastSegment ;
+	:name "Where Do p(doom) Percentages Come From?" ;
+	:startingTimestamp "PT12M6S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment07 a :PodcastSegment ;
+	:name "The Core Doom Argument Broken Down" ;
+	:startingTimestamp "PT15M1S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment08 a :PodcastSegment ;
+	:name "Premise 1: Is Intelligence Sufficient for Domination?" ;
+	:startingTimestamp "PT20M47S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment09 a :PodcastSegment ;
+	:name "Did AI \"Almost Start a War\"? Misleading Headlines" ;
+	:startingTimestamp "PT22M36S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment10 a :PodcastSegment ;
+	:name "Hanlon's Razor & Intentionality in LLMs" ;
+	:startingTimestamp "PT26M6S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment11 a :PodcastSegment ;
+	:name "Premise 2: Limits to Superhuman Intelligence" ;
+	:startingTimestamp "PT29M25S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment12 a :PodcastSegment ;
+	:name "Premises 3–5: Desires, Alignment, and Losing a Conflict" ;
+	:startingTimestamp "PT34M7S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment13 a :PodcastSegment ;
+	:name "The Math of Multiplying Uncertain Premises" ;
+	:startingTimestamp "PT49M33S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment14 a :PodcastSegment ;
+	:name "The Argument from Exponential Progress" ;
+	:startingTimestamp "PT53M31S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment15 a :PodcastSegment ;
+	:name "Reasoning Models, Wrappers, and Stacking Advances" ;
+	:startingTimestamp "PT57M46S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment16 a :PodcastSegment ;
+	:name "Benchmark Contamination & Overstated Gains" ;
+	:startingTimestamp "PT59M40S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment17 a :PodcastSegment ;
+	:name "Real-World Coding Regressions (Fighting with Models)" ;
+	:startingTimestamp "PT1H4M3S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment18 a :PodcastSegment ;
+	:name "Appeal to Expert Anxiety & Regulatory Moats" ;
+	:startingTimestamp "PT1H8M56S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment19 a :PodcastSegment ;
+	:name "Assessing Authority vs. Vested Commercial Interests" ;
+	:startingTimestamp "PT1H16M7S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment20 a :PodcastSegment ;
+	:name "The Argument from Unpreparedness & Cybersecurity Debt" ;
+	:startingTimestamp "PT1H22M45S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment21 a :PodcastSegment ;
+	:name "The \"Big Impacts\" Fallacy & Infinite Disutility" ;
+	:startingTimestamp "PT1H29M13S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment22 a :PodcastSegment ;
+	:name "What Does Recursive Self-Improvement (RSI) Actually Mean?" ;
+	:startingTimestamp "PT1H34M42S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment23 a :PodcastSegment ;
+	:name "Anthropic's RSI Evidence: Checking in Lines of Code" ;
+	:startingTimestamp "PT1H41M8S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment24 a :PodcastSegment ;
+	:name "Asymptotes, Data Bottlenecks, and Real-World Friction" ;
+	:startingTimestamp "PT1H46M"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment25 a :PodcastSegment ;
+	:name "Why Focusing on Fiction Harms Real-World Victims" ;
+	:startingTimestamp "PT1H53M34S"^^xsd:duration ;
+.
+
+:PPP-Episode12-Segment26 a :PodcastSegment ;
+	:name "Closing Thoughts: Stay Calm and Focus on Real Problems" ;
+	:startingTimestamp "PT1H55M25S"^^xsd:duration ;
+.
+
+
+#### Episode 13
+:PPP-Episode13 a :PodcastEpisode ;
+	:name "Pause AI? Should we? If so, how do we make it matter?" ;
+	:hasDuration [:duration "PT1H40M14S"^^xsd:duration] ;
+	:episodeNumber "13"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-10-01"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=f_hLOaB8Zt8"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/0fP1sfqedwVKKNAXrwcK2o"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/pause-ai-should-we-if-so-how-do-we-make-it-matter/id6793816529?i=1000792606355"^^xsd:anyURI ;
+	:description """In the wake of high-profile security breaches, frontier lab resignations, and mounting political pressure, the call to \"Pause AI\" has moved from fringe forums to Capitol Hill. But what does pausing AI actually look like in practice?
+
+In this episode of Philosophy Programs and Prompts, Casey Hart(@OntologyExplained) and Carl Brown(@InternetOfBugs) break down the tangled definitions, ulterior motives, and policy proposals surrounding the AI pause movement. They explore whether agentic LLMs should be legally classified as malware, interrogate the PR machinery behind AI safety whistleblowers, and evaluate proposals ranging from Dario Amodei’s call to \"pace the frontier\" to the official PauseAI international treaty framework.
+
+Most importantly, they tackle the critical distinction between abstract existential dread and immediate, tangible harms—asking whether regulatory obsession with hypothetical \"superintelligence\" is blinding lawmakers to the damage happening right now.""" ;
+	:hasPart :PPP-Episode13-Segment01,
+		:PPP-Episode13-Segment02,
+		:PPP-Episode13-Segment03,
+		:PPP-Episode13-Segment04,
+		:PPP-Episode13-Segment05,
+		:PPP-Episode13-Segment06,
+		:PPP-Episode13-Segment07,
+		:PPP-Episode13-Segment08,
+		:PPP-Episode13-Segment09,
+		:PPP-Episode13-Segment10,
+		:PPP-Episode13-Segment11,
+		:PPP-Episode13-Segment12,
+		:PPP-Episode13-Segment13,
+		:PPP-Episode13-Segment14,
+		:PPP-Episode13-Segment15,
+		:PPP-Episode13-Segment16,
+		:PPP-Episode13-Segment17,
+		:PPP-Episode13-Segment18,
+		:PPP-Episode13-Segment19,
+		:PPP-Episode13-Segment20,
+		:PPP-Episode13-Segment21,
+		:PPP-Episode13-Segment22 ;
+	:cites :Source-0ec82eb4-b581-5134-967a-88b9ef53e34d,
+		:Source-621752b8-3a46-5094-9ce0-1c61483f5d26,
+		:Source-18a4eb61-cd71-5a00-a0c6-7c8d3db44458,
+		:Source-bc2f8384-7cc4-5b2c-a385-c44ca6f38c3d,
+		:Source-064619cf-97eb-55a2-9782-254e11249e91,
+		:Source-d94cb680-f5eb-5249-a60b-4949f86fd9c4,
+		:Source-69ba8b37-11a8-5208-aa3e-2a7d3174c7a7,
+		:Source-d0774c39-db21-541c-8a75-cc35d2e0d7e2,
+		:Source-58844e71-054d-5284-8b65-37a2ea45e367,
+		:Source-da3034ee-6d75-5374-8a61-022f3c2bb3f3,
+		:Source-a2b5c863-1a2d-5745-a31e-f61bde44ff9a,
+		:Source-83a730d2-771e-567f-94c1-eaa37a687c79,
+		:Source-bb002878-d87a-5758-ac3c-82fa663d7b79,
+		:Source-58cb54e8-001c-5945-a6ea-c81a2a737c57 ;
+.
+
+:PPP-Episode13-Segment01 a :PodcastSegment ;
+	:name "Cold Open: The Super AI Trap" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment02 a :PodcastSegment ;
+	:name "Slowing Down & The AI Doomer Explosion" ;
+	:startingTimestamp "PT33S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment03 a :PodcastSegment ;
+	:name "What Does \"Pause AI\" Actually Mean?" ;
+	:startingTimestamp "PT1M42S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment04 a :PodcastSegment ;
+	:name "Is AI a \"Normal Technology\"?" ;
+	:startingTimestamp "PT3M45S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment05 a :PodcastSegment ;
+	:name "AI as Malware: Agentic Intent vs. Real Outcomes" ;
+	:startingTimestamp "PT5M7S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment06 a :PodcastSegment ;
+	:name "The Jacob Coxon Resignation & Safety PR" ;
+	:startingTimestamp "PT12M10S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment07 a :PodcastSegment ;
+	:name "Follow the Money: Who Funds the AI Doom Movement?" ;
+	:startingTimestamp "PT15M45S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment08 a :PodcastSegment ;
+	:name "Dario Amodei, METR, and \"Pacing the Frontier\"" ;
+	:startingTimestamp "PT23M15S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment09 a :PodcastSegment ;
+	:name "Geopolitics and the \"China Boogeyman\"" ;
+	:startingTimestamp "PT25M6S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment10 a :PodcastSegment ;
+	:name "Media Hype and the Failure to Cite Sources" ;
+	:startingTimestamp "PT29M5S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment11 a :PodcastSegment ;
+	:name "OpenAI's Security Response & The Incompetence Problem" ;
+	:startingTimestamp "PT32M46S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment12 a :PodcastSegment ;
+	:name "Defining the Target: Current LLMs vs. Superintelligence" ;
+	:startingTimestamp "PT36M47S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment13 a :PodcastSegment ;
+	:name "The Casar-Sanders Bill & Political Definitions" ;
+	:startingTimestamp "PT41M21S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment14 a :PodcastSegment ;
+	:name "Military AI Targeting and Anthropic's Pushback" ;
+	:startingTimestamp "PT46M22S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment15 a :PodcastSegment ;
+	:name "Deconstructing the PauseAI Treaty Proposal" ;
+	:startingTimestamp "PT52M5S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment16 a :PodcastSegment ;
+	:name "An IAEA for AI vs. Regulating Social Media" ;
+	:startingTimestamp "PT58M43S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment17 a :PodcastSegment ;
+	:name "Regulatory Capture and Big Tech Moats" ;
+	:startingTimestamp "PT1H11M14S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment18 a :PodcastSegment ;
+	:name "The Case for a Pause: Prioritizing Real Harms" ;
+	:startingTimestamp "PT1H18M"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment19 a :PodcastSegment ;
+	:name "Economic Fallout, Force Majeure, and the AI Bubble" ;
+	:startingTimestamp "PT1H25M30S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment20 a :PodcastSegment ;
+	:name "Why Corporate Incompetence Trumps Deception" ;
+	:startingTimestamp "PT1H29M30S"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment21 a :PodcastSegment ;
+	:name "Soundbite Verdicts: Should We Pause AI?" ;
+	:startingTimestamp "PT1H35M"^^xsd:duration ;
+.
+
+:PPP-Episode13-Segment22 a :PodcastSegment ;
+	:name "Outro" ;
+	:startingTimestamp "PT1H39M38S"^^xsd:duration ;
+.
+
+
+#### Episode 14
+:PPP-Episode14 a :PodcastEpisode ;
+	:name "Alignment Problem Part 2 - Taking it Seriously" ;
+	:hasDuration [:duration "PT1H17M47S"^^xsd:duration] ;
+	:episodeNumber "14"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-10-08"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=45meveem2-Y"^^xsd:anyURI ;
+	:url-Spotify "https://open.spotify.com/episode/6RB2IcWMkXt0O1UzqE5eaF"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/alignment-problem-part-2-taking-it-seriously/id6793816529?i=1000793893973"^^xsd:anyURI ;
+	:description """Can the AI \"alignment problem\" actually be defined, or is it fundamentally flawed from the start? In this episode of Philosophy, Programs, and Prompts, Casey Hart(@OntologyExplained) and Carl Brown(@InternetOfBugs) set aside bad-faith doomer rhetoric and corporate marketing moats to examine the core arguments behind AI alignment in good faith.
+
+Casey argues that grappling with alignment acts as a conceptual gateway into foundational questions of ethics, paternalism, and what constitutes the \"good life\". Meanwhile, Carl pushes back from an engineering and practical standpoint, arguing that true alignment with humanity—which is notoriously misaligned with itself—is a distraction from pressing real-world issues like environmental degradation, social media algorithms, legal accountability, and building practical systems we can control.
+
+Together, they dissect the mechanics of Coherent Extrapolated Volition (CEV), Isaac Asimov's Three Laws of Robotics, Nick Bostrom's orthogonality thesis, and the practical limits of guardrails, kill switches, and machine interpretability.""" ;
+	:hasPart :PPP-Episode14-Segment01,
+		:PPP-Episode14-Segment02,
+		:PPP-Episode14-Segment03,
+		:PPP-Episode14-Segment04,
+		:PPP-Episode14-Segment05,
+		:PPP-Episode14-Segment06,
+		:PPP-Episode14-Segment07,
+		:PPP-Episode14-Segment08,
+		:PPP-Episode14-Segment09,
+		:PPP-Episode14-Segment10,
+		:PPP-Episode14-Segment11,
+		:PPP-Episode14-Segment12,
+		:PPP-Episode14-Segment13,
+		:PPP-Episode14-Segment14,
+		:PPP-Episode14-Segment15,
+		:PPP-Episode14-Segment16,
+		:PPP-Episode14-Segment17 ;
+	:cites :Source-d3d5fee6-09b3-5410-af2e-5deb6652f9a0,
+		:Source-aa9f1477-a500-59de-b9e4-c973034b073e ;
+.
+
+:PPP-Episode14-Segment01 a :PodcastSegment ;
+	:name "Cold Open: Why Computer Science Ignores History" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment02 a :PodcastSegment ;
+	:name "Welcome to Philosophy, Programs, and Prompts" ;
+	:startingTimestamp "PT28S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment03 a :PodcastSegment ;
+	:name "The Thesis: Alignment as a Gateway Drug to Philosophy" ;
+	:startingTimestamp "PT1M53S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment04 a :PodcastSegment ;
+	:name "Four Ways to Frame the Alignment Problem" ;
+	:startingTimestamp "PT3M59S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment05 a :PodcastSegment ;
+	:name "Paternalism, Ethics, and Defining \"The Good Life\"" ;
+	:startingTimestamp "PT6M5S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment06 a :PodcastSegment ;
+	:name "The Computer Science Habit of Working in a Vacuum" ;
+	:startingTimestamp "PT9M50S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment07 a :PodcastSegment ;
+	:name "Coherent Extrapolated Volition & Paternalistic Genies" ;
+	:startingTimestamp "PT15M6S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment08 a :PodcastSegment ;
+	:name "Eternal Recurrence and Avoiding an Algorithmic Rut" ;
+	:startingTimestamp "PT20M20S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment09 a :PodcastSegment ;
+	:name "Defining Alignment: Goals, Intentions, and Needs" ;
+	:startingTimestamp "PT25M30S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment10 a :PodcastSegment ;
+	:name "Can We Be Aligned with Non-Living Artifacts?" ;
+	:startingTimestamp "PT31M40S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment11 a :PodcastSegment ;
+	:name "Internal Self-Misalignment and Humanity's Fractured Goals" ;
+	:startingTimestamp "PT36M"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment12 a :PodcastSegment ;
+	:name "A Taxonomy of Proposed Solutions: Moratoriums & Off Switches" ;
+	:startingTimestamp "PT47M20S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment13 a :PodcastSegment ;
+	:name "Asimov's Three Laws: Control Constraints vs. True Alignment" ;
+	:startingTimestamp "PT54M20S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment14 a :PodcastSegment ;
+	:name "Encoding Morality: Utilitarian Calculators & Perfect Parents" ;
+	:startingTimestamp "PT1H50S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment15 a :PodcastSegment ;
+	:name "Eliminativism, Orthogonality, and Decision Theory Flaws" ;
+	:startingTimestamp "PT1H5M14S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment16 a :PodcastSegment ;
+	:name "Machine Interpretability: What Science Can Actually Do" ;
+	:startingTimestamp "PT1H9M30S"^^xsd:duration ;
+.
+
+:PPP-Episode14-Segment17 a :PodcastSegment ;
+	:name "Marketing Benchmarks vs. Real-World Harm" ;
+	:startingTimestamp "PT1H13M"^^xsd:duration ;
+.
+
+
+
+##### REFERENCES
+#### Source IRIs are minted, not looked up: "Source-" + uuid5(NAMESPACE_URL, canonical identifier),
+#### where the identifier is the best one available (DOI > arXiv > ISBN > canonical URL > "urn:x-title:" + lowercased title).
+#### The same source therefore always gets the same IRI, so citations across episodes merge.
+#### Once minted, an IRI stays put: a better identifier found later is added as a link, not used to re-mint.
+#### Sources from YouTube are :Video; everything else is :Content for now.
+:Source-b17168c4-4868-5adb-b342-6ca813e2ade2 a :Video ;
+	:createdBy :CarlBrown ;
+	:name "Definitions of AI and How Companies Use Them to Lie" ;
+	:url-Youtube "https://www.youtube.com/watch?v=F5ajyr5VzS0"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 3.5
+:Source-4667d376-c3f5-53a0-812a-dffd55164244 a :Content ;
+	:name "Hugging Face blog: Security Incident (July 2026)" ;
+	:uri "https://huggingface.co/blog/security-incident-july-2026"^^xsd:anyURI ;
+.
+
+:Source-9522578c-ac45-595e-b91c-8bceaf80f5af a :Content ;
+	:name "OpenAI: Hugging Face Model Evaluation Security Incident" ;
+	:uri "https://openai.com/index/hugging-face-model-evaluation-security-incident/"^^xsd:anyURI ;
+.
+
+:Source-719c2200-a0e0-56bf-b44c-4787857a0d45 a :Content ;
+	:name "The Emperor's New Exploit" ;
+	:uri "https://medium.com/@lfloridi/the-emperors-new-exploit-2b062f124c06"^^xsd:anyURI ;
+.
+
+:Source-28172924-a5c8-5937-992b-54521e546cde a :Video ;
+	:name "The OpenAI/Huggingface incident | Redwood Research podcast episode 2" ;
+	:url-Youtube "https://www.youtube.com/watch?v=Vtk8YLgYU4g"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 4
+:Source-4944f282-253d-5954-9c9b-9c1bb90406cb a :Video ;
+	:name "What Is an AI Anyway? | Mustafa Suleyman | TED" ;
+	:url-Youtube "https://www.youtube.com/watch?v=KKNCiRWd_j0"^^xsd:anyURI ;
+.
+
+:Source-e5582d53-237f-501c-aebd-3faeff8cb2cb a :Video ;
+	:name "ChatGPT isn't Smart. It's something Much Weirder" ;
+	:url-Youtube "https://www.youtube.com/watch?v=5CKuiuc5cJM"^^xsd:anyURI ;
+.
+
+:Source-138b9937-0f93-5c77-acb4-0cf05dd4ce2d a :Video ;
+	:name "“This Isn’t Just AI. It’s ALIEN Intelligence” | Full-Length Documentary" ;
+	:url-Youtube "https://www.youtube.com/watch?v=3YZyxnQF1_E"^^xsd:anyURI ;
+.
+
+:Source-517cbe08-94df-5f39-abf8-dc527fef3668 a :Video ;
+	:name "LLMs Are Databases - So Query Them" ;
+	:url-Youtube "https://www.youtube.com/watch?v=8Ppw8254nLI"^^xsd:anyURI ;
+.
+
+:Source-6a2c09b1-7489-5d25-8223-4d87e136f680 a :Content ;
+	:name "Scientists Tried to Re-create an Entire Human Brain in a Computer. What Happened?" ;
+	:uri "https://www.scientificamerican.com/article/scientists-tried-to-re-create-an-entire-human-brain-in-a-computer-what-happened/"^^xsd:anyURI ;
+.
+
+:Source-3285f4ef-fc49-561e-b4e4-ca5197a76de7 a :Content ;
+	:name "How GM's Cruise robotaxi tech failures led it to drag a pedestrian 20 feet" ;
+	:uri "https://www.reuters.com/business/autos-transportation/how-gms-cruise-robotaxi-tech-failures-led-it-drag-pedestrian-20-feet-2024-01-26/"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 5
+:Source-3004978d-e97d-5a03-9f8a-18fc20899854 a :Content ;
+	:name "Is AI the next phase of evolution? (When Dawkins Met Claude)" ;
+	:uri "https://unherd.com/2026/05/is-ai-the-next-phase-of-evolution/"^^xsd:anyURI ;
+.
+
+:Source-863d166b-fa8d-580b-851a-00fbe05d3703 a :Content ;
+	:name "No, Artificial Intelligence Is Not Conscious" ;
+	:uri "https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/"^^xsd:anyURI ;
+.
+
+:Source-a0138e8f-979a-59d7-a986-6245e83aa08f a :Content ;
+	:name "Meta's A.I. Chief Yann LeCun Explains Why a House Cat Is Smarter Than the Best A.I." ;
+	:uri "https://observer.com/2024/02/metas-a-i-chief-yann-lecun-explains-why-a-house-cat-is-smarter-than-the-best-a-i/"^^xsd:anyURI ;
+.
+
+:Source-50968fc0-61d2-5252-962c-34fa5dc8fe14 a :Video ;
+	:name "Is AI ALIVE? What AI is teaching us about consciousness with Michael Pollan and Chris Hayes" ;
+	:url-Youtube "https://www.youtube.com/watch?v=Xgd_bQ4Mscg"^^xsd:anyURI ;
+.
+
+:Source-03b06f0c-fb00-5ebf-8949-bf8f306f9568 a :Content ;
+	:name "Paper on ELIZA (IJFMR, 2025)" ;
+	:uri "https://www.ijfmr.com/papers/2025/6/60365.pdf"^^xsd:anyURI ;
+.
+
+:Source-54eacb2c-9445-5a65-aacf-e6c3bd458efa a :Content ;
+	:name "The failure of the Human Brain Project" ;
+	:uri "https://www.technologyreview.com/2021/08/25/1032133/big-science-human-brain-failure/"^^xsd:anyURI ;
+.
+
+:Source-ab5f3644-bc5e-5f3e-8b5c-a4403a3f2f1f a :Content ;
+	:name "Grok used in firing missiles at Iran" ;
+	:uri "https://www.independent.co.uk/news/world/americas/us-politics/elon-musk-grok-ai-iran-missiles-pentagon-b2997321.html"^^xsd:anyURI ;
+.
+
+:Source-2598e9b1-322d-5a01-91ba-e966489f6878 a :Content ;
+	:name "Ukrainian AI drones already choose their own targets" ;
+	:uri "https://komersant.ua/en/ukrainski-drony-iz-shi-vzhe-sami-obyraiut-tsili-eksperty-poiasnyly-iak-tse-zminiuie-pravyla-suchasnoi-viyny/"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 6.1
+:Source-ce1c895b-fb6d-5438-a85f-827ad59f1515 a :Video ;
+	:name "Black Hat USA 2026 | The 'Breaking' News: The OpenAI–Hugging Face Incident" ;
+	:url-Youtube "https://www.youtube.com/watch?v=87DyyMV0kCY"^^xsd:anyURI ;
+.
+
+:Source-0f695692-65a6-5bda-8dfa-4f9e70c0aff3 a :Content ;
+	:name "Reasoning models don't always say what they think" ;
+	:uri "https://www.anthropic.com/research/reasoning-models-dont-say-think"^^xsd:anyURI ;
+.
+
+:Source-3fab3ade-8545-5ef3-832e-e87a1737ceb7 a :Content ;
+	:name "Measuring Faithfulness in Chain-of-Thought Reasoning" ;
+	:uri "https://www.anthropic.com/research/measuring-faithfulness-in-chain-of-thought-reasoning"^^xsd:anyURI ;
+.
+
+:Source-b5ab646b-b7b8-5b58-983f-571081aa4357 a :Video ;
+	:createdBy :CarlBrown ;
+	:name "AI Agent Adopters are SO Naive - AI may prove humans are DOOMED After All" ;
+	:url-Youtube "https://www.youtube.com/watch?v=GYfgjYVEYQ0"^^xsd:anyURI ;
+.
+
+:Source-3339d964-696e-59ef-8f9d-ce30d0e6733f a :Content ;
+	:name "Radiolab: Born This Way (transcript)" ;
+	:uri "https://radiolab.org/podcast/born-way/transcript"^^xsd:anyURI ;
+.
+
+:Source-ee8cf19b-2a37-582c-95ca-9a1314223dfa a :Content ;
+	:name "Microsoft Patches Record 622 Flaws" ;
+	:uri "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 6.2
+:Source-bbb894c1-cee0-5be5-8656-6af1a15854b4 a :Video ;
+	:createdBy :CaseyHart ;
+	:name "I'm Sick of the ASI Fear-Mongering (Hank Green's Video Made Me Rage, Featuring Nate Soares)" ;
+	:url-Youtube "https://www.youtube.com/watch?v=QXCAGStCOMA"^^xsd:anyURI ;
+.
+
+:Source-803db921-4a36-5ab6-8e99-e0cf4aba33f6 a :Video ;
+	:createdBy :CarlBrown ;
+	:name "Your Favorite Science YouTubers Are Wrong About AI, (e.g. SciShow, Kurzgesagt, and Kyle Hill )" ;
+	:url-Youtube "https://www.youtube.com/watch?v=4lKyNdZz3Vw"^^xsd:anyURI ;
+.
+
+:Source-9129e2fb-03b2-5780-ba75-ef450d32c3e6 a :Video ;
+	:name "Does Hank Green Shave His Butt? | Soupytime Asks Hank Anything" ;
+	:url-Youtube "https://www.youtube.com/watch?v=C5bwAv9Xdz8"^^xsd:anyURI ;
+.
+
+:Source-f4ad7da5-9448-5108-924f-1f7ac12e9b7a a :Content ;
+	:name "Hank Green's comment on r/nerdfighters" ;
+	:uri "https://www.reddit.com/r/nerdfighters/comments/1vbmoj5/comment/p0vzmog/"^^xsd:anyURI ;
+.
+
+:Source-0525d247-c30a-58c8-ba4e-80935d61a81b a :Content ;
+	:name "YouTuber Hank Green says his AI usage is not healthy" ;
+	:uri "https://techcrunch.com/2026/08/01/youtuber-hank-green-says-his-ai-usage-is-not-healthy/"^^xsd:anyURI ;
+.
+
+:Source-6e2391c2-3512-5526-bfcf-89d255164ac7 a :Video ;
+	:name "We’ve Lost Control of AI" ;
+	:url-Youtube "https://www.youtube.com/watch?v=90C3XVjUMqE"^^xsd:anyURI ;
+.
+
+:Source-ce39d28f-3a8e-5b55-874e-ca3114324f88 a :Video ;
+	:name "I Remade the SciShow Knitting Video (with accurate SCIENCE)" ;
+	:url-Youtube "https://www.youtube.com/watch?v=5btQokB32dQ"^^xsd:anyURI ;
+.
+
+:Source-30e27165-3412-53c2-8800-cda0491bfa06 a :Video ;
+	:name "Scientist and Knitter reacts to SciShow's knitting video" ;
+	:url-Youtube "https://www.youtube.com/watch?v=wx1orbc-7MQ"^^xsd:anyURI ;
+.
+
+:Source-fa3d5dc5-833c-5aba-aeaf-f96a6e256074 a :Video ;
+	:name "This is Going to be Very Messy" ;
+	:url-Youtube "https://www.youtube.com/watch?v=8MLbOulrLA0"^^xsd:anyURI ;
+.
+
+:Source-825f2a0e-4d03-5683-af98-0057f63dc28f a :Video ;
+	:createdBy :CarlBrown ;
+	:name "The Biggest Lie in AI" ;
+	:url-Youtube "https://www.youtube.com/watch?v=0Plo-zT8W9w"^^xsd:anyURI ;
+.
+
+:Source-3d90cc91-5799-5bb2-8770-98ae9ee68268 a :Video ;
+	:name "We need to talk about the Hank Green situation" ;
+	:url-Youtube "https://www.youtube.com/watch?v=cVT7MbRBiLY"^^xsd:anyURI ;
+.
+
+:Source-f4e8dbb9-875d-592d-bc87-2b074a9a196f a :Content ;
+	:name "GEO vs. AEO vs. SEO: What's the Difference and How to Optimize for All Three" ;
+	:uri "https://www.searchenginepeople.com/blog/geo-vs-aeo-vs-seo-whats-the-difference-and-how-to-optimize-for-all-three.html"^^xsd:anyURI ;
+.
+
+:Source-3bec29b5-2f2f-5193-a96e-f3fb690c332d a :Content ;
+	:name "Israel influencing LLMs? (Drop Site News)" ;
+	:uri "https://www.dropsitenews.com/p/fd107677-6cf9-4ece-9e45-de16bbde8b4a"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 7
+:Source-03755285-5cce-5faa-8d35-716bb44f097b a :Video ;
+	:name "Surprising emergent behavior of sorting algorithms | Michael Levin and Lex Fridman" ;
+	:url-Youtube "https://www.youtube.com/watch?v=jr1sNYY2t9A"^^xsd:anyURI ;
+.
+
+:Source-4cf9e552-26a8-5eec-9702-9406e8f481cf a :Video ;
+	:name "Your Brain Isn’t a Computer and That Changes Everything" ;
+	:url-Youtube "https://www.youtube.com/watch?v=_kuwwmFnxGY"^^xsd:anyURI ;
+.
+
+:Source-5a1da861-abd9-5e7b-90b7-c2eb47de8a76 a :Content ;
+	:name "The Secret Life of Algorithms" ;
+	:uri "https://www.forbes.com/sites/andreamorris/2025/11/13/the-secret-life-of-algorithms/"^^xsd:anyURI ;
+.
+
+:Source-8a99eecf-d1f3-57f7-9968-f4abd66a5d09 a :Video ;
+	:name "The Chinese Room Experiment | The Hunt for AI | BBC Studios" ;
+	:url-Youtube "https://www.youtube.com/watch?v=D0MD4sRHj1M"^^xsd:anyURI ;
+.
+
+:Source-063a8865-91ba-56e3-870b-d23381e8ce35 a :Content ;
+	:name "Thomas Kuhn (Stanford Encyclopedia of Philosophy)" ;
+	:uri "https://plato.stanford.edu/entries/thomas-kuhn/"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 8
+:Source-17043733-2a71-5162-b5cd-1f17405f5c66 a :Video ;
+	:name "I'm done coding with AI" ;
+	:url-Youtube "https://www.youtube.com/watch?v=2ZU3j4GQ4K8"^^xsd:anyURI ;
+.
+
+:Source-a813ec6b-c4e4-5d66-b799-f9a70c9038f6 a :Video ;
+	:name "Why I don't use AI for just the easy things" ;
+	:url-Youtube "https://www.youtube.com/watch?v=P6FZKrE-Hfo"^^xsd:anyURI ;
+.
+
+:Source-7e9af38b-1cd8-528f-bcff-b210352d6cd4 a :Content ;
+	:name "Joseph Weizenbaum, inventor of the ELIZA chatbot, turned against artificial intelligence" ;
+	:uri "https://www.theguardian.com/technology/2023/jul/25/joseph-weizenbaum-inventor-eliza-chatbot-turned-against-artificial-intelligence-ai"^^xsd:anyURI ;
+.
+
+:Source-8fee96b8-1540-5bbe-8d81-67edb5161c2b a :Video ;
+	:name "Mike Israetel's PhD: The Biggest Academic Sham in Fitness?" ;
+	:url-Youtube "https://www.youtube.com/watch?v=elLI9PRn1gQ"^^xsd:anyURI ;
+.
+
+:Source-c753de7e-1f69-5d6e-af4f-22e63ea43253 a :Video ;
+	:name "Mike Israetel's Latest Book Is AI Slop (The Aesthetic Revolution)" ;
+	:url-Youtube "https://www.youtube.com/watch?v=0dFugf0ySnc"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 9
+:Source-2e2ab05b-cee0-562b-9438-3380c2aa5538 a :Video ;
+	:name "Do Google engineers actually vibe code?" ;
+	:url-Youtube "https://www.youtube.com/watch?v=PbsocBPkoUc"^^xsd:anyURI ;
+.
+
+:Source-472459de-4287-5b68-b53b-fd4f6d2c569f a :Content ;
+	:name "Minds, Brains, and Programs" ;
+	:uri "https://rintintin.colorado.edu/~vancecd/phil201/Searle.pdf"^^xsd:anyURI ;
+.
+
+:Source-0f4473eb-4e27-50af-b751-a7f8b323293b a :Content ;
+	:name "Intentionality: An Essay in the Philosophy of Mind" ;
+	:uri "https://books.google.com/books/about/Intentionality.html?id=nAYGcftgT20C"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 10
+:Source-5b608b6a-c4cf-5616-ac70-e189a944b546 a :Content ;
+	:name "HuffPost article on Bostrom's paperclip maximizer" ;
+	:uri "https://www.huffpost.com/entry/artificial-intelligence-oxford_n_5689858"^^xsd:anyURI ;
+.
+
+:Source-2967c325-d9fb-5524-b224-7ee0ba505582 a :Content ;
+	:name "AI alignment (IEEE Spectrum)" ;
+	:uri "https://spectrum.ieee.org/ai-alignment"^^xsd:anyURI ;
+.
+
+:Source-033894ad-9bc4-547f-a531-54bb73f9da12 a :Content ;
+	:name "If Anyone Builds It, Everyone Dies" ;
+.
+
+:Source-238c6e43-26df-58f7-88bf-c5b0385e0b95 a :Video ;
+	:name "No, AI Isn’t Conscious; It’s Actually Much Worse | AI Scientist" ;
+	:url-Youtube "https://www.youtube.com/watch?v=FS_hLDTDI1w"^^xsd:anyURI ;
+.
+
+:Source-6f880e01-7e69-5d59-a4cd-f849261059b7 a :Video ;
+	:name "How difficult is AI alignment? | Anthropic Research Salon" ;
+	:url-Youtube "https://www.youtube.com/watch?v=IPmt8b-qLgk"^^xsd:anyURI ;
+.
+
+:Source-3ff5d526-d52e-55af-b2fe-90a21c182922 a :Content ;
+	:name "ControlAI on Sky News (Instagram clip)" ;
+	:uri "https://www.instagram.com/reel/DTxt8oqDysU/"^^xsd:anyURI ;
+.
+
+:Source-58cb54e8-001c-5945-a6ea-c81a2a737c57 a :Video ;
+	:name "Grok: 'The creators don't know how it works - or how to keep it under control'" ;
+	:url-Youtube "https://www.youtube.com/watch?v=odSvjKMRn-I"^^xsd:anyURI ;
+.
+
+:Source-1dd31fde-ca79-5739-a685-1091bf736095 a :Video ;
+	:name "Nate Soares: \"If Anyone Builds Artificial Super Intelligence, Everyone Dies\" | Seeing Clearly" ;
+	:url-Youtube "https://www.youtube.com/watch?v=TfgrWN5iufA"^^xsd:anyURI ;
+.
+
+:Source-95f6ccda-fe19-5d7e-b20d-bfeafeec7a95 a :Video ;
+	:name "The alignment problem - Jordan Peterson #shortsvideo" ;
+	:url-Youtube "https://www.youtube.com/watch?v=K5IUcbTecBY"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 11
+:Source-a2b5c863-1a2d-5745-a31e-f61bde44ff9a a :Content ;
+	:name "The Post-Labor Day AI Panic Psyop" ;
+	:uri "https://eddowdbeyondthenarrative.substack.com/p/the-post-labor-day-ai-panic-psyop"^^xsd:anyURI ;
+.
+
+:Source-1d17d93e-2114-5a44-bfba-764bf1cd4d87 a :Content ;
+	:name "Chatbot Chess Championship 2026" ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLBRObSmbZluQwBIvxyiWfm_b495AnpzDn"^^xsd:anyURI ;
+.
+
+:Source-33b6c268-52c7-53f2-b797-42d749fea9c4 a :Content ;
+	:name "turbo-fieldfare (Mac app for running mixture-of-experts models)" ;
+	:uri "https://github.com/drumih/turbo-fieldfare/"^^xsd:anyURI ;
+.
+
+:Source-13923deb-1695-5a2e-b8ca-eea1b419d73b a :Content ;
+	:name "LLMs can't perform \"genuine logical reasoning,\" Apple researchers suggest" ;
+	:uri "https://arstechnica.com/ai/2024/10/llms-cant-perform-genuine-logical-reasoning-apple-researchers-suggest/"^^xsd:anyURI ;
+.
+
+:Source-92c7498b-5d6c-5273-8539-247058c51436 a :Content ;
+	:name "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models" ;
+	:uri "https://arxiv.org/pdf/2410.05229"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 12
+:Source-26ffcb34-4bbb-5b4c-bd78-2fce27e79e74 a :Video ;
+	:name "Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)" ;
+	:url-Youtube "https://www.youtube.com/watch?v=oxHKesSpqBM"^^xsd:anyURI ;
+.
+
+:Source-48a74e4a-f48f-5ae9-ae6b-af8761445c5c a :Content ;
+	:name "AI almost started a war with China (Military Watch Magazine)" ;
+	:uri "https://militarywatchmagazine.com/article/ai-us-intelligence-war-china-nuclear"^^xsd:anyURI ;
+.
+
+:Source-a5a3216f-8786-5739-81b3-9bf199be0bc8 a :Content ;
+	:name "New Apple study challenges whether AI models truly \"reason\" through problems" ;
+	:uri "https://arstechnica.com/ai/2025/06/new-apple-study-challenges-whether-ai-models-truly-reason-through-problems/"^^xsd:anyURI ;
+.
+
+:Source-648232f6-1b74-5eb0-86ac-8e735c572189 a :Content ;
+	:name "The Illusion of Thinking" ;
+	:uri "https://machinelearning.apple.com/research/illusion-of-thinking"^^xsd:anyURI ;
+.
+
+:Source-b78ebe03-6182-5ef0-b28b-23c9bea44a99 a :Content ;
+	:name "Gates sees end to spam in 2 years" ;
+	:uri "https://www.nytimes.com/2004/01/26/IHT-gates-sees-end-to-spam-in-2-years.html"^^xsd:anyURI ;
+.
+
+:Source-7d709fd5-e969-5de8-aa4f-f3a801b5b8be a :Video ;
+	:name "HACKED! Are Commercial Ships Being Targeted by Cyber Attacks? | Maritime Cyber Security Deep Dive" ;
+	:url-Youtube "https://www.youtube.com/watch?v=5kkP-3d_8ac"^^xsd:anyURI ;
+.
+
+:Source-ce5e5b12-f495-562a-956e-a6ff92ef4a4e a :Content ;
+	:name "Recursive self-improvement (Anthropic)" ;
+	:uri "https://www.anthropic.com/institute/recursive-self-improvement"^^xsd:anyURI ;
+.
+
+:Source-46da73c7-05c5-59f6-9512-715ad0fba23c a :Content ;
+	:name "Thread on ties between AI doomers, rationalists and AI employees" ;
+	:uri "https://x.com/kevinnbass/status/2099621874279817638"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 13
+:Source-0ec82eb4-b581-5134-967a-88b9ef53e34d a :Content ;
+	:name "Jacob Coxon resignation thread" ;
+	:uri "https://x.com/hilbertspaess/status/2097476196791709843"^^xsd:anyURI ;
+.
+
+:Source-621752b8-3a46-5094-9ce0-1c61483f5d26 a :Content ;
+	:name "EXCLUSIVE: Jacob Coxon Worked With Doomer PR Firm" ;
+	:uri "https://www.piratewires.com/p/jacob-coxon-worked-with-ai-doomer-firm"^^xsd:anyURI ;
+.
+
+:Source-18a4eb61-cd71-5a00-a0c6-7c8d3db44458 a :Content ;
+	:name "We Must Pace the Frontier" ;
+	:uri "https://darioamodei.com/post/we-must-pace-the-frontier"^^xsd:anyURI ;
+.
+
+:Source-bc2f8384-7cc4-5b2c-a385-c44ca6f38c3d a :Content ;
+	:name "Ban Artificial Superintelligence Act: Release Summary" ;
+	:uri "https://www.sanders.senate.gov/wp-content/uploads/Ban-Artificial-Superintelligence-Act-Release-Summary.pdf"^^xsd:anyURI ;
+.
+
+:Source-064619cf-97eb-55a2-9782-254e11249e91 a :Content ;
+	:name "PauseAI Proposal" ;
+	:uri "https://pauseai.info/proposal"^^xsd:anyURI ;
+.
+
+:Source-d94cb680-f5eb-5249-a60b-4949f86fd9c4 a :Video ;
+	:name "Pete Hegseth Has Become a HUGE Problem for Trump and Republicans" ;
+	:url-Youtube "https://www.youtube.com/watch?v=v_BTZ5lcXrw"^^xsd:anyURI ;
+.
+
+:Source-69ba8b37-11a8-5208-aa3e-2a7d3174c7a7 a :Content ;
+	:name "PauseAI Funding" ;
+	:uri "https://pauseai.info/funding"^^xsd:anyURI ;
+.
+
+:Source-d0774c39-db21-541c-8a75-cc35d2e0d7e2 a :Content ;
+	:name "Future of Life Institute: Finances" ;
+	:uri "https://futureoflife.org/about-us/finances/"^^xsd:anyURI ;
+.
+
+:Source-58844e71-054d-5284-8b65-37a2ea45e367 a :Video ;
+	:name "Why Are We Sprinting Off the A.I. Cliff? | The Ezra Klein Show" ;
+	:url-Youtube "https://www.youtube.com/watch?v=fjZ90V_JREk"^^xsd:anyURI ;
+.
+
+:Source-da3034ee-6d75-5374-8a61-022f3c2bb3f3 a :Video ;
+	:name "'OpenAI’s $1.5trn valuation is insane' | Ed Zitron" ;
+	:url-Youtube "https://www.youtube.com/watch?v=PENnaW9zGYI"^^xsd:anyURI ;
+.
+
+:Source-83a730d2-771e-567f-94c1-eaa37a687c79 a :Video ;
+	:name "‘BEYOND SCIENCE FICTION’: Alex Bores says Hugging Face incident shows AI ‘moving into scheming’" ;
+	:url-Youtube "https://www.youtube.com/watch?v=EQUBMpg1aY4"^^xsd:anyURI ;
+.
+
+:Source-bb002878-d87a-5758-ac3c-82fa663d7b79 a :Content ;
+	:name "Anthropic AI in the Iran campaign (Washington Post)" ;
+	:uri "https://www.washingtonpost.com/technology/2026/03/04/anthropic-ai-iran-campaign/"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 14
+:Source-d3d5fee6-09b3-5410-af2e-5deb6652f9a0 a :Content ;
+	:name "Coherent Extrapolated Volition" ;
+	:uri "https://intelligence.org/files/CEV.pdf"^^xsd:anyURI ;
+.
+
+:Source-aa9f1477-a500-59de-b9e4-c973034b073e a :Content ;
+	:name "Superintelligence: Paths, Dangers, Strategies" ;
+	:uri "https://global.oup.com/academic/product/superintelligence-9780199678112"^^xsd:anyURI ;
+.
+
+
+##### TOPICS
+#### Not sure how I want to do this yet. Leaving it blank for now.
+#### At first blush, we could make a subclass of :Category, :Topic, and have each topic be an instance of that. But then I want the topics to be the :about, so that's probably better. Then I don't have the duplication of a topic and the class (e.g. :AI-Topic, which is an instance of :Topic, and :ArtificialIntelligence, which is a class).
+
+##### PEOPLE
+
+:CaseyHart a :Person ;
+	   :name-first "Casey" ;
+	   :name-last "Hart" ;
+	   :emailAddress "ontologyexplained@gmail.com" ;
+	   rdfs:seeAlso <https://caseyhart.com/> ;
+.
+
+:CarlBrown a :Person ;
+	   :name-first "Carl" ;
+	   :name-last "Brown" ;
+	   :emailAddress "CB@InternetOfBugs.com" ;
+	   rdfs:seeAlso <https://internetofbugs.com/> ;
+.	   

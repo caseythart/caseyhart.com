@@ -1,0 +1,10 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# Chapters. Matches parts stated in either direction, since the build does no OWL reasoning.
+SELECT ?ep ?seg ?name ?start WHERE {
+  ?ep a :PodcastEpisode ;
+      :hasPart|^:partOf ?seg .
+  ?seg a :PodcastSegment ;
+       :name ?name ;
+       :startingTimestamp ?start .
+}

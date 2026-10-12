@@ -1,0 +1,10 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# The show itself: its links and one-line description.
+SELECT ?show ?comment ?youtube ?spotify ?apple WHERE {
+  ?show a :Podcast .
+  OPTIONAL { ?show rdfs:comment ?comment }
+  OPTIONAL { ?show :url-Youtube ?youtube }
+  OPTIONAL { ?show :url-Spotify ?spotify }
+  OPTIONAL { ?show :url-ApplePodcasts ?apple }
+}

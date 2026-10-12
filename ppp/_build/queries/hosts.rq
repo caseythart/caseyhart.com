@@ -1,0 +1,8 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# The people who made the show.
+SELECT ?person ?first ?last ?page WHERE {
+  ?show a :Podcast ; :createdBy ?person .
+  ?person :name-first ?first ; :name-last ?last .
+  OPTIONAL { ?person rdfs:seeAlso ?page }
+}

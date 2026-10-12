@@ -1,0 +1,12 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# Everything each episode cites: outside sources and other episodes of the show.
+SELECT ?ep ?src ?kind ?name ?youtube ?uri ?creator WHERE {
+  ?ep a :PodcastEpisode ;
+      :cites ?src .
+  OPTIONAL { ?src a ?kind }
+  OPTIONAL { ?src :name ?name }
+  OPTIONAL { ?src :url-Youtube ?youtube }
+  OPTIONAL { ?src :uri ?uri }
+  OPTIONAL { ?src :createdBy ?creator }
+}

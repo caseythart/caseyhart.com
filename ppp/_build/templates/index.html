@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Philosophy, Programs, and Prompts | AI without the agenda{% endblock %}
+{% block description %}A podcast where real technologists who actually build things and actually read philosophy talk about AI without trying to sell you anything. Hosted by Casey Hart and Carl Brown.{% endblock %}
+{% block content %}
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="prompt" aria-hidden="true">&gt;_</span> A podcast about AI</p>
+          <h1>
+            <span class="w-phil">Philosophy,</span>
+            <span class="w-code">Programs,</span>
+            <span class="w-prompt">and Prompts</span>
+          </h1>
+          <p class="tagline">AI without the agenda.</p>
+          <p class="lead">{{ show.comment or "Real technologists who actually build things and actually read philosophy talk about AI without trying to sell you anything." }}</p>
+          <div class="actions">
+            <a class="btn" href="{{ root }}episode/{{ latest.slug }}/">Latest: Episode {{ latest.number }}</a>
+            <a class="btn ghost" href="https://www.youtube.com/@PhilosophyProgramsPromptsPod">YouTube</a>
+            {% if show.spotify %}<a class="btn ghost" href="{{ show.spotify }}">Spotify</a>{% endif %}
+            {% if show.apple %}<a class="btn ghost" href="{{ show.apple }}">Apple Podcasts</a>{% endif %}
+          </div>
+        </div>
+        <figure class="hero-mark">
+          <img src="../images/ppp-icon.svg" width="800" height="800" alt="The PPP mark: a phi symbol for philosophy beside a terminal prompt for code.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="hosts" id="hosts" aria-labelledby="hosts-h">
+      <div class="wrap">
+        <h2 id="hosts-h">Philosophy meets code.</h2>
+        <div class="host-pair">
+          <article class="host host-phil">
+            <span class="glyph" aria-hidden="true">&phi;</span>
+            <h3>Casey Hart</h3>
+            <p class="role">The philosopher</p>
+            <p>An analytic philosopher with ten years of ontology development.</p>
+            <a class="host-link" href="../">caseyhart.com <span aria-hidden="true">&rarr;</span></a>
+          </article>
+          <span class="divider" aria-hidden="true"></span>
+          <article class="host host-code">
+            <span class="glyph" aria-hidden="true">&gt;_</span>
+            <h3>Carl Brown</h3>
+            <p class="role">The engineer</p>
+            <p>A veteran software engineer who has spent decades actually building systems.</p>
+            <a class="host-link" href="https://internetofbugs.com/">internetofbugs.com <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="episodes" id="episodes" aria-labelledby="episodes-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="episodes-h">Episodes</h2>
+          <p>Newest first. Each episode page has the chapters and every source we cite &mdash; <a href="sources/">{{ sources | length }} so far</a>.</p>
+        </div>
+
+        <ol class="ep-list">
+          {% for ep in episodes | reverse %}
+          <li class="ep{% if loop.first %} is-new{% endif %}">
+            <span class="ep-num">{{ ep.number }}</span>
+            <div class="ep-body">
+              <h3><a href="episode/{{ ep.slug }}/">{{ ep.name }}</a></h3>
+              <p class="ep-meta">
+                {% if loop.first %}<span class="tag">New</span>{% endif %}
+                <time datetime="{{ ep.date.isoformat() }}">{{ ep.date | date }}</time>
+                <span>&middot; {{ ep.length | hm }}</span>
+                {% if ep.sources %}<span>&middot; {{ ep.sources | length }} source{{ "s" if ep.sources | length != 1 }}</span>{% endif %}
+              </p>
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+{% endblock %}
