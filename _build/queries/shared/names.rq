@@ -1,0 +1,7 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+# Anything with more than one :name, usually the same source described differently in the two data files.
+SELECT ?thing (GROUP_CONCAT(?name; separator=" | ") AS ?names) WHERE {
+  ?thing :name ?name .
+}
+GROUP BY ?thing
+HAVING (COUNT(DISTINCT ?name) > 1)

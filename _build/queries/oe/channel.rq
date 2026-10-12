@@ -1,0 +1,11 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# The channel itself.
+SELECT ?channel ?name ?comment ?description ?youtube WHERE {
+  VALUES ?channel { :OntologyExplained }
+  ?channel a :YouTubeChannel .
+  OPTIONAL { ?channel :name ?name }
+  OPTIONAL { ?channel rdfs:comment ?comment }
+  OPTIONAL { ?channel :description ?description }
+  OPTIONAL { ?channel :url-Youtube ?youtube }
+}

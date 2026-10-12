@@ -1,0 +1,10 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+# Chapters of the channel's videos (parts stated in either direction).
+SELECT ?video ?seg ?name ?start WHERE {
+  ?video a :Video ;
+         :partOf|^:hasPart :OntologyExplained ;
+         :hasPart|^:partOf ?seg .
+  ?seg a :VideoSegment ;
+       :name ?name ;
+       :startingTimestamp ?start .
+}

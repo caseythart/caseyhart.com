@@ -1,0 +1,11 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+# Every citation made by either show, with what's known about the thing cited.
+SELECT ?citer ?src ?kind ?name ?youtube ?uri ?creator WHERE {
+  { ?citer a :PodcastEpisode } UNION { ?citer a :Video ; :partOf|^:hasPart :OntologyExplained }
+  ?citer :cites ?src .
+  OPTIONAL { ?src a ?kind }
+  OPTIONAL { ?src :name ?name }
+  OPTIONAL { ?src :url-Youtube ?youtube }
+  OPTIONAL { ?src :uri ?uri }
+  OPTIONAL { ?src :createdBy ?creator }
+}

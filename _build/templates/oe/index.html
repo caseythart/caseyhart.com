@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}Ontology Explained | Philosophy and AI on YouTube, by Casey Hart{% endblock %}
+{% block description %}Every Ontology Explained video in one place: {{ videos | length }} videos on ontology, philosophy and AI, grouped into series, with chapters and every source cited in the show notes.{% endblock %}
+{% block content %}
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <h1>Ontology Explained</h1>
+          <p class="tagline">Philosophy &amp; AI</p>
+          <p class="lead">{{ channel.comment }}</p>
+          {% if channel.description %}<p class="about">{{ channel.description }}</p>{% endif %}
+          <div class="actions">
+            <a class="btn" href="#series">Browse the series</a>
+            <a class="btn ghost" href="{{ channel.youtube }}">Subscribe on YouTube</a>
+          </div>
+          <p class="facts">{{ videos | length }} videos since {{ videos[0].date | month }}, about {{ hours }} hours in all, citing {{ sources | length }} sources.</p>
+        </div>
+        <a class="newest" href="{{ latest.slug }}/">
+          <span class="newest-img"><img src="https://i.ytimg.com/vi/{{ latest.youtube_id }}/hqdefault.jpg" alt="" width="480" height="360"></span>
+          <span class="newest-label">Newest video, <time datetime="{{ latest.date.isoformat() }}">{{ latest.date | date }}</time></span>
+          <span class="newest-title">{{ latest.name }}</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="series" id="series" aria-labelledby="series-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="series-h">Series</h2>
+          <p>{{ playlists | length }} playlists, the most recently updated first. Each runs in the order it was released.</p>
+        </div>
+        <div class="series-grid">
+          {% for pl in playlists %}
+          <article class="series-block" id="{{ pl.slug }}" aria-labelledby="{{ pl.slug }}-h">
+            <h3 id="{{ pl.slug }}-h">{{ pl.name }}</h3>
+            <p class="series-meta">{{ pl.videos | length }} video{{ "s" if pl.videos | length != 1 }}, {{ pl.length | minutes }}</p>
+            {% if pl.description %}
+            <div class="series-desc">
+              {% for kind, body in pl.description | paragraphs %}<p>{{ body }}</p>{% endfor %}
+            </div>
+            {% endif %}
+            <ol class="seq">
+              {% for v in pl.videos %}
+              <li><a href="{{ v.slug }}/"><span class="seq-title">{{ v.name }}</span><span class="len">{{ v.length | clock }}</span></a></li>
+              {% endfor %}
+            </ol>
+            {% if pl.youtube %}<p class="series-yt"><a href="{{ pl.youtube }}">Play this series on YouTube</a></p>{% endif %}
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="videos" aria-labelledby="videos-h">
+      <div class="wrap">
+        <div class="catalog-head">
+          <div class="section-head">
+            <h2 id="videos-h">All videos</h2>
+            <p>Newest first. Each video&rsquo;s page has its description, any chapters, and every source it cites.</p>
+          </div>
+          <div class="filter">
+            <label for="filter">Filter by title</label>
+            <input type="search" id="filter" autocomplete="off" placeholder="fallacy, SPARQL, Hinton&hellip;">
+          </div>
+        </div>
+        {% for year, vids in by_year %}
+        <section class="year" aria-labelledby="y{{ year }}">
+          <h3 id="y{{ year }}">{{ year }}</h3>
+          <ul class="rows">
+            {% for v in vids %}
+            <li class="row" data-title="{{ v.name | lower }}">
+              <time datetime="{{ v.date.isoformat() }}">{{ v.date | day }}</time>
+              <div class="row-main">
+                <a href="{{ v.slug }}/">{{ v.name }}</a>
+                {% if v.playlists %}<span class="row-series">{{ v.playlists | map(attribute="name") | join(", ") }}</span>{% endif %}
+              </div>
+              <span class="len">{{ v.length | clock }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endfor %}
+        <p class="no-match" id="no-match" hidden>No titles match that. Try a shorter word, or clear the filter.</p>
+      </div>
+    </section>
+{% endblock %}
+{% block scripts %}
+  <script>
+    // Filter the catalog by title. Without JavaScript the full list shows.
+    (function () {
+      var input = document.getElementById('filter');
+      if (!input) return;
+      var rows = document.querySelectorAll('.row');
+      var years = document.querySelectorAll('.year');
+      var none = document.getElementById('no-match');
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var shown = 0;
+        rows.forEach(function (r) {
+          var hit = !q || r.dataset.title.indexOf(q) !== -1;
+          r.hidden = !hit;
+          if (hit) shown++;
+        });
+        years.forEach(function (y) { y.hidden = !y.querySelector('.row:not([hidden])'); });
+        none.hidden = shown > 0;
+      });
+    })();
+  </script>
+{% endblock %}

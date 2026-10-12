@@ -1,0 +1,11 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+# Pairs of episodes or videos (from either show) that cite at least one of the same sources.
+SELECT ?a ?b (COUNT(DISTINCT ?src) AS ?shared) (GROUP_CONCAT(DISTINCT STR(?srcName); separator="|") AS ?names) WHERE {
+  { ?a a :PodcastEpisode } UNION { ?a a :Video ; :partOf|^:hasPart :OntologyExplained }
+  { ?b a :PodcastEpisode } UNION { ?b a :Video ; :partOf|^:hasPart :OntologyExplained }
+  ?a :cites ?src .
+  ?b :cites ?src .
+  FILTER (?a != ?b)
+  OPTIONAL { ?src :name ?srcName }
+}
+GROUP BY ?a ?b

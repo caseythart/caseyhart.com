@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Sources | Ontology Explained{% endblock %}
+{% block description %}Every article, paper, book and video cited in the Ontology Explained show notes, with the videos that cite each one.{% endblock %}
+{% block path %}sources/{% endblock %}
+{% block content %}
+    <section class="sources-page">
+      <div class="wrap narrow">
+        <p class="crumbs"><a href="{{ root }}#videos">All videos</a></p>
+        <header class="video-head">
+          <h1>Sources</h1>
+          <p class="lead">Everything cited in the show notes: {{ sources | length }} sources across {{ videos | selectattr("sources") | list | length }} videos, the most cited first.
+            Links to other videos on this channel aren&rsquo;t listed here; they&rsquo;re on each video&rsquo;s page.
+            It all comes from <a href="{{ root }}{{ data_file }}">one Turtle file</a>, so you can query it yourself.</p>
+        </header>
+
+        <ol class="source-list biblio">
+          {% for s in sources %}
+          <li class="source" id="{{ s.id }}">
+            {% if s.page %}<a class="src-name" href="{{ root }}../{{ s.page.path }}">{{ s.name }}</a>{% elif s.url %}<a class="src-name" href="{{ s.url }}">{{ s.name }}</a>{% else %}<span class="src-name">{{ s.name }}</span>{% endif %}
+            <p class="src-meta">
+              <span>{% if s.page %}Philosophy, Programs, and Prompts{% else %}{{ s.kind }}{% endif %}</span>
+              {% for who in s.by | sort %}<span class="tag">{{ who }}&rsquo;s</span>{% endfor %}
+            </p>
+            <p class="cited-in">Cited in
+              {% for c in s.videos %}<a class="chip" href="{{ root }}../{{ c.path }}" title="{{ c.name }}">{{ c.name | truncate(40, false, "…", 0) }}</a>{% endfor %}
+            </p>
+            {% if s.episodes %}
+            <p class="cited-in">Also on Philosophy, Programs, and Prompts
+              {% for e in s.episodes %}<a class="chip" href="{{ root }}../{{ e.path }}" title="{{ e.name }}">Ep {{ e.number }}</a>{% endfor %}
+            </p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+{% endblock %}

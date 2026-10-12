@@ -1,0 +1,8 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+# Which playlists each video belongs to (stated in either direction).
+SELECT ?video ?playlist WHERE {
+  ?video a :Video ;
+         :partOf|^:hasPart ?playlist .
+  ?playlist a :Playlist ;
+            :partOf|^:hasPart :OntologyExplained .
+}

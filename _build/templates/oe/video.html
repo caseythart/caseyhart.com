@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% block title %}{{ v.name }} | Ontology Explained{% endblock %}
+{% block description %}{{ v.name }}: an Ontology Explained video by Casey Hart, with {% if v.chapters %}chapters and {% endif %}every source cited in the show notes.{% endblock %}
+{% block og_type %}video.other{% endblock %}
+{% block path %}{{ v.slug }}/{% endblock %}
+{% block og_image %}https://i.ytimg.com/vi/{{ v.youtube_id }}/hqdefault.jpg{% endblock %}
+{% macro also(list, current) %}
+{% set others = list | rejectattr("iri", "equalto", current) | list %}
+{% for c in others[:2] %}<a href="{{ root }}../{{ c.path }}">{% if c.show == "ppp" %}PPP Episode {{ c.number }}{% else %}{{ c.name }}{% endif %}</a>{{ "; " if not loop.last }}{% endfor %}
+{% if others | length > 2 %} and {{ others | length - 2 }} more{% endif %}
+{% endmacro %}
+{% block content %}
+    <article class="video-page">
+      <div class="wrap narrow">
+        <p class="crumbs"><a href="{{ root }}#videos">All videos</a>{% for pl in v.playlists %}<span aria-hidden="true"> / </span><a href="{{ root }}#{{ pl.slug }}">{{ pl.name }}</a>{% endfor %}</p>
+
+        <header class="video-head">
+          <h1>{{ v.name }}</h1>
+          <p class="facts">Released <time datetime="{{ v.date.isoformat() }}">{{ v.date | date }}</time>, {{ v.length | minutes }}{% if v.chapters %}, {{ v.chapters | length }} chapter{{ "s" if v.chapters | length != 1 }}{% endif %}</p>
+        </header>
+
+        <a class="player" id="player" href="{{ v.youtube }}" data-yt="{{ v.youtube_id }}" data-title="{{ v.name }}">
+          <img src="https://i.ytimg.com/vi/{{ v.youtube_id }}/hqdefault.jpg" alt="" width="480" height="360">
+          <span class="play" aria-hidden="true"></span>
+          <span class="visually-hidden">Play {{ v.name }} on YouTube</span>
+        </a>
+
+        <div class="actions">
+          <a class="btn" href="{{ v.youtube }}">Watch on YouTube</a>
+        </div>
+
+        <div class="description">
+          {% for kind, body in v.description | paragraphs %}
+          {% if kind == "ul" %}
+          <ul>{% for item in body %}<li>{{ item }}</li>{% endfor %}</ul>
+          {% else %}
+          <p>{{ body }}</p>
+          {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if v.chapters %}
+        <section class="block" aria-labelledby="chapters-h">
+          <h2 id="chapters-h">Chapters</h2>
+          <ol class="chapters">
+            {% for c in v.chapters %}
+            <li><a href="{{ v.youtube }}&amp;t={{ c.start }}s" data-t="{{ c.start }}"><span class="ts">{{ c.start | clock }}</span><span class="ch-name">{{ c.name }}</span></a></li>
+            {% endfor %}
+          </ol>
+        </section>
+        {% endif %}
+
+        {% for pos in v.positions %}
+        <section class="block in-series" aria-labelledby="series-{{ loop.index }}-h">
+          <h2 id="series-{{ loop.index }}-h">{{ pos.playlist.name }}</h2>
+          <p class="series-pos">Part {{ pos.index }} of {{ pos.count }} in this series.</p>
+          <ol class="seq">
+            {% for other in pos.playlist.videos %}
+            <li{% if other is sameas v %} class="is-current"{% endif %}>
+              {% if other is sameas v %}<span class="here" aria-current="page"><span class="seq-title">{{ other.name }}</span><span class="len">{{ other.length | clock }}</span></span>
+              {% else %}<a href="{{ root }}{{ other.slug }}/"><span class="seq-title">{{ other.name }}</span><span class="len">{{ other.length | clock }}</span></a>{% endif %}
+            </li>
+            {% endfor %}
+          </ol>
+          {% if pos.next %}<p class="series-next">Next in the series: <a href="{{ root }}{{ pos.next.slug }}/">{{ pos.next.name }}</a></p>{% endif %}
+        </section>
+        {% endfor %}
+
+        <section class="block" aria-labelledby="sources-h">
+          <h2 id="sources-h">Sources</h2>
+          {% if v.sources %}
+          <ul class="source-list">
+            {% for item in v.sources %}
+            {% if item.page %}
+            {% set p = item.page %}
+            <li class="source">
+              <a class="src-name" href="{{ root }}../{{ p.path }}">{{ p.name }}</a>
+              <p class="src-meta">{% if p.show == "playlist" %}A series on this channel{% else %}Another Ontology Explained video, <time datetime="{{ p.date.isoformat() }}">{{ p.date | date }}</time>{% endif %}</p>
+            </li>
+            {% else %}
+            {% set s = item.source %}
+            <li class="source">
+              {% if s.page %}<a class="src-name" href="{{ root }}../{{ s.page.path }}">{{ s.name }}</a>{% elif s.url %}<a class="src-name" href="{{ s.url }}">{{ s.name }}</a>{% else %}<span class="src-name">{{ s.name }}</span>{% endif %}
+              <p class="src-meta">
+                <span>{% if s.page %}Philosophy, Programs, and Prompts{% else %}{{ s.kind }}{% endif %}</span>
+                {% for who in s.by | sort %}<span class="tag">{{ who }}&rsquo;s</span>{% endfor %}
+                {% if item.elsewhere %}<span class="also">Also cited in {{ also(item.elsewhere, v.iri) }}</span>{% endif %}
+              </p>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p class="empty">This video&rsquo;s show notes don&rsquo;t cite any sources.</p>
+          {% endif %}
+        </section>
+
+        {% if v.cited_by %}
+        <section class="block" aria-labelledby="citedby-h">
+          <h2 id="citedby-h">Cited by</h2>
+          <ul class="related">
+            {% for c in v.cited_by %}
+            <li>
+              <a href="{{ root }}../{{ c.path }}">{% if c.show == "ppp" %}PPP Episode {{ c.number }}: {{ c.name }}{% else %}{{ c.name }}{% endif %}</a>
+              <p class="rel-why">{% if c.show == "ppp" %}An episode of Philosophy, Programs, and Prompts{% else %}An Ontology Explained video{% endif %}, <time datetime="{{ c.date.isoformat() }}">{{ c.date | date }}</time></p>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endif %}
+
+        {% if v.related %}
+        <section class="block" aria-labelledby="related-h">
+          <h2 id="related-h">Related</h2>
+          <ul class="related">
+            {% for r in v.related %}
+            {% set p = r.page %}
+            <li>
+              <a href="{{ root }}../{{ p.path }}">{% if p.show == "ppp" %}PPP Episode {{ p.number }}: {{ p.name }}{% else %}{{ p.name }}{% endif %}</a>
+              <p class="rel-why">{% if p.show == "ppp" %}On Philosophy, Programs, and Prompts. {% endif %}Both cite {{ r.names[:2] | join("; ") }}{% if r.names | length > 2 %} and {{ r.names | length - 2 }} more{% endif %}.</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endif %}
+
+        <nav class="pager" aria-label="Videos by release date">
+          {% if v.prev %}<a class="prev" href="{{ root }}{{ v.prev.slug }}/"><span>Previous video</span>{{ v.prev.name }}</a>{% else %}<span></span>{% endif %}
+          {% if v.next %}<a class="next" href="{{ root }}{{ v.next.slug }}/"><span>Next video</span>{{ v.next.name }}</a>{% endif %}
+        </nav>
+      </div>
+    </article>
+{% endblock %}
+{% block scripts %}
+  <script>
+    // Click-to-play: load YouTube (privacy-enhanced) only when someone asks for it.
+    // Chapter links jump the player to that time; without JavaScript they open YouTube.
+    (function () {
+      var player = document.getElementById('player');
+      if (!player) return;
+      function play(start) {
+        var frame = document.getElementById('player-frame');
+        var src = 'https://www.youtube-nocookie.com/embed/' + player.dataset.yt + '?autoplay=1&rel=0' + (start ? '&start=' + start : '');
+        if (!frame) {
+          frame = document.createElement('iframe');
+          frame.id = 'player-frame';
+          frame.className = 'player-frame';
+          frame.title = player.dataset.title;
+          frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+          frame.allowFullscreen = true;
+          player.hidden = true;
+          player.parentNode.insertBefore(frame, player);
+        }
+        frame.src = src;
+        frame.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      player.addEventListener('click', function (e) { e.preventDefault(); play(0); });
+      document.querySelectorAll('.chapters a[data-t]').forEach(function (a) {
+        a.addEventListener('click', function (e) { e.preventDefault(); play(+a.dataset.t); });
+      });
+    })();
+  </script>
+{% endblock %}

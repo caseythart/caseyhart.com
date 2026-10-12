@@ -1,0 +1,13 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+# One row per video on the channel, oldest first. The upload time (when there is one) orders same-day uploads.
+SELECT ?video ?name ?date ?time ?duration ?youtube ?description WHERE {
+  ?video a :Video ;
+         :partOf|^:hasPart :OntologyExplained ;
+         :name ?name .
+  OPTIONAL { ?video :releaseDate/:universalDate ?date }
+  OPTIONAL { ?video :releaseDate/:universalDateTime ?time }
+  OPTIONAL { ?video :hasDuration/:duration ?duration }
+  OPTIONAL { ?video :url-Youtube ?youtube }
+  OPTIONAL { ?video :description ?description }
+}
+ORDER BY ?date ?time ?name

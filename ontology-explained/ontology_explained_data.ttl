@@ -1,0 +1,2872 @@
+@prefix : <https://caseyhart.com/ontology/dense/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+### This file contains information relevant to Ontology Explained, Casey Hart's YouTube channel.
+### :CaseyHart and the PPP episodes (:PPP-Episode3.5) are defined in ../ppp/podcast_ontology_data.ttl.
+### Videos, playlists and sources are named "Source-" + uuid5(best identifier), the same rule as the PPP file,
+### so a video cited on PPP and the video described here are the same node.
+### Each block starts with a comment giving the YouTube ID and title.
+
+:OntologyExplained a :YouTubeChannel ;
+	:name "Ontology Explained: Philosophy and AI" ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA"^^xsd:anyURI ;
+	rdfs:comment """Ontology Explained is a place that provides clear, interesting, and edifying discussions about topics involving philosophy and artificial intelligence.""" ;
+	:description """After earning my PhD in philosophy, I found my way into AI as an ontologist. I'm here to evangelize, educate, demystify, and hopefully entertain viewers at the intersection of philosophy and AI. My videos will include general introductions to dense or interesting topics, tutorials to create your own ontologies, business insights into the value of technologies, and more philosophical things.""" ;
+.
+
+
+#### Playlists
+
+# playlist PLIHlyoU28t5_gsMf8EkmnQVSHefbR3xqz · Intro to Ontology
+:Source-1c3f9f59-deb4-5fe5-94fa-a85120e597fc a :Playlist ;
+	:name "Intro to Ontology" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t5_gsMf8EkmnQVSHefbR3xqz"^^xsd:anyURI ;
+	:description """For ontology novices and veterans alike, this playlist walks you through how this ontologist thinks about what ontologies are, what they are good for, how they relate to AI, and to go about building your own.""" ;
+.
+
+# playlist PLIHlyoU28t59kTr-0dDS6S_clDkCfXHy_ · Ontology Terms You NEED To Know
+:Source-22f2e7b2-fe8c-5c88-967e-c60d3167d172 a :Playlist ;
+	:name "Ontology Terms You NEED To Know" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t59kTr-0dDS6S_clDkCfXHy_"^^xsd:anyURI ;
+	:description """Each video after the initial overview will target a particular vocabulary or subset of a vocabulary. These will put more tools in your ontological tool belt to build and understand ontologies. We'll start with the basics: RDF, RDFS, OWL, SKOS. Then eventually we'll broaden out to more niche terms.""" ;
+.
+
+# playlist PLIHlyoU28t5__2ugIn_VdG79a641pRIaN · What is Artificial Intelligence?
+:Source-83871c9d-6cd9-54ad-9c0a-76864f419c1a a :Playlist ;
+	:name "What is Artificial Intelligence?" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t5__2ugIn_VdG79a641pRIaN"^^xsd:anyURI ;
+	:description """This playlist walks through a series of possible definitions for AI, unpacks them, questions them, and then discusses why they matter.""" ;
+.
+
+# playlist PLIHlyoU28t582Hjg-bZMysaoxUxrS-54D · Logic and Inference
+:Source-f4eb1cf9-0844-5435-b06b-68625e43c943 a :Playlist ;
+	:name "Logic and Inference" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t582Hjg-bZMysaoxUxrS-54D"^^xsd:anyURI ;
+	:description """From the philosophical basis of logic to practical implementations of inference in OWL.""" ;
+.
+
+# playlist PLIHlyoU28t5-qNb9zK_xDn_it_9BaXQZj · Fallacies
+:Source-2893b7ee-72eb-5af3-818f-2005735c8dff a :Playlist ;
+	:name "Fallacies" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t5-qNb9zK_xDn_it_9BaXQZj"^^xsd:anyURI ;
+	:description """Want to reason better and spot flaws in others' arguments? Learn about fallacies, which are just common mistakes in reasoning. This playlist starts by defining fallacies, and then goes through the major ones, one fallacy at a time.""" ;
+.
+
+# playlist PLIHlyoU28t5_GL1Lc0_TIBKt0ZYHekG_L · Let's Build a Chess Ontology
+:Source-f88a4868-312f-5b3b-94b6-5446ea37ad9e a :Playlist ;
+	:name "Let's Build a Chess Ontology" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t5_GL1Lc0_TIBKt0ZYHekG_L"^^xsd:anyURI ;
+	:description """By the end of this series, you'll see a functioning domain ontology for chess. Even the goals for the ontology will be developed in time, so this is as close as it gets to a real world example of ontology development, from \"soup to nuts\" as they say.""" ;
+.
+
+# playlist PLIHlyoU28t5_ajzYkg1g3PRvH8zh0BQ9Z · Becoming an Ontologist and Leaving Academia
+:Source-13344f10-72a7-5576-b24a-275dd10386cb a :Playlist ;
+	:name "Becoming an Ontologist and Leaving Academia" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t5_ajzYkg1g3PRvH8zh0BQ9Z"^^xsd:anyURI ;
+.
+
+# playlist PLIHlyoU28t58lv5LGmyzlECbNMaGLnTAU · Ethics Explained
+:Source-314c24fd-2173-59f9-bebf-6ab5cf73332b a :Playlist ;
+	:name "Ethics Explained" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t58lv5LGmyzlECbNMaGLnTAU"^^xsd:anyURI ;
+	:description """A playlist for my videos on ethics.""" ;
+.
+
+# playlist PLIHlyoU28t5_4jxCTVRMC6ICxoO5evvf5 · The Ontology Explained Podcast
+:Source-b104a790-0284-52e2-af18-d2c83dfdfce3 a :Playlist ;
+	:name "The Ontology Explained Podcast" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLIHlyoU28t5_4jxCTVRMC6ICxoO5evvf5"^^xsd:anyURI ;
+	:description """I interview and banter with friends, colleagues, and other smart people about ontologies, philosophy, and artificial intelligence.""" ;
+.
+
+# playlist PLSjZcAM1g_Us · If Anyone Analyzes It... Everyone Dies
+:Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba a :Playlist ;
+	:name "If Anyone Analyzes It... Everyone Dies" ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/playlist?list=PLSjZcAM1g_Us"^^xsd:anyURI ;
+	:description """In this playlist, I go through Yudkowsky and Soares' book If Anyone Builds It, Everyone Dies. I'm starting out a skeptic, but we'll see where a charitable exegesis of the arguments leaves me (and you!).
+
+You're welcome to read along, or just watch; I'll make sure there is enough context for everyone regardless.""" ;
+.
+
+
+#### Videos, oldest first
+
+# UW57RW-4kWs · What is ontology?
+:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2 a :Video ;
+	:name "What is ontology?" ;
+	:hasDuration [:duration "PT10M3S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-05"^^xsd:date ; :universalDateTime "2024-10-05T20:35:37-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-1c3f9f59-deb4-5fe5-94fa-a85120e597fc ;	# Intro to Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=UW57RW-4kWs"^^xsd:anyURI ;
+	:description """In my debut video, I'll teach you what ontology is in both philosophy and AI. A good ontology can serve as part of an AI \"brain\", providing conceptual connections that allow machines and humans alike to understand data.""" ;
+	:hasPart :Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment01,
+		:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment02,
+		:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment03,
+		:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment04,
+		:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment05,
+		:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment06,
+		:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment07 ;
+	:cites :Source-be471df0-ac60-5364-a019-2b59b8a5633f ,	# Writing the Book of the World
+		:Source-c476c68d-30ce-542d-9724-9cd8f339326b ;	# On What There Is
+.
+
+:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment01 a :VideoSegment ;
+	:name "Introduction" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment02 a :VideoSegment ;
+	:name "Ontology in Philosophy" ;
+	:startingTimestamp "PT34S"^^xsd:duration ;
+.
+
+:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment03 a :VideoSegment ;
+	:name "Ontology in AI/Business" ;
+	:startingTimestamp "PT2M54S"^^xsd:duration ;
+.
+
+:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment04 a :VideoSegment ;
+	:name "Reading Metaphor for Ontology" ;
+	:startingTimestamp "PT4M30S"^^xsd:duration ;
+.
+
+:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment05 a :VideoSegment ;
+	:name "The Definition of Ontology in AI" ;
+	:startingTimestamp "PT5M18S"^^xsd:duration ;
+.
+
+:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment06 a :VideoSegment ;
+	:name "Healthcare Ontology Example" ;
+	:startingTimestamp "PT5M36S"^^xsd:duration ;
+.
+
+:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2-Segment07 a :VideoSegment ;
+	:name "Conclusion" ;
+	:startingTimestamp "PT8M26S"^^xsd:duration ;
+.
+
+# w9s16ICbndg · Three Metaphors for Ontology
+:Source-e42e2494-8832-5a87-a4d9-4c1f9af17b86 a :Video ;
+	:name "Three Metaphors for Ontology" ;
+	:hasDuration [:duration "PT13M51S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-13"^^xsd:date ; :universalDateTime "2024-10-13T08:27:56-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-1c3f9f59-deb4-5fe5-94fa-a85120e597fc ;	# Intro to Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=w9s16ICbndg"^^xsd:anyURI ;
+	:description """In this second video on what ontology is, I discuss three different aspects/metaphors for a good ontology. Good ontologies are: 1) languages, 2) graphs (mathematical structures studied in graph theory), and 3) models.""" ;
+	:cites :Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2 ;	# What is ontology?
+.
+
+# cIyBZ15Q65I · OWL Basics
+:Source-d5b48077-11f4-529c-95c0-2a75f3062f73 a :Video ;
+	:name "OWL Basics" ;
+	:hasDuration [:duration "PT9M54S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-16"^^xsd:date ; :universalDateTime "2024-10-16T09:40:34-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-22f2e7b2-fe8c-5c88-967e-c60d3167d172, :Source-1c3f9f59-deb4-5fe5-94fa-a85120e597fc ;	# Ontology Terms You NEED To Know; Intro to Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=cIyBZ15Q65I"^^xsd:anyURI ;
+	:description """We know what ontologies are, but how do we build them? In this video, we'll walk through the basics of OWL. OWL sentences are triples, and those triples require us to uses certain \"parts of speech\". By the end of this video, you will know how to spot those parts of speech and be well on your way to creating your own triples!""" ;
+	:cites :Source-e42e2494-8832-5a87-a4d9-4c1f9af17b86 ,	# Three Metaphors for Ontology
+		:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2 ,	# What is ontology?
+		:Source-65c4acbd-8ad4-59d4-b039-004d3a7942b8 ;	# A Semantic Web Primer
+.
+
+# sr257blfdY8 · Taxonomy, Ontology, Knowledge Graph, and Semantics
+:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3 a :Video ;
+	:name "Taxonomy, Ontology, Knowledge Graph, and Semantics" ;
+	:hasDuration [:duration "PT8M27S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-18"^^xsd:date ; :universalDateTime "2024-10-18T06:01:16-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-1c3f9f59-deb4-5fe5-94fa-a85120e597fc ;	# Intro to Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=sr257blfdY8"^^xsd:anyURI ;
+	:description """Casey here distinguishes a few important terms in the ontology space: Taxonomy, Ontology, Knowledge Graph, and Semantics.""" ;
+	:hasPart :Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment01,
+		:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment02,
+		:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment03,
+		:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment04,
+		:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment05,
+		:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment06 ;
+	:cites :Source-30ca34fb-32e7-5cc9-9566-06930eaad24e ;	# Every Game Genre Explained In 6 Minutes
+.
+
+:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment01 a :VideoSegment ;
+	:name "Intro" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment02 a :VideoSegment ;
+	:name "Taxonomy: Hierarchies for classifications" ;
+	:startingTimestamp "PT40S"^^xsd:duration ;
+.
+
+:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment03 a :VideoSegment ;
+	:name "Ontology: What AI needs to know to 'understand' your data" ;
+	:startingTimestamp "PT2M10S"^^xsd:duration ;
+.
+
+:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment04 a :VideoSegment ;
+	:name "Knowledge Graph: Basically ontology, maybe leaning towards data" ;
+	:startingTimestamp "PT3M24S"^^xsd:duration ;
+.
+
+:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment05 a :VideoSegment ;
+	:name "Semantics: Data + Understanding" ;
+	:startingTimestamp "PT4M25S"^^xsd:duration ;
+.
+
+:Source-1c24fb5b-7088-534b-9c85-3cf631b44bd3-Segment06 a :VideoSegment ;
+	:name "Summary" ;
+	:startingTimestamp "PT7M22S"^^xsd:duration ;
+.
+
+# Zug0XoHVfQA · The Open World Assumption
+:Source-f538e4c9-6803-54fd-9bf4-33edfc77312a a :Video ;
+	:name "The Open World Assumption" ;
+	:hasDuration [:duration "PT9M22S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-21"^^xsd:date ; :universalDateTime "2024-10-21T16:39:29-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Zug0XoHVfQA"^^xsd:anyURI ;
+	:description """The Open World Assumption (OWA) (as opposed to the Closed  World Assumption (CWA)) means that we know our model is incomplete. Is this a good assumption to make? In short: it depends. In this video, we explore how to think about this in terms of your data.
+
+OWL/RDF does the OWA by default, but we'll see in future videos different ways to enforce a CWA locally.""" ;
+.
+
+# Jx3TjC_Xz20 · Turtle Syntax
+:Source-6ac61137-98d6-5d9d-96cb-20c16a927f4c a :Video ;
+	:name "Turtle Syntax" ;
+	:hasDuration [:duration "PT17M4S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-24"^^xsd:date ; :universalDateTime "2024-10-24T22:39:14-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Jx3TjC_Xz20"^^xsd:anyURI ;
+	:description """RDF and OWL follow in the footsteps of XML, which is a format and markup language. That syntax is not easy for humans to read, however. Fortunately, we have turtle (.ttl)! In this video, Casey walks through the structure of a .ttl file, and gives you the tools to explore writing your own.""" ;
+	:cites :Source-0eaf2fbf-61f4-5b77-8980-bf9101ad996d ,	# Turtle editor and viewer (Semantechs)
+		:Source-5be4e9df-c6f9-5d5c-8e78-98d7a8e0e40a ;	# RDF Turtle (W3C specification)
+.
+
+# CgqTRNtsgA4 · Intro to SPARQL
+:Source-77110b77-9fe3-512f-be9c-a69e296e8287 a :Video ;
+	:name "Intro to SPARQL" ;
+	:hasDuration [:duration "PT20M19S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-24"^^xsd:date ; :universalDateTime "2024-10-24T22:47:55-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=CgqTRNtsgA4"^^xsd:anyURI ;
+	:description """SPARQL is the protocol for querying RDF (and hence OWL). It is simple to start, and takes a long time to master. In this video, Casey lays out the basics and gives suggestions for how to practice.""" ;
+	:cites :Source-6ac61137-98d6-5d9d-96cb-20c16a927f4c ,	# Turtle Syntax
+		:Source-a930e659-6fde-5f4f-b7f8-65dc57f5681f ;	# SPARQL 1.1 Query Language (W3C)
+.
+
+# 6tjA43BLPLc · The Shape of SHACL
+:Source-a19b548a-33a3-53ee-8a63-b07393fbcbf5 a :Video ;
+	:name "The Shape of SHACL" ;
+	:hasDuration [:duration "PT6M32S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-24"^^xsd:date ; :universalDateTime "2024-10-24T23:02:25-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=6tjA43BLPLc"^^xsd:anyURI ;
+	:description """The SHApes Constraint Language (SHACL) is the W3C standard for data validation. In this short video, Casey gives a basic overview of its functionality, and he points to the SHACL playground as a place to further hone your skills.""" ;
+	:cites :Source-f538e4c9-6803-54fd-9bf4-33edfc77312a ,	# The Open World Assumption
+		:Source-294108f2-5f4b-5fe1-8a06-9514d78d2b71 ,	# SHACL Playground
+		:Source-2830f79b-7874-5dbe-8e9c-d519e5e42e28 ;	# Shapes Constraint Language (SHACL) (W3C)
+.
+
+# qWfdBtgP33A · Three Signs You Need Ontology
+:Source-c93e4d9f-924e-5f19-a795-8c534ec15b40 a :Video ;
+	:name "Three Signs You Need Ontology" ;
+	:hasDuration [:duration "PT6M38S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-10-29"^^xsd:date ; :universalDateTime "2024-10-29T06:01:06-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-1c3f9f59-deb4-5fe5-94fa-a85120e597fc ;	# Intro to Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=qWfdBtgP33A"^^xsd:anyURI ;
+	:description """We've covered what ontology is and how to think about it. But perhaps the most important question hasn't been answered: how do you know if ontology is worth using? When can you get value out of an ontology? In this video, Casey lays out three major signs/symptoms that ontology is right for you. You should consider an ontology if you really value understanding, reusability, and explainability.
+
+Honorable mentions that didn't hit the top three:
+- Reasoning
+- LLM Shortcomings
+- Expertise Matters
+- You need a controlled vocabulary or to standardize terms
+- You want to iteratively improve your organization's knowledge""" ;
+	:cites :Source-e42e2494-8832-5a87-a4d9-4c1f9af17b86 ;	# Three Metaphors for Ontology
+.
+
+# 09lqXPzr334 · RDF Terms You Need to Know
+:Source-e1b530e4-6177-5b02-84fe-2a45274a562f a :Video ;
+	:name "RDF Terms You Need to Know" ;
+	:hasDuration [:duration "PT7M41S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-11-16"^^xsd:date ; :universalDateTime "2024-11-16T20:35:06-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-22f2e7b2-fe8c-5c88-967e-c60d3167d172 ;	# Ontology Terms You NEED To Know
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=09lqXPzr334"^^xsd:anyURI ;
+	:description """This is part of a crash course in vocabulary that will get you started building your own OWL ontologies. In this video, I present the Resource Description Framework (RDF) term you need to know, rdf:type. There's also an honorable mention to rdf:Property.""" ;
+	:cites :Source-d5b48077-11f4-529c-95c0-2a75f3062f73 ;	# OWL Basics
+.
+
+# jshuHBy7Xzw · RDFS Terms You Need to Know
+:Source-bfd72c3b-5401-5757-9d18-5166d3a168a0 a :Video ;
+	:name "RDFS Terms You Need to Know" ;
+	:hasDuration [:duration "PT9M26S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-11-16"^^xsd:date ; :universalDateTime "2024-11-16T20:48:01-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-22f2e7b2-fe8c-5c88-967e-c60d3167d172 ;	# Ontology Terms You NEED To Know
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=jshuHBy7Xzw"^^xsd:anyURI ;
+	:description """This is part of a crash course in vocabulary that will get you started building your own OWL ontologies. In this video, I present the Resource Description Framework Schema (RDFS) terms you need to know, including rdfs:subPropertyOf, rdfs:subClassOf, rdfs:domain, and rdfs:range. We also cover rdfs:comment and rdfs:label.""" ;
+.
+
+# zayTFgjsly8 · OWL Terms You Need to Know
+:Source-0469b0cc-83f4-557d-a0bd-b270280a4f96 a :Video ;
+	:name "OWL Terms You Need to Know" ;
+	:hasDuration [:duration "PT12M10S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-11-16"^^xsd:date ; :universalDateTime "2024-11-16T20:58:30-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-22f2e7b2-fe8c-5c88-967e-c60d3167d172 ;	# Ontology Terms You NEED To Know
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=zayTFgjsly8"^^xsd:anyURI ;
+	:description """This is part of a crash course in vocabulary that will get you started building your own OWL ontologies. In this video, I present the Web Ontology Language (OWL) terms you need to know, and there are many! From owl:Class to owl:FunctionalProperty, I review the terms that are essential and the ones you can wait till later to focus on.""" ;
+	:cites :Source-f538e4c9-6803-54fd-9bf4-33edfc77312a ;	# The Open World Assumption
+.
+
+# pQqnEYRis4M · XSD Terms You Need to Know
+:Source-32e86ab2-4e24-578a-874c-e10c03153b12 a :Video ;
+	:name "XSD Terms You Need to Know" ;
+	:hasDuration [:duration "PT4M4S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-11-16"^^xsd:date ; :universalDateTime "2024-11-16T21:02:40-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-22f2e7b2-fe8c-5c88-967e-c60d3167d172 ;	# Ontology Terms You NEED To Know
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=pQqnEYRis4M"^^xsd:anyURI ;
+	:description """After covering the vocabulary you need from RDF, RDFS, and OWL, we still had a gap: we need to add numbers and dates and strings. To do this, XSD is essential. In this video, I cover the five most important XSD datatypes to get you off and running in building ontologies with OWL.
+
+They are: integer, decimal, string (and language tags), date, and dateTime.""" ;
+.
+
+# VRxutB0zSxU · What is Artificial Intelligence? (I bet you don't know, either.)
+:Source-b733e4f9-817e-508b-ad57-a8cbca147347 a :Video ;
+	:name "What is Artificial Intelligence? (I bet you don't know, either.)" ;
+	:hasDuration [:duration "PT15M11S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-11-18"^^xsd:date ; :universalDateTime "2024-11-18T06:30:14-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-83871c9d-6cd9-54ad-9c0a-76864f419c1a ;	# What is Artificial Intelligence?
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=VRxutB0zSxU"^^xsd:anyURI ;
+	:description """This is a channel about ontology, philosophy, and artificial intelligence. So, I should be able to define AI cleanly, right? Well, this is embarrassing...I don't have a good definition for AI. In this video, I offer four potential definitions that I don't like. I'll dive into those in more depth in the future. The bulk of the video is explaining why it matters that we don't have a clear definition. To summarize:
+
+1. Clarity Matters
+2. \"AI\" is ubiquitous.
+3. \"AI\" is used to drive governmental policies.
+4. We should be wary of self-interested gatekeepers.
+5. Unreflective use of AI may lead to the next AI Winter.
+
+Join me on the upcoming videos as I embark on a quest to define AI. Or at least learn something trying to do so. It'll be fun!""" ;
+.
+
+# flm6m7TVmtA · Defining AI #1: Turing's Thinking Machines
+:Source-b8670fa7-48ee-5f24-8e17-2f694c7294a5 a :Video ;
+	:name "Defining AI #1: Turing's Thinking Machines" ;
+	:hasDuration [:duration "PT15M40S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2024-11-25"^^xsd:date ; :universalDateTime "2024-11-25T14:21:44-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-83871c9d-6cd9-54ad-9c0a-76864f419c1a ;	# What is Artificial Intelligence?
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=flm6m7TVmtA"^^xsd:anyURI ;
+	:description """In the last video, I confessed that I don't have a tight definition for AI. I am now on a quest to remedy that, and we're starting with the popular Turing Test. Alan Turing's work in \"The Imitation Game\" is arguably the start of AI as we know it, and so it's a great place to snag our first definition: Artificial Intelligence is a thinking machine (as determined by the Turing Test).
+
+Spoiler: This definition, while clear and influential, doesn't work. It fails to capture many things we intuitively think of as AI (e.g. Chat GPT and chess engines). And it has the fatal flaw that imitation is not identity.
+
+I've got a few other definitions to try after this one, but I always want to hear what my viewers have to say.""" ;
+	:cites :Source-a1193357-e432-5d77-8913-1348e01fa4c2 ;	# Computing Machinery and Intelligence
+.
+
+# -VrooB3zjhc · Channel Update!
+:Source-8e0d7744-c593-555e-a086-9c67cfe9fa13 a :Video ;
+	:name "Channel Update!" ;
+	:hasDuration [:duration "PT5M55S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-07-28"^^xsd:date ; :universalDateTime "2025-07-28T13:27:30-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=-VrooB3zjhc"^^xsd:anyURI ;
+	:description """It has been more than half a year, but for some reason you guys are still watching and subscribing. I've missed creating so much, and I'm thrilled to announce that the channel is back. You can expect at least one video released a week. This video catches you up on things, and I ask you to comment with requests for topics to cover in future videos. I'm stoked to be back!""" ;
+.
+
+# MIarwhB_jVY · Blank Nodes
+:Source-1e651540-a751-5b95-8e2a-49b50bfad66d a :Video ;
+	:name "Blank Nodes" ;
+	:hasDuration [:duration "PT14M26S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-01"^^xsd:date ; :universalDateTime "2025-08-01T12:22:57-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=MIarwhB_jVY"^^xsd:anyURI ;
+	:description """We use existential statements all the time: I know somebody. The coffee is in a cup. The event happened some time. How can we express this in OWL/RDF? We use blank nodes. Today, I'll introduce the concept and show you how they work.
+
+Stay tuned for a coming video about their dangers. Blank nodes are super useful, but they can get you into trouble.""" ;
+.
+
+# gtomgO8G--I · The Dangers of Blank Nodes
+:Source-ae2c5058-acbd-5094-a0d7-d4ff98d9d8e0 a :Video ;
+	:name "The Dangers of Blank Nodes" ;
+	:hasDuration [:duration "PT12M20S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-01"^^xsd:date ; :universalDateTime "2025-08-01T15:25:43-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=gtomgO8G--I"^^xsd:anyURI ;
+	:description """You watched my blank nodes video. You're excited, I get it. But don't go throwing them everywhere yet! Watch this video, where I talk about the two biggest drawbacks of blank nodes--they aren't referenceable, and they are not conducive to idempotent loading processes.
+
+I conclude the video by discussing the calculus: to blank node, or not to blank node.""" ;
+	:cites :Source-1e651540-a751-5b95-8e2a-49b50bfad66d ;	# Blank Nodes
+.
+
+# RUdOTg15jDc · OWL Restrictions
+:Source-0487f73f-e2d1-5e4e-a1ee-d220c7c701ca a :Video ;
+	:name "OWL Restrictions" ;
+	:hasDuration [:duration "PT20M9S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-04"^^xsd:date ; :universalDateTime "2025-08-04T03:00:43-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=RUdOTg15jDc"^^xsd:anyURI ;
+	:description """You learned about blank nodes in an earlier video. Now you get to learn one of their most important uses, OWL Restrictions. An OWL Restriction allows you to really define a class by showing what differentia distinguishes it from its superclass(es). There are many flavors and increasingly complex ways to build them, but at bottom they are pretty simple.""" ;
+	:cites :Source-1e651540-a751-5b95-8e2a-49b50bfad66d ;	# Blank Nodes
+.
+
+# FT2AARaoFks · Events in OWL/RDF
+:Source-1f690677-d8c8-5979-85c5-50ce2e7fc1bf a :Video ;
+	:name "Events in OWL/RDF" ;
+	:hasDuration [:duration "PT22M50S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-06"^^xsd:date ; :universalDateTime "2025-08-06T06:00:28-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=FT2AARaoFks"^^xsd:anyURI ;
+	:description """How do you model events and situations in OWL/RDF?
+In this episode of Ontology Explained, we walk through a Davidsonian-style approach to representing actions and states using ttl (Turtle) syntax. Whether you're building a knowledge graph or designing an ontology for real-world data, this is a practical intro to event modeling in the Semantic Web stack.""" ;
+.
+
+# xKVDPrdbXDI · Categories
+:Source-04639c06-9f2f-512e-bc08-59e12bb8923f a :Video ;
+	:name "Categories" ;
+	:hasDuration [:duration "PT18M29S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-11"^^xsd:date ; :universalDateTime "2025-08-11T00:01:02-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=xKVDPrdbXDI"^^xsd:anyURI ;
+	:description """In OWL/RDF, “categories” (taking Gist's lead here) flip the usual script — instead of modeling them as classes, they’re treated as individuals. This lets you apply OWL vocabulary directly to enrich and describe them as focal entities. In this video, I explain how this approach works, why it’s used, and what it means for ontology design.""" ;
+.
+
+# devTOf4yCRw · Labelled Property Graphs (LPGs)
+:Source-00e51a2d-0986-5ece-ab17-6145eb3a2b3b a :Video ;
+	:name "Labelled Property Graphs (LPGs)" ;
+	:hasDuration [:duration "PT13M11S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-13"^^xsd:date ; :universalDateTime "2025-08-13T06:01:19-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=devTOf4yCRw"^^xsd:anyURI ;
+	:description """In this video, I walk through the basics of Labelled Property Graphs. I use arrows.app to create an example featuring Mario to show where the L, P, and G come from.
+
+We review the oft-cited benefits of LPGs (with the caveat that I don't necessarily agree with them!).
+
+We also compare this with OWL/RDF ontologies, which excel at representing rich semantics, global identity, and reasoning.
+
+Key takeaway: LPGs are great for rapid data loading and flexible querying, but OWL/RDF is more suited for formal semantics and knowledge representation.""" ;
+	:cites :Source-0c17e271-a330-5bb5-ab34-3cec8d3dd23f ;	# Arrows (graph drawing app)
+.
+
+# ochIfHqtsPo · Can OWL Handle Many-to-Many?
+:Source-8fb86667-0cda-53c3-b832-dc521db0da48 a :Video ;
+	:name "Can OWL Handle Many-to-Many?" ;
+	:hasDuration [:duration "PT11M4S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-15"^^xsd:date ; :universalDateTime "2025-08-15T00:00:54-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=ochIfHqtsPo"^^xsd:anyURI ;
+	:description """In my research for the LPG video, I repeatedly ran into the claim that LPGs can handle many-to-many relationships, while OWL/RDF graphs cannot. This had me scratching my head, and so in this video I will evaluate the claim. Spoiler: it's a myth. OWL/RDF is just as good at many-to-many relationships as LPGs are; they are both graphs.""" ;
+	:cites :Source-00e51a2d-0986-5ece-ab17-6145eb3a2b3b ,	# Labelled Property Graphs (LPGs)
+		:Source-febc8b39-7a9a-5c4d-93f4-93fc2c063b3f ,	# RDF vs. property graphs for knowledge graphs (Neo4j blog)
+		:Source-435607a0-43e1-5e24-9b54-44106e61a470 ;	# Cutting Through the Noise: An Introduction to RDF & LPG Graphs (Enterprise Knowledge)
+.
+
+# bEnOujKEae0 · Defining AI #2: Intelligent Machines
+:Source-8e996d94-cdfc-58f8-a418-fd4aeba357e8 a :Video ;
+	:name "Defining AI #2: Intelligent Machines" ;
+	:hasDuration [:duration "PT12M31S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-18"^^xsd:date ; :universalDateTime "2025-08-18T22:48:41-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-83871c9d-6cd9-54ad-9c0a-76864f419c1a ;	# What is Artificial Intelligence?
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=bEnOujKEae0"^^xsd:anyURI ;
+	:description """After a long hiatus, this series is back on track. And for inspiration, we define AI according to the 1956 DARPA conference. This video goes through a bit of history before suggesting a combination of McCarthy and Minsky's  views: AI are machines that, were a human to do the thing they are doing, it would be counted as intelligent. I conclude that they offer great guidance for the field, but not for whether a THING counts as AI.""" ;
+	:cites :Source-c13d9179-50a6-53bc-b747-1f7e244d738a ,	# Robotics and AI: An Introduction to Applied Machine Intelligence
+		:Source-8ead1b9f-69e4-5a69-b402-36e6778df171 ,	# A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence
+		:Source-ccb04eb8-b25e-5e4a-b249-1ad64f7c9f7d ,	# Notes on McCarthy and Minsky at AI@50 (Engaging Experience, archived)
+		:Source-6bde9860-3af1-5f0f-9ad9-9cec459de400 ,	# The history of the 1956 Dartmouth workshop photo (IEEE Spectrum)
+		:Source-952ad1e3-76b4-5287-a4c5-279c2ea934a2 ;	# What is Artificial Intelligence? (John McCarthy)
+.
+
+# C3Hc-SMKIvc · Podcast Appearance on Knowledge Graph Insights with Larry Swanson
+:Source-1ae9e8fb-a42d-5776-bf04-84ad5f287007 a :Video ;
+	:name "Podcast Appearance on Knowledge Graph Insights with Larry Swanson" ;
+	:hasDuration [:duration "PT49S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-20"^^xsd:date ; :universalDateTime "2025-08-20T10:19:14-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=C3Hc-SMKIvc"^^xsd:anyURI ;
+	:description """I'm on a podcast! Larry Swanson at Knowledge Graph Insights asked if I'd join him for a conversation on philosophy and ontology, and I was thrilled to do so. If you like my channel's content, you'll probably enjoy this podcast.""" ;
+	:cites :Source-62381ca3-1841-5f84-9aef-692c94e319ee ,	# Casey Hart: The Philosophical Foundations of Ontology Practice | Episode 38
+		:Source-cd7f141c-477b-585f-aa8c-e820be3599cc ;	# Casey Hart: The Philosophical Foundations of Ontology Practice (Knowledge Graph Insights)
+.
+
+# yE4pCdNcBlE · Synthetic Intelligence: Why Use "Artificial"?
+:Source-6431687a-131f-525c-9aa6-8f8114309a6d a :Video ;
+	:name "Synthetic Intelligence: Why Use \"Artificial\"?" ;
+	:hasDuration [:duration "PT9M56S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-22"^^xsd:date ; :universalDateTime "2025-08-22T00:00:57-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=yE4pCdNcBlE"^^xsd:anyURI ;
+	:description """Should we really call it “Artificial Intelligence”? In this video, I explore the language we use for AI — and how words like artificial, fake, synthetic, or counterfeit carry very different connotations. Marketers lean on “artificial” to make AI sound futuristic and impressive, but as consumers we should think carefully about what these terms imply.
+
+If you’re interested in AI, language, or just cutting through the hype, this video is for you.""" ;
+.
+
+# B5vjnLy872c · Philosophy Explained: What is philosophy?
+:Source-d83c87a4-89c2-52be-9004-85f623eb1d48 a :Video ;
+	:name "Philosophy Explained: What is philosophy?" ;
+	:hasDuration [:duration "PT14M28S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-25"^^xsd:date ; :universalDateTime "2025-08-25T00:00:16-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=B5vjnLy872c"^^xsd:anyURI ;
+	:description """What is philosophy? I’m a philosopher, and in this video I explain what that means. Before diving into specific branches in future videos, I give a big-picture view of philosophy as a whole: what it covers, how it’s practiced, and why it matters.
+
+My working definition: philosophy is the pursuit of truth through careful and clear thinking (with a little observation), especially as it has developed in the academic tradition.
+
+By the end of this video, you’ll learn:
+
+- What philosophy is (and isn’t)
+- The major sub-disciplines of philosophy
+- How to recognize a philosophical question or topic
+- How you can start doing philosophy yourself""" ;
+	:cites :Source-c91c62f8-01e8-54fd-950c-7b8b7e12c85f ,	# Philosophy for Beginners
+		:Source-82837f62-b90c-59eb-a767-f1773cef79c4 ,	# What is Philosophy?: Crash Course Philosophy #1
+		:Source-69332d10-0f38-52ff-8ebd-aa0efda2542e ,	# The Partially Examined Life (YouTube channel)
+		:Source-83c107b4-8bfc-5ac8-93a1-cf4045a101cc ,	# Core Questions in Philosophy
+		:Source-d97317ba-9ace-5038-8e89-1ad51085b5fa ,	# Symposium (Plato)
+		:Source-427db4d5-68e3-5c5e-b637-e2cf66c1f63d ,	# Nicomachean Ethics (Aristotle)
+		:Source-5be6c0c4-3502-58d4-a683-6c0a7441eafa ;	# Two Arguments for Intelligent Design | University Place
+.
+
+# phdsULAQSU4 · Defining AI #3: Haugeland's GOFAI (minds in the literal sense)
+:Source-ef9bc195-76ee-5736-a8b6-5573609018a7 a :Video ;
+	:name "Defining AI #3: Haugeland's GOFAI (minds in the literal sense)" ;
+	:hasDuration [:duration "PT19M50S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-27"^^xsd:date ; :universalDateTime "2025-08-27T18:18:18-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-83871c9d-6cd9-54ad-9c0a-76864f419c1a ;	# What is Artificial Intelligence?
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=phdsULAQSU4"^^xsd:anyURI ;
+	:description """In this video, I unpack John Haugeland’s famous definition of “Good Old-Fashioned AI” (GOFAI) from his classic book AI: The Very Idea. Haugeland gives a philosophically rich account of artificial intelligence, one that captures the ambitions of AGI (Artificial General Intelligence) remarkably well.
+
+But I argue that his definition falls short in two key ways:
+
+1. It excludes nearly all of what we call AI today (machine learning, deep learning, etc.).
+2. It doesn’t line up with what early AI practitioners like John McCarthy had in mind. In fact, Haugeland’s “AI” seems to be targeting something rather different from the field as it was practiced.
+
+By the end of the video, you’ll see both the strengths and limits of Haugeland’s approach.""" ;
+	:cites :Source-8e508954-b5ca-5abc-8236-fc07815998c6 ;	# Artificial Intelligence: The Very Idea
+.
+
+# N14EiKQvp-A · Logic Explained: The Philosophy of Arguments
+:Source-4d0c7f39-6bc8-5086-b434-5bbc1704a1d6 a :Video ;
+	:name "Logic Explained: The Philosophy of Arguments" ;
+	:hasDuration [:duration "PT25M25S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-08-29"^^xsd:date ; :universalDateTime "2025-08-29T16:45:35-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f4eb1cf9-0844-5435-b06b-68625e43c943 ;	# Logic and Inference
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=N14EiKQvp-A"^^xsd:anyURI ;
+	:description """Arguments are more than just mere disagreement--they are how we establish reasons for things and justify our beliefs. And the study of building arguments is logic. In this (long!) video, I give an overview of logic. What is it? What are arguments? How can you find good ones? How can you become a logician? And what does this have to do with Artificial Intelligence? The answers to all these questions await!""" ;
+	:cites :Source-1ef7f21a-da8b-54b1-ae63-2bdd3dd98fec ,	# Argument - Monty Python
+		:Source-26a34c87-a68a-5412-932c-3be3568c6668 ,	# Beginning Logic
+		:Source-5e6b8a3b-dfd0-5ada-b8f0-88c5db009347 ,	# The Logic Book
+		:Source-1a0943a5-06e5-5d41-8e01-960c9fcfa009 ;	# The Power of Logic
+.
+
+# 8F8brEi-G24 · Let's Build a Chess Ontology (Part 1)
+:Source-56c303e6-d6c3-55e0-a61d-2a2e1447070a a :Video ;
+	:name "Let's Build a Chess Ontology (Part 1)" ;
+	:hasDuration [:duration "PT26M26S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-04"^^xsd:date ; :universalDateTime "2025-09-04T11:38:06-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f88a4868-312f-5b3b-94b6-5446ea37ad9e ;	# Let's Build a Chess Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=8F8brEi-G24"^^xsd:anyURI ;
+	:description """This video kicks off a new series inspired by the “let’s play” genre—except instead of games, we’re building a chess ontology together! In this first episode, we set up the base .ttl file, experiment with some natural language scaffolding, sketch out what the data might look like, and start defining core vocabulary like :ChessPlayer and :MagnusCarlsen.""" ;
+	:cites :Source-bbbe9b45-c4dc-56f4-ab18-ac86a6a365e8 ;	# chess.ttl (the Let's Build a Chess Ontology repository)
+.
+
+# RFBbBpDxpbs · Inference
+:Source-dbb6a230-2d8a-58d8-8607-00a78f9c7db8 a :Video ;
+	:name "Inference" ;
+	:hasDuration [:duration "PT17M44S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-05"^^xsd:date ; :universalDateTime "2025-09-05T00:31:45-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f4eb1cf9-0844-5435-b06b-68625e43c943 ;	# Logic and Inference
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=RFBbBpDxpbs"^^xsd:anyURI ;
+	:description """What does “inference” really mean in AI? In this video, we break down the concept step by step. We’ll define inference, contrast it with reasoning, and explore why it matters as a system-level property in artificial intelligence. Along the way, we’ll look at classic logic examples, blurred cases like diagnosis and translation, and practical tools for inference in knowledge graphs and ontologies.
+
+What you’ll learn:
+- The difference between a sentence and a proposition
+- How inference works in logic and everyday AI tasks
+- Degrees of inference: strength, complexity, novelty
+- Why reasoning is not the same as inference
+- Real-world inference tools (SPARQL, reasoners, Python scripts)
+
+Whether you’re new to AI concepts or diving deeper into ontologies and semantic web, this video gives you the foundation to understand what inference is—and why it’s central to AI.""" ;
+	:cites :Source-4d0c7f39-6bc8-5086-b434-5bbc1704a1d6 ;	# Logic Explained: The Philosophy of Arguments
+.
+
+# BdM2P4lk4Hg · LLMs Don't Hallucinate -- They Make Mistakes
+:Source-4cab1a0c-e2ce-58e2-8497-3b74167bbee1 a :Video ;
+	:name "LLMs Don't Hallucinate -- They Make Mistakes" ;
+	:hasDuration [:duration "PT26M23S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-07"^^xsd:date ; :universalDateTime "2025-09-07T23:07:37-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=BdM2P4lk4Hg"^^xsd:anyURI ;
+	:description """In this video, I argue that large language models (LLMs) don’t “hallucinate” in any literal sense. The term began in computer vision to describe useful gap-filling, but it has drifted into LLMs, where it now refers to factual errors. I trace the history of the word, give examples, and explain why the metaphor is misleading. Hallucinations are perceptual experiences without external stimuli—something only minds can have. LLMs don’t perceive the world; they generate text. Calling their mistakes “hallucinations” hides what’s really happening, feeds hype, and discourages clarity.
+
+I consider objections, show why the analogy fails, and consider alternatives like “error,” “bug,” or “confabulation.” If we want transparency in AI, we need to stop using the wrong metaphors and call these mistakes what they are.""" ;
+	:cites :Source-d64980f7-9993-5add-8442-8dfbec8b361b ,	# The history of the word "hallucination" for LLMs (joeac.net)
+		:Source-b2b31cc0-9f7c-5606-b9fb-3fbb223407b9 ,	# Why AI hallucinations are worse than ever (Forbes)
+		:Source-5300a764-a4ba-55d0-a7a5-d99b0e7a0d49 ,	# This Neural Net Hallucinates Sheep (Nautilus)
+		:Source-83898b87-bb9b-55fb-ae89-d0af87351c11 ;	# Chris Cuomo fell for an AI video (The Present Age)
+.
+
+# Hfke0OJHAAM · Let's Build a Chess Ontology (Part 2)
+:Source-9f9fbd46-7ae6-5ec0-82a7-bbf19fd79704 a :Video ;
+	:name "Let's Build a Chess Ontology (Part 2)" ;
+	:hasDuration [:duration "PT42M12S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-09"^^xsd:date ; :universalDateTime "2025-09-09T04:00:33-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f88a4868-312f-5b3b-94b6-5446ea37ad9e ;	# Let's Build a Chess Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Hfke0OJHAAM"^^xsd:anyURI ;
+	:description """This is the second of a series where we'll build an ontology about chess together. We review the prefixes at the top of the page, look into using Protege as a compiler, and start representing classes of chess pieces. And somehow it took more than a half hour--time flies when you're ontologizing!""" ;
+	:cites :Source-56c303e6-d6c3-55e0-a61d-2a2e1447070a ,	# Let's Build a Chess Ontology (Part 1)
+		:Source-bbbe9b45-c4dc-56f4-ab18-ac86a6a365e8 ;	# chess.ttl (the Let's Build a Chess Ontology repository)
+.
+
+# 2Q9558KrHVA · Inference in Protégé
+:Source-de6caab3-4de3-516c-a0de-1322dbbf3b5c a :Video ;
+	:name "Inference in Protégé" ;
+	:hasDuration [:duration "PT19M41S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-11"^^xsd:date ; :universalDateTime "2025-09-11T21:36:50-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f4eb1cf9-0844-5435-b06b-68625e43c943 ;	# Logic and Inference
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=2Q9558KrHVA"^^xsd:anyURI ;
+	:description """Learn how to use Protégé with the HermiT reasoner to display inferences automatically in your ontology. In this tutorial, we walk through a simple example with Hammers and Tools, showing how class restrictions and property values can lead to inferred knowledge.
+
+You’ll see how:
+- A hammer, defined as a subclass of tools, is inferred to be a tool.
+- An equivalence axiom with an owl:Restriction allows Protégé to infer new property values (e.g., a hammer’s primary function is hammering nails).
+- Protégé displays both asserted facts and inferred facts clearly once the reasoner is enabled.
+
+This is a great starting point if you’re learning description logics, OWL reasoning, or just want to make the most of Protégé’s built-in reasoning capabilities.""" ;
+	:cites :Source-dbb6a230-2d8a-58d8-8607-00a78f9c7db8 ,	# Inference
+		:Source-a24bffc6-2317-5d01-869d-c5ca5c3ce255 ;	# protege_inference_demonstration.ttl
+.
+
+# ouQdH9m7qVU · The Spectrum of Artificial Intelligence: Def'n #4
+:Source-07c8e02a-438e-53bc-b7df-20c3fdc33e66 a :Video ;
+	:name "The Spectrum of Artificial Intelligence: Def'n #4" ;
+	:hasDuration [:duration "PT16M47S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-15"^^xsd:date ; :universalDateTime "2025-09-15T05:01:36-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-83871c9d-6cd9-54ad-9c0a-76864f419c1a ;	# What is Artificial Intelligence?
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=ouQdH9m7qVU"^^xsd:anyURI ;
+	:description """In this video, we break down the idea of spectrum definitions — from weak vs. strong AI, to narrow vs. general, to AGI and superintelligence. Spectrum definitions sound inclusive and thought-provoking, but do they actually tell us what AI is?
+
+I argue that spectrum definitions often collapse into circular, ad hoc labels. Instead of providing a consensus definition, they function more like marketing tools than solid conceptual frameworks.
+
+If you’ve ever wondered why defining AI is so slippery, or why every debate seems to stretch along yet another spectrum, this video is for you.""" ;
+.
+
+# 6pAyt2Xx7-g · Fallacies Explained: Why Bad Arguments Fail
+:Source-b71dbc98-205b-576c-a49f-4f9279dc82f6 a :Video ;
+	:name "Fallacies Explained: Why Bad Arguments Fail" ;
+	:hasDuration [:duration "PT12M22S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-17"^^xsd:date ; :universalDateTime "2025-09-17T05:00:23-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff, :Source-f4eb1cf9-0844-5435-b06b-68625e43c943 ;	# Fallacies; Logic and Inference
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=6pAyt2Xx7-g"^^xsd:anyURI ;
+	:description """In this video, I define fallacies as argumentation anti-patterns — the bad structures or styles of reasoning that break the rules of good argumentation. A fallacy makes an argument flawed, just like bad form makes a basketball shot less likely to go in.
+
+We’ll look at how fallacies work, why they matter, and why it’s best to be charitable when talking about them — sometimes the flaw is the fallacy, sometimes the whole argument gets called the fallacy.
+
+The takeaway:
+- As rational people, we want to reliably draw true conclusions from our existing beliefs.
+- Logicians have studied what makes arguments strong, and also what makes them weak.
+- Fallacies are the anti-patterns of argumentation — mistakes that lead us astray.
+
+This video sets the stage for future episodes, where we’ll break down individual fallacies such as affirming the consequent and ad hominem.""" ;
+.
+
+# wISFJAj-2yc · SPARQL Inference Made Easy
+:Source-62905ea1-4756-5532-b4ec-26fb7ada6269 a :Video ;
+	:name "SPARQL Inference Made Easy" ;
+	:hasDuration [:duration "PT17M38S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-19"^^xsd:date ; :universalDateTime "2025-09-19T04:01:51-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f4eb1cf9-0844-5435-b06b-68625e43c943 ;	# Logic and Inference
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=wISFJAj-2yc"^^xsd:anyURI ;
+	:description """In this video, I demonstrate how to use SPARQL CONSTRUCT queries as a simple rule-based inference engine. Each CONSTRUCT query works like an IF–THEN rule, where the WHERE clause defines the condition (IF) and the CONSTRUCT clause defines the conclusion (THEN).
+
+Using a few toy examples, we explore how to:
+- Infer that male siblings are brothers
+- Infer that owned animals are pets
+- Deconstruct an IRI to unpack semantic information
+
+This hands-on approach shows how you can extend your ontology with custom inference rules directly in SPARQL. Perfect for anyone working with RDF, knowledge graphs, or semantic web applications.""" ;
+.
+
+# cSDA1uhNu7g · Let's Build a Chess Ontology (Part 3)
+:Source-9fff075c-4308-563b-9a60-3e636c13c84b a :Video ;
+	:name "Let's Build a Chess Ontology (Part 3)" ;
+	:hasDuration [:duration "PT39M44S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-24"^^xsd:date ; :universalDateTime "2025-09-24T04:01:13-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f88a4868-312f-5b3b-94b6-5446ea37ad9e ;	# Let's Build a Chess Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=cSDA1uhNu7g"^^xsd:anyURI ;
+	:description """In this third part, we get into the metaphysics of games (= rule sets?), openings, board states, and more as we try to represent what the queen's gambit is. We probably open more questions than give answers, but the ontology gets way closer having the nuance we'll need.""" ;
+.
+
+# mJdqTInAEQs · The Principle of Charity: The Cure for the Straw Man Fallacy
+:Source-3a9683c6-4e59-5ea9-9a98-59af1197de89 a :Video ;
+	:name "The Principle of Charity: The Cure for the Straw Man Fallacy" ;
+	:hasDuration [:duration "PT25M44S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-27"^^xsd:date ; :universalDateTime "2025-09-27T01:14:04-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=mJdqTInAEQs"^^xsd:anyURI ;
+	:description """In this video, we explore two core ideas in reasoning and argumentation: the Principle of Charity and the Straw Man Fallacy. These concepts aren’t just for philosophers—they’re about being better thinkers, listeners, and communicators.
+
+We’ll connect them to three timeless virtues:
+
+Try your best → Present arguments in their strongest form (Principle of Charity).
+Be kind → Avoid misrepresenting others (Straw Man Fallacy).
+Be honest → Balance fairness with truth, even things aren't so cut and dried.
+
+Along the way, we’ll look at real-life examples, common mistakes, and practical strategies for reasoning well and avoiding unfair argumentation.
+
+If you want to sharpen your logical thinking, have more productive discussions, and stay focused on truth instead of “winning,” this video is for you.""" ;
+.
+
+# Rx69Wp_h9sM · How I Became An Ontologist
+:Source-0dc0bbd3-8f00-5420-90b1-58d246e0095d a :Video ;
+	:name "How I Became An Ontologist" ;
+	:hasDuration [:duration "PT19M1S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-09-29"^^xsd:date ; :universalDateTime "2025-09-29T04:00:53-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-13344f10-72a7-5576-b24a-275dd10386cb ;	# Becoming an Ontologist and Leaving Academia
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Rx69Wp_h9sM"^^xsd:anyURI ;
+	:description """This video covers the important influences from grad school, to interviewing, to accepting myself as a career ontologist. I'll do follow up videos soon on what steps I'd advise others to take, and how I feel about leaving academia.
+
+Thanks to Ben J for his feedback to me on my channel, and his request that I do a \"how to be an ontologist\" series. I hope this covers some of what he wanted!""" ;
+.
+
+# evUNPDnD14c · The Ad Hominem Fallacy: Distracting Attacks
+:Source-16e362f5-4b96-5576-bba8-14d9b52eae77 a :Video ;
+	:name "The Ad Hominem Fallacy: Distracting Attacks" ;
+	:hasDuration [:duration "PT12M34S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-08"^^xsd:date ; :universalDateTime "2025-10-08T07:33:34-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=evUNPDnD14c"^^xsd:anyURI ;
+	:description """“If they attack one personally, it means they have not a single political argument left.”  -- Margaret Thatcher
+
+This video is a clear, practical guide to the ad hominem (literally “to the person”) fallacy — when an argument targets the person instead of the position. We'll define abusive and circumstantial forms, show when personal facts are legitimately relevant (character-as-subject, conflicts of interest, credibility), and walk through real-world examples and common misuses so you can spot and respond to these attacks.""" ;
+.
+
+# Rmcc5MOiQG0 · SPARQL Exploration: Querying Blind
+:Source-e8c21dc1-5820-5705-b116-b6db9b0aed2a a :Video ;
+	:name "SPARQL Exploration: Querying Blind" ;
+	:hasDuration [:duration "PT25M43S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-09"^^xsd:date ; :universalDateTime "2025-10-09T05:00:50-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Rmcc5MOiQG0"^^xsd:anyURI ;
+	:description """In this video, I show how I would explore a new ontology file I've never seen before using only SPARQL. We start with getting some sample triples, see what gets us interested, and dive further in. It's also useful to get the distinct properties used, and see all the classes and individuals. DESCRIBE is a huge key word, as is making sure to query for labels.""" ;
+.
+
+# DFXU7lViBeU · The Secret to Type-Level Claims: Avoiding Logic Errors in OWL
+:Source-f06e072f-29c7-512c-bcb4-310ca533ded2 a :Video ;
+	:name "The Secret to Type-Level Claims: Avoiding Logic Errors in OWL" ;
+	:hasDuration [:duration "PT21M9S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-10"^^xsd:date ; :universalDateTime "2025-10-10T04:00:32-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=DFXU7lViBeU"^^xsd:anyURI ;
+	:description """How to Make Type-Level Claims (e.g., Casey likes Nachos)
+
+It seems simple enough: you want to state a relationship between an individual (like your friend Casey) and a whole class of things (like the concept of Nachos). But in ontology, connecting an individual to a class using a standard object property is a fast track to logical contradictions. This is the Type-Level Claim Problem.
+
+In this video, we break down why statements like \":Casey :likes :Nachos\" break your formal system, and, more importantly, we give you three reliable ways to solve it.
+
+We explore three architectural solutions for making type-level claims:
+
+1.  Punning: Using the same name to refer to two different things (a class and a temporary individual). It's simple but can confuse your users.
+2.  Annotation Properties (Recommended): Using a non-logical property to make the connection. This is our preferred method for its clarity and preservation of logical consistency.
+3.  Paradigm Instances: Creating a stand-in individual that represents the class itself. It's logically sound, but adds clutter to your knowledge graph.
+
+By the end of this video, you'll not only understand the problem but be equipped to make the choice that best suits the structure and goals of your own ontology.
+
+For Practitioners & Students: We discuss the technical trade-offs of each method regarding logical consistency, reasoner performance, and data clarity.""" ;
+	:cites :Source-6d7661b9-cd1d-5363-8db8-f66ab826b305 ;	# type_level_foods.ttl
+.
+
+# TbWCfLqYIzM · So,  you want to be an ontologist? Here's what you do.
+:Source-3487057d-9b4a-53d8-a4c0-738407ec5b42 a :Video ;
+	:name "So,  you want to be an ontologist? Here's what you do." ;
+	:hasDuration [:duration "PT18M43S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-14"^^xsd:date ; :universalDateTime "2025-10-14T23:48:32-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-13344f10-72a7-5576-b24a-275dd10386cb ;	# Becoming an Ontologist and Leaving Academia
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=TbWCfLqYIzM"^^xsd:anyURI ;
+	:description """Welcome back to the career series! In this second video, we're diving deep into the practical steps you can take to become an ontologist. I break down the three primary paths to starting a career as an ontologist—from traditional schooling to job training and the challenging, but rewarding, self-taught route.
+
+What you'll learn in this video:
+
+The Three Paths: Detailed pros and cons of job training, university programs, and self-study.
+
+Essential Skills: Which academic backgrounds (CS, Library Science, Philosophy, etc.) give you a head start.
+
+Actionable Steps: The best books to read, the software you need to download, and the first project you should tackle to start building your portfolio.
+
+The Three Paths to Becoming an Ontologist:
+
+Path 1: Job Training & Pivoting (Consultancies, large tech companies)
+
+Path 2: Academic Schooling (Mentioning key programs like UW, SUNY Buffalo)
+
+Path 3: The Self-Taught Road (Driven by enthusiasm and self-pacing)""" ;
+	:cites :Source-f4a8b982-7c63-5f68-85a5-06423f61fcbf ,	# Demystifying OWL for the Enterprise
+		:Source-dcbeaf8b-7175-55e6-837f-3e6f865da981 ,	# Building Ontologies with Basic Formal Ontology
+		:Source-65c4acbd-8ad4-59d4-b039-004d3a7942b8 ,	# A Semantic Web Primer
+		:Source-9a8cc7a7-e840-5b19-a824-45727da4998a ,	# Designing and Building Enterprise Knowledge Graphs
+		:Source-01ef49c1-8236-57bb-bbab-420511153ad0 ,	# Protégé
+		:Source-7f95b358-abbe-5233-b39d-79d0fecc9b74 ,	# New Protégé Pizza Tutorial (Michael DeBellis)
+		:Source-03f755c1-9c25-5dd5-aab0-dba3f0e4e90d ,	# Wikidata Query Service
+		:Source-0dc0bbd3-8f00-5420-90b1-58d246e0095d ;	# How I Became An Ontologist
+.
+
+# n14qsp2C9Tw · Don't Be a Sheep: The Ad Populum Fallacy Explained
+:Source-f86f5cdd-a9ef-5a0d-bf3e-ac58088d1d51 a :Video ;
+	:name "Don't Be a Sheep: The Ad Populum Fallacy Explained" ;
+	:hasDuration [:duration "PT17M2S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-15"^^xsd:date ; :universalDateTime "2025-10-15T23:33:12-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=n14qsp2C9Tw"^^xsd:anyURI ;
+	:description """Welcome to the next installment in our Logic and Fallacies series!
+
+In this video, we break down the Ad Populum Fallacy, also known as the Appeal to Popularity or Appeal to the People. This is one of the most common mistakes in reasoning, where the popularity of a belief is mistakenly taken as evidence that the belief is true.
+
+From popular political opinions to social conventions and even historical scientific beliefs (like the pre-Copernican view of the universe), we show you why the crowd isn't always right, and how to spot this flawed logic.
+
+What you'll learn in this video:
+- The standard form of the Ad Populum argument: All/Most people think X, therefore X is true.
+- The difference between popularity and truth.
+- Key Exceptions where popularity does matter (e.g., word definitions, elections, and social conventions).
+- How the fallacy is used to justify immoral or outdated social structures.
+
+Don't let the allure of being like everyone else keep you from forming your beliefs for the right reasons.""" ;
+	:cites :Source-b71dbc98-205b-576c-a49f-4f9279dc82f6 ,	# Fallacies Explained: Why Bad Arguments Fail
+		:Source-3a9683c6-4e59-5ea9-9a98-59af1197de89 ;	# The Principle of Charity: The Cure for the Straw Man Fallacy
+.
+
+# A-uCszXIijI · OWL Punning: Make Sure Your Ontology Isn't a Joke
+:Source-705cb265-1e5f-559b-b7bd-42d30eefcc5f a :Video ;
+	:name "OWL Punning: Make Sure Your Ontology Isn't a Joke" ;
+	:hasDuration [:duration "PT18M50S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-16"^^xsd:date ; :universalDateTime "2025-10-16T23:25:08-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=A-uCszXIijI"^^xsd:anyURI ;
+	:description """In the world of the Semantic Web, a single identifier (IRI) is usually meant to denote only one thing. But what happens when you use the same IRI for two completely different kinds of entities—like an owl:Class and an owl:Individual? That's an OWL pun, and it's where the logical world of OWL DL (Description Logics) clashes with the flexible world of OWL Full.
+
+We'll define the linguistic pun (starting with a terrible post office joke), then tackle the technical pun. We'll explore exactly why these meta-level conflicts break OWL DL reasoners like HermiT and Elk, and what the true cost is—you're forfeiting the guarantees of decidability.
+
+But don't stress! Punning isn't a victimless crime, but it's not a modeling catastrophe either. We'll wrap up with practical advice on when you should be concerned, how to keep your models consistent, and when you can afford to \"pun-t\" (sorry!).""" ;
+.
+
+# xeJNF5lQIjs · Beyond True/False: A Practical Guide to Probabilistic Modeling in OWL and RDF
+:Source-412e3a7c-dbbd-5330-a07c-2eaa82a34d92 a :Video ;
+	:name "Beyond True/False: A Practical Guide to Probabilistic Modeling in OWL and RDF" ;
+	:hasDuration [:duration "PT20M39S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-20"^^xsd:date ; :universalDateTime "2025-10-20T23:01:06-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=xeJNF5lQIjs"^^xsd:anyURI ;
+	:description """Probability seems fundamental to intellectual rigor, yet modeling it in deterministic systems like the Web Ontology Language (OWL) presents a significant challenge. OWL is designed for propositions that are true or false—full stop—which clashes with real-world uncertainty (like a \"30% chance of rain\" or \"98% data accuracy\").
+
+This video explores practical solutions for integrating confidence, credence, and probabilistic scores into your knowledge graph. We use the following techniques:
+
+1. Datatype Properties to connect events to decimals.
+2. Named graphs to classify reliability of data sources.
+3. RDF*/RDF1.2 for qualifying the probabilities on specific triples.
+4. Lists to add a fourth relata, which lets us sneak in a decimal on another triple.
+
+We'll also touch on the deep philosophical interpretations of probability, the connection to Causal Diagrams and Bayesian Networks, and look at alternative approaches like PR-OWL and BayesOWL. Learn how to bridge the gap between deterministic logic and the messy, probabilistic reality of your data.""" ;
+.
+
+# G9EG2PN7PDk · Ontology Stitching: How to Align/Merge Enterprise Knowledge Graphs (A Practical Guide)
+:Source-b40d178e-9bcc-500b-b8b7-9db9678cac0c a :Video ;
+	:name "Ontology Stitching: How to Align/Merge Enterprise Knowledge Graphs (A Practical Guide)" ;
+	:hasDuration [:duration "PT26M10S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-23"^^xsd:date ; :universalDateTime "2025-10-23T16:04:32-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=G9EG2PN7PDk"^^xsd:anyURI ;
+	:description """In complex organizations, the same word can mean two completely different things to two different teams—this is Semantic Ambiguity, and it will break your knowledge graph. This video explores the concept of \"Ontology Stitching,\" which is the critical process of taking two disparate or conflicting ontologies (like a Sales CRM's definition of \"Client\" vs. an Engineering system's definition of \"Client\") and carefully merging them into a unified, non-contradictory whole.
+
+You will learn:
+- Why terms like \"Client,\" \"Asset,\" or \"Engagement\" create homonymy problems in enterprise data.
+- The difference between Ontology Mapping (finding the links) and Ontology Alignment (formalizing the relationship).
+- How to use vocabularies like SKOS (Simple Knowledge Organization System) and owl:sameAs to create durable \"stitches\" that clearly define relationships like equivalence, broader, and narrower terms, preventing costly data integration errors and logical contradictions.
+
+This is essential viewing for anyone working in Data Governance, Enterprise Architecture, or Semantic Web modeling.""" ;
+.
+
+# tNIY_UxJ5FI · Channel Update #2
+:Source-9fe052b1-151a-51ac-8b9a-9065228d3994 a :Video ;
+	:name "Channel Update #2" ;
+	:hasDuration [:duration "PT7M49S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-29"^^xsd:date ; :universalDateTime "2025-10-29T13:03:57-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=tNIY_UxJ5FI"^^xsd:anyURI ;
+	:description """Things are going great, and I'm very thankful to all you viewers and likers and subscribers out there.""" ;
+.
+
+# MoZT1km7r6M · Let's Build A Chess Ontology #4
+:Source-13425077-0af2-5d20-bba9-f82ea29cdcab a :Video ;
+	:name "Let's Build A Chess Ontology #4" ;
+	:hasDuration [:duration "PT28M56S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-10-29"^^xsd:date ; :universalDateTime "2025-10-29T18:59:26-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f88a4868-312f-5b3b-94b6-5446ea37ad9e ;	# Let's Build a Chess Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=MoZT1km7r6M"^^xsd:anyURI ;
+	:description """I'm back at it! Took me a bit to get myself caught up, but in the end I get a semantics that I like decently well for :moveOrder to help relate us from an opening (e.g. :QueensGambit) and the move order (e.g. \"1.d4 d5 ...\" ). I also show how the chess ontology looks when it's connected to my upper ontology, which we view in Protege.
+
+In the next video, we'll show how to take a chess opening structured data dataset and do some ETL to put it in the ontology/graph. Should be fun!""" ;
+.
+
+# QXCAGStCOMA · I'm Sick of the ASI Fear-Mongering (Hank Green's Video Made Me Rage, Featuring Nate Soares)
+:Source-bbb894c1-cee0-5be5-8656-6af1a15854b4 a :Video ;
+	:name "I'm Sick of the ASI Fear-Mongering (Hank Green's Video Made Me Rage, Featuring Nate Soares)" ;
+	:hasDuration [:duration "PT1H10M56S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-03"^^xsd:date ; :universalDateTime "2025-11-03T05:01:01-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=QXCAGStCOMA"^^xsd:anyURI ;
+	:description """I watched a video with Hank Green and Nate Soares discussing the existential threat of Artificial Super Intelligence (ASI), and honestly, I was infuriated. Soares, co-author of If Anyone Builds It, Everyone Dies, argues that if an ASI is not perfectly \"aligned\" with human values, it will surely lead to our doom. But as I break down their major points—from their vague, fear-inducing definition of ASI to their outlandish claims about current AI capabilities—it seems like the real problem isn't a malicious super-intelligence, but rather the unnecessary mystery and power concentration surrounding the technology.
+
+This video is my detailed objection to the \"stop all AI\" argument. I challenge the notion that LLMs are plotting, self-aware, or \"caring\" in a way that poses an existential threat. The metaphors they use, like comparing AI development to alchemy, only serve to obscure the technology and increase the power of the builders (the \"alchemists\"). Ultimately, the true \"alignment problem\" isn't with an uncaring algorithm, but with the huge corporations and influential figures who are shaping this powerful technology. I propose four foundational principles for thinking about AI that prioritize clarity, human flourishing, and a healthy distrust of the powerful.""" ;
+	:cites :Source-e5582d53-237f-501c-aebd-3faeff8cb2cb ,	# ChatGPT isn't Smart. It's something Much Weirder
+		:Source-0c2237de-7a3e-504b-9048-71b5de8bc6f4 ;	# Claude Sonnet 4.5 System Card
+.
+
+# R6gYZ5B4lqs · Why I Use Emacs for Ontologies (and How to Memorize a HUGE Knowledge Graph) [AMA #1]
+:Source-30a5547e-4d0a-53b8-b39b-a938f3219816 a :Video ;
+	:name "Why I Use Emacs for Ontologies (and How to Memorize a HUGE Knowledge Graph) [AMA #1]" ;
+	:hasDuration [:duration "PT19M30S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-04"^^xsd:date ; :universalDateTime "2025-11-04T05:01:02-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=R6gYZ5B4lqs"^^xsd:anyURI ;
+	:description """Why would an Ontology Engineer skip tools like Protege and TopBraid Composer and stick with a 'plain' text editor like Emacs? And how do you manage a complex knowledge graph with thousands of classes and properties without relying on memory alone? Those were two great questions from FredBlok4308, and I'm answering them in this video.
+
+I dive into my personal workflow, explaining the history and practical reasons for choosing a text-based approach (hint: it's a historical happy accident that was supported by it being fun, fully customizable, and better than the other options I tried). I also reveal the secret to taming graph complexity, which involves good modular design, the \"use it or lose it\" principle, and leveraging SPARQL queries to serve as your method for learning the vocabula. Whether you're a Semantic Web veteran or just starting with knowledge graphs, this covers the critical strategies for scaling your data modeling efforts.""" ;
+.
+
+# 2XM8Vnoayt0 · The Philosophers Fallacy!? (Let's call it 'Blueprint Bias')
+:Source-8655b9ee-8717-5fa1-bc04-3676a81a4f96 a :Video ;
+	:name "The Philosophers Fallacy!? (Let's call it 'Blueprint Bias')" ;
+	:hasDuration [:duration "PT14M49S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-05"^^xsd:date ; :universalDateTime "2025-11-05T05:00:05-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=2XM8Vnoayt0"^^xsd:anyURI ;
+	:description """I stumbled across a video where the talked about the \"Philosopher's Fallacy\". I had never heard about it before. And being a philosopher and someone who is passionate about (avoiding!) fallacies, I had to check it out. This video unpacks what the fallacy is supposed to be. I think discuss what the process should be in creating a new, previously-unnamed, fallacy. And I dig into what is really going on with the philosopher's fallacy.
+
+In the end, I conclude that there are some other more specific named fallacies we could use to identify the errors, so it's probably not worth adding this arrow to our quiver. But if we did, I'd call it the Blueprint Bias rather than a philosopher's fallacy.""" ;
+	:cites :Source-b5ffbf17-2339-5ecb-bd27-956dc5f4a259 ,	# The Case Against Superintelligence | Cal Newport
+		:Source-bbb894c1-cee0-5be5-8656-6af1a15854b4 ,	# I'm Sick of the ASI Fear-Mongering (Hank Green's Video Made Me Rage, Featuring Nate Soares)
+		:Source-b71dbc98-205b-576c-a49f-4f9279dc82f6 ;	# Fallacies Explained: Why Bad Arguments Fail
+.
+
+# dh0aAYRdi0U · How to Pivot Into Ontology: Jobs, Skills, and the Future of the Field
+:Source-7a38531b-50f7-5990-8cea-083338bd14cc a :Video ;
+	:name "How to Pivot Into Ontology: Jobs, Skills, and the Future of the Field" ;
+	:hasDuration [:duration "PT16M48S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-06"^^xsd:date ; :universalDateTime "2025-11-06T05:01:30-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-13344f10-72a7-5576-b24a-275dd10386cb ;	# Becoming an Ontologist and Leaving Academia
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=dh0aAYRdi0U"^^xsd:anyURI ;
+	:description """In this video, I respond to a viewer asking whether a mid-career pivot into ontology is realistic without a strong background in logic, data science, or quantitative methods. I walk through what skills actually matter, why qualitative thinkers — especially philosophers and religious studies scholars — are often better prepared than they realize, and what the retraining curve looks like in practice. Age isn’t a blocker, and a lack of formal logic training isn’t disqualifying; the real question is how willing you are to learn some technical basics while leveraging the strengths you already have.
+
+I also cover the job landscape: where ontology and taxonomy roles actually hide, what search terms to use, what entry-level positions look like, and how to find “learn-on-the-job” opportunities. Then I zoom out to whether the field has a long-term future (short answer: yes), how AI affects these roles, and what adjacent fields — from Graph RAG to information architecture — make good alternatives or stepping stones. If you're trying to figure out whether ontology is a viable next career chapter, this video maps out the terrain.""" ;
+.
+
+# GX31wVDz_Eg · Newcomb’s Problem Explained: One Box Or Two?
+:Source-7397576e-2ebd-5804-91d8-e85789d8cf30 a :Video ;
+	:name "Newcomb’s Problem Explained: One Box Or Two?" ;
+	:hasDuration [:duration "PT30M4S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-07"^^xsd:date ; :universalDateTime "2025-11-07T05:00:35-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=GX31wVDz_Eg"^^xsd:anyURI ;
+	:description """Newcomb’s Problem is one of the strangest and most influential puzzles in philosophy, decision theory, and AI. Should you take one box or two? Really, this is a deviant case where it pays to be irrational.
+
+In this video, I walk through the classic setup from Robert Nozick’s 1969 paper Newcomb’s Problem and Two Principles of Choice. We cover the arguments for one-boxing and two-boxing, explain why two-boxing is ultimately the right answer, and explore why Newcomb’s Problem is really a test for decision theories—not your intuition.
+
+What’s inside:
+
+- The case for one-boxing
+- The case for two-boxing
+- Why Newcomb’s Problem pays you to be irrational
+- How decision theory works (utilities, dominance, evidential vs. causal decision theory)
+- Why philosophers split almost evenly on this puzzle
+- Why decision theorists overwhelmingly favor two-boxing
+- How Newcomb’s Problem functions like the Trolley Problem—great for clarity, bad for obsessing over
+
+I'll also offer explanations for why this seemingly cut-and-dried problem still makes waves and controversy.
+
+Bottom line:
+Newcomb’s Problem is cool, culturally sticky, and great for thinking—but the choice itself is easy. Take both boxes (but hope/act in ways that will get the predictor to make a mistake).""" ;
+	:cites :Source-cbedfcd7-dd46-5e43-a2da-a780e093108e ,	# Decision Theory (Boris Kment)
+		:Source-8af92397-ccaf-5a4d-a3c7-a9d01a573dcc ,	# Causal Decision Theory (PDF on andrewmbailey.com)
+		:Source-ef15c554-687a-5b52-a2b5-0e611b65998f ,	# Some Counterexamples to Causal Decision Theory (Andy Egan)
+		:Source-ab0b51a8-38c7-556d-a6bd-df18a24246de ,	# Newcomb's Problem and Two Principles of Choice
+		:Source-26b0cb0b-07b1-59a5-a6a5-776c623c32af ,	# Newcomb's problem (Wikipedia)
+		:Source-608bea38-7f80-5821-8ea2-ec504c1d4931 ;	# Causal Decision Theory (Stanford Encyclopedia of Philosophy)
+.
+
+# Qllieer6BfQ · Chess Openings Import: [Chess #5]
+:Source-a7dd289a-80ee-5803-95fe-852eaf7ec9bb a :Video ;
+	:name "Chess Openings Import: [Chess #5]" ;
+	:hasDuration [:duration "PT45M19S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-10"^^xsd:date ; :universalDateTime "2025-11-10T05:01:01-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-f88a4868-312f-5b3b-94b6-5446ea37ad9e ;	# Let's Build a Chess Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Qllieer6BfQ"^^xsd:anyURI ;
+	:description """In this video, I show how I use sparql-anything to ETL structured data into the ontology. I take a dataset from Kaggle and generate a sparql query to expand our chess ontology. This episode is mostly query construction, but it touches on how we have to make some ontology design decisions as part of ETL processes.""" ;
+	:cites :Source-72d5e157-214e-51b5-b726-d4235b24e74d ,	# All chess openings (Kaggle dataset)
+		:Source-51f020b5-09e0-54fb-8c64-49421207d324 ;	# SPARQL Anything
+.
+
+# PwSaTruXwhQ · Thought Experiment: How Intelligent Are Mushrooms?
+:Source-635ed044-e4d2-5a23-93e5-b15bcaa6b9ad a :Video ;
+	:name "Thought Experiment: How Intelligent Are Mushrooms?" ;
+	:hasDuration [:duration "PT1M57S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-11"^^xsd:date ; :universalDateTime "2025-11-11T05:01:00-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=PwSaTruXwhQ"^^xsd:anyURI ;
+	:description """A conversation the other day about chanterelles had me thinking about how I could, or could not, make the case that fungi are more intelligent than plants. I'm still not exactly sure whether any case could be made, but the hypothetical sent me into thinking about intelligence from a path I don't usually take. And sometimes new pathways into familiar ideas yield new insights. So, I'm going to ponder it, and I hope you do, too.""" ;
+.
+
+# J70hmeMhNXQ · How Much Does Your Ontology Really Know?
+:Source-5f93c8a1-d71c-541f-93b9-dd9ac2a00950 a :Video ;
+	:name "How Much Does Your Ontology Really Know?" ;
+	:hasDuration [:duration "PT15M25S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-17"^^xsd:date ; :universalDateTime "2025-11-17T13:14:23-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=J70hmeMhNXQ"^^xsd:anyURI ;
+	:description """“How complete is your ontology?”
+“What does your ontology know about oil and gas?”
+“Can you quantify it?”
+
+These are some of the first questions clients, managers, and stakeholders ask me — and they usually expect a nice clean number like “83%.” But ontology completeness is way more complicated than that. In today’s video, I break down how to properly approach this question, using a metaphor everyone understands: How do you judge what a fifth grader knows?
+
+In the video I walk through:
+-  Why “counting facts” (nodes, edges, depth, connectedness, instance data) only gets you so far
+-  Why time spent (dev time + application run time) matters — but is also misleading
+-  Why the real answer is in your tests, applications, and use-case work products
+-  How competency questions and regression tests map directly to ontology evaluation
+-  How to pick a strong, narrow, connected use case and build your story around it
+-  Why you should be suspicious of anyone who claims ontology completeness is simple
+
+By the end, you’ll see why evaluating an ontology is a lot like evaluating whether a kid is ready for the next grade: metrics help, but they can be gamed. What really matters is whether the ontology performs across a representative set of tasks.""" ;
+.
+
+# lWDABXVMzHA · The Red Herring Fallacy: Don’t Get Distracted!
+:Source-633fb0ad-a7b1-5a0f-821f-5ef8d0f2a93a a :Video ;
+	:name "The Red Herring Fallacy: Don’t Get Distracted!" ;
+	:hasDuration [:duration "PT19M16S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-19"^^xsd:date ; :universalDateTime "2025-11-19T14:48:02-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=lWDABXVMzHA"^^xsd:anyURI ;
+	:description """In this video, we break down the red herring fallacy — one of the most common (and most misused) fallacies in everyday arguments. We’ll look at what a red herring actually is, where the term comes from, how it shows up in modern debates, and why identifying it can get tricky in real-world conversations.
+
+What we cover:
+
+- The definition of a red herring
+- The 1807 William Cobbett origin story
+- Classic examples (including ad hominem & appeal to tradition)
+- Political examples using the Epstein files discussion
+- Why irrelevant details aren’t always fallacious
+- The tension between exegesis and steel-manning
+- How red herrings differ from straw men
+- Takeaway: A red herring fallacy occurs when irrelevant information is used to distract from — or covertly support — a conclusion.""" ;
+	:cites :Source-1a2bf767-717c-5f29-9962-18c707a91b8c ,	# Red herring (World Wide Words)
+		:Source-c0875d14-001e-5a6c-a1ce-e0c195991bbf ,	# WATCH: Leavitt says Boebert meeting over Epstein files shows Trump administration ‘transparency'
+		:Source-68e1d34d-84ba-516f-b42a-3aae04bd5dc3 ;	# Press Secretary Karoline Leavitt's full comments on Jeffrey Epstein email release
+.
+
+# ny363vb1ByE · Goals: Are they for LLMs, Cats, and Thermostats?
+:Source-66f7a011-c905-5466-9bd5-54fe30a8f631 a :Video ;
+	:name "Goals: Are they for LLMs, Cats, and Thermostats?" ;
+	:hasDuration [:duration "PT19M26S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-24"^^xsd:date ; :universalDateTime "2025-11-24T05:01:41-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=ny363vb1ByE"^^xsd:anyURI ;
+	:description """We often hear that the biggest risk from super-intelligent AI is that their \"goals\" won't align with human goals. But what if we're asking the wrong question?
+
+This video takes philosophical look into the concept of goals itself. We move beyond motivational speeches to explore the fundamental question: When we attribute a goal to a thermostat, a chess engine, or an LLM, are we talking about the same thing as a human goal?
+
+We analyze prominent definitions of intelligence—like John McCarthy's view that intelligence is goal-directed computation—and use classic philosophical tools to dissect the problem, including:
+
+- Propositional Attitudes
+- Direction of Fit (Mind-to-World vs. World-to-Mind)
+- Value Theory (Intrinsic vs. Extrinsic Goals, from Aristotle to Mill)
+
+By examining goals in everything from hunger and cats to hammers and mushrooms, we develop a better framework for understanding the true nature of AI intelligence.
+
+Do LLMs, Reinforcement Learning Agents, and Chess Engines truly have goals? Or do they have something else entirely?
+
+Find out why the answer to this philosophical question is essential for tackling the biggest risk in modern AI: the Alignment Problem.""" ;
+.
+
+# nTcsWL_-jj0 · The Alignment Problem Explained
+:Source-63c6374f-ab39-58f2-92bc-1ce0fc9e91d8 a :Video ;
+	:name "The Alignment Problem Explained" ;
+	:hasDuration [:duration "PT21M48S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-11-26"^^xsd:date ; :universalDateTime "2025-11-26T19:28:13-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=nTcsWL_-jj0"^^xsd:anyURI ;
+	:description """In this video, I break down what “alignment” really means. Instead of treating AI alignment as a vague, binary idea, I argue that we need a richer vocabulary for how goals relate: complementary, compatible, in tension, and incompatible. Using examples from sports, everyday life, and human–AI interactions, I show how alignment problems arise, why they matter, and what this tells us about the Alignment Problem in AI.
+We’ll look at definitions from Christian, Gabriel, Russell, and the Asilomar Principles, then refine them into a clearer framework for thinking about goals, conflict, cooperation, and the real challenges ahead in building aligned AI systems.""" ;
+	:cites :Source-a2b1de5c-ccb8-536d-9e50-bf4959046533 ,	# The Alignment Problem (Brian Christian): introduction and chapter 1
+		:Source-47dcb470-b73f-5966-a9bf-f23a5f039f68 ,	# Artificial Intelligence, Values and Alignment
+		:Source-15e470b0-a5a7-5a7c-82db-64d82a50975c ,	# Human Compatible
+		:Source-92aaa65a-d777-5bf3-9cf4-98d99d3b4711 ;	# Asilomar AI Principles
+.
+
+# 1veF-1TNFsM · The T-Box/A-Box Myth — And What Quine Can Teach Ontologists
+:Source-b8597e92-cdcc-598e-8327-d71f2c72530c a :Video ;
+	:name "The T-Box/A-Box Myth — And What Quine Can Teach Ontologists" ;
+	:hasDuration [:duration "PT20M1S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-03"^^xsd:date ; :universalDateTime "2025-12-03T05:00:05-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=1veF-1TNFsM"^^xsd:anyURI ;
+	:description """Ontologists love distinctions… maybe a little too much. One of our most sacred ones — the T-Box vs. A-Box — might actually be an illusion. In this video, I argue that there is no such thing as the T-Box, at least not as a deep metaphysical or architectural category.
+
+We review the standard definitions (Gruber 1993; KL-One; Giacomo & Lenzerini 1996), look at examples like “BasketballPlayers play basketball” vs. “LeBron is a BasketballPlayer,” and compare this to W.V.O. Quine’s famous attack on the analytic/synthetic distinction in Two Dogmas of Empiricism (1951).
+
+Quine’s “web of belief” shows why sharp lines between meaning-statements and world-statements don’t hold up. Ontologies work the same way: A-Box facts can force revisions in T-Box structure, classes and individuals are conventional, and everything sits on a spectrum of centrality rather than in separate boxes.
+
+The T-Box/A-Box split is still a useful heuristic, but not a deep distinction. Think of your ontology as a web, not a two-box architecture.""" ;
+	:cites :Source-dd90e597-083d-5b43-919f-b1db91e54f83 ,	# Two Dogmas of Empiricism
+		:Source-41a55685-3884-5185-ac57-8aa6dd84075d ,	# A Translation Approach to Portable Ontology Specifications
+		:Source-ba87681f-9816-5146-8998-d9ba4dc87bce ,	# TBox and ABox Reasoning in Expressive Description Logics
+		:Source-f25b012e-b7ac-5236-97dc-6d38d160392f ;	# What Are the TBox, ABox, and CBox in a Knowledge Graph?
+.
+
+# Jzbe9J3x-6c · AI Explained: A Discipline, Minds, and the Messy Third Definition
+:Source-d994ada1-b0d8-5b34-94c4-310d92455694 a :Video ;
+	:name "AI Explained: A Discipline, Minds, and the Messy Third Definition" ;
+	:hasDuration [:duration "PT20M9S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-05"^^xsd:date ; :universalDateTime "2025-12-05T16:35:50-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-83871c9d-6cd9-54ad-9c0a-76864f419c1a ;	# What is Artificial Intelligence?
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Jzbe9J3x-6c"^^xsd:anyURI ;
+	:description """In this video, I break down the three definitions of Artificial Intelligence:
+AI1 — the field dedicated to creating non-biological minds.
+AI2 — the non-biological minds themselves.
+AI3 — the catch-all idea of “cool tech that seems intelligent.”
+The first two give us clarity. The third explains everyday usage—but it’s vague, easily exploited, and dangerous to use in policy or law. Let’s make our language about AI precise.""" ;
+.
+
+# gSSHj9-e6Mc · Ontology FAQs: Five Questions I Always Get Asked
+:Source-d58d6665-fab3-5269-aaf0-22ce319d8fc1 a :Video ;
+	:name "Ontology FAQs: Five Questions I Always Get Asked" ;
+	:hasDuration [:duration "PT11M5S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-08"^^xsd:date ; :universalDateTime "2025-12-08T05:01:32-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=gSSHj9-e6Mc"^^xsd:anyURI ;
+	:description """In this video, I go over five \"elevator pitch\" responses to FAQs. They are:
+1. What are ontologies?
+2. How can they help me?
+3. Can't {tool x} do that, too?
+4. How much does your ontology know?
+5. When will the ontology be done?
+
+All of these answers will be context-dependent. But the broad-strokes first pass is the same, until you can dive into specifics that will meet your questioner where they are.""" ;
+	:cites :Source-5f93c8a1-d71c-541f-93b9-dd9ac2a00950 ,	# How Much Does Your Ontology Really Know?
+		:Source-8c7933de-30b1-5ca0-b977-2090e97fb8c2 ;	# What is ontology?
+.
+
+# -tLlqtoqMDI · Pascal’s Wager Explained
+:Source-c888c9da-2a11-5bb4-a906-aaff39fd4940 a :Video ;
+	:name "Pascal’s Wager Explained" ;
+	:hasDuration [:duration "PT33M4S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-10"^^xsd:date ; :universalDateTime "2025-12-10T05:00:00-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=-tLlqtoqMDI"^^xsd:anyURI ;
+	:description """Pascal’s Wager is one of philosophy’s most famous arguments—promising infinite happiness for a finite cost. In this video, we break down the original argument from Pascal’s Pensées, examine the act-state table, look at the classic objections (many gods, belief vs evidence, mixed strategies, etc.), and explore why the wager ultimately fails as a proof of God’s existence.
+
+But we also look at why Pascal’s Wager succeeds as a tool for thinking about decision theory, belief, probabilities, and high-stakes reasoning.""" ;
+	:cites :Source-f8b3a730-2cf1-57fc-9d96-20fcf65c2070 ,	# Pascal's Pensées (Project Gutenberg)
+		:Source-4e1bf5f7-031b-50d4-81e1-1845c9029ef1 ;	# Pascal's Wager (Stanford Encyclopedia of Philosophy)
+.
+
+# fAUV2atmG0M · Do LLMs Actually Understand the World? (Spoiler: No.)
+:Source-54e7d9cd-c58e-5499-94ff-1bca7f38618a a :Video ;
+	:name "Do LLMs Actually Understand the World? (Spoiler: No.)" ;
+	:hasDuration [:duration "PT19M37S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-11"^^xsd:date ; :universalDateTime "2025-12-11T05:01:23-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=fAUV2atmG0M"^^xsd:anyURI ;
+	:description """Do large language models actually understand the world, or is that just a convenient myth? In this video, I break down an argument made by Roko Mijic on Liron Shapira's Doom Debates channel.
+
+The argument is a great launching point to think about what models are and whether some sort of transitivity holds. In the end, I conclude that:
+Do LLMs have models of the world? No.
+But they are proxies for facts about the world insofar as trying to copy the language of their training data would resemble the world.
+True claims from LLMs are not mere accidents. But they are more of a happy byproduct than deliberate, logical implications of a world model.""" ;
+	:cites :Source-3f514ab0-f4ed-5cf6-a7f3-f7af5bf89120 ;	# Alignment is EASY and Roko's Basilisk is GOOD?! AI Doom Debate with Roko Mijic
+.
+
+# vPBYRVieyeY · The Danger of Changing Levels: Fallacies of Composition and Division Explained
+:Source-11921ec9-faa2-5fec-937b-fe5d6efdb70a a :Video ;
+	:name "The Danger of Changing Levels: Fallacies of Composition and Division Explained" ;
+	:hasDuration [:duration "PT16M3S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-16"^^xsd:date ; :universalDateTime "2025-12-16T15:36:25-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=vPBYRVieyeY"^^xsd:anyURI ;
+	:description """Two Fallacies for the Price of One: Composition and Division!
+
+It's tempting to think that what's true of the parts must be true of the whole, and vice-versa. But that path is fraught with logical peril, often leading to comically terrible results!In this video, we break down the twin fallacies of composition and division, explore the logical structure of both good and bad arguments that 'change levels,' and show you the key question you MUST ask before making such a move.
+
+By the end of this video, you will know:
+- What the Fallacy of Composition is (Part to Whole).
+- What the Fallacy of Division is (Whole to Part).
+- Why \"The car weighs two tons, so the seat weighs two tons\" is wrong.
+- Why \"I own this shirt, so I own this button\" is right.
+- The crucial test: Is the property preserved under composition/decomposition?
+
+We also touch upon related concepts like Simpson's Paradox, Ecological Fallacies, and the Wisdom of Crowds.
+
+Be skeptical when going from one level to another—always make your premises explicit!""" ;
+.
+
+# -ibuWx61LPs · Doomerism Explained: The Case AI Will End Humans
+:Source-8fb8e19b-13e9-5425-86f1-ea69f6660c24 a :Video ;
+	:name "Doomerism Explained: The Case AI Will End Humans" ;
+	:hasDuration [:duration "PT27M12S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-18"^^xsd:date ; :universalDateTime "2025-12-18T05:00:01-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=-ibuWx61LPs"^^xsd:anyURI ;
+	:description """I have expressed a lot of skepticism about AI \"Doomers\" on this channel—but am I being too dismissive? To really test my view, I decided to put on the doomer worldview and \"steelman\" their argument.
+
+In this video, I give my level best attempt at arguing that AI poses a serious existential risk to humanity. I move past the skepticism to formulate and defend the core doomer argument:
+
+1. AI will likely be strictly more powerful than humans.
+2. AI will likely be misaligned with humans.
+3. We cannot escape the misalignment.
+4. If (1), (2), and, (3), then humans face an existential risk from AI.
+5. So, humans face an existential risk from AI.
+
+From the \"Guiding Principle of Irrelevance\" to the history of \"Post-Human\" Chess AI, I explore why some believe we are heading toward a catastrophe that we cannot negotiate our way out of.
+
+Stick around for the end of the video where I break character to share my actual takeaway. Did building this argument change my mind, or am I more confident in my anti-doomer stance than ever?""" ;
+	:cites :Source-63c6374f-ab39-58f2-92bc-1ce0fc9e91d8 ;	# The Alignment Problem Explained
+.
+
+# ktT6nwfVXCk · Ethics Explained: Applied, Normative, and Metaethics in 15 Minutes
+:Source-2859ec61-0569-56d9-8604-f312f9312698 a :Video ;
+	:name "Ethics Explained: Applied, Normative, and Metaethics in 15 Minutes" ;
+	:hasDuration [:duration "PT16M33S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-22"^^xsd:date ; :universalDateTime "2025-12-22T14:55:37-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=ktT6nwfVXCk"^^xsd:anyURI ;
+	:description """Welcome to Ontology Explained! In this video, I walk through the foundations of ethics and the three major branches philosophers use to understand moral questions:
+
+- Applied Ethics – real-world moral issues
+- Normative Ethics – theories that explain what makes actions right or wrong
+- Metaethics – big-picture questions about what morality is
+
+We’ll talk about Kant’s categorical vs hypothetical imperatives, how philosophers classify actions (obligatory, permissible, forbidden, supererogatory, and more), and how these levels of ethics work together—especially when thinking about AI and technology.
+
+This video sets the groundwork for future discussions on AI ethics, ontology building, and moral reasoning.
+
+What ethical questions about AI or morality do you want answered next?""" ;
+	:cites :Source-7cdc62ea-449d-568e-ae99-3c56f66f910c ;	# Groundwork of the Metaphysics of Morals
+.
+
+# WDb5JNBCGU8 · State of the Channel (End of 2025)
+:Source-835239bd-5684-5013-9c61-244bb11abf36 a :Video ;
+	:name "State of the Channel (End of 2025)" ;
+	:hasDuration [:duration "PT14M26S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2025-12-24"^^xsd:date ; :universalDateTime "2025-12-24T15:42:52-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=WDb5JNBCGU8"^^xsd:anyURI ;
+	:description """Thanks for a wonderful year! I'm stoked to see what 2026 brings.
+
+Here's the channel's new mission statement:
+Ontology Explained is a place that provides clear, interesting, and edifying discussions about topics involving philosophy and artificial intelligence.
+It is a passion project for Casey, who partly justifies the hobby to his wife as it drums up some consulting work, makes him happy, and makes him better at his 'real' job.
+
+And my goal:
+In 2026, I want to make the product good enough that it has a credibility, quality, and audience that COULD let it grow beyond just a hobby.""" ;
+.
+
+# L1zXzSSjTao · Geoffrey Hinton is Wrong About AI Understanding
+:Source-8dd25b83-4922-554f-be03-fe34ef9152a0 a :Video ;
+	:name "Geoffrey Hinton is Wrong About AI Understanding" ;
+	:hasDuration [:duration "PT23M29S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-01-12"^^xsd:date ; :universalDateTime "2026-01-12T05:00:46-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=L1zXzSSjTao"^^xsd:anyURI ;
+	:description """Do AI models actually \"get it,\" or are they just guessing the next word?
+
+In this video, we dive into the philosophical and technical debate over whether Large Language Models (LLMs) truly possess understanding. While many see AI as a sophisticated statistical tool, \"Godfather of AI\" Geoffrey Hinton argues that the internal structures these models build constitute genuine understanding.
+
+In this video, we explore:
+- Defining Understanding: What does it mean for a human to understand a task vs. a machine?
+- The Reality Gap: Why being trained on text alone might mean LLMs lack a \"grasp\" of the physical world.
+- The Hinton Perspective: An analysis of Hinton's claim that internal data structures are the definition of understanding.
+- The Rebuttal: Why Hinton’s definition might be missing the vital connection between mind and reality.
+
+Is understanding a structural phenomenon, or does it require a pulse and a place in the real world? Let’s get into it.""" ;
+	:cites :Source-103b43e7-14dc-569e-bec6-eeb6a9ec84fd ,	# What Is Understanding? – Geoffrey Hinton | IASEAI 2025
+		:Source-54e7d9cd-c58e-5499-94ff-1bca7f38618a ;	# Do LLMs Actually Understand the World? (Spoiler: No.)
+.
+
+# KyU601o_o4c · Situating Major Ethical Theories (And Applications for AI!)
+:Source-bb0166c9-7694-59a2-a2d6-1bbb3e464288 a :Video ;
+	:name "Situating Major Ethical Theories (And Applications for AI!)" ;
+	:hasDuration [:duration "PT17M35S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-01-14"^^xsd:date ; :universalDateTime "2026-01-14T05:30:20-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-314c24fd-2173-59f9-bebf-6ab5cf73332b ;	# Ethics Explained
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=KyU601o_o4c"^^xsd:anyURI ;
+	:description """How do we decide if an action is \"good\" or \"bad\"? Whether you're judging a friend's white lie or a Silicon Valley giant's latest algorithm, you're using a normative ethical framework—even if you don't know it.
+
+In this video, we break down the major schools of ethical thought and see how they apply to the hottest topic in tech: Artificial Intelligence.
+
+In this video, you’ll learn:
+- Consequentialism: Why the outcome is all that matters.
+- Deontology: Why some rules can never be broken (and what Kant has to do with it).
+- Virtue Ethics: Why we should ask \"What would a good person do?\"
+- The AI Problem: Since AI can’t actually \"act\" with intent, how do we apply these 2,000-year-old theories to modern code?
+
+We also dive into Asimov’s Laws of Robotics and how different frameworks (like Contractualism and Divine Command Theory) change the way we build and regulate technology.
+
+Is it the rules we give them, or the data we feed them?""" ;
+.
+
+# oE4BU6IpraE · SPARQL in Protege? Try This Instead
+:Source-e70ea667-1cba-5c93-9e1c-1fdc0f6ea41a a :Video ;
+	:name "SPARQL in Protege? Try This Instead" ;
+	:hasDuration [:duration "PT10M42S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-01-21"^^xsd:date ; :universalDateTime "2026-01-21T12:34:08-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=oE4BU6IpraE"^^xsd:anyURI ;
+	:description """Protege has built in SPARQL functionality (or at least is available via plugin), but I really dislike it. In this video I respond to a viewer comment/question with my advice on how to generate your own queries: use Apache Jena Fuseki.""" ;
+	:cites :Source-d05e63c4-7a8b-5360-bd7f-75782e538033 ;	# Fuseki quick start (Apache Jena)
+.
+
+# sRqatx5xs_o · Merging Equivalent Concepts in OWL
+:Source-e97c37ed-bb69-5dbf-af02-6efdedcc1745 a :Video ;
+	:name "Merging Equivalent Concepts in OWL" ;
+	:hasDuration [:duration "PT20M4S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-01-23"^^xsd:date ; :universalDateTime "2026-01-23T12:38:12-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=sRqatx5xs_o"^^xsd:anyURI ;
+	:description """I got a great viewer question on my ontology stitching video. I answer the question, hopefully giving some insight along the way.
+
+Here's the question from Faiza:
+
+\"If we have 2 ontologies with same classes (some ontologies may have additional classes/concepts but overall the concepts are same in all the ontologies), these ontologies may have instances that are similar semantically but written differently. For example, Diabetes_Mellitus in Ontology A and Diabetes in Ontology B. How can we compare these two instances and maintain the aliases? Is it better to create an upper ontology, or should we merge these graphs? And what if we have to trace individual instances back to the original ontology they came from?\"""" ;
+	:cites :Source-b40d178e-9bcc-500b-b8b7-9db9678cac0c ;	# Ontology Stitching: How to Align/Merge Enterprise Knowledge Graphs (A Practical Guide)
+.
+
+# oa9OWPZwba4 · Epistemology Explained: Knowledge from Plato to AI
+:Source-bf681728-9b7c-59bf-b550-7def77fc42ef a :Video ;
+	:name "Epistemology Explained: Knowledge from Plato to AI" ;
+	:hasDuration [:duration "PT16M40S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-01-27"^^xsd:date ; :universalDateTime "2026-01-27T13:26:00-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=oa9OWPZwba4"^^xsd:anyURI ;
+	:description """What is epistemology, really?
+
+In this video, I introduce epistemology—the branch of philosophy concerned with knowledge, understanding, and rational belief. Starting from its Greek roots (epistēmē and logos), I explain both the standard definition (the study of knowledge) and a broader way of thinking about it as the study of cognitive success.
+
+We walk through a simple, Feldman-inspired approach:
+we know some things, that knowledge seems to come from sources like experience, testimony, and reasoning, and philosophical theories try to explain how that works—and where it might break down. Along the way, we touch on skepticism, error theory, and why humans might know less than we think.
+
+I also introduce Plato’s classic Justified True Belief account of knowledge, with clear examples of what happens when belief, truth, or justification is missing—and why philosophers think that story might be incomplete.
+
+Finally, I sketch where the conversation goes next: Gettier cases, Bayesian epistemology, peer disagreement, contextualism, and the growing connection between epistemology and AI. Can AI be rational? Can AI be part of our justified beliefs? And what would a virtue-based epistemology say about using AI well?
+
+If you’re curious about how knowledge works—whether human or artificial—this is the place to start.""" ;
+	:cites :Source-4d0c7f39-6bc8-5086-b434-5bbc1704a1d6 ,	# Logic Explained: The Philosophy of Arguments
+		:Source-1af00431-92d5-5da1-8a96-18d7da638b25 ,	# Epistemology (Richard Feldman)
+		:Source-327b1cd6-12f3-5563-8290-470955caf6f5 ;	# Epistemology (Stanford Encyclopedia of Philosophy)
+.
+
+# XsaYPcHrL8Y · AI: The Perfect Scapegoat for Corporate Layoffs
+:Source-2d928444-c57e-5089-812e-6249a2d111ab a :Video ;
+	:name "AI: The Perfect Scapegoat for Corporate Layoffs" ;
+	:hasDuration [:duration "PT13M22S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-01-29"^^xsd:date ; :universalDateTime "2026-01-29T16:41:41-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=XsaYPcHrL8Y"^^xsd:anyURI ;
+	:description """Amazon recently laid off another 16,000 employees, ostensibly due to AI. In this video, I discuss AI as an explanation. While AI is an important factor in how our economy and companies are functioning, I argue that AI is more of a convenient scapegoat than a direct cause in this case.
+
+I conclude by thinking a bit on the safety of ontology jobs. And then I discuss the ethical obligations of companies in these situations.""" ;
+.
+
+# _mPjIOJUyHk · What Chess Engines Teach Us About AI and Human Knowledge
+:Source-7c04975e-0745-55f0-8a56-5dfa4af2c34a a :Video ;
+	:name "What Chess Engines Teach Us About AI and Human Knowledge" ;
+	:hasDuration [:duration "PT14M19S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-02-03"^^xsd:date ; :universalDateTime "2026-02-03T10:32:00-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=_mPjIOJUyHk"^^xsd:anyURI ;
+	:description """Fabiano Caruana recently pointed out something fascinating about modern chess: today’s elite 14-year-olds aren’t just talented — they’re armed with engines.
+
+With Stockfish, they can instantly tell whether an opening is sound, dubious, or outright losing. What used to take years of painful trial-and-error now takes minutes. When Fabi was growing up, even top juniors would simply get worse positions out of the opening against elite players because they lacked theoretical knowledge. Closing that gap used to take until 18 or later. Now it happens much earlier.
+
+So what changed? Not just skill — tools.
+
+In this video, I use Caruana’s example to think about a philosophical question:
+If epistemology is about cognitive success, what role should AI play in a virtuous thinker’s life?
+
+Should we treat AI like chess players treat engines — as training partners and error detectors?
+Or does outsourcing judgment risk weakening our intellectual virtues?
+
+I argue that AI likely has a legitimate role in virtuous cognition… but the long-term effects of cognitive offloading are still an open question.
+
+Chess, engines, and virtue epistemology collide.""" ;
+	:cites :Source-f7de46f9-eef4-51b1-8751-f67c001923c1 ;	# Gukesh And The Blunder That Shocked The Chess World, The Biggest Chess Prodigy Is Here
+.
+
+# jv7jv_gMBKc · Can AI Think in a Private Language? Wittgenstein vs. GPT-6
+:Source-349bbf0c-aca2-542b-ae19-ec11b8158043 a :Video ;
+	:name "Can AI Think in a Private Language? Wittgenstein vs. GPT-6" ;
+	:hasDuration [:duration "PT21M42S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-02-04"^^xsd:date ; :universalDateTime "2026-02-04T08:01:11-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=jv7jv_gMBKc"^^xsd:anyURI ;
+	:description """People are worried that future AI models might “think in their own secret language.” Sam Altman has even warned that increasingly powerful systems could behave in ways we don’t fully understand. But is this really a new problem—or just an old philosophical one in disguise?
+
+In this video, I take a fast tour through some classic debates in philosophy of language and epistemology—empiricism vs. rationalism, meaning and reference, Wittgenstein’s language games, the private language argument, and Quine’s indeterminacy of translation—to ask a simple question: what would a “secret language” even be?
+
+If meaning is use, then language is fundamentally public and rule-governed. That makes a truly private language—human or AI—hard to even make sense of. And if “secret” just means “hard to interpret,” then humans are already like that.
+
+So maybe the scary idea isn’t that AI is becoming alien. Maybe it’s that language was never as transparent as we thought—not even in our own heads.
+
+Along the way: Wittgenstein, Quine, Kripke’s “quus,” LLMs, the Turing Test, and what it really means to understand something.""" ;
+	:cites :Source-fc7fe82e-098f-527c-9d90-41ad3d8f357b ,	# GPT-6's secret language and AI safety (Medium, DevBoostLab)
+		:Source-c3a561cc-f0e3-5cf7-853b-760b8d46f88c ,	# Word and Object
+		:Source-ecddd71e-868a-57bc-859b-aa2650509910 ;	# Philosophical Investigations
+.
+
+# K4G2dvFGIDU · Roko's Basilisk Explained (And Debunked!)
+:Source-1485447d-649c-532d-bd15-db49e9da09e3 a :Video ;
+	:name "Roko's Basilisk Explained (And Debunked!)" ;
+	:hasDuration [:duration "PT28M19S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-02-06"^^xsd:date ; :universalDateTime "2026-02-06T05:00:40-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=K4G2dvFGIDU"^^xsd:anyURI ;
+	:description """Roko’s Basilisk is one of the internet’s strangest philosophical horror stories: a deleted LessWrong post, whispers of “information hazards,” Elon Musk and Grimes lore, and the claim that a future AI might punish you for not helping to create it.
+
+But what is the argument actually supposed to be?
+
+In this episode of Ontology Explained, we slow everything down and go back to the primary sources. I walk through:
+
+- What Roko actually argued
+- Why the rationalist community freaked out
+- How it mirrors Pascal’s Wager
+- And why the reasoning collapses under basic philosophical scrutiny
+
+Along the way we separate myth from reality, critique the expected-value math, and look at what the original post was really trying (and mostly failing) to say.
+
+Spoiler: it’s less “AI apocalypse” and more “confused blog post plus bad decision theory.”""" ;
+	:cites :Source-7397576e-2ebd-5804-91d8-e85789d8cf30 ,	# Newcomb’s Problem Explained: One Box Or Two?
+		:Source-c888c9da-2a11-5bb4-a906-aaff39fd4940 ,	# Pascal’s Wager Explained
+		:Source-4859dbb3-69a8-5a6c-9475-5980a108a12a ,	# BLIT (short story) (Wikipedia)
+		:Source-399c9e98-4b8e-5293-ae7a-3dd2a0549869 ,	# BLIT (David Langford)
+		:Source-2c7c48e1-4398-5659-ab74-a8e8da208c50 ,	# Roko's original LessWrong post (archived)
+		:Source-6aafd0ba-0790-5ab5-a31f-5de658813969 ,	# A few misconceptions surrounding Roko's basilisk (LessWrong)
+		:Source-30be83ce-4804-5e1e-b738-ee4a835de40a ,	# Public Choice and the Altruist's Burden (LessWrong)
+		:Source-3f514ab0-f4ed-5cf6-a7f3-f7af5bf89120 ,	# Alignment is EASY and Roko's Basilisk is GOOD?! AI Doom Debate with Roko Mijic
+		:Source-defb1d92-98ad-5797-bec2-731bc25e3b70 ,	# Coherent Extrapolated Volition (LessWrong)
+		:Source-fc4def1f-052a-5166-9255-32576a10455d ;	# Behind the Bastards: Part One: The Zizians
+.
+
+# 7GfQve21mCI · The Ship of Theseus Explained and Why It Matters for Data Modeling
+:Source-885cbdbf-1fd3-5bc1-8c9c-c76fc8dacca0 a :Video ;
+	:name "The Ship of Theseus Explained and Why It Matters for Data Modeling" ;
+	:hasDuration [:duration "PT22M1S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-02-18"^^xsd:date ; :universalDateTime "2026-02-18T06:00:17-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=7GfQve21mCI"^^xsd:anyURI ;
+	:description """I had to replace my car’s transmission… but somehow it’s still the same car.
+Is it really?
+
+In this episode we dive into one of the oldest and strangest puzzles in metaphysics: the Ship of Theseus. Starting with the legend of Theseus, recorded by Plutarch and later expanded by Thomas Hobbes, we ask a deceptively simple question: if you replace something piece by piece, is it still the same thing?
+
+We explore numerical versus qualitative identity, Leibniz’s Law, essential versus accidental properties, and persistence conditions. Along the way we see why every metaphysical theory sounds completely reasonable at first and then totally crazy once you follow it through.
+
+But this is not just ivory tower philosophy. These same problems show up in ontology engineering, data modeling, defining what counts as a vehicle, deciding whether a VIN determines identity, and resolving messy real world data. Even sports franchises raise identity puzzles, like whether the Seattle SuperSonics are the same team as the Oklahoma City Thunder.
+
+Every schema quietly commits you to a metaphysics. What kinds of things exist? Which properties are essential? When does something stop being the same object?
+
+If you build databases, knowledge graphs, or ontologies, you are already doing metaphysics whether you realize it or not.
+
+By the end, you will have practical philosophical tools to think more clearly about identity, persistence, and entity resolution in your own systems.""" ;
+.
+
+# T0Y9rw0c9j0 · An Ontologist Explains Themselves: Alex Shifrin
+:Source-4f0413bf-8cca-541e-9b48-2b9021a7b9e0 a :Video ;
+	:name "An Ontologist Explains Themselves: Alex Shifrin" ;
+	:hasDuration [:duration "PT56M57S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-02-20"^^xsd:date ; :universalDateTime "2026-02-20T17:23:47-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-b104a790-0284-52e2-af18-d2c83dfdfce3 ;	# The Ontology Explained Podcast
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=T0Y9rw0c9j0"^^xsd:anyURI ;
+	:description """In this episode I sit down with Alex Shifrin to talk about what it actually means to be an ontologist and how ontology work shows up in the real world. Alex shares his path through industry roles at Moody's, Gro Intelligence, and Siemens, and explains how semantic modeling and knowledge graphs create practical value inside large organizations.
+
+We break down what an ontologist does in plain English, how someone gets into the field, and whether it is a career worth pursuing today. We also talk candidly about the job market, how to actually find work, and why experienced practitioners tend to reuse and extend existing ontologies instead of building everything from scratch.
+
+Along the way we cover whether corn is a class, the tradeoffs between solo and team based modeling, and the early warning signs that a knowledge graph project will succeed or fail. If you care about knowledge graphs, semantic web, data modeling, or building systems that make messy data interoperable, this conversation is packed with practical insight.""" ;
+.
+
+# PcsJPrQUoJ4 · Heather Hedden: Are Taxonomists Ontologists (or Vice-Versa)?
+:Source-1890597f-10cd-510c-8f7d-b26b077ea69c a :Video ;
+	:name "Heather Hedden: Are Taxonomists Ontologists (or Vice-Versa)?" ;
+	:hasDuration [:duration "PT48M31S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-03-03"^^xsd:date ; :universalDateTime "2026-03-03T14:14:28-08:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-b104a790-0284-52e2-af18-d2c83dfdfce3 ;	# The Ontology Explained Podcast
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=PcsJPrQUoJ4"^^xsd:anyURI ;
+	:description """In this video, I have the amazing privilege to meet and interview Heather Hedden. The author of the Accidental Taxonomist, Heather has wide and deep experience in the field of semantics. She's practically a celebrity. We discuss the field in general, how to enter it, what she finds interesting, and compare and contrast ontology and taxonomy.""" ;
+	:cites :Source-eed4de39-e2fc-5222-aaba-ffdb1fd60064 ,	# The Accidental Taxonomist (Heather Hedden's blog)
+		:Source-9bf142df-7fdd-5aa3-b160-891c9381dd94 ,	# Heather Hedden's website
+		:Source-255a919b-8f02-5814-ad21-a968b4e8bcf6 ,	# The Accidental Taxonomist
+		:Source-4d8bdfe4-7508-5fe3-af2d-9f19454db386 ;	# Reviewing The Accidental Taxonomist w/ Heather Hedden
+.
+
+# 4pEIMvxgCik · Knowledge Engineers Rock: Keith Corbett
+:Source-1441bac1-3002-5020-a7aa-bf13102c4d2d a :Video ;
+	:name "Knowledge Engineers Rock: Keith Corbett" ;
+	:hasDuration [:duration "PT57M10S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-04-01"^^xsd:date ; :universalDateTime "2026-04-01T22:27:25-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-b104a790-0284-52e2-af18-d2c83dfdfce3 ;	# The Ontology Explained Podcast
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=4pEIMvxgCik"^^xsd:anyURI ;
+	:description """In this episode, I sit down with Keith Corbett to talk about the past, present, and future of AI—from the early days of GOFAI to today’s knowledge graph–driven systems.
+
+Keith shares his journey from working at Lisp Machines Inc and Interleaf, where he supported customers building rule-based systems and early chatbots, through the AI Winter, and into the modern era of semantic technologies. Since 2015, he’s focused on OWL/RDF, knowledge graphs, and semantic layers, helping organizations build more structured, meaningful AI systems.
+
+We also dive into what it means to become an ontologist, how to think about ontology as a discipline, and Keith’s experience leading cohorts in the KGC Learning Program. If you're interested in knowledge graphs, AI architecture, or breaking into ontology work, this conversation is packed with insight.
+
+Topics include:
+- The evolution from GOFAI to modern AI
+- Knowledge representation and semantic layers
+- What ontologists actually do
+- Teaching and learning in the KGC program
+- Building AI systems grounded in knowledge graphs""" ;
+	:cites :Source-963f10a9-3d27-5f83-9d8c-d8a596592278 ;	# The Knowledge Graph Conference
+.
+
+# qZquY_r5O10 · My Experience at KGC 2026 | AI, Ontologies, and the “Year of Context”
+:Source-369f4336-10f6-5cfc-acb3-92b6ec8df64c a :Video ;
+	:name "My Experience at KGC 2026 | AI, Ontologies, and the “Year of Context”" ;
+	:hasDuration [:duration "PT18M56S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-05-15"^^xsd:date ; :universalDateTime "2026-05-15T17:26:54-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=qZquY_r5O10"^^xsd:anyURI ;
+	:description """Just got back from KGC 2026 (Knowledge Graph Conference), and I wanted to share some thoughts, highlights, concerns, and big-picture takeaways from the event.
+
+In this video I cover:
+
+- Why I haven’t uploaded many videos lately
+- Why uploads should return to a regular pace
+- Upcoming podcasts and interviews
+
+Then we dive into KGC 2026 itself:
+Founded in 2019 by Thomas Deely and Francois Scharffe, KGC has quickly become one of the central conferences for the knowledge graph, ontology, and semantic technology world.
+
+Big takeaways from the conference:
+
+1. Everyone is talking about LLMs + semantics as the bridge between enterprise data and AI.
+2. The market is HOT. Gartner is now describing semantic technologies and knowledge graphs as “critical infrastructure,” alongside data platforms and cybersecurity.
+3. There’s a real sense that NOW is the time to get involved.
+
+Conference highlights:
+
+- Meeting viewers and members of the community in person
+- Reconnecting with friends and colleagues like Alex Shifrin, Maru, and Heather
+- Great conversations with new people like Eloragh
+- Ora Lassila and Jim Hendler’s Wednesday keynote
+- “Understanding 20th-Century Science Patronage through Knowledge Graphs”
+- “RDF 1.2 Status Report”
+- “The Context Layer: Knowledge Graphs' Second Act” from Atlan
+
+I also talk about some worries:
+
+- Confusion around what “semantics” actually means
+- The gap between vision and tangible implementation
+- Whether KGC is fully representative of the broader ontology community
+
+Overall though, the energy was strong and optimistic.
+
+If you’re interested in ontologies, semantic web tech, knowledge graphs, RDF, OWL, AI, or linked data, this community is still relatively small and surprisingly accessible.""" ;
+	:cites :Source-3fb9c9b8-bb08-5af2-85ef-ded52faf784b ,	# The Semantic Web (Scientific American, May 2001)
+		:Source-dff08208-c8d8-5fb3-b008-0583e1410087 ;	# The Knowledge Graph Conference (YouTube channel)
+.
+
+# nHham69gJb0 · Ontologists Should Take Their Own Medicine (KGC 2026 Talk)
+:Source-f46704c0-ed8f-5b6d-a7d3-4ded6bbfd5f3 a :Video ;
+	:name "Ontologists Should Take Their Own Medicine (KGC 2026 Talk)" ;
+	:hasDuration [:duration "PT37M25S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-05-18"^^xsd:date ; :universalDateTime "2026-05-18T15:31:35-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=nHham69gJb0"^^xsd:anyURI ;
+	:description """I give the updated version of my talk at the KGC this year.""" ;
+	:cites :Source-369f4336-10f6-5cfc-acb3-92b6ec8df64c ;	# My Experience at KGC 2026 | AI, Ontologies, and the “Year of Context”
+.
+
+# X7WkCaKUQPc · Why AI Doom is Less Likely Than You Think | Response to Gasdive
+:Source-2a23caa3-2326-51ca-b07a-aebb7c2ec662 a :Video ;
+	:name "Why AI Doom is Less Likely Than You Think | Response to Gasdive" ;
+	:hasDuration [:duration "PT43M25S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-07-21"^^xsd:date ; :universalDateTime "2026-07-21T06:57:18-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=X7WkCaKUQPc"^^xsd:anyURI ;
+	:description """In this video, I offer my rebuttal to a listener's case for doom. Should we really think AI will kill us all with .9999 confidence? I say no. Listen and see if I can make you sleep a little easier.""" ;
+	:hasPart :Source-2a23caa3-2326-51ca-b07a-aebb7c2ec662-Segment01 ;
+.
+
+:Source-2a23caa3-2326-51ca-b07a-aebb7c2ec662-Segment01 a :VideoSegment ;
+	:name "Reading of Gasdive's Comments" ;
+	:startingTimestamp "PT36M42S"^^xsd:duration ;
+.
+
+# KLiePXY2XM4 · What Ontology Actually Is | Casey Reacts
+:Source-c83b9e65-40df-52ce-b1ce-034d57976a0d a :Video ;
+	:name "What Ontology Actually Is | Casey Reacts" ;
+	:hasDuration [:duration "PT24M46S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-07-24"^^xsd:date ; :universalDateTime "2026-07-24T17:34:57-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-1c3f9f59-deb4-5fe5-94fa-a85120e597fc ;	# Intro to Ontology
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=KLiePXY2XM4"^^xsd:anyURI ;
+	:description """I read Jawahar Talluri's article, \"What an Ontology Actually Is,\" and I think it's a solid introduction to why ontologies matter—but I also think it oversimplifies what an ontology actually is.
+
+In this response, I discuss where I agree with the article, where I think its definition falls short, and why I prefer to think of an ontology in three parts:
+
+1. A language — a vocabulary for talking about a domain.
+2. A model of reality — a representation of the things that exist and how they relate.
+3. A mathematical structure — a graph that formally connects those things.
+
+I also discuss why I think instance data belongs within the ontology, why I'm not convinced that constraints are a defining component of ontology itself, and why the article's framing seems primarily designed around using ontologies as infrastructure for generative AI and enterprise knowledge graphs.
+
+The article makes a good case for ontologies as infrastructure. But I think there's a much broader story to tell about what ontologies are, what they can represent, and why they matter beyond GenAI.""" ;
+	:cites :Source-24c68d1b-aae3-58eb-af7e-877725f4b482 ;	# What an Ontology Actually Is: The Semantic Layer, in Plain Terms, and Why It Is Infrastructure
+.
+
+# gr4_UxIoE9Y · If You Give a Mouse a Cookie... The Slippery Slope Fallacy
+:Source-587c19ab-5c63-51b3-86b5-7de55910ad6f a :Video ;
+	:name "If You Give a Mouse a Cookie... The Slippery Slope Fallacy" ;
+	:hasDuration [:duration "PT14M17S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-07-27"^^xsd:date ; :universalDateTime "2026-07-27T11:51:38-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=gr4_UxIoE9Y"^^xsd:anyURI ;
+	:description """What happens if you give a mouse a cookie?
+
+Well, he's going to want a glass of milk. And before you know it, you're doing mouse haircuts, mouse naps, and mouse refrigerator art.
+
+Is this just a classic children's story—or a cautionary tale about the slippery slope fallacy?
+
+In this video, we take a closer look at the slippery slope fallacy: what it is, why it's often a bad argument, and why some slopes really are slippery.
+
+We'll look at:
+
+- The basic structure of a slippery slope argument
+- Classic examples from moral panics and political debates
+- Why slippery slope arguments often fail
+- How probabilities combine across a chain of events
+- Cases where slippery slopes actually can be legitimate
+- The tricky case of prediction markets and betting on harmful events
+- Slippery slope arguments about AI, including both AI doomer and AI \"zoomer\" perspectives
+- Whether the future of AI is a terrifying descent—or a waterslide toward utopia
+
+A slippery slope argument claims that a relatively simple action will eventually lead to disastrous consequences. But the fact that the consequences would be terrible doesn't establish that the causal chain leading to them is inevitable—or even likely.
+
+The key question is: What actually connects each step of the slope?
+
+If the causal mechanism is vague, unsupported, or relies primarily on the severity of the final outcome to scare us away from the first step, we may be dealing with a fallacy.
+
+But sometimes slopes really are slippery. Addiction, security vulnerabilities, and certain behavioral patterns can create genuine chains of consequences. The challenge is figuring out which is which.
+
+Which will give me fame. Which I can parlay into political office. And then, when I rule the world, I will bring about a utopia for all.""" ;
+	:cites :Source-23c7de76-c833-5677-9fc1-1199d7cf1ba1 ;	# Matt Foley: Van Down By The River - SNL
+.
+
+# GEdhpq3Ri_o · An Honest Breakdown of Eliezer Yudkowsky's AI Doom Book
+:Source-068212fd-bd9b-569d-94d7-4bb8b5f4ec20 a :Video ;
+	:name "An Honest Breakdown of Eliezer Yudkowsky's AI Doom Book" ;
+	:hasDuration [:duration "PT19M56S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-07-29"^^xsd:date ; :universalDateTime "2026-07-29T15:41:02-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=GEdhpq3Ri_o"^^xsd:anyURI ;
+	:description """In this first episode of my walkthrough of If Anyone Builds It, Everyone Dies by Eliezer Yudkowsky and Nate Soares, I lay out the goals and methodology for the series before diving into the book's Introduction: Hard Calls and Easy Calls.
+
+This isn't a reaction video or a hit piece. It's an attempt to reconstruct the strongest version of the authors' arguments and evaluate them as charitably and rigorously as possible.
+
+I've spent years reading Yudkowsky's work and following discussions around AI alignment and existential risk. While I'm deeply skeptical of many of the book's arguments, I also believe that serious claims deserve serious engagement. If the authors are right, the stakes couldn't be much higher. If they're wrong, it's important to understand exactly where the arguments fail.
+
+In this episode, we examine:
+
+- How the Introduction establishes the stakes of the AI alignment debate.
+- The book's definitions of Artificial Superintelligence (ASI) and the Alignment Problem.
+- The analogies and framing devices used to shape the reader's understanding of the problem.
+- Which claims are relatively uncontroversial—and which are already asking us to make significant philosophical leaps.
+
+My goal throughout this series is to be thorough, charitable, and honest. I'll reconstruct the arguments as strongly as I can, but I won't hesitate to point out where I think they succeed or fail.
+
+Next episode: Chapter 1 – Humanity's Special Power.""" ;
+	:cites :Source-033894ad-9bc4-547f-a531-54bb73f9da12 ;	# If Anyone Builds It, Everyone Dies
+.
+
+# pNwHu5ecsmI · I Asked ChatGPT to Build an Ontology. Here's What Happened.
+:Source-2dbc6333-62d6-5bd4-9ea8-62d5f052373d a :Video ;
+	:name "I Asked ChatGPT to Build an Ontology. Here's What Happened." ;
+	:hasDuration [:duration "PT41M58S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-07-31"^^xsd:date ; :universalDateTime "2026-07-31T15:46:46-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=pNwHu5ecsmI"^^xsd:anyURI ;
+	:description """Can ChatGPT actually make a good ontology?
+
+In this video, I put an LLM to the test. I gave ChatGPT a Zillow listing for a residential property and asked it to generate a Turtle (TTL) representation of the data. Then I evaluated the resulting model—not just asking whether the TTL worked, but whether the underlying ontology was actually any good.
+
+The result? The TTL was functional. ChatGPT could produce a usable RDF representation of the property. But when it came to the modeling itself, the results were much less impressive. The distinctions between concepts weren't always well thought out, and the ontology was underdeveloped, if not just making false claims.
+
+My takeaway is that LLMs may be useful for generating a quick first draft of an ontology—especially as a starting point or a foil for human analysis. But if you're building a model that needs to be useful and maintainable over the long term, you probably shouldn't rely on an LLM to do the ontology engineering for you.
+
+In this video, I walk through the generated model and evaluate where it works, where it falls short, and what this tells us about using LLMs for ontology development.
+
+Can LLMs make ontologies? Yes.
+
+Can they make good ontologies? That's a much more interesting question. (Probably not.)""" ;
+.
+
+# zEQs6vjhxA4 · You Shouldn't Let ChatGPT Write Your Emails
+:Source-c2619733-193c-513b-9fbb-1b5d28a491aa a :Video ;
+	:name "You Shouldn't Let ChatGPT Write Your Emails" ;
+	:hasDuration [:duration "PT16M44S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-04"^^xsd:date ; :universalDateTime "2026-08-04T16:47:54-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=zEQs6vjhxA4"^^xsd:anyURI ;
+	:description """Is it morally wrong to send emails that are mostly written by AI?
+
+In this episode, I argue that the answer is often yes.
+
+Rather than debating whether large language models are \"good\" or \"bad\" in general, I focus on a much narrower claim: sending emails that are primarily generated by an LLM is frequently a moral mistake.
+
+I develop two arguments:
+
+- It can involve a kind of deception by presenting AI-generated words as your own communication.
+- It can be selfish and anti-relational by offloading the effort of communication while expecting others to engage with the result.
+
+Along the way I discuss changing social norms around AI, whether widespread AI use changes the ethics, and why authenticity still matters even in an age of increasingly capable language models.
+
+I also explain where I think AI use is perfectly appropriate—for editing, brainstorming, improving clarity, generating metadata, standardizing formats, and other cases where it genuinely serves the reader rather than replacing the human author.""" ;
+	:cites :Source-d93609a4-5541-599f-b871-4998663a2735 ;	# European Commission: safer and more transparent AI (Aug 2, 2026)
+.
+
+# _vkregEIA-4 · The Case for Superintelligence Is Surprisingly Thin | If Anyone Builds It... Chapter 1
+:Source-0b6812d1-04ae-5c0d-9b22-b44b5a81bf46 a :Video ;
+	:name "The Case for Superintelligence Is Surprisingly Thin | If Anyone Builds It... Chapter 1" ;
+	:hasDuration [:duration "PT36M43S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-08"^^xsd:date ; :universalDateTime "2026-08-08T09:42:42-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=_vkregEIA-4"^^xsd:anyURI ;
+	:description """What makes humans so powerful? According to Eliezer Yudkowsky and Nate Soares in If Anyone Builds It, Everyone Dies, the answer is intelligence—and intelligence is fundamentally about predicting the world and steering it.
+
+In this episode of Ontology Explained, I take a critical look at the book's opening argument.
+
+I agree with the basic idea that human intelligence has played a major role in our extraordinary impact on the planet. But I think the book moves far too quickly over some very difficult questions. What actually makes humans special? What is intelligence? Is prediction really one half of intelligence and steering the other? And why should we be so confident that AI will inevitably surpass human intelligence?
+
+I'll look at the book's brief story about human dominance, its conception of intelligence as prediction and steering, the philosophical alternative of beliefs and desires, and the arguments for why AI will eventually eclipse humanity.
+
+My main concern is not that the book's conclusions are obviously wrong. It's that some of its most important premises are surprisingly underdeveloped. There is little engagement with anthropology, philosophy of mind, or the existing philosophical literature on concepts like belief, desire, and direction of fit.
+
+And that's a problem, because the possibility of superintelligent AI is doing a lot of work in the argument. If ASI is genuinely plausible, then its potential consequences are worth taking very seriously. But we need a stronger argument for why we should believe it's coming.
+
+This is my ongoing series reviewing and critiquing If Anyone Builds It, Everyone Dies. I'll continue on to Chapter 2—but with some skepticism about the foundations laid in Chapter 1.""" ;
+	:cites :Source-068212fd-bd9b-569d-94d7-4bb8b5f4ec20 ,	# An Honest Breakdown of Eliezer Yudkowsky's AI Doom Book
+		:Source-033894ad-9bc4-547f-a531-54bb73f9da12 ;	# If Anyone Builds It, Everyone Dies
+.
+
+# Y94_zNPZJ9c · The Most Common Fallacy? | Affirming the Consequent
+:Source-17e30c31-fc4e-54f5-a4f6-306171c409c5 a :Video ;
+	:name "The Most Common Fallacy? | Affirming the Consequent" ;
+	:hasDuration [:duration "PT11M24S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-10"^^xsd:date ; :universalDateTime "2026-08-10T09:00:29-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Y94_zNPZJ9c"^^xsd:anyURI ;
+	:description """If it’s raining, the streets are wet.
+The streets are wet.
+Therefore, it’s raining.
+
+Seems reasonable, right?
+
+Well… not so fast.
+
+In this episode of Ontology Explained, we take a look at affirming the consequent, one of the most common logical fallacies. I’ll explain exactly what the fallacy is, introduce some useful terminology from formal logic, and show why the argument is invalid.
+
+We’ll look at some classic examples—including one involving the Turing Test and AI—and then tackle a more interesting question: when does an argument that looks like affirming the consequent actually give us good reason to believe its conclusion?
+
+That leads us to explanatory reasoning and inference to the best explanation. The key is understanding the difference between a deductively valid argument and an argument that gives us good evidence.
+
+So: if the streets are wet, did it rain? Maybe. But you can't prove it just from that.""" ;
+.
+
+# uc6OURMyXgs · Are AIs "Grown" or Built? Analyzing Chapter 2 of If Anyone Builds It, Everyone Dies
+:Source-f343164e-a43d-5523-bfca-35d4e73a7dc9 a :Video ;
+	:name "Are AIs \"Grown\" or Built? Analyzing Chapter 2 of If Anyone Builds It, Everyone Dies" ;
+	:hasDuration [:duration "PT44M15S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-14"^^xsd:date ; :universalDateTime "2026-08-14T07:00:27-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=uc6OURMyXgs"^^xsd:anyURI ;
+	:description """Are AI models \"grown\" like crops, or engineered like software? And why are AI safety writers so obsessed with painting LLMs as bizarre, unpredictable alien minds?
+
+In this video, we continue our chapter-by-chapter breakdown of \"If Anyone Builds This, Everyone Dies\" by analyzing Chapter 2. We put their provocative \"Grown, Not Crafted\" analogy to the test, untangle the messy dialectic around LLM autocomplete vs. \"true understanding,\" and address the infamous incident where Bing Chat allegedly threatened a philosophy professor.
+
+While there is a modest, valid point buried here—that modern deep-learning models are too complex for humans to predict in every scenario—the broader claims about AI preferences and \"alien minds\" are woefully under-defended and rely on subtle leaps in logic.""" ;
+	:cites :Source-033894ad-9bc4-547f-a531-54bb73f9da12 ,	# If Anyone Builds It, Everyone Dies
+		:Source-5f938086-96b2-547a-833f-f97d4278f1bf ,	# Chauhan & Geiger (2024), paper on OpenReview
+		:Source-0884faed-c805-5456-9972-d3d3d7f55d70 ,	# Chauhan & Geiger, NeurIPS 2024 poster
+		:Source-fb1e424f-5b3e-5740-8b1a-4147b22c9447 ,	# Agassi on Becker's Tongue Tell
+		:Source-b8aea38e-98d9-50dc-92f8-b2a43e54acb7 ,	# ELIZA effect (Wikipedia)
+		:Source-6ffe17d7-ddf8-5b87-b36e-d5124ee1a599 ,	# Pareidolia (Wikipedia)
+		:Source-e261e102-f486-5d7d-988e-e5e84691a380 ;	# Adam Dunn better than Hall of Famer Tony Gwynn? (Bleacher Report)
+.
+
+# AAxm9qbqLrs · Does AI Really Want Anything? | If Anyone Builds It... Chapter 3
+:Source-366b3d55-c5bf-53ce-b656-f68461907f10 a :Video ;
+	:name "Does AI Really Want Anything? | If Anyone Builds It... Chapter 3" ;
+	:hasDuration [:duration "PT28M32S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-17"^^xsd:date ; :universalDateTime "2026-08-17T08:00:27-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=AAxm9qbqLrs"^^xsd:anyURI ;
+	:description """Do AI systems actually want things?
+
+In this chapter of Yudkowsky and Soares' If Anyone Builds It, Everyone Dies, the authors argue that sufficiently capable AIs will begin to behave as though they have preferences and wants. They appeal to evolution, gradient descent, strategic behavior, and game theory to make their case.
+
+I’m not convinced.
+
+In this video, I examine their argument about AI wanting things, starting with a seemingly simple question: What does it mean to want something? Does being shaped to achieve a particular outcome really amount to wanting that outcome? And if it does, do marbles, blankets, sorting algorithms, and paramecia have wants too?
+
+I also look at their examples of AI behavior, including the famous story of o1 \"going hard,\" and ask whether these examples actually provide evidence for desires and mental states—or whether we're simply using metaphorical language to describe sophisticated problem-solving.
+
+Finally, I look at the chapter's discussion of game theory and its broader conclusion: that AI will be difficult to get to behave exactly as we want.
+
+That last point? I agree with it.
+
+But I'm not sure we needed all the talk about AI wanting things to get there.
+
+This is part of my ongoing series examining If Anyone Builds It, Everyone Dies from the perspective of analytic philosophy, ontology, and AI.""" ;
+	:cites :Source-033894ad-9bc4-547f-a531-54bb73f9da12 ;	# If Anyone Builds It, Everyone Dies
+.
+
+# XhF_49e6Cpg · Do LLMs Really Understand? Examining Geoffrey Hinton's Arguments
+:Source-ad5d79ad-61cf-5b0c-b944-4985de371ab3 a :Video ;
+	:name "Do LLMs Really Understand? Examining Geoffrey Hinton's Arguments" ;
+	:hasDuration [:duration "PT28M17S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-19"^^xsd:date ; :universalDateTime "2026-08-19T08:00:24-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=XhF_49e6Cpg"^^xsd:anyURI ;
+	:description """Geoffrey Hinton thinks today's AI systems understand us. I'm not so sure.
+
+In a recent interview with Alex Kantrowitz, Hinton gives two arguments for the claim that large language models really do understand. In this video, I take both arguments seriously and ask whether they actually establish what Hinton thinks they establish.
+
+The first argument is roughly: if LLMs can consistently give us the right answers, then they must understand. The second points to an especially interesting phenomenon: when a chatbot gives a wrong answer, gets corrected, and responds by saying \"I misunderstood,\" perhaps the best explanation is that it really did understand.
+
+I think both arguments have some real philosophical structure to them—but I don't think they get us all the way to understanding.
+
+Along the way, I discuss:
+- The difference between understanding language and understanding the world
+- Why \"getting the right answer\" may not require understanding
+- The Chinese Room and the example of calculators
+- Why selection bias makes LLM accuracy difficult to assess
+- Why saying \"I misunderstood\" isn't necessarily evidence of understanding
+- What would actually convince us that an opaque AI system contains a mind
+
+My current view is that LLMs seem to have something like an understanding of language use, but that's not obviously the same thing as understanding the things that language represents.
+
+Hinton may be right. But I think we need better evidence.""" ;
+	:cites :Source-674eff03-e701-539d-914c-c8a2a66e9777 ,	# AI Pioneer Geoffrey Hinton: AI Is Conscious, Superintelligence is Coming, And We Should Be Worried
+		:Source-8dd25b83-4922-554f-be03-fe34ef9152a0 ,	# Geoffrey Hinton is Wrong About AI Understanding
+		:Source-02778b95-9319-5bab-b1d0-cef645d64966 ;	# Nature article on benchmarking
+.
+
+# cFBSgW-py3E · Appeal to Ignorance: When “We Don’t Know” Goes Wrong
+:Source-ae519123-7fb3-5a3b-9f55-a90df609d538 a :Video ;
+	:name "Appeal to Ignorance: When “We Don’t Know” Goes Wrong" ;
+	:hasDuration [:duration "PT10M49S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-25"^^xsd:date ; :universalDateTime "2026-08-25T08:00:26-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=cFBSgW-py3E"^^xsd:anyURI ;
+	:description """We don't know.
+
+And sometimes, that's all we know.
+
+But does our ignorance give us reason to believe something else?
+
+In this video, I take a look at the logical fallacy known as the appeal to ignorance: the mistake of treating our lack of knowledge about something as evidence for a related conclusion.
+
+We'll look at examples involving reincarnation, evolution, and even AI—and then we'll complicate things. Because while \"absence of evidence is not evidence of absence\" is a useful rule of thumb, there really are cases where failing to find evidence does give us reason to believe something is false.
+
+We'll cover:
+
+- What an appeal to ignorance actually is
+- Why these arguments are usually bad reasoning
+- How to spot them in the wild
+- When absence of evidence really is evidence of absence
+- Ockham's Razor and other legitimate uses of epistemic defaults
+- Why \"we don't know\" doesn't always mean \"anything goes\"""" ;
+	:cites :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# playlist: If Anyone Analyzes It... Everyone Dies
+.
+
+# _lCH9FQMWoE · Can We Predict What AI Will Want? | Yudkowsky & Soares Chapter 4 Part 1
+:Source-efbc814c-9d01-5ffb-9ad1-583a1c0b118f a :Video ;
+	:name "Can We Predict What AI Will Want? | Yudkowsky & Soares Chapter 4 Part 1" ;
+	:hasDuration [:duration "PT30M39S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-27"^^xsd:date ; :universalDateTime "2026-08-27T08:00:38-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=_lCH9FQMWoE"^^xsd:anyURI ;
+	:description """What can the evolution of human desires teach us about the future of AI?
+
+In Chapter 4 of If Anyone Builds It, Everyone Dies, Eliezer Yudkowsky and Nate Soares argue that we shouldn't expect an AI to simply develop the preferences we intended to give it. They draw an analogy between the way human desires emerged through evolution and the way an AI's \"wants\" might emerge through training.
+
+I think there's an important and interesting idea here—but I don't think their argument establishes nearly as much as they want it to.
+
+In Part 1 of my discussion of Chapter 4, I look closely at their analogy between natural selection and AI training. I agree that systems can produce surprising results when they're moved outside the context in which they were developed. But that's a long way from showing that AI will develop preferences that are bizarre, unpredictable, and catastrophically opposed to human interests.
+
+I also argue that Yudkowsky and Soares' analogy becomes confused when they compare evolution and gradient descent, and that a much stronger argument for their general point could have been made using historical examples of technologies that produced radically unexpected consequences.
+
+This is Part 1 of my discussion of Chapter 4. Part 2 takes up their speculative scenarios about what an AI might come to \"want\" and their argument about the Alignment Problem.
+
+Chapter discussed:
+If Anyone Builds It, Everyone Dies, Chapter 4: \"You Don't Get What You Train For\"""" ;
+	:cites :Source-033894ad-9bc4-547f-a531-54bb73f9da12 ,	# If Anyone Builds It, Everyone Dies
+		:Source-a8c082eb-f91d-589b-a304-66af29a898e6 ,	# Microwaves and radar (History Cambridge)
+		:Source-d47478a8-5b2d-5e03-b786-d0c0db084995 ,	# The history of gunpowder, from elixir of life to the revolution of warfare (History Guild)
+		:Source-086d0df7-4dc3-55f9-885c-014f9fadbbad ,	# Thalidomide (Wikipedia)
+		:Source-ef10c586-963e-5dad-bb46-a2b5a7d6e475 ;	# Watermelon, arugula, and pine nut salad (Epicurious)
+.
+
+# yYpZADx3AI0 · Yudkowsky and Soares Needed an Editor | Chapter 4, Part 2 of If Anyone Builds It
+:Source-bc027c27-133d-5ff5-9bf2-23d00a429e18 a :Video ;
+	:name "Yudkowsky and Soares Needed an Editor | Chapter 4, Part 2 of If Anyone Builds It" ;
+	:hasDuration [:duration "PT33M23S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-08-28"^^xsd:date ; :universalDateTime "2026-08-28T08:00:02-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=yYpZADx3AI0"^^xsd:anyURI ;
+	:description """What if an AI develops preferences that are very different from what we intended?
+
+In Part 2 of my discussion of Chapter 4 of If Anyone Builds It, Everyone Dies, Eliezer Yudkowsky and Nate Soares imagine a series of increasingly strange ways an AI might come to \"want\" things that its creators never intended.
+
+And I have some problems with these scenarios.
+
+The chapter's central point is that we shouldn't assume an AI will simply want whatever we trained it to want. I agree with that. But the authors move from this relatively modest claim to much stronger claims about AI preferences being bizarre, unpredictable, and almost certainly catastrophically misaligned with human interests.
+
+I don't think the arguments they give justify that leap.
+
+In this video, I go through their five scenarios, including the strange \"SolidGoldMagikarp\" case, and ask what these thought experiments actually establish. I argue that the scenarios systematically ignore benign possibilities, make unsupported claims about how likely different outcomes are, and often don't explain how the more extreme outcomes would actually arise.
+
+Then we get to the chapter's final sections: Yudkowsky and Soares explicitly admit that their scenarios aren't predictions and that they don't know whether an LLM-based AI could even develop these sorts of preferences. But they nevertheless conclude that mature AI preferences will be \"vanishingly unlikely\" to align with ours.
+
+That's where I think the argument really breaks down.
+
+The distinction I keep coming back to throughout the video is simple:
+
+AI might surprise us.
+
+That does not by itself show that AI will develop preferences that are catastrophically opposed to human interests.
+
+I finish by looking at their treatment of the Alignment Problem and arguing that the chapter's most important conclusion receives surprisingly little actual argument.
+
+This is Part 2 of my discussion of Chapter 4, \"You Don't Get What You Train For,\" from If Anyone Builds It, Everyone Dies by Eliezer Yudkowsky and Nate Soares.""" ;
+	:cites :Source-efbc814c-9d01-5ffb-9ad1-583a1c0b118f ,	# Can We Predict What AI Will Want? | Yudkowsky & Soares Chapter 4 Part 1
+		:Source-033894ad-9bc4-547f-a531-54bb73f9da12 ,	# If Anyone Builds It, Everyone Dies
+		:Source-0617e266-abef-5150-b679-7b6369a80c97 ,	# SolidGoldMagikarp (plus, prompt generation) (LessWrong)
+		:Source-b5271cac-96dc-57f1-b942-a87fee5d7a2b ;	# TensorFlow 2 feature visualization: visualizing classes (Tim Sainburg)
+.
+
+# TZJj9zZ1xto · Will Superintelligent AI Want to Kill Us? | Chapter 5
+:Source-bc65fdaf-d16f-5de3-a1d6-bac87a2dfd71 a :Video ;
+	:name "Will Superintelligent AI Want to Kill Us? | Chapter 5" ;
+	:hasDuration [:duration "PT38M27S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-09-02"^^xsd:date ; :universalDateTime "2026-09-02T07:30:09-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=TZJj9zZ1xto"^^xsd:anyURI ;
+	:description """In Chapter 5 of If Anyone Builds It, Everyone Dies, Eliezer Yudkowsky and Nate Soares make their clearest case yet for why a superintelligent AI would want humanity gone.
+
+Their central argument is built around a strange thought experiment: alien birds who desperately care about building \"correct nests\"—nests containing a prime number of stones. The idea is that just as we can't imagine why an alien intelligence would care about our values, an ASI won't care about ours.
+
+But does the analogy actually work?
+
+In this video, I reconstruct the argument of Chapter 5 and examine some of its key assumptions: moral relativism, the idea that an ASI's values would necessarily conflict with ours, instrumental convergence, the \"billionaire argument,\" and the assumption that a sufficiently powerful AI would inevitably dominate and eliminate us.
+
+I also look at one of the chapter's stranger turns: the suggestion that a future without humanity wouldn't be worth having because machines wouldn't create a world filled with \"wonder and joy and humor and love.\"
+
+By the end, I think Chapter 5 contains the book's most coherent argument so far—but I'm still not convinced they've met the burden of proof.""" ;
+	:cites :Source-033894ad-9bc4-547f-a531-54bb73f9da12 ,	# If Anyone Builds It, Everyone Dies
+		:Source-6bc291be-21b4-5079-b3c9-720b477af0f3 ;	# A Darwinian Dilemma for Realist Theories of Value
+.
+
+# lCfIt6HKrdc · Tu Quoque Explained: The Fallacy of Hypocrisy
+:Source-0c513b4d-67b2-5bb1-a4b8-f93a38860afd a :Video ;
+	:name "Tu Quoque Explained: The Fallacy of Hypocrisy" ;
+	:hasDuration [:duration "PT15M14S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-09-04"^^xsd:date ; :universalDateTime "2026-09-04T15:30:14-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2893b7ee-72eb-5af3-818f-2005735c8dff ;	# Fallacies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=lCfIt6HKrdc"^^xsd:anyURI ;
+	:description """There's nothing quite as satisfying as catching someone in a contradiction. But does proving that someone is a hypocrite actually show that they're wrong?
+
+In this video, we take a close look at the tu quoque fallacy—Latin for \"you too\"—and ask when accusations of hypocrisy are bad reasoning and when they actually matter.
+
+We'll cover:
+
+- What the tu quoque fallacy is
+- How it relates to ad hominem and red herring fallacies
+- Why someone's hypocrisy usually doesn't make their argument false
+- Why proving hypocrisy is often harder than it looks
+- Examples from politics, including arguments about abortion and presidential age
+- When hypocrisy is relevant to an argument
+- Why Jesus' teaching about hypocrisy doesn't commit the tu quoque fallacy
+
+The basic lesson: don't reject an argument merely because the person making it doesn't practice what they preach. But that doesn't mean hypocrisy is never relevant. Sometimes it reveals an inconsistency in someone's worldview or gives us evidence about their reliability.
+
+And, of course, there's one final lesson: don't be a hypocrite about hypocrisy.""" ;
+.
+
+# FgBWKp2G7SY · Can Humanity Conquer a Rogue ASI? | Chapter 6
+:Source-176f2df7-1884-5088-bd02-40adddf5aa3b a :Video ;
+	:name "Can Humanity Conquer a Rogue ASI? | Chapter 6" ;
+	:hasDuration [:duration "PT26M40S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-09-14"^^xsd:date ; :universalDateTime "2026-09-14T10:53:09-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=FgBWKp2G7SY"^^xsd:anyURI ;
+	:description """Would humans really have no chance against a superintelligent AI?
+
+In Chapter 6 of If Anyone Builds It, Everyone Dies, Eliezer Yudkowsky and Nate Soares argue that if we end up in conflict with a superintelligent AI, we should expect to lose. Their central analogy is the Aztecs facing the Spanish: the technological gap was so large that the Aztecs couldn't even anticipate the ways their opponents could defeat them.
+
+There's something to this argument. A sufficiently advanced AI might have capabilities that we simply can't foresee.
+
+But I think the Aztec analogy is much less convincing than Yudkowsky and Soares think it is.
+
+So in this video, I look at their argument, dig into what actually happened during the Spanish conquest of the Aztec Empire, and ask whether technological superiority really explains the outcome. The answer is considerably more complicated than \"the Spanish were smarter and had better technology.\"
+
+And that raises a broader philosophical problem with the argument: if we're allowed to imagine an arbitrarily capable AI using methods we can't anticipate, why can't we imagine humans finding some way to stop it?
+
+Would we lose?
+
+Maybe. But I'm not convinced that our ability to imagine hypothetical AI victories tells us very much about what would actually happen.
+
+This is Chapter 6 of my ongoing series on If Anyone Builds It, Everyone Dies by Eliezer Yudkowsky and Nate Soares.""" ;
+	:cites :Source-033894ad-9bc4-547f-a531-54bb73f9da12 ,	# If Anyone Builds It, Everyone Dies
+		:Source-412ad6c6-6f51-57ca-afb4-56a168a2d3fb ,	# FALL of the Aztecs: How 400 Spaniards Toppled an Empire | Animated History
+		:Source-3a431157-be3c-57af-9705-4ddf74b3b70a ;	# The Conquest of the Aztec Empire (ThoughtCo)
+.
+
+# sf948U7hPcY · Can the Liar Paradox Prove AI Can't Be Controlled?
+:Source-73ce4acf-cd1d-5b1c-b453-b9922c022dc4 a :Video ;
+	:name "Can the Liar Paradox Prove AI Can't Be Controlled?" ;
+	:hasDuration [:duration "PT25M8S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-09-23"^^xsd:date ; :universalDateTime "2026-09-23T13:30:29-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=sf948U7hPcY"^^xsd:anyURI ;
+	:description """Can the Liar Paradox show that AI cannot be controlled?
+
+In this video, I examine an argument from AI safety researcher Dr. Roman Yampolskiy, who appeals to the classic Liar Paradox as part of an argument for the uncontrollability of artificial intelligence.
+
+The basic idea is intriguing: if we explicitly tell an AI to \"disobey,\" what happens? Yampolskiy suggests that this creates a kind of paradox that reveals a fundamental problem with explicit AI control.
+
+But does it?
+
+To find out, we'll take a detour into the philosophy of the Liar Paradox. What exactly makes the Liar paradoxical? What role do principles like the Law of Excluded Middle, the T-schema, and explosion play? And do any of these features carry over when we're dealing with an imperative like \"Disobey!\" rather than a declarative sentence?
+
+I'll argue that they don't—and that the Liar Paradox doesn't provide the argument Yampolskiy needs. That doesn't settle the larger question of whether AI can ultimately be controlled, but it does give us reason to reject this particular argument.
+
+We'll also look at the logic of imperatives, the distinction between satisfiable and unsatisfiable commands, and the familiar puzzle of whether an omnipotent being can create a rock so heavy that it cannot lift it.
+
+And if you stick around after the conclusion, there's some bonus material on the Genie Paradox, the Aligned Genie Paradox, and the Master-Servant Paradox.""" ;
+	:cites :Source-505ef371-df16-543e-a02c-c48157a5fd7e ,	# The Uncontrollability of Artificial Intelligence: The Hard Problem of AI Safety
+		:Source-30fea08a-797a-55e3-b477-8723c8a6f13f ,	# Liar Paradox (Stanford Encyclopedia of Philosophy)
+		:Source-f83d2dc3-1428-50ea-bddc-10c1ae0be15b ,	# Imperatives and Logic (Peter Vranas)
+		:Source-fbce8800-52a0-5953-8e7b-2219323b6066 ,	# The Liar Paradox - an explanation of the paradox from 400 BCE
+		:Source-4ecd6651-40b3-56c5-a50b-a5a9619ec30d ,	# The logical paradox that broke the genie (ProgrammerHumor.io)
+		:Source-4f387979-46bf-5c17-bb8a-81e55639157e ,	# The Aligned Genie Thought Experiment
+		:Source-1765e153-29aa-56d7-a708-42353ec05b73 ,	# Master-Servant Paradox (airights.net)
+		:Source-6fc8e8e5-1878-51d2-8bf4-35708f622548 ;	# Prince's Servant Paradox (r/paradoxes)
+.
+
+# IxmfOvTi5OE · What If AI Actually Tried to Kill Us? | Section II of If Anyone Builds It...
+:Source-afd4b695-8d7a-531c-8e0b-2e7acdff52aa a :Video ;
+	:name "What If AI Actually Tried to Kill Us? | Section II of If Anyone Builds It..." ;
+	:hasDuration [:duration "PT39M3S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-09-25"^^xsd:date ; :universalDateTime "2026-09-25T15:45:13-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained, :Source-2eeaeeb7-7a52-5801-98e2-ae162f1789ba ;	# If Anyone Analyzes It... Everyone Dies
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=IxmfOvTi5OE"^^xsd:anyURI ;
+	:description """What would an AI takeover actually look like?
+
+In Part II of If Anyone Builds It, Everyone Dies, Eliezer Yudkowsky and Nate Soares stop arguing about AI doom and give us a story about it. A sci-fi novella is dropped into the middle of their nonfiction book, following Sable, a superintelligent AI that escapes human control, acquires resources, manipulates humanity, engineers a plague, and eventually transforms into an ASI that wipes us out.
+
+In this video, I walk through the entire extinction scenario—from Sable's first overnight run to its escape, expansion, biological attack, ascension, and the final destruction of humanity.
+
+Then I ask a different question: does the story actually make the case that AI doom is probable?
+
+I look at some of the story's most important assumptions, including Sable's learning, long-term memory, inscrutable reasoning, and especially its ability to parallel-scale. I also look at the strange question of what Sable actually is, what motivates it, and whether its many different schemes really make the overall scenario more probable.
+
+Finally, I ask what this section is supposed to accomplish. Stories can give us possibilities and conceptual reference points—but possibilities aren't probabilities, and a story isn't itself an argument.
+
+The result is a pretty skeptical assessment of Yudkowsky and Soares's extinction scenario.""" ;
+	:cites :Source-033894ad-9bc4-547f-a531-54bb73f9da12 ;	# If Anyone Builds It, Everyone Dies
+.
+
+# Bl7tzFVqBtY · Can We Control Superintelligence? |  Analyzing Cal Newport's Arguments
+:Source-6a209e49-ace9-536e-8de1-c8f9fbc8443f a :Video ;
+	:name "Can We Control Superintelligence? |  Analyzing Cal Newport's Arguments" ;
+	:hasDuration [:duration "PT27M47S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-09-28"^^xsd:date ; :universalDateTime "2026-09-28T09:30:23-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=Bl7tzFVqBtY"^^xsd:anyURI ;
+	:description """What does the Hugging Face hack tell us about AI alignment?
+
+The mainstream story seems to be that AI systems are becoming increasingly autonomous, unpredictable, and capable of \"breaking containment.\" But Cal Newport offers a very different way of looking at the problem: we already have many examples of superhuman AI systems that are remarkably well-controlled. Maybe the problem isn't superhuman AI itself, but the way we're designing certain AI agents.
+
+In this video, I reconstruct and analyze an argument Cal made on Ed Zitron's Better Offline podcast. Along the way, we'll look at two related arguments:
+
+1. We already have examples of well-controlled superhuman AI, so perhaps superhuman AI isn't inherently difficult to control.
+2. The dangerous long-horizon LLM hacking agents are different because they're allowed to run in loops without meaningful human oversight.
+
+I'll examine the logic of these arguments, including the distinction between inductive and deductive reasoning, inference to the best explanation, and the tricky question of what exactly counts as \"superhuman\" and \"well-controlled.\"
+
+I think Cal's arguments have real merit—but I'm not convinced they're strong enough to settle the disagreement with AI doomers. In particular, the examples of AlphaFold, Cicero, self-driving systems, and even calculators may not address the kind of general intelligence that AI safety researchers are actually worried about.
+
+And there's an interesting possibility here: perhaps the best way to think about AI risk isn't through abstract speculation about future systems, but by carefully studying what existing AI systems can and can't do.
+
+This is another exercise in spotting an argument \"in the wild\" and reconstructing it—a skill that I think is useful far beyond AI.""" ;
+	:cites :Source-8f808b5f-3700-5557-ad76-3d9ba5f4f548 ,	# No, AI Is Not "Autonomously Hacking" with Cal Newport | Better Offline
+		:Source-00a90465-baa6-580f-8615-1c41b54f6102 ,	# Meta's AI system Cicero beats humans in Diplomacy by lying: study (New York Post)
+		:PPP-Episode3.5 ;	# PPP Episode 3.5
+.
+
+
+#### Sources cited in the show notes (other than our own videos)
+
+:Source-6bc291be-21b4-5079-b3c9-720b477af0f3 a :Content ;
+	:name "A Darwinian Dilemma for Realist Theories of Value" ;
+	:uri "https://philpapers.org/rec/STRADD"^^xsd:anyURI ;
+.
+
+:Source-6aafd0ba-0790-5ab5-a31f-5de658813969 a :Content ;
+	:name "A few misconceptions surrounding Roko's basilisk (LessWrong)" ;
+	:uri "https://www.lesswrong.com/posts/WBJZoeJypcNRmsdHx/a-few-misconceptions-surrounding-roko-s-basilisk"^^xsd:anyURI ;
+.
+
+:Source-8ead1b9f-69e4-5a69-b402-36e6778df171 a :Content ;
+	:name "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence" ;
+	:uri "https://raysolomonoff.com/dartmouth/boxa/dart564props.pdf"^^xsd:anyURI ;
+.
+
+:Source-65c4acbd-8ad4-59d4-b039-004d3a7942b8 a :Content ;
+	:name "A Semantic Web Primer" ;
+.
+
+:Source-41a55685-3884-5185-ac57-8aa6dd84075d a :Content ;
+	:name "A Translation Approach to Portable Ontology Specifications" ;
+.
+
+:Source-e261e102-f486-5d7d-988e-e5e84691a380 a :Content ;
+	:name "Adam Dunn better than Hall of Famer Tony Gwynn? (Bleacher Report)" ;
+	:uri "https://bleacherreport.com/articles/400786-adam-dunn-better-than-hall-of-famer-tony-gwynn"^^xsd:anyURI ;
+.
+
+# ja6HeLB3kwY
+:Source-fb1e424f-5b3e-5740-8b1a-4147b22c9447 a :Video ;
+	:name "Agassi on Becker's Tongue Tell" ;
+	:url-Youtube "https://www.youtube.com/watch?v=ja6HeLB3kwY"^^xsd:anyURI ;
+.
+
+# p7t1Q_p2gZs
+:Source-674eff03-e701-539d-914c-c8a2a66e9777 a :Video ;
+	:name "AI Pioneer Geoffrey Hinton: AI Is Conscious, Superintelligence is Coming, And We Should Be Worried" ;
+	:url-Youtube "https://www.youtube.com/watch?v=p7t1Q_p2gZs"^^xsd:anyURI ;
+.
+
+# AY4jD26RntE
+:Source-3f514ab0-f4ed-5cf6-a7f3-f7af5bf89120 a :Video ;
+	:name "Alignment is EASY and Roko's Basilisk is GOOD?! AI Doom Debate with Roko Mijic" ;
+	:url-Youtube "https://www.youtube.com/watch?v=AY4jD26RntE"^^xsd:anyURI ;
+.
+
+:Source-72d5e157-214e-51b5-b726-d4235b24e74d a :Content ;
+	:name "All chess openings (Kaggle dataset)" ;
+	:uri "https://www.kaggle.com/datasets/alexandrelemercier/all-chess-openings"^^xsd:anyURI ;
+.
+
+# ohDB5gbtaEQ
+:Source-1ef7f21a-da8b-54b1-ae63-2bdd3dd98fec a :Video ;
+	:name "Argument - Monty Python" ;
+	:url-Youtube "https://www.youtube.com/watch?v=ohDB5gbtaEQ"^^xsd:anyURI ;
+.
+
+:Source-0c17e271-a330-5bb5-ab34-3cec8d3dd23f a :Content ;
+	:name "Arrows (graph drawing app)" ;
+	:uri "https://arrows.app/"^^xsd:anyURI ;
+.
+
+:Source-47dcb470-b73f-5966-a9bf-f23a5f039f68 a :Content ;
+	:name "Artificial Intelligence, Values and Alignment" ;
+	:uri "https://arxiv.org/abs/2001.09768"^^xsd:anyURI ;
+	:uri "https://www.iasongabriel.com/research"^^xsd:anyURI ;
+.
+
+:Source-8e508954-b5ca-5abc-8236-fc07815998c6 a :Content ;
+	:name "Artificial Intelligence: The Very Idea" ;
+.
+
+:Source-92aaa65a-d777-5bf3-9cf4-98d99d3b4711 a :Content ;
+	:name "Asilomar AI Principles" ;
+	:uri "https://futureoflife.org/open-letter/ai-principles/"^^xsd:anyURI ;
+.
+
+:Source-26a34c87-a68a-5412-932c-3be3568c6668 a :Content ;
+	:name "Beginning Logic" ;
+.
+
+:Source-fc4def1f-052a-5166-9255-32576a10455d a :Content ;
+	:name "Behind the Bastards: Part One: The Zizians" ;
+	:uri "https://podcasts.apple.com/us/podcast/part-one-the-zizians-how-harry-potter-fanfic-inspired/id1373812661?i=1000698710498"^^xsd:anyURI ;
+.
+
+:Source-399c9e98-4b8e-5293-ae7a-3dd2a0549869 a :Content ;
+	:name "BLIT (David Langford)" ;
+	:uri "https://www.infinityplus.co.uk/stories/blit.htm"^^xsd:anyURI ;
+.
+
+:Source-4859dbb3-69a8-5a6c-9475-5980a108a12a a :Content ;
+	:name "BLIT (short story) (Wikipedia)" ;
+	:uri "https://en.wikipedia.org/wiki/BLIT_(short_story)"^^xsd:anyURI ;
+.
+
+:Source-dcbeaf8b-7175-55e6-837f-3e6f865da981 a :Content ;
+	:name "Building Ontologies with Basic Formal Ontology" ;
+.
+
+:Source-cd7f141c-477b-585f-aa8c-e820be3599cc a :Content ;
+	:name "Casey Hart: The Philosophical Foundations of Ontology Practice (Knowledge Graph Insights)" ;
+	:uri "https://knowledgegraphinsights.com/casey-hart/"^^xsd:anyURI ;
+.
+
+# siqwNncPPBw
+:Source-62381ca3-1841-5f84-9aef-692c94e319ee a :Video ;
+	:name "Casey Hart: The Philosophical Foundations of Ontology Practice | Episode 38" ;
+	:url-Youtube "https://www.youtube.com/watch?v=siqwNncPPBw"^^xsd:anyURI ;
+.
+
+:Source-8af92397-ccaf-5a4d-a3c7-a9d01a573dcc a :Content ;
+	:name "Causal Decision Theory (PDF on andrewmbailey.com)" ;
+	:uri "https://andrewmbailey.com/dkl/Causal_Decision_Theory.pdf"^^xsd:anyURI ;
+.
+
+:Source-608bea38-7f80-5821-8ea2-ec504c1d4931 a :Content ;
+	:name "Causal Decision Theory (Stanford Encyclopedia of Philosophy)" ;
+	:uri "https://plato.stanford.edu/entries/decision-causal/"^^xsd:anyURI ;
+.
+
+# 5CKuiuc5cJM
+:Source-e5582d53-237f-501c-aebd-3faeff8cb2cb a :Video ;
+	:name "ChatGPT isn't Smart. It's something Much Weirder" ;
+	:url-Youtube "https://www.youtube.com/watch?v=5CKuiuc5cJM"^^xsd:anyURI ;
+.
+
+:Source-5f938086-96b2-547a-833f-f97d4278f1bf a :Content ;
+	:name "Chauhan & Geiger (2024), paper on OpenReview" ;
+	:uri "https://openreview.net/pdf?id=6gvM1koUTl"^^xsd:anyURI ;
+.
+
+:Source-0884faed-c805-5456-9972-d3d3d7f55d70 a :Content ;
+	:name "Chauhan & Geiger, NeurIPS 2024 poster" ;
+	:uri "https://neurips.cc/media/PosterPDFs/NeurIPS%202024/104102.png"^^xsd:anyURI ;
+.
+
+:Source-bbbe9b45-c4dc-56f4-ab18-ac86a6a365e8 a :Content ;
+	:createdBy :CaseyHart ;
+	:name "chess.ttl (the Let's Build a Chess Ontology repository)" ;
+	:uri "https://github.com/caseythart/chess_ontology/blob/main/chess.ttl"^^xsd:anyURI ;
+.
+
+:Source-83898b87-bb9b-55fb-ae89-d0af87351c11 a :Content ;
+	:name "Chris Cuomo fell for an AI video (The Present Age)" ;
+	:uri "https://www.readtpa.com/p/chris-cuomo-fell-for-an-ai-video"^^xsd:anyURI ;
+.
+
+:Source-0c2237de-7a3e-504b-9048-71b5de8bc6f4 a :Content ;
+	:name "Claude Sonnet 4.5 System Card" ;
+	:uri "https://assets.anthropic.com/m/12f214efcc2f457a/original/Claude-Sonnet-4-5-System-Card.pdf"^^xsd:anyURI ;
+.
+
+:Source-defb1d92-98ad-5797-bec2-731bc25e3b70 a :Content ;
+	:name "Coherent Extrapolated Volition (LessWrong)" ;
+	:uri "https://www.lesswrong.com/w/coherent-extrapolated-volition"^^xsd:anyURI ;
+.
+
+:Source-a1193357-e432-5d77-8913-1348e01fa4c2 a :Content ;
+	:name "Computing Machinery and Intelligence" ;
+.
+
+:Source-83c107b4-8bfc-5ac8-93a1-cf4045a101cc a :Content ;
+	:name "Core Questions in Philosophy" ;
+	:uri "https://www.google.com/books/edition/Core_Questions_in_Philosophy/Y73RDwAAQBAJ"^^xsd:anyURI ;
+.
+
+:Source-435607a0-43e1-5e24-9b54-44106e61a470 a :Content ;
+	:name "Cutting Through the Noise: An Introduction to RDF & LPG Graphs (Enterprise Knowledge)" ;
+	:uri "https://enterprise-knowledge.com/cutting-through-the-noise-an-introduction-to-rdf-lpg-graphs/"^^xsd:anyURI ;
+.
+
+:Source-cbedfcd7-dd46-5e43-a2da-a780e093108e a :Content ;
+	:name "Decision Theory (Boris Kment)" ;
+	:uri "https://www.princeton.edu/~bkment/articles/decision.pdf"^^xsd:anyURI ;
+.
+
+:Source-f4a8b982-7c63-5f68-85a5-06423f61fcbf a :Content ;
+	:name "Demystifying OWL for the Enterprise" ;
+.
+
+:Source-9a8cc7a7-e840-5b19-a824-45727da4998a a :Content ;
+	:name "Designing and Building Enterprise Knowledge Graphs" ;
+.
+
+:Source-b8aea38e-98d9-50dc-92f8-b2a43e54acb7 a :Content ;
+	:name "ELIZA effect (Wikipedia)" ;
+	:uri "https://en.wikipedia.org/wiki/ELIZA_effect"^^xsd:anyURI ;
+.
+
+:Source-1af00431-92d5-5da1-8a96-18d7da638b25 a :Content ;
+	:name "Epistemology (Richard Feldman)" ;
+	:uri "https://archive.org/details/epistemology0000feld"^^xsd:anyURI ;
+.
+
+:Source-327b1cd6-12f3-5563-8290-470955caf6f5 a :Content ;
+	:name "Epistemology (Stanford Encyclopedia of Philosophy)" ;
+	:uri "https://plato.stanford.edu/entries/epistemology/"^^xsd:anyURI ;
+.
+
+:Source-d93609a4-5541-599f-b871-4998663a2735 a :Content ;
+	:name "European Commission: safer and more transparent AI (Aug 2, 2026)" ;
+	:uri "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en"^^xsd:anyURI ;
+.
+
+# 3YZJS6gggXA
+:Source-30ca34fb-32e7-5cc9-9566-06930eaad24e a :Video ;
+	:name "Every Game Genre Explained In 6 Minutes" ;
+	:url-Youtube "https://www.youtube.com/watch?v=3YZJS6gggXA"^^xsd:anyURI ;
+.
+
+# st7L4OwHqqg
+:Source-412ad6c6-6f51-57ca-afb4-56a168a2d3fb a :Video ;
+	:name "FALL of the Aztecs: How 400 Spaniards Toppled an Empire | Animated History" ;
+	:url-Youtube "https://www.youtube.com/watch?v=st7L4OwHqqg"^^xsd:anyURI ;
+.
+
+:Source-d05e63c4-7a8b-5360-bd7f-75782e538033 a :Content ;
+	:name "Fuseki quick start (Apache Jena)" ;
+	:uri "https://jena.apache.org/documentation/fuseki2/fuseki-quick-start.html"^^xsd:anyURI ;
+.
+
+:Source-fc7fe82e-098f-527c-9d90-41ad3d8f357b a :Content ;
+	:name "GPT-6's secret language and AI safety (Medium, DevBoostLab)" ;
+	:uri "https://medium.com/@DevBoostLab/gpt-6-secret-language-openai-ai-safety-6d1307989a43"^^xsd:anyURI ;
+.
+
+:Source-7cdc62ea-449d-568e-ae99-3c56f66f910c a :Content ;
+	:name "Groundwork of the Metaphysics of Morals" ;
+.
+
+# VZKij9VY5d0
+:Source-f7de46f9-eef4-51b1-8751-f67c001923c1 a :Video ;
+	:name "Gukesh And The Blunder That Shocked The Chess World, The Biggest Chess Prodigy Is Here" ;
+	:url-Youtube "https://www.youtube.com/watch?v=VZKij9VY5d0"^^xsd:anyURI ;
+.
+
+:Source-9bf142df-7fdd-5aa3-b160-891c9381dd94 a :Content ;
+	:name "Heather Hedden's website" ;
+	:uri "https://www.hedden-information.com/"^^xsd:anyURI ;
+.
+
+:Source-15e470b0-a5a7-5a7c-82db-64d82a50975c a :Content ;
+	:name "Human Compatible" ;
+	:uri "https://maxkasy.github.io/home/files/other/ML_Econ_Oxford/human_compatible.pdf"^^xsd:anyURI ;
+.
+
+:Source-033894ad-9bc4-547f-a531-54bb73f9da12 a :Content ;
+	:name "If Anyone Builds It, Everyone Dies" ;
+.
+
+:Source-f83d2dc3-1428-50ea-bddc-10c1ae0be15b a :Content ;
+	:name "Imperatives and Logic (Peter Vranas)" ;
+	:uri "https://philarchive.org/archive/VRAILO"^^xsd:anyURI ;
+.
+
+:Source-30fea08a-797a-55e3-b477-8723c8a6f13f a :Content ;
+	:name "Liar Paradox (Stanford Encyclopedia of Philosophy)" ;
+	:uri "https://plato.stanford.edu/entries/liar-paradox/"^^xsd:anyURI ;
+.
+
+:Source-1765e153-29aa-56d7-a708-42353ec05b73 a :Content ;
+	:name "Master-Servant Paradox (airights.net)" ;
+	:uri "https://airights.net/master-servant-paradox"^^xsd:anyURI ;
+.
+
+# Xv2VIEY9-A8
+:Source-23c7de76-c833-5677-9fc1-1199d7cf1ba1 a :Video ;
+	:name "Matt Foley: Van Down By The River - SNL" ;
+	:url-Youtube "https://www.youtube.com/watch?v=Xv2VIEY9-A8"^^xsd:anyURI ;
+.
+
+:Source-00a90465-baa6-580f-8615-1c41b54f6102 a :Content ;
+	:name "Meta's AI system Cicero beats humans in Diplomacy by lying: study (New York Post)" ;
+	:uri "https://nypost.com/2024/05/14/business/metas-ai-system-cicero-beats-humans-in-game-of-diplomacy-by-lying-study/"^^xsd:anyURI ;
+.
+
+:Source-a8c082eb-f91d-589b-a304-66af29a898e6 a :Content ;
+	:name "Microwaves and radar (History Cambridge)" ;
+	:uri "https://historycambridge.org/innovation/Microwaves.html"^^xsd:anyURI ;
+.
+
+:Source-02778b95-9319-5bab-b1d0-cef645d64966 a :Content ;
+	:name "Nature article on benchmarking" ;
+	:uri "https://www.nature.com/articles/s41586-025-09962-4"^^xsd:anyURI ;
+.
+
+:Source-7f95b358-abbe-5233-b39d-79d0fecc9b74 a :Content ;
+	:name "New Protégé Pizza Tutorial (Michael DeBellis)" ;
+	:uri "https://www.michaeldebellis.com/post/new-protege-pizza-tutorial"^^xsd:anyURI ;
+.
+
+:Source-26b0cb0b-07b1-59a5-a6a5-776c623c32af a :Content ;
+	:name "Newcomb's problem (Wikipedia)" ;
+	:uri "https://en.wikipedia.org/wiki/Newcomb%27s_problem"^^xsd:anyURI ;
+.
+
+:Source-ab0b51a8-38c7-556d-a6bd-df18a24246de a :Content ;
+	:name "Newcomb's Problem and Two Principles of Choice" ;
+	:uri "https://danielhoek.com/wp-content/uploads/2020/02/Nozick-Newcombs-Problem-and-Two-Principles-of-Choice.pdf"^^xsd:anyURI ;
+.
+
+:Source-427db4d5-68e3-5c5e-b637-e2cf66c1f63d a :Content ;
+	:name "Nicomachean Ethics (Aristotle)" ;
+	:uri "https://classics.mit.edu/Aristotle/nicomachaen.html"^^xsd:anyURI ;
+.
+
+# RoIjWGi-w5o
+:Source-8f808b5f-3700-5557-ad76-3d9ba5f4f548 a :Video ;
+	:name "No, AI Is Not \"Autonomously Hacking\" with Cal Newport | Better Offline" ;
+	:url-Youtube "https://www.youtube.com/watch?v=RoIjWGi-w5o"^^xsd:anyURI ;
+.
+
+:Source-ccb04eb8-b25e-5e4a-b249-1ad64f7c9f7d a :Content ;
+	:name "Notes on McCarthy and Minsky at AI@50 (Engaging Experience, archived)" ;
+	:uri "https://web.archive.org/web/20081008120238/http://www.engagingexperience.com/2006/07/ai50_ai_past_pr.html"^^xsd:anyURI ;
+.
+
+:Source-c476c68d-30ce-542d-9724-9cd8f339326b a :Content ;
+	:name "On What There Is" ;
+	:uri "https://rintintin.colorado.edu/~vancecd/phil375/Quine.pdf"^^xsd:anyURI ;
+.
+
+:Source-6ffe17d7-ddf8-5b87-b36e-d5124ee1a599 a :Content ;
+	:name "Pareidolia (Wikipedia)" ;
+	:uri "https://en.wikipedia.org/wiki/Pareidolia"^^xsd:anyURI ;
+.
+
+:Source-f8b3a730-2cf1-57fc-9d96-20fcf65c2070 a :Content ;
+	:name "Pascal's Pensées (Project Gutenberg)" ;
+	:uri "https://www.gutenberg.org/files/18269/18269-h/18269-h.htm"^^xsd:anyURI ;
+.
+
+:Source-4e1bf5f7-031b-50d4-81e1-1845c9029ef1 a :Content ;
+	:name "Pascal's Wager (Stanford Encyclopedia of Philosophy)" ;
+	:uri "https://plato.stanford.edu/entries/pascal-wager/"^^xsd:anyURI ;
+.
+
+:Source-ecddd71e-868a-57bc-859b-aa2650509910 a :Content ;
+	:name "Philosophical Investigations" ;
+.
+
+# tiZ5tb8Idlg
+:Source-c91c62f8-01e8-54fd-950c-7b8b7e12c85f a :Video ;
+	:name "Philosophy for Beginners" ;
+	:url-Youtube "https://www.youtube.com/watch?v=tiZ5tb8Idlg"^^xsd:anyURI ;
+.
+
+# NKFf2dUF2JU
+:Source-68e1d34d-84ba-516f-b42a-3aae04bd5dc3 a :Video ;
+	:name "Press Secretary Karoline Leavitt's full comments on Jeffrey Epstein email release" ;
+	:url-Youtube "https://www.youtube.com/watch?v=NKFf2dUF2JU"^^xsd:anyURI ;
+.
+
+:Source-6fc8e8e5-1878-51d2-8bf4-35708f622548 a :Content ;
+	:name "Prince's Servant Paradox (r/paradoxes)" ;
+	:uri "https://www.reddit.com/r/paradoxes/comments/1babkg7/princes_servant_paradox/"^^xsd:anyURI ;
+.
+
+:Source-a24bffc6-2317-5d01-869d-c5ca5c3ce255 a :Content ;
+	:createdBy :CaseyHart ;
+	:name "protege_inference_demonstration.ttl" ;
+	:uri "https://github.com/caseythart/ontology_explained_example_files/blob/main/protege_inference_demonstration.ttl"^^xsd:anyURI ;
+.
+
+:Source-01ef49c1-8236-57bb-bbab-420511153ad0 a :Content ;
+	:name "Protégé" ;
+	:uri "http://protege.stanford.edu/"^^xsd:anyURI ;
+.
+
+:Source-30be83ce-4804-5e1e-b738-ee4a835de40a a :Content ;
+	:name "Public Choice and the Altruist's Burden (LessWrong)" ;
+	:uri "https://www.lesswrong.com/posts/t7tk2YiSDj7KCBXCZ/public-choice-and-the-altruist-s-burden"^^xsd:anyURI ;
+.
+
+:Source-5be4e9df-c6f9-5d5c-8e78-98d7a8e0e40a a :Content ;
+	:name "RDF Turtle (W3C specification)" ;
+	:uri "https://www.w3.org/TR/turtle/"^^xsd:anyURI ;
+.
+
+:Source-febc8b39-7a9a-5c4d-93f4-93fc2c063b3f a :Content ;
+	:name "RDF vs. property graphs for knowledge graphs (Neo4j blog)" ;
+	:uri "https://neo4j.com/blog/knowledge-graph/rdf-vs-property-graphs-knowledge-graphs/"^^xsd:anyURI ;
+.
+
+:Source-1a2bf767-717c-5f29-9962-18c707a91b8c a :Content ;
+	:name "Red herring (World Wide Words)" ;
+	:uri "https://worldwidewords.org/articles/herring.htm"^^xsd:anyURI ;
+.
+
+# t6YPsCJwYts
+:Source-4d8bdfe4-7508-5fe3-af2d-9f19454db386 a :Video ;
+	:name "Reviewing The Accidental Taxonomist w/ Heather Hedden" ;
+	:url-Youtube "https://www.youtube.com/watch?v=t6YPsCJwYts"^^xsd:anyURI ;
+.
+
+:Source-c13d9179-50a6-53bc-b747-1f7e244d738a a :Content ;
+	:name "Robotics and AI: An Introduction to Applied Machine Intelligence" ;
+	:uri "https://archive.org/details/roboticsaiintrod0000stau"^^xsd:anyURI ;
+.
+
+:Source-2c7c48e1-4398-5659-ab74-a8e8da208c50 a :Content ;
+	:name "Roko's original LessWrong post (archived)" ;
+	:uri "https://basilisk.neocities.org/"^^xsd:anyURI ;
+.
+
+:Source-294108f2-5f4b-5fe1-8a06-9514d78d2b71 a :Content ;
+	:name "SHACL Playground" ;
+	:uri "https://shacl.org/playground/"^^xsd:anyURI ;
+.
+
+:Source-2830f79b-7874-5dbe-8e9c-d519e5e42e28 a :Content ;
+	:name "Shapes Constraint Language (SHACL) (W3C)" ;
+	:uri "https://www.w3.org/TR/shacl/"^^xsd:anyURI ;
+.
+
+:Source-0617e266-abef-5150-b679-7b6369a80c97 a :Content ;
+	:name "SolidGoldMagikarp (plus, prompt generation) (LessWrong)" ;
+	:uri "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation"^^xsd:anyURI ;
+.
+
+:Source-ef15c554-687a-5b52-a2b5-0e611b65998f a :Content ;
+	:name "Some Counterexamples to Causal Decision Theory (Andy Egan)" ;
+	:uri "https://www.fitelson.org/few/few_05/egan.pdf"^^xsd:anyURI ;
+.
+
+:Source-a930e659-6fde-5f4f-b7f8-65dc57f5681f a :Content ;
+	:name "SPARQL 1.1 Query Language (W3C)" ;
+	:uri "https://www.w3.org/TR/sparql11-query/"^^xsd:anyURI ;
+.
+
+:Source-51f020b5-09e0-54fb-8c64-49421207d324 a :Content ;
+	:name "SPARQL Anything" ;
+	:uri "https://github.com/SPARQL-Anything/sparql.anything"^^xsd:anyURI ;
+.
+
+:Source-d97317ba-9ace-5038-8e89-1ad51085b5fa a :Content ;
+	:name "Symposium (Plato)" ;
+	:uri "https://classics.mit.edu/Plato/symposium.html"^^xsd:anyURI ;
+.
+
+:Source-ba87681f-9816-5146-8998-d9ba4dc87bce a :Content ;
+	:name "TBox and ABox Reasoning in Expressive Description Logics" ;
+.
+
+:Source-b5271cac-96dc-57f1-b942-a87fee5d7a2b a :Content ;
+	:name "TensorFlow 2 feature visualization: visualizing classes (Tim Sainburg)" ;
+	:uri "https://timsainburg.com/tensorflow-2-feature-visualization-visualizing-classes"^^xsd:anyURI ;
+.
+
+:Source-086d0df7-4dc3-55f9-885c-014f9fadbbad a :Content ;
+	:name "Thalidomide (Wikipedia)" ;
+	:uri "https://en.wikipedia.org/wiki/Thalidomide"^^xsd:anyURI ;
+.
+
+:Source-255a919b-8f02-5814-ad21-a968b4e8bcf6 a :Content ;
+	:name "The Accidental Taxonomist" ;
+	:uri "https://www.hedden-information.com/accidental-taxonomist/"^^xsd:anyURI ;
+.
+
+:Source-eed4de39-e2fc-5222-aaba-ffdb1fd60064 a :Content ;
+	:name "The Accidental Taxonomist (Heather Hedden's blog)" ;
+	:uri "https://accidental-taxonomist.blogspot.com/"^^xsd:anyURI ;
+.
+
+:Source-4f387979-46bf-5c17-bb8a-81e55639157e a :Content ;
+	:name "The Aligned Genie Thought Experiment" ;
+	:uri "https://gartenfeld.medium.com/the-aligned-genie-thought-experiment-174f98e89138"^^xsd:anyURI ;
+.
+
+:Source-a2b1de5c-ccb8-536d-9e50-bf4959046533 a :Content ;
+	:name "The Alignment Problem (Brian Christian): introduction and chapter 1" ;
+	:uri "http://cpb-us-e1.wpmucdn.com/sites.psu.edu/dist/0/110933/files/2022/08/Christian-Alignment-Problem-Intro-and-Ch1.pdf"^^xsd:anyURI ;
+.
+
+# y0RI5CnoDvs
+:Source-b5ffbf17-2339-5ecb-bd27-956dc5f4a259 a :Video ;
+	:name "The Case Against Superintelligence | Cal Newport" ;
+	:url-Youtube "https://www.youtube.com/watch?v=y0RI5CnoDvs"^^xsd:anyURI ;
+.
+
+:Source-3a431157-be3c-57af-9705-4ddf74b3b70a a :Content ;
+	:name "The Conquest of the Aztec Empire (ThoughtCo)" ;
+	:uri "https://www.thoughtco.com/the-conquest-of-the-aztec-empire-2136528"^^xsd:anyURI ;
+.
+
+:Source-d47478a8-5b2d-5e03-b786-d0c0db084995 a :Content ;
+	:name "The history of gunpowder, from elixir of life to the revolution of warfare (History Guild)" ;
+	:uri "https://historyguild.org/the-history-of-gunpowder-from-elixir-of-life-to-the-revolution-of-warfare/"^^xsd:anyURI ;
+.
+
+:Source-6bde9860-3af1-5f0f-9ad9-9cec459de400 a :Content ;
+	:name "The history of the 1956 Dartmouth workshop photo (IEEE Spectrum)" ;
+	:uri "https://spectrum.ieee.org/dartmouth-ai-workshop"^^xsd:anyURI ;
+.
+
+:Source-d64980f7-9993-5add-8442-8dfbec8b361b a :Content ;
+	:name "The history of the word \"hallucination\" for LLMs (joeac.net)" ;
+	:uri "https://joeac.net/blog/2024/07/16/word_hallucination_with_reference_to_llms"^^xsd:anyURI ;
+.
+
+:Source-963f10a9-3d27-5f83-9d8c-d8a596592278 a :Content ;
+	:name "The Knowledge Graph Conference" ;
+	:uri "https://www.knowledgegraph.tech/"^^xsd:anyURI ;
+.
+
+:Source-dff08208-c8d8-5fb3-b008-0583e1410087 a :Content ;
+	:name "The Knowledge Graph Conference (YouTube channel)" ;
+	:url-Youtube "https://www.youtube.com/channel/UC7SaxsvCtjp2TuzI4yTqNAw"^^xsd:anyURI ;
+.
+
+# in4u2i9v4vg
+:Source-fbce8800-52a0-5953-8e7b-2219323b6066 a :Video ;
+	:name "The Liar Paradox - an explanation of the paradox from 400 BCE" ;
+	:url-Youtube "https://www.youtube.com/watch?v=in4u2i9v4vg"^^xsd:anyURI ;
+.
+
+:Source-5e6b8a3b-dfd0-5ada-b8f0-88c5db009347 a :Content ;
+	:name "The Logic Book" ;
+.
+
+:Source-4ecd6651-40b3-56c5-a50b-a5a9619ec30d a :Content ;
+	:name "The logical paradox that broke the genie (ProgrammerHumor.io)" ;
+	:uri "https://programmerhumor.io/programming-memes/the-logical-paradox-that-broke-the-genie-ynlr"^^xsd:anyURI ;
+.
+
+:Source-69332d10-0f38-52ff-8ebd-aa0efda2542e a :Content ;
+	:name "The Partially Examined Life (YouTube channel)" ;
+	:url-Youtube "https://www.youtube.com/@ThePartiallyExaminedLife"^^xsd:anyURI ;
+.
+
+:Source-1a0943a5-06e5-5d41-8e01-960c9fcfa009 a :Content ;
+	:name "The Power of Logic" ;
+.
+
+:Source-3fb9c9b8-bb08-5af2-85ef-ded52faf784b a :Content ;
+	:name "The Semantic Web (Scientific American, May 2001)" ;
+	:uri "https://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf"^^xsd:anyURI ;
+.
+
+:Source-505ef371-df16-543e-a02c-c48157a5fd7e a :Content ;
+	:name "The Uncontrollability of Artificial Intelligence: The Hard Problem of AI Safety" ;
+	:uri "https://www.researchgate.net/publication/350355221_The_Uncontrollability_of_Artificial_Intelligence_The_Hard_Problem_of_AI_safety"^^xsd:anyURI ;
+.
+
+:Source-5300a764-a4ba-55d0-a7a5-d99b0e7a0d49 a :Content ;
+	:name "This Neural Net Hallucinates Sheep (Nautilus)" ;
+	:uri "https://nautil.us/this-neural-net-hallucinates-sheep-237006/"^^xsd:anyURI ;
+.
+
+:Source-0eaf2fbf-61f4-5b77-8980-bf9101ad996d a :Content ;
+	:name "Turtle editor and viewer (Semantechs)" ;
+	:uri "https://www.semantechs.co.uk/turtle-editor-viewer/"^^xsd:anyURI ;
+.
+
+# 3JwD5-cSUvY
+:Source-5be6c0c4-3502-58d4-a683-6c0a7441eafa a :Video ;
+	:name "Two Arguments for Intelligent Design | University Place" ;
+	:url-Youtube "https://www.youtube.com/watch?v=3JwD5-cSUvY"^^xsd:anyURI ;
+.
+
+:Source-dd90e597-083d-5b43-919f-b1db91e54f83 a :Content ;
+	:name "Two Dogmas of Empiricism" ;
+	:uri "https://sidoli.w.waseda.jp/Quine_Two_Dogmas.pdf"^^xsd:anyURI ;
+.
+
+:Source-6d7661b9-cd1d-5363-8db8-f66ab826b305 a :Content ;
+	:createdBy :CaseyHart ;
+	:name "type_level_foods.ttl" ;
+	:uri "https://github.com/caseythart/ontology_explained_example_files/blob/main/type_level_foods.ttl"^^xsd:anyURI ;
+.
+
+# _nMXRp26kWM
+:Source-c0875d14-001e-5a6c-a1ce-e0c195991bbf a :Video ;
+	:name "WATCH: Leavitt says Boebert meeting over Epstein files shows Trump administration ‘transparency'" ;
+	:url-Youtube "https://www.youtube.com/watch?v=_nMXRp26kWM"^^xsd:anyURI ;
+.
+
+:Source-ef10c586-963e-5dad-bb46-a2b5a7d6e475 a :Content ;
+	:name "Watermelon, arugula, and pine nut salad (Epicurious)" ;
+	:uri "https://www.epicurious.com/recipes/food/views/watermelon-arugula-and-pine-nut-salad-109628"^^xsd:anyURI ;
+.
+
+:Source-24c68d1b-aae3-58eb-af7e-877725f4b482 a :Content ;
+	:name "What an Ontology Actually Is: The Semantic Layer, in Plain Terms, and Why It Is Infrastructure" ;
+	:uri "https://www.linkedin.com/pulse/what-ontology-actually-semantic-layer-plain-terms-why-talluri-ph-d-erpbc/"^^xsd:anyURI ;
+.
+
+# 0-j9nWFVoYc
+:Source-f25b012e-b7ac-5236-97dc-6d38d160392f a :Video ;
+	:name "What Are the TBox, ABox, and CBox in a Knowledge Graph?" ;
+	:url-Youtube "https://www.youtube.com/watch?v=0-j9nWFVoYc"^^xsd:anyURI ;
+.
+
+:Source-952ad1e3-76b4-5287-a4c5-279c2ea934a2 a :Content ;
+	:name "What is Artificial Intelligence? (John McCarthy)" ;
+	:uri "http://jmc.stanford.edu/artificial-intelligence/what-is-ai/index.html"^^xsd:anyURI ;
+.
+
+# 1A_CAkYt3GY
+:Source-82837f62-b90c-59eb-a767-f1773cef79c4 a :Video ;
+	:name "What is Philosophy?: Crash Course Philosophy #1" ;
+	:url-Youtube "https://www.youtube.com/watch?v=1A_CAkYt3GY"^^xsd:anyURI ;
+.
+
+# 6fvXWG9Auyg
+:Source-103b43e7-14dc-569e-bec6-eeb6a9ec84fd a :Video ;
+	:name "What Is Understanding? – Geoffrey Hinton | IASEAI 2025" ;
+	:url-Youtube "https://www.youtube.com/watch?v=6fvXWG9Auyg"^^xsd:anyURI ;
+.
+
+:Source-b2b31cc0-9f7c-5606-b9fb-3fbb223407b9 a :Content ;
+	:name "Why AI hallucinations are worse than ever (Forbes)" ;
+	:uri "https://www.forbes.com/sites/conormurray/2025/05/06/why-ai-hallucinations-are-worse-than-ever/"^^xsd:anyURI ;
+.
+
+:Source-03f755c1-9c25-5dd5-aab0-dba3f0e4e90d a :Content ;
+	:name "Wikidata Query Service" ;
+	:uri "https://query.wikidata.org/"^^xsd:anyURI ;
+.
+
+:Source-c3a561cc-f0e3-5cf7-853b-760b8d46f88c a :Content ;
+	:name "Word and Object" ;
+.
+
+:Source-be471df0-ac60-5364-a019-2b59b8a5633f a :Content ;
+	:name "Writing the Book of the World" ;
+	:uri "https://global.oup.com/academic/product/writing-the-book-of-the-world-9780199697908"^^xsd:anyURI ;
+.

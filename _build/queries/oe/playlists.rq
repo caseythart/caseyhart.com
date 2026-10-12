@@ -1,0 +1,9 @@
+PREFIX : <https://caseyhart.com/ontology/dense/>
+# The channel's playlists (its series).
+SELECT ?playlist ?name ?description ?youtube WHERE {
+  ?playlist a :Playlist ;
+            :partOf|^:hasPart :OntologyExplained ;
+            :name ?name .
+  OPTIONAL { ?playlist :description ?description }
+  OPTIONAL { ?playlist :url-Youtube ?youtube }
+}
