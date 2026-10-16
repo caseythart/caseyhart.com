@@ -2238,6 +2238,37 @@ This is another exercise in spotting an argument \"in the wild\" and reconstruct
 		:PPP-Episode3.5 ;	# PPP Episode 3.5
 .
 
+# 3s2xuqI0xJE · Bayesian Epistemology Explained: Why Belief Isn’t All-or-Nothing
+:Source-ca466d39-3927-5097-8a90-7b238bff6e70 a :Video ;
+	:name "Bayesian Epistemology Explained: Why Belief Isn’t All-or-Nothing" ;
+	:hasDuration [:duration "PT19M41S"^^xsd:duration] ;
+	:releaseDate [:universalDate "2026-10-16"^^xsd:date ; :universalDateTime "2026-10-16T12:01:09-07:00"^^xsd:dateTime] ;
+	:partOf :OntologyExplained ;
+	:createdBy :CaseyHart ;
+	:url-Youtube "https://www.youtube.com/watch?v=3s2xuqI0xJE"^^xsd:anyURI ;
+	:description """You'd bet your life that your coffee isn't poisoned, but would you bet your life that it'll freeze tonight? You believe both, but not equally. That difference is the starting point for Bayesian epistemology.
+
+Traditional epistemology treats belief and knowledge as all-or-nothing: you have them or you don't. Bayesian epistemology adds nuance by studying degrees of belief, or credences. In this video, I cover the basics: what credences are, how conditional credences work, and how Bayes' Theorem tells us to update our confidence when new evidence comes in.
+
+We work through an example: I'm 70% confident it'll freeze tonight, and then I see a weather report predicting a freeze. Where should my confidence end up? (Spoiler: about 91%, and where you start matters a lot.)
+
+Then we tour the big questions Bayesian epistemologists work on:
+- Kolmogorov's axioms as rationality constraints on credences
+- Updating by conditionalization
+- The problem of the priors (uniqueness vs. permissivism, convergence theorems)
+- Peer disagreement
+- Meta-credences: can I be 70% confident and 50% confident I'm wrong to be?
+- Dutch Book arguments and decision theory
+- Why all of this matters for AI: rationalist circles, Newcomb's Problem, and Bayesian approaches to defining AI rationality
+
+I plan to turn many of these into their own videos. Which should come first? Let me know in the comments!""" ;
+	:cites :Source-ed8d4edf-831f-5bb4-90d1-77fc8bcd7d7f ,	# Michael Titelbaum, Fundamentals of Bayesian Epistemology, Vol. 1: Introducing Credences
+		:Source-39217ca3-277f-5522-9a68-4e0537c1117e ,	# Stanford Encyclopedia of Philosophy, "Bayesian Epistemology"
+		:Source-59057218-4ef2-5d9c-96cd-f12ed81dadea ,	# Thomas Bayes (Wikipedia)
+		:Source-416fb384-9d71-58a7-bc0f-2b4f7836d6e1 ,	# Bayes' Theorem (Wikipedia)
+		:Source-bf681728-9b7c-59bf-b550-7def77fc42ef ;	# Epistemology Explained: Knowledge from Plato to AI
+.
+
 
 #### Sources cited in the show notes (other than our own videos)
 
@@ -2316,6 +2347,11 @@ This is another exercise in spotting an argument \"in the wild\" and reconstruct
 :Source-92aaa65a-d777-5bf3-9cf4-98d99d3b4711 a :Content ;
 	:name "Asilomar AI Principles" ;
 	:uri "https://futureoflife.org/open-letter/ai-principles/"^^xsd:anyURI ;
+.
+
+:Source-416fb384-9d71-58a7-bc0f-2b4f7836d6e1 a :Content ;
+	:name "Bayes' Theorem (Wikipedia)" ;
+	:uri "https://en.wikipedia.org/wiki/Bayes%27_theorem"^^xsd:anyURI ;
 .
 
 :Source-26a34c87-a68a-5412-932c-3be3568c6668 a :Content ;
@@ -2518,6 +2554,11 @@ This is another exercise in spotting an argument \"in the wild\" and reconstruct
 	:uri "https://nypost.com/2024/05/14/business/metas-ai-system-cicero-beats-humans-in-game-of-diplomacy-by-lying-study/"^^xsd:anyURI ;
 .
 
+:Source-ed8d4edf-831f-5bb4-90d1-77fc8bcd7d7f a :Content ;
+	:name "Michael Titelbaum, Fundamentals of Bayesian Epistemology, Vol. 1: Introducing Credences" ;
+	:uri "https://www.amazon.com/dp/0198707614"^^xsd:anyURI ;
+.
+
 :Source-a8c082eb-f91d-589b-a304-66af29a898e6 a :Content ;
 	:name "Microwaves and radar (History Cambridge)" ;
 	:uri "https://historycambridge.org/innovation/Microwaves.html"^^xsd:anyURI ;
@@ -2677,6 +2718,11 @@ This is another exercise in spotting an argument \"in the wild\" and reconstruct
 	:uri "https://github.com/SPARQL-Anything/sparql.anything"^^xsd:anyURI ;
 .
 
+:Source-39217ca3-277f-5522-9a68-4e0537c1117e a :Content ;
+	:name "Stanford Encyclopedia of Philosophy, \"Bayesian Epistemology\"" ;
+	:uri "https://plato.stanford.edu/entries/epistemology-bayesian/"^^xsd:anyURI ;
+.
+
 :Source-d97317ba-9ace-5038-8e89-1ad51085b5fa a :Content ;
 	:name "Symposium (Plato)" ;
 	:uri "https://classics.mit.edu/Plato/symposium.html"^^xsd:anyURI ;
@@ -2789,6 +2835,11 @@ This is another exercise in spotting an argument \"in the wild\" and reconstruct
 :Source-5300a764-a4ba-55d0-a7a5-d99b0e7a0d49 a :Content ;
 	:name "This Neural Net Hallucinates Sheep (Nautilus)" ;
 	:uri "https://nautil.us/this-neural-net-hallucinates-sheep-237006/"^^xsd:anyURI ;
+.
+
+:Source-59057218-4ef2-5d9c-96cd-f12ed81dadea a :Content ;
+	:name "Thomas Bayes (Wikipedia)" ;
+	:uri "https://en.wikipedia.org/wiki/Thomas_Bayes"^^xsd:anyURI ;
 .
 
 :Source-0eaf2fbf-61f4-5b77-8980-bf9101ad996d a :Content ;

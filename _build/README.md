@@ -1,7 +1,8 @@
 # Show pages build (PPP and Ontology Explained)
 
 The pages for both shows on caseyhart.com are generated from two data files. Edit the data
-or the templates, run one command, then commit.
+or the templates, run one command, then commit. For a new episode or video, one command
+writes the data for you from its YouTube page: see [Adding an episode or video](#adding-an-episode-or-video).
 
 ```
 ppp/podcast_ontology_data.ttl                       PPP data, edited by hand (published, so it's downloadable)
@@ -11,6 +12,7 @@ ontology-explained/oe.css                           styling for the Ontology Exp
 ontology-explained/oe-mark.png, oe-icon-*.png       the "oe" mark, cropped from images/logo.png
 
 _build/build.py                                     the build script (one script for both shows)
+_build/add.py                                       adds a new episode or video to the data from its YouTube link
 _build/queries/ppp/*.rq                             SPARQL queries for the PPP pages
 _build/queries/oe/*.rq                              SPARQL queries for the Ontology Explained pages
 _build/queries/shared/*.rq                          queries that look across both shows
@@ -45,7 +47,8 @@ From the repo root:
 pip install -r _build/requirements.txt
 ```
 
-(Use a virtualenv if you prefer. The build only needs `rdflib` and `jinja2`.)
+(Use a virtualenv if you prefer. The build needs `rdflib` and `jinja2`; `add.py` also uses
+`yt-dlp` to read YouTube.)
 
 
 ## Every time you change either data file, a template, or the CSS
@@ -84,6 +87,7 @@ buffer (`M-x revert-buffer`) before saving, so you don't save over the other cha
 
 | You want to change...                               | Edit                                              |
 |-----------------------------------------------------|---------------------------------------------------|
+| Add a new episode or video                          | run `python3 _build/add.py <YouTube link>`        |
 | A PPP episode, chapter or source                    | `ppp/podcast_ontology_data.ttl`                   |
 | An Ontology Explained video, series or source       | `ontology-explained/ontology_explained_data.ttl`  |
 | PPP landing-page copy, hero, host bios              | `_build/templates/ppp/index.html`                 |
@@ -98,10 +102,74 @@ buffer (`M-x revert-buffer`) before saving, so you don't save over the other cha
 Run the build after any of these, including CSS-only changes.
 
 
-## Adding a PPP episode
+## Adding an episode or video
 
-Copy this block into `ppp/podcast_ontology_data.ttl` next to the other episodes and fill it
-in. The build needs everything above `:description`. Use the YouTube upload date as the
+From the repo root, with the YouTube link:
+
+```bash
+python3 _build/add.py https://www.youtube.com/watch?v=VIDEO_ID
+```
+
+The same command works for both shows: it tells them apart by the YouTube channel. It reads
+the video from YouTube, writes it into that show's `.ttl` (exactly the blocks described in the
+next two sections), then runs the build. What it fills in:
+
+- **Title, length, release date** (and upload time, for Ontology Explained).
+- **Description:** the paragraphs at the top of the YouTube description, stopping at the first
+  chapter list, link, heading (`Chapters`, `Links:` …), call to action or hashtag line.
+- **Chapters:** every timestamp line, in any of the usual forms: `0:00 Cold Open`,
+  `(1:05:14) Title`, `🔹 12:30 - Title`, `Title - 12:30`. If it can't read the lines, it takes
+  YouTube's own chapter list instead, but only when the description has timestamps or a
+  `Chapters` heading, so YouTube's automatic chapters never get in.
+- **Sources:** every link in the description.
+  - A link to something already in either file cites that node: a source (matched by its
+    DOI, arXiv ID, ISBN or link), one of your videos, a PPP episode (by its YouTube, Spotify,
+    Apple or caseyhart.com link), or a series.
+  - Anything else becomes a new source, with its IRI minted by [the source rule](#adding-a-source-either-show).
+    An Amazon link to a book counts as its ISBN (a book's Amazon ID is its ISBN-10).
+    Its name is the text before the link on the same line (or the line above it); failing
+    that, the video's YouTube title or the page's title. A cited video by Carl or you gets
+    `:createdBy` (channels are listed in `PEOPLE_BY_CHANNEL` at the top of `add.py`).
+  - Profile, support, newsletter and site links are skipped and listed (the rules are
+    `NOT_SOURCES` at the top of `add.py`).
+- **PPP:** the episode number from `| Ep 15` at the end of the YouTube title (which is then
+  dropped from the name), else the next number; `--number 15.5` to choose. The Apple Podcasts
+  link, looked up on Apple. The Spotify link, if you pass `--spotify <link>`.
+- **Ontology Explained:** each of your series (playlists) the video is in, by checking them
+  on YouTube; or name them with `--series "Ethics Explained"` (repeatable).
+
+It prints what it added. **Read the names of the new sources**, since those are its best guesses.
+Then:
+
+```bash
+git diff                        # what was added; change anything in Emacs, then python3 _build/build.py
+python3 -m http.server 8000     # preview
+git add _build/ ppp/ ontology-explained/
+git commit -m "PPP: Episode 15"
+git push
+```
+
+- **Spotify or Apple not up yet?** Run the same command again later, adding
+  `--spotify <link>` once you have it. For an episode already in the data it only fills in
+  the missing podcast links (and replaces one if you pass a different link).
+- **A new source with no name** (a PDF with no label, say) gets a `# TODO` line instead of
+  `:name`, and the build stops until you add one.
+- `--dry-run` shows the Turtle it would add and changes nothing. `--no-build` skips the build.
+  `--offline` looks nothing up besides the video itself (no source titles, Apple link or
+  playlists).
+- **If YouTube refuses:** `pip install -U yt-dlp` (YouTube changes often). If it says to sign
+  in or confirm you're not a bot, add `--cookies-from-browser safari` (or `chrome`,
+  `firefox`). Last resort: `yt-dlp -J <link> > video.json`, then add `--from-json video.json`.
+
+Descriptions it reads best: summary paragraphs first, then the chapters, then one link per
+line with a label (`Coherent Extrapolated Volition (MIRI): https://…`). The label becomes the
+source's name, so a good label saves an edit.
+
+
+## Adding a PPP episode by hand
+
+`add.py` writes this block for you. To write one by hand, copy it into
+`ppp/podcast_ontology_data.ttl` next to the other episodes and fill it in. The build needs everything above `:description`. Use the YouTube upload date as the
 release date.
 
 ```turtle
@@ -143,9 +211,9 @@ release date.
 - **Latest episode:** whichever has the highest number is marked "New" on the landing page.
 
 
-## Adding an Ontology Explained video
+## Adding an Ontology Explained video by hand
 
-A video's IRI follows the source rule below (`Source-` + uuid5 of its watch URL), so that a
+`add.py` writes this block for you. To write one by hand: a video's IRI follows the source rule below (`Source-` + uuid5 of its watch URL), so that a
 PPP episode citing the video and this file describe the same node. Work it out first:
 
 ```bash
@@ -203,7 +271,7 @@ Use the best identifier available:
 4. the cleaned-up URL (no `si=`, `utm_…` or `t=`, and no trailing `/`)
 5. for something with no link: `urn:x-title:` plus the lowercased title
 
-Then:
+Then (or let `add.py` do all of this for the links in a description):
 
 ```bash
 python3 -c 'import uuid,sys; print("Source-" + str(uuid.uuid5(uuid.NAMESPACE_URL, sys.argv[1])))' \
@@ -261,3 +329,9 @@ you renumber an episode or rename a video. Delete those yourself.
 
 It then fills the templates and writes the HTML. The graph exists only while the script
 runs; there is no triplestore to keep running.
+
+`add.py` loads the same two files to see what's already there, then inserts Turtle text into
+them (so your formatting, comments and ordering stay as they are): episodes after the last
+episode, PPP sources under a `#### First cited in Episode N` heading above `##### TOPICS`,
+videos after the last video, and Ontology Explained sources in A-Z order in their section. It
+checks that both files still parse before it saves anything.
