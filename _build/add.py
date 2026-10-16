@@ -50,7 +50,8 @@ from build import DATA, OE_DATA, DENSE, ROOT, fmt_date, fmt_length, fmt_number, 
 D = rdflib.Namespace(DENSE)
 PACIFIC = ZoneInfo("America/Los_Angeles")      # upload times are written in Pacific time, like the rest of the file
 
-# A cited YouTube video from one of these channels gets ":createdBy <person>". Lowercase handles.
+# A cited YouTube video from one of these channels gets ":createdBy <person>". Lowercase handles or channel IDs.
+# (Channels in the data with a :createdBy, like Ontology Explained's, are added to this automatically.)
 PEOPLE_BY_CHANNEL = {
     "@ontologyexplained": "CaseyHart",
     "@internetofbugs": "CarlBrown",
@@ -333,14 +334,14 @@ def page_title(url):
 
 
 def oembed(link):
-    """Title and channel of a YouTube video, without yt-dlp."""
+    """Title, channel name and channel (its @handle or UC… ID) of a YouTube video, without yt-dlp."""
     try:
         _, body = http_get("https://www.youtube.com/oembed?format=json&url=" + urllib.parse.quote(link, safe=""))
         data = json.loads(body)
-        handle = (data.get("author_url") or "").rstrip("/").rsplit("/", 1)[-1]
-        return data.get("title"), handle
+        channel = (data.get("author_url") or "").rstrip("/").rsplit("/", 1)[-1]
+        return data.get("title"), data.get("author_name"), channel
     except Exception:
-        return None, None
+        return None, None, None
 
 
 class _Quiet:
@@ -472,6 +473,16 @@ class Data:
 
     def is_show_or_person(self, node):
         return any((node, RDF.type, t) in self.g for t in (D.Podcast, D.YouTubeChannel, D.Person))
+
+    @property
+    def people_by_channel(self):
+        """PEOPLE_BY_CHANNEL plus every channel in the data that has a :createdBy (by its UC… ID)."""
+        people = {k.lower(): v for k, v in PEOPLE_BY_CHANNEL.items()}
+        for channel in self.g.subjects(RDF.type, D.YouTubeChannel):
+            creators = list(self.g.objects(channel, D.createdBy))
+            if self.channel_id(channel) and len(creators) == 1:
+                people.setdefault(self.channel_id(channel).lower(), self.local(creators[0]))
+        return people
 
     def channel_id(self, node):
         url = self.link_of(node, D["url-Youtube"]) or ""
@@ -627,10 +638,11 @@ def resolve_links(links, data, this_video, offline, oe_file):
         src = {"iri": iri, "kind": kind, "link": link, "how": how, "creator": None, "name": label or None,
                "youtube_id": youtube_id(link) if kind == "video" else None, "named_from": "description"}
         if kind == "video" and not offline:
-            title, handle = oembed(link)
+            title, channel_name, channel = oembed(link)
             if title:
                 src["name"], src["named_from"] = title, "YouTube"
-            src["creator"] = PEOPLE_BY_CHANNEL.get((handle or "").lower())
+            src["channel"] = channel_name or channel
+            src["creator"] = data.people_by_channel.get((channel or "").lower())
         elif not src["name"] and not offline:
             title = page_title(link)
             if title:
@@ -955,6 +967,9 @@ def report_cites(cites, skipped):
                 s = c["src"]
                 named = f"{s['name']!r} (name from {s['named_from']})" if s["name"] else "NO NAME YET: add a :name"
                 print(f"    new, minted from {s['how']}: {named}\n        {s['link']}")
+                if s.get("channel"):
+                    by = f", so :createdBy :{s['creator']}" if s["creator"] else ""
+                    print(f"        on YouTube channel {s['channel']!r}{by}")
     for link, why in skipped:
         print(f"  Not cited ({why}): {link}")
 

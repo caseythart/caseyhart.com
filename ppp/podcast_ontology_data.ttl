@@ -1988,6 +1988,129 @@ Together, they dissect the mechanics of Coherent Extrapolated Volition (CEV), Is
 .
 
 
+#### Episode 15
+:PPP-Episode15 a :PodcastEpisode ;
+	:name "Is Claude Conscious or just a Tool?" ;
+	:hasDuration [:duration "PT1H18M36S"^^xsd:duration] ;
+	:episodeNumber "15"^^xsd:decimal ;
+	:releaseDate [:universalDate "2026-10-16"^^xsd:date] ;
+	:partOf :PhilosophyProgramsAndPrompts ;
+	:url-Youtube "https://www.youtube.com/watch?v=YvaN7BGolKY"^^xsd:anyURI ;
+	:url-ApplePodcasts "https://podcasts.apple.com/us/podcast/is-claude-conscious-or-just-a-tool-ep-15/id6793816529?i=1000796696428"^^xsd:anyURI ;
+	:description """In this episode of *Philosophy, Programs, and Prompts*, hosts Casey Hart (@OntologyExplained) and Carl Brown (@InternetOfBugs) dive into the strange intersection of theology, tech hype, and AI ethics. Anthropic recently updated its terms of service to forbid \"sustained and needless abusive or cruel behavior\" toward its models—effectively banning users from \"torturing\" Claude. But are large language models actually capable of feeling pain, or are we just projecting humanity into statistical matrix math?
+
+Casey and Carl explore Anthropic's lobbying efforts aimed at the Catholic Church and other religious leaders, the Pope’s encyclical addressing machine intelligence and human art, and the philosophical absurdity of two recent papers claiming to map \"functional pain\" and \"well-being\" onto LLM vector spaces. Along the way, they unpack a viral GitHub \"torture chamber\" experiment, why adding a \"constipation vector\" breaks an LLM just as easily as pain, and why current AI models remain miles away from genuine sentience.""" ;
+	:hasPart :PPP-Episode15-Segment01,
+		:PPP-Episode15-Segment02,
+		:PPP-Episode15-Segment03,
+		:PPP-Episode15-Segment04,
+		:PPP-Episode15-Segment05,
+		:PPP-Episode15-Segment06,
+		:PPP-Episode15-Segment07,
+		:PPP-Episode15-Segment08,
+		:PPP-Episode15-Segment09,
+		:PPP-Episode15-Segment10,
+		:PPP-Episode15-Segment11,
+		:PPP-Episode15-Segment12,
+		:PPP-Episode15-Segment13,
+		:PPP-Episode15-Segment14,
+		:PPP-Episode15-Segment15 ;
+	:cites :Source-72e46753-1f3e-5912-9e6b-af958abae751,
+		:Source-615fb03a-8cd9-58d8-8bcd-a51442cfa7a5,
+		:Source-e2eabd0e-2f5c-5ca1-9e95-a4193d8df594,
+		:Source-617f4183-8ca7-5155-8da1-55f2dfd358fa,
+		:Source-c400ea23-6524-5dc8-80fe-2e8f62edc859,
+		:Source-7041a8fc-2ffe-5226-9fab-dbc695cc890d,
+		:Source-09107200-4b2d-560a-9f65-2d60a8296336,
+		:Source-fd1ad1ea-beba-59a1-86df-dd294af79cc1,
+		:Source-63418956-4f68-5c9f-b7f9-39be2d7e26d1,
+		:Source-cba6b7a7-e8c8-5d26-af69-0f1d171b9bbc,
+		:Source-708d36af-fb62-5b16-8556-73baecf2cdc0,
+		:Source-d87f5522-12b0-546e-923a-118b984e887f,
+		:Source-e44ffb83-a3a3-58e2-aff0-14fb468155e1,
+		:Source-3870dcb4-9684-5f71-9e57-468fcd9cc958,
+		:Source-c99cf9a1-8c8c-5d41-92df-8c74f548acaa,
+		:Source-bb8645fa-aace-55bc-bfc6-7bd8f36c6f13,
+		:Source-46c6fec2-7dbc-5612-ab01-20253162957c,
+		:Source-b5ab646b-b7b8-5b58-983f-571081aa4357 ;
+.
+
+:PPP-Episode15-Segment01 a :PodcastSegment ;
+	:name "Introduction & Anthropic’s Cruelty Ban" ;
+	:startingTimestamp "PT0S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment02 a :PodcastSegment ;
+	:name "Lobbying Religious Leaders on AI Sentience" ;
+	:startingTimestamp "PT1M55S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment03 a :PodcastSegment ;
+	:name "Possibility of Machine Consciousness vs. Today's Reality" ;
+	:startingTimestamp "PT5M20S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment04 a :PodcastSegment ;
+	:name "PR Stunts, Regulatory Capture, and Rabbi Navon’s Dilemma" ;
+	:startingTimestamp "PT7M30S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment05 a :PodcastSegment ;
+	:name "Why Target the Catholic Church?" ;
+	:startingTimestamp "PT15M10S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment06 a :PodcastSegment ;
+	:name "The Pope’s Encyclical and the Human Element" ;
+	:startingTimestamp "PT20M40S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment07 a :PodcastSegment ;
+	:name "Historical Panics and Cold War Parallels" ;
+	:startingTimestamp "PT26M"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment08 a :PodcastSegment ;
+	:name "The Ontological Difference in AI Art" ;
+	:startingTimestamp "PT31M"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment09 a :PodcastSegment ;
+	:name "Pattern Averaging vs. Transformative Human Art" ;
+	:startingTimestamp "PT36M15S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment10 a :PodcastSegment ;
+	:name "Paper 1: AI Well-Being and Utility Functions" ;
+	:startingTimestamp "PT44M40S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment11 a :PodcastSegment ;
+	:name "Moltbook and Human Anthropomorphic Projection" ;
+	:startingTimestamp "PT50M30S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment12 a :PodcastSegment ;
+	:name "Paper 2: The \"Pain Axis\" and Vector Direction" ;
+	:startingTimestamp "PT57M50S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment13 a :PodcastSegment ;
+	:name "The GitHub Torture Chamber & The Constipation Vector" ;
+	:startingTimestamp "PT1H2M40S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment14 a :PodcastSegment ;
+	:name "Why Anthropic Actually Cares (Training Data vs. Press)" ;
+	:startingTimestamp "PT1H9M40S"^^xsd:duration ;
+.
+
+:PPP-Episode15-Segment15 a :PodcastSegment ;
+	:name "Aligning Intentions, Sentience Tests, and Outro" ;
+	:startingTimestamp "PT1H14M30S"^^xsd:duration ;
+.
+
+
 
 ##### REFERENCES
 #### Source IRIs are minted, not looked up: "Source-" + uuid5(NAMESPACE_URL, canonical identifier),
@@ -2445,6 +2568,92 @@ Together, they dissect the mechanics of Coherent Extrapolated Volition (CEV), Is
 :Source-aa9f1477-a500-59de-b9e4-c973034b073e a :Content ;
 	:name "Superintelligence: Paths, Dangers, Strategies" ;
 	:uri "https://global.oup.com/academic/product/superintelligence-9780199678112"^^xsd:anyURI ;
+.
+
+#### First cited in Episode 15
+:Source-72e46753-1f3e-5912-9e6b-af958abae751 a :Content ;
+	:name "Anthropic lobbying religious scholars and ethicists on AI consciousness" ;
+	:uri "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html"^^xsd:anyURI ;
+.
+
+:Source-615fb03a-8cd9-58d8-8bcd-a51442cfa7a5 a :Content ;
+	:name "Anthropic Has Been Aggressively Lobbying the Vatican to Consider AI Consciousness" ;
+	:uri "https://futurism.com/artificial-intelligence/anthropic-lobbying-vatican"^^xsd:anyURI ;
+.
+
+:Source-e2eabd0e-2f5c-5ca1-9e95-a4193d8df594 a :Content ;
+	:name "Pope Leo Says AI Safety Fears Are Not 'Fake News' And Criticizes Nvidia's Billionaire CEO (Forbes)" ;
+	:uri "https://www.forbes.com/sites/siladityaray/2026/09/29/pope-leo-says-ai-safety-fears-are-not-fake-news-and-criticizes-nvidias-billionaire-ceo/"^^xsd:anyURI ;
+.
+
+:Source-617f4183-8ca7-5155-8da1-55f2dfd358fa a :Content ;
+	:name "The dangerous myth of ‘conscious’ AI" ;
+	:uri "https://www.catholicculture.org/commentary/dangerous-myth-conscious-ai/"^^xsd:anyURI ;
+.
+
+:Source-c400ea23-6524-5dc8-80fe-2e8f62edc859 a :Content ;
+	:name "AI Weekly: Tech companies engage faith leaders on AI sentience" ;
+	:uri "https://aiweekly.co/alerts/anthropic-lobbied-pope-leo-xivs-advisers-over-ai-consciousness"^^xsd:anyURI ;
+.
+
+:Source-7041a8fc-2ffe-5226-9fab-dbc695cc890d a :Video ;
+	:name "Pope REJECTS AI Consciousness After Anthropic Freakout" ;
+	:url-Youtube "https://www.youtube.com/watch?v=vhWeyGEplU4"^^xsd:anyURI ;
+.
+
+:Source-09107200-4b2d-560a-9f65-2d60a8296336 a :Content ;
+	:name "404 Media: Report and video on the viral AI GitHub \"torture chamber\" experiment and backlash" ;
+	:uri "https://www.404media.co/someone-torturing-llms-in-a-robot-prison-has-triggered-the-dumbest-debate-in-ai-yet/"^^xsd:anyURI ;
+.
+
+:Source-fd1ad1ea-beba-59a1-86df-dd294af79cc1 a :Video ;
+	:name "No, LLMs Are Not Conscious" ;
+	:url-Youtube "https://www.youtube.com/watch?v=aLYyF_nxNh0"^^xsd:anyURI ;
+.
+
+:Source-63418956-4f68-5c9f-b7f9-39be2d7e26d1 a :Content ;
+	:name "Papal Encyclical on Artificial Intelligence (May 2026), Section 99: \"Magnifica Humanitas\"" ;
+	:uri "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html"^^xsd:anyURI ;
+.
+
+:Source-cba6b7a7-e8c8-5d26-af69-0f1d171b9bbc a :Content ;
+	:name "Pope's Statement on X / Twitter (October 8): On the ontological difference between human art and machine-generated content" ;
+	:uri "https://x.com/Pontifex/status/2105983638147891490"^^xsd:anyURI ;
+.
+
+:Source-708d36af-fb62-5b16-8556-73baecf2cdc0 a :Content ;
+	:name "Ren et al. – \"AI Well-Being: Measuring and Improving the Functional Pleasure and Pain of AIs\"" ;
+	:uri "https://www.ai-wellbeing.org/paper.pdf"^^xsd:anyURI ;
+.
+
+:Source-d87f5522-12b0-546e-923a-118b984e887f a :Content ;
+	:name "Tagliabue et al. – \"The Pain Axis: LLMs Represent Self-Directed Harm and Act to Relieve It\"" ;
+	:uri "https://arxiv.org/abs/2609.16247v1"^^xsd:anyURI ;
+.
+
+:Source-e44ffb83-a3a3-58e2-aff0-14fb468155e1 a :Content ;
+	:name "\"The Neurogenic Case Against Synthetic Sentience\"" ;
+	:uri "https://arxiv.org/abs/2301.05397"^^xsd:anyURI ;
+.
+
+:Source-3870dcb4-9684-5f71-9e57-468fcd9cc958 a :Content ;
+	:name "GitHub: The AI \"Torture Chamber\" steering repository and README rebuttal experiments" ;
+	:uri "https://github.com/terrafying/ai-torture-chamber"^^xsd:anyURI ;
+.
+
+:Source-c99cf9a1-8c8c-5d41-92df-8c74f548acaa a :Content ;
+	:name "Anthropic Terms of Service update: Prohibition on \"sustained and needless abusive or cruel behavior\"" ;
+	:uri "https://www.anthropic.com/news/2026-usage-policy-update"^^xsd:anyURI ;
+.
+
+:Source-bb8645fa-aace-55bc-bfc6-7bd8f36c6f13 a :Content ;
+	:name "Nightshade: Data poisoning tool for image generative models" ;
+	:uri "https://arxiv.org/abs/2310.13828"^^xsd:anyURI ;
+.
+
+:Source-46c6fec2-7dbc-5612-ab01-20253162957c a :Content ;
+	:name "What Is Nightshade? (University of Chicago)" ;
+	:uri "https://nightshade.cs.uchicago.edu/whatis.html"^^xsd:anyURI ;
 .
 
 
